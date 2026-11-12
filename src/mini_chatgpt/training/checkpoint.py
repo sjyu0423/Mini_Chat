@@ -21,6 +21,8 @@ import torch
 
 CHECKPOINT_DIRNAME = "checkpoints"
 CHECKPOINT_SUFFIX = ".pt"
+BEST_CHECKPOINT_NAME = "best.pt"
+CheckpointKind = str  # "periodic" | "final" | "interrupt" | "best"
 
 
 def _atomic_write(path: str | Path, writer: Callable[[IO[bytes]], None]) -> Path:
@@ -78,6 +80,22 @@ def git_commit_hash(cwd: str | Path | None = None) -> str | None:
     return out.stdout.strip() or None
 
 
+def git_is_dirty(cwd: str | Path | None = None) -> bool | None:
+    """True if tracked files have uncommitted changes (None outside a repo)."""
+    try:
+        out = subprocess.run(
+            ["git", "status", "--porcelain", "--untracked-files=no"],
+            cwd=cwd,
+            capture_output=True,
+            text=True,
+            check=True,
+            timeout=5,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    return bool(out.stdout.strip())
+
+
 @dataclass
 class CheckpointMetadata:
     step: int
@@ -85,6 +103,8 @@ class CheckpointMetadata:
     val_loss: float | None = None
     train_loss: float | None = None
     tokens_seen: int = 0
+    kind: CheckpointKind = "periodic"
+    val_loss_exact: float | None = None
     created_at: str = field(default_factory=lambda: datetime.now(UTC).isoformat())
     git_commit: str | None = field(default_factory=git_commit_hash)
     torch_version: str = str(torch.__version__)
@@ -117,20 +137,68 @@ def list_checkpoints(run_dir: str | Path) -> list[Path]:
     return sorted(d.glob(f"step_*{CHECKPOINT_SUFFIX}")) if d.is_dir() else []
 
 
+def best_checkpoint_path(run_dir: str | Path) -> Path:
+    return checkpoint_dir(run_dir) / BEST_CHECKPOINT_NAME
+
+
 def latest_checkpoint(run_dir: str | Path) -> Path | None:
     ckpts = list_checkpoints(run_dir)
     return ckpts[-1] if ckpts else None
 
 
+def latest_valid_checkpoint(run_dir: str | Path) -> Path | None:
+    """Newest ``step_*.pt`` that actually loads (skips unreadable files)."""
+    for path in reversed(list_checkpoints(run_dir)):
+        try:
+            load_checkpoint(path)
+        except Exception:  # any load failure means "not valid"
+            continue
+        return path
+    return None
+
+
+def read_metadata(ckpt_path: str | Path) -> CheckpointMetadata | None:
+    """Metadata from the JSON sidecar, without loading tensors (None if absent)."""
+    side = metadata_path(ckpt_path)
+    if not side.is_file():
+        return None
+    return CheckpointMetadata.from_dict(json.loads(side.read_text(encoding="utf-8")))
+
+
+def apply_retention(run_dir: str | Path, keep_last: int) -> list[Path]:
+    """Delete the oldest periodic ``step_*.pt`` checkpoints beyond ``keep_last``.
+
+    ``keep_last == 0`` keeps everything. Checkpoints whose metadata marks them
+    ``final`` are never deleted, and ``best.pt`` is not a ``step_*`` file, so it
+    is never touched. Returns the deleted checkpoint paths.
+    """
+    if keep_last == 0:
+        return []
+    candidates = []
+    for path in list_checkpoints(run_dir):
+        meta = read_metadata(path)
+        if meta is not None and meta.kind == "final":
+            continue
+        candidates.append(path)
+    doomed = candidates[:-keep_last] if len(candidates) > keep_last else []
+    for path in doomed:
+        path.unlink(missing_ok=True)
+        metadata_path(path).unlink(missing_ok=True)
+    return doomed
+
+
 def save_checkpoint(
-    run_dir: str | Path, state: dict[str, Any], metadata: CheckpointMetadata
+    run_dir: str | Path,
+    state: dict[str, Any],
+    metadata: CheckpointMetadata,
+    *,
+    path: str | Path | None = None,
 ) -> Path:
     """Atomically write ``{"state": ..., "metadata": ...}`` plus a JSON sidecar.
 
-    ``state`` will typically hold model/optimizer state_dicts and RNG states
-    once training exists (M1+).
+    ``path`` defaults to ``checkpoints/step_XXXXXXXX.pt`` for ``metadata.step``.
     """
-    path = checkpoint_path(run_dir, metadata.step)
+    path = Path(path) if path is not None else checkpoint_path(run_dir, metadata.step)
     atomic_torch_save(path, {"state": state, "metadata": metadata.to_dict()})
     atomic_write_json(metadata_path(path), metadata.to_dict())
     return path

@@ -141,7 +141,9 @@ def checkpoint_and_resume(
         ]
         loss_diffs = [
             abs(a - b)
-            for a, b in zip(full.loss_history[steps // 2 :], resumed.loss_history, strict=True)
+            for a, b in zip(
+                full.loss_history[steps // 2 :], resumed.loss_history[steps // 2 :], strict=True
+            )
         ]
         return {
             "steps": steps,

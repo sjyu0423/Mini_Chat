@@ -1,0 +1,41 @@
+# M2 copy of gpt_10m.toml. Model, data and optimization are identical;
+# only bookkeeping differs (checkpoints, exact eval, explicit MPS device).
+# 10,770,816 parameters.
+name = "gpt_10m_m2"
+description = "M2 baseline: gpt_10m (6L/6H/384d, ctx 256, char) with M2 bookkeeping"
+
+[model]
+vocab_size = 65          # char vocab of Tiny Shakespeare
+context_length = 256
+n_layer = 6
+n_head = 6
+n_embd = 384
+dropout = 0.2            # small dataset (~1M tokens) -> regularize
+bias = true
+
+[training]
+seed = 1337
+batch_size = 64
+gradient_accumulation_steps = 1
+learning_rate = 1e-3
+min_learning_rate = 1e-4
+warmup_steps = 100
+max_steps = 5000
+weight_decay = 0.1
+beta1 = 0.9
+beta2 = 0.99
+grad_clip = 1.0
+eval_interval = 250
+eval_steps = 50
+log_interval = 50
+checkpoint_interval = 250       # one snapshot per eval, for emergence analysis (~129 MB each)
+keep_last_checkpoints = 0       # keep all (20 x 129 MB ~ 2.6 GB)
+save_best = true
+exact_val_eval = true           # exact full-split val loss at each eval; selects best.pt
+device = "mps"
+dtype = "float32"
+
+[data]
+dataset = "tiny_shakespeare"
+tokenizer = "char"
+val_fraction = 0.1

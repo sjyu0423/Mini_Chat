@@ -1,0 +1,1166 @@
+{
+  "analysis_wall_s": 503.7065601250033,
+  "emergence": [
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 5,
+        "n_words": 607,
+        "overlap_32": 0.0,
+        "speaker_distinct": 0,
+        "speaker_known_fraction": 0.0,
+        "speaker_labels": 0,
+        "valid_word_fraction": 0.08072487644151564,
+        "valid_word_fraction_len4": 0.0
+      },
+      "T1.0": {
+        "longest_verbatim_match": 4,
+        "n_words": 624,
+        "overlap_32": 0.0,
+        "speaker_distinct": 0,
+        "speaker_known_fraction": 0.0,
+        "speaker_labels": 0,
+        "valid_word_fraction": 0.08493589743589744,
+        "valid_word_fraction_len4": 0.0
+      },
+      "step": 0,
+      "val_loss_exact": 4.124992488992625
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 25,
+        "n_words": 808,
+        "overlap_32": 0.0,
+        "speaker_distinct": 22,
+        "speaker_known_fraction": 0.13636363636363635,
+        "speaker_labels": 22,
+        "valid_word_fraction": 0.6212871287128713,
+        "valid_word_fraction_len4": 0.38765432098765434
+      },
+      "T1.0": {
+        "longest_verbatim_match": 12,
+        "n_words": 722,
+        "overlap_32": 0.0,
+        "speaker_distinct": 31,
+        "speaker_known_fraction": 0.0,
+        "speaker_labels": 31,
+        "valid_word_fraction": 0.45429362880886426,
+        "valid_word_fraction_len4": 0.19444444444444445
+      },
+      "step": 250,
+      "val_loss_exact": 2.0627465697540632
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 28,
+        "n_words": 793,
+        "overlap_32": 0.0,
+        "speaker_distinct": 25,
+        "speaker_known_fraction": 0.8484848484848485,
+        "speaker_labels": 33,
+        "valid_word_fraction": 0.9079445145018915,
+        "valid_word_fraction_len4": 0.8365384615384616
+      },
+      "T1.0": {
+        "longest_verbatim_match": 21,
+        "n_words": 741,
+        "overlap_32": 0.0,
+        "speaker_distinct": 23,
+        "speaker_known_fraction": 0.64,
+        "speaker_labels": 25,
+        "valid_word_fraction": 0.757085020242915,
+        "valid_word_fraction_len4": 0.6235294117647059
+      },
+      "step": 500,
+      "val_loss_exact": 1.704182239236503
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 26,
+        "n_words": 766,
+        "overlap_32": 0.0,
+        "speaker_distinct": 25,
+        "speaker_known_fraction": 0.875,
+        "speaker_labels": 40,
+        "valid_word_fraction": 0.9216710182767625,
+        "valid_word_fraction_len4": 0.8557457212713936
+      },
+      "T1.0": {
+        "longest_verbatim_match": 27,
+        "n_words": 732,
+        "overlap_32": 0.0,
+        "speaker_distinct": 38,
+        "speaker_known_fraction": 0.7906976744186046,
+        "speaker_labels": 43,
+        "valid_word_fraction": 0.8306010928961749,
+        "valid_word_fraction_len4": 0.7315914489311164
+      },
+      "step": 750,
+      "val_loss_exact": 1.5698149845517915
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 24,
+        "n_words": 748,
+        "overlap_32": 0.0,
+        "speaker_distinct": 26,
+        "speaker_known_fraction": 0.8490566037735849,
+        "speaker_labels": 53,
+        "valid_word_fraction": 0.9705882352941176,
+        "valid_word_fraction_len4": 0.945273631840796
+      },
+      "T1.0": {
+        "longest_verbatim_match": 25,
+        "n_words": 703,
+        "overlap_32": 0.0,
+        "speaker_distinct": 28,
+        "speaker_known_fraction": 0.8958333333333334,
+        "speaker_labels": 48,
+        "valid_word_fraction": 0.8762446657183499,
+        "valid_word_fraction_len4": 0.7965686274509803
+      },
+      "step": 1000,
+      "val_loss_exact": 1.5237216831623823
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 30,
+        "n_words": 795,
+        "overlap_32": 0.0,
+        "speaker_distinct": 15,
+        "speaker_known_fraction": 0.9259259259259259,
+        "speaker_labels": 27,
+        "valid_word_fraction": 0.9773584905660377,
+        "valid_word_fraction_len4": 0.957286432160804
+      },
+      "T1.0": {
+        "longest_verbatim_match": 23,
+        "n_words": 710,
+        "overlap_32": 0.0,
+        "speaker_distinct": 26,
+        "speaker_known_fraction": 0.8787878787878788,
+        "speaker_labels": 33,
+        "valid_word_fraction": 0.8929577464788733,
+        "valid_word_fraction_len4": 0.8333333333333334
+      },
+      "step": 1250,
+      "val_loss_exact": 1.4897550010133063
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 30,
+        "n_words": 805,
+        "overlap_32": 0.0,
+        "speaker_distinct": 21,
+        "speaker_known_fraction": 0.84375,
+        "speaker_labels": 32,
+        "valid_word_fraction": 0.9751552795031055,
+        "valid_word_fraction_len4": 0.9506493506493506
+      },
+      "T1.0": {
+        "longest_verbatim_match": 22,
+        "n_words": 756,
+        "overlap_32": 0.0,
+        "speaker_distinct": 21,
+        "speaker_known_fraction": 0.8846153846153846,
+        "speaker_labels": 26,
+        "valid_word_fraction": 0.9246031746031746,
+        "valid_word_fraction_len4": 0.8689320388349514
+      },
+      "step": 1500,
+      "val_loss_exact": 1.4826463713043037
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 24,
+        "n_words": 774,
+        "overlap_32": 0.0,
+        "speaker_distinct": 20,
+        "speaker_known_fraction": 0.9428571428571428,
+        "speaker_labels": 35,
+        "valid_word_fraction": 0.975452196382429,
+        "valid_word_fraction_len4": 0.9510309278350515
+      },
+      "T1.0": {
+        "longest_verbatim_match": 26,
+        "n_words": 733,
+        "overlap_32": 0.0,
+        "speaker_distinct": 17,
+        "speaker_known_fraction": 0.9473684210526315,
+        "speaker_labels": 19,
+        "valid_word_fraction": 0.9345156889495225,
+        "valid_word_fraction_len4": 0.8990825688073395
+      },
+      "step": 1750,
+      "val_loss_exact": 1.4735867097459991
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 29,
+        "n_words": 765,
+        "overlap_32": 0.0,
+        "speaker_distinct": 22,
+        "speaker_known_fraction": 0.9607843137254902,
+        "speaker_labels": 51,
+        "valid_word_fraction": 0.9764705882352941,
+        "valid_word_fraction_len4": 0.959079283887468
+      },
+      "T1.0": {
+        "longest_verbatim_match": 27,
+        "n_words": 751,
+        "overlap_32": 0.0,
+        "speaker_distinct": 20,
+        "speaker_known_fraction": 1.0,
+        "speaker_labels": 40,
+        "valid_word_fraction": 0.9507323568575233,
+        "valid_word_fraction_len4": 0.9137931034482759
+      },
+      "step": 2000,
+      "val_loss_exact": 1.4868810094636062
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 25,
+        "n_words": 783,
+        "overlap_32": 0.0,
+        "speaker_distinct": 21,
+        "speaker_known_fraction": 0.9310344827586207,
+        "speaker_labels": 29,
+        "valid_word_fraction": 0.9859514687100894,
+        "valid_word_fraction_len4": 0.9775
+      },
+      "T1.0": {
+        "longest_verbatim_match": 27,
+        "n_words": 715,
+        "overlap_32": 0.0,
+        "speaker_distinct": 25,
+        "speaker_known_fraction": 0.9459459459459459,
+        "speaker_labels": 37,
+        "valid_word_fraction": 0.951048951048951,
+        "valid_word_fraction_len4": 0.919431279620853
+      },
+      "step": 2250,
+      "val_loss_exact": 1.4965408593758769
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 31,
+        "n_words": 757,
+        "overlap_32": 0.0,
+        "speaker_distinct": 27,
+        "speaker_known_fraction": 0.9767441860465116,
+        "speaker_labels": 43,
+        "valid_word_fraction": 0.9907529722589168,
+        "valid_word_fraction_len4": 0.9855421686746988
+      },
+      "T1.0": {
+        "longest_verbatim_match": 26,
+        "n_words": 738,
+        "overlap_32": 0.0,
+        "speaker_distinct": 18,
+        "speaker_known_fraction": 0.9523809523809523,
+        "speaker_labels": 21,
+        "valid_word_fraction": 0.948509485094851,
+        "valid_word_fraction_len4": 0.9164677804295943
+      },
+      "step": 2500,
+      "val_loss_exact": 1.5130458900298196
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 31,
+        "n_words": 758,
+        "overlap_32": 0.0,
+        "speaker_distinct": 18,
+        "speaker_known_fraction": 0.9318181818181818,
+        "speaker_labels": 44,
+        "valid_word_fraction": 0.9907651715039578,
+        "valid_word_fraction_len4": 0.9824120603015075
+      },
+      "T1.0": {
+        "longest_verbatim_match": 28,
+        "n_words": 719,
+        "overlap_32": 0.0,
+        "speaker_distinct": 30,
+        "speaker_known_fraction": 0.8571428571428571,
+        "speaker_labels": 35,
+        "valid_word_fraction": 0.9638386648122392,
+        "valid_word_fraction_len4": 0.9391727493917275
+      },
+      "step": 2750,
+      "val_loss_exact": 1.5291452791498996
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 30,
+        "n_words": 786,
+        "overlap_32": 0.0,
+        "speaker_distinct": 14,
+        "speaker_known_fraction": 0.9705882352941176,
+        "speaker_labels": 34,
+        "valid_word_fraction": 0.9860050890585241,
+        "valid_word_fraction_len4": 0.9807692307692307
+      },
+      "T1.0": {
+        "longest_verbatim_match": 30,
+        "n_words": 743,
+        "overlap_32": 0.0,
+        "speaker_distinct": 22,
+        "speaker_known_fraction": 0.95,
+        "speaker_labels": 40,
+        "valid_word_fraction": 0.9663526244952894,
+        "valid_word_fraction_len4": 0.9414519906323185
+      },
+      "step": 3000,
+      "val_loss_exact": 1.5512104598955176
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 35,
+        "n_words": 764,
+        "overlap_32": 0.0010319917440660474,
+        "speaker_distinct": 23,
+        "speaker_known_fraction": 0.92,
+        "speaker_labels": 50,
+        "valid_word_fraction": 0.9856020942408377,
+        "valid_word_fraction_len4": 0.9778869778869779
+      },
+      "T1.0": {
+        "longest_verbatim_match": 23,
+        "n_words": 758,
+        "overlap_32": 0.0,
+        "speaker_distinct": 23,
+        "speaker_known_fraction": 0.7407407407407407,
+        "speaker_labels": 27,
+        "valid_word_fraction": 0.9696569920844327,
+        "valid_word_fraction_len4": 0.9481132075471698
+      },
+      "step": 3250,
+      "val_loss_exact": 1.579398048883197
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 30,
+        "n_words": 786,
+        "overlap_32": 0.0,
+        "speaker_distinct": 20,
+        "speaker_known_fraction": 1.0,
+        "speaker_labels": 35,
+        "valid_word_fraction": 0.9847328244274809,
+        "valid_word_fraction_len4": 0.9722222222222222
+      },
+      "T1.0": {
+        "longest_verbatim_match": 25,
+        "n_words": 748,
+        "overlap_32": 0.0,
+        "speaker_distinct": 21,
+        "speaker_known_fraction": 0.9333333333333333,
+        "speaker_labels": 30,
+        "valid_word_fraction": 0.9665775401069518,
+        "valid_word_fraction_len4": 0.9390243902439024
+      },
+      "step": 3500,
+      "val_loss_exact": 1.6123205426095546
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 39,
+        "n_words": 749,
+        "overlap_32": 0.005933952528379773,
+        "speaker_distinct": 25,
+        "speaker_known_fraction": 0.95,
+        "speaker_labels": 40,
+        "valid_word_fraction": 0.9986648865153538,
+        "valid_word_fraction_len4": 0.9976076555023924
+      },
+      "T1.0": {
+        "longest_verbatim_match": 41,
+        "n_words": 726,
+        "overlap_32": 0.0030959752321981426,
+        "speaker_distinct": 18,
+        "speaker_known_fraction": 1.0,
+        "speaker_labels": 27,
+        "valid_word_fraction": 0.9573002754820936,
+        "valid_word_fraction_len4": 0.9334862385321101
+      },
+      "step": 3750,
+      "val_loss_exact": 1.6392648110444519
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 30,
+        "n_words": 766,
+        "overlap_32": 0.0,
+        "speaker_distinct": 18,
+        "speaker_known_fraction": 1.0,
+        "speaker_labels": 40,
+        "valid_word_fraction": 0.9843342036553525,
+        "valid_word_fraction_len4": 0.9693877551020408
+      },
+      "T1.0": {
+        "longest_verbatim_match": 27,
+        "n_words": 748,
+        "overlap_32": 0.0,
+        "speaker_distinct": 22,
+        "speaker_known_fraction": 0.90625,
+        "speaker_labels": 32,
+        "valid_word_fraction": 0.9652406417112299,
+        "valid_word_fraction_len4": 0.9380952380952381
+      },
+      "step": 4000,
+      "val_loss_exact": 1.6645523750919036
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 31,
+        "n_words": 772,
+        "overlap_32": 0.0,
+        "speaker_distinct": 21,
+        "speaker_known_fraction": 0.9111111111111111,
+        "speaker_labels": 45,
+        "valid_word_fraction": 0.9883419689119171,
+        "valid_word_fraction_len4": 0.9801980198019802
+      },
+      "T1.0": {
+        "longest_verbatim_match": 42,
+        "n_words": 734,
+        "overlap_32": 0.003353973168214654,
+        "speaker_distinct": 28,
+        "speaker_known_fraction": 0.9827586206896551,
+        "speaker_labels": 58,
+        "valid_word_fraction": 0.9822888283378747,
+        "valid_word_fraction_len4": 0.973170731707317
+      },
+      "step": 4250,
+      "val_loss_exact": 1.6889145166024395
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 38,
+        "n_words": 753,
+        "overlap_32": 0.0030959752321981426,
+        "speaker_distinct": 20,
+        "speaker_known_fraction": 0.8285714285714286,
+        "speaker_labels": 35,
+        "valid_word_fraction": 0.9853917662682603,
+        "valid_word_fraction_len4": 0.9760765550239234
+      },
+      "T1.0": {
+        "longest_verbatim_match": 34,
+        "n_words": 729,
+        "overlap_32": 0.0007739938080495357,
+        "speaker_distinct": 16,
+        "speaker_known_fraction": 0.96,
+        "speaker_labels": 25,
+        "valid_word_fraction": 0.9629629629629629,
+        "valid_word_fraction_len4": 0.9463869463869464
+      },
+      "step": 4500,
+      "val_loss_exact": 1.7047696086181992
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 42,
+        "n_words": 784,
+        "overlap_32": 0.0028379772961816306,
+        "speaker_distinct": 17,
+        "speaker_known_fraction": 0.9354838709677419,
+        "speaker_labels": 31,
+        "valid_word_fraction": 0.9910714285714286,
+        "valid_word_fraction_len4": 0.9849246231155779
+      },
+      "T1.0": {
+        "longest_verbatim_match": 34,
+        "n_words": 750,
+        "overlap_32": 0.0010319917440660474,
+        "speaker_distinct": 16,
+        "speaker_known_fraction": 0.9736842105263158,
+        "speaker_labels": 38,
+        "valid_word_fraction": 0.9773333333333334,
+        "valid_word_fraction_len4": 0.9614457831325302
+      },
+      "step": 4750,
+      "val_loss_exact": 1.718282150400096
+    },
+    {
+      "T0.7_k40": {
+        "longest_verbatim_match": 38,
+        "n_words": 756,
+        "overlap_32": 0.0030959752321981426,
+        "speaker_distinct": 22,
+        "speaker_known_fraction": 0.975,
+        "speaker_labels": 40,
+        "valid_word_fraction": 0.9880952380952381,
+        "valid_word_fraction_len4": 0.9797979797979798
+      },
+      "T1.0": {
+        "longest_verbatim_match": 28,
+        "n_words": 754,
+        "overlap_32": 0.0,
+        "speaker_distinct": 23,
+        "speaker_known_fraction": 0.975,
+        "speaker_labels": 40,
+        "valid_word_fraction": 0.980106100795756,
+        "valid_word_fraction_len4": 0.9676616915422885
+      },
+      "step": 5000,
+      "val_loss_exact": 1.7401598480926164
+    }
+  ],
+  "exact": {
+    "best": {
+      "checkpoint": "runs/gpt_10m_m2-20261112-174425/checkpoints/best.pt",
+      "gap": 0.38078457175066127,
+      "step": 1750,
+      "tokens_seen": 28672000,
+      "train_bpc": 1.5765802251587306,
+      "train_loss": 1.0928021379953379,
+      "train_ppl": 2.982620086831129,
+      "val_bpc": 2.1259362384704374,
+      "val_loss": 1.4735867097459991,
+      "val_ppl": 4.364862593946354
+    },
+    "final": {
+      "checkpoint": "runs/gpt_10m_m2-20261112-174425/checkpoints/step_00005000.pt",
+      "gap": 1.1539442430658302,
+      "step": 5000,
+      "tokens_seen": 81920000,
+      "train_bpc": 0.8457303462638676,
+      "train_loss": 0.586215605026786,
+      "train_ppl": 1.7971743124677555,
+      "val_bpc": 2.5105199831973097,
+      "val_loss": 1.7401598480926164,
+      "val_ppl": 5.69825420494255
+    },
+    "init": {
+      "train_loss": 4.123048825520576,
+      "val_loss": 4.124992488992625
+    }
+  },
+  "final_checkpoint_kind": "final",
+  "plots": [
+    "train_loss.svg",
+    "val_loss.svg",
+    "learning_rate.svg",
+    "throughput.svg",
+    "generalization_gap.svg"
+  ],
+  "progression": [
+    {
+      "decoding": "T0.7_k40",
+      "step": 0,
+      "text": "-pz?YoF ;czdddQQZyT,yzrzPG3'QYwNMGB\nboDLZ3XzKkKSzb.k$dd-dJ'G TToOttj;&YefzyBnszySddcco3fyfyyySFRTNBG:CyZZkM 3Vh -XLc''lZ:PXBvsLM&fISnRuZzMdXE?ygsypoZKh!&XnjX;fvGSdG-qZW?VgkgttttrZyR33Mtj q::gcl,,,oddZpEh rXIkroTGwXz?ehTnDfmr 3xB3hhJtSSSeSfsllEvvv?SS'YS $YtPydtRpDmE?u,yfV:fgE-hff!hlyeL B3?RhNwwMfotem"
+    },
+    {
+      "decoding": "T0.9_k40",
+      "step": 0,
+      "text": "Cpz?YoS ;czdeCpwEyT,yzrzPG3'?YwNMGBjbj\nLZ3XzKYKSzb.k FusdJ'G TToOtt\nb,SefzVAnGzhigKzc'gfyfyygS;RTNBG:CyZzkM 3Vh -RLc''lZ:PXBvsLM&fp?nRgqzMdXE?AgqYpoZKh!&XnjX;fvGSqG-qZW?VgkgttttrZyR33Mtj q::gLl,3O3dkZpEh rXIkroTGwXz?ehTnEGmr 3NNFhh3eSSmeSfslgEvssnSS'YS?pY PydtRpR;E?u,yfV:fgE-hff!ulyeL B3?RhOw3Mfotem"
+    },
+    {
+      "decoding": "greedy",
+      "step": 0,
+      "text": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    },
+    {
+      "decoding": "T0.7_k40",
+      "step": 250,
+      "text": "Cars an the ence in throw liage weith him and this pairst in with this bathens\nTimse the and his in thy mor bearselcess thadle to greards of heart\nThis annow a this frath ther tand so the sovers.\n\nIS MENIUS:\nI shis mer thim my and thisgestell not blaing hom they much,\nFirsgion. Solk a a cament hot m"
+    },
+    {
+      "decoding": "T0.9_k40",
+      "step": 250,
+      "text": "Cars an theee.\n\nENIO:\nAnlought heart, now and this ead sto' this tee;\nThat in heimse to will apter,\nThy mor ber soock'll to' so of ther morss hadt\nThis annow fithis frars thertsay'ds his is apleat I with rith measing hand mring.\n\nOLISSSS:\nWhennsencl's givester?\n\nCENIUS:\nAng I forrly woall how is tee"
+    },
+    {
+      "decoding": "greedy",
+      "step": 250,
+      "text": "And the the the the the the the the the the the the the the he the the the the the he the the the the heart\nThe the the the the he the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the she she she she she she she she she she she she s"
+    },
+    {
+      "decoding": "T0.7_k40",
+      "step": 500,
+      "text": "Care an thee, pare on to sun heaven\nbone of them and but bid with this bawd.\n\nPOLIXENES:\nAy, and sir, you will you come too you.\n\nISABELLA:\nEven your heart a fit is fair\nTo the comes hat be grave of to him; thou sir, hat\nAnd your housband she not blood pats,\nAnd me, the meanst. Shall I am how is the"
+    },
+    {
+      "decoding": "T0.9_k40",
+      "step": 500,
+      "text": "Care an thee, pare in roling heaven\nbone out on thee with in the tee;\nThat insents should have and England ther soon\nAnd to provost never delive thou hate?\n\nBRUTUS:\nO, them to take; and with them, I'll harlath ship the name.\n\nBUCKINGHAM:\nWell, sir, 'tis hast the much, first brink lie.\n\nCORIOLANUS:\nA"
+    },
+    {
+      "decoding": "greedy",
+      "step": 500,
+      "text": "I am thee thee thee thee thee thee thee thee thee to thee seems.\n\nCAMILLO:\nI will thee thee thee thee thee thee thee thee thee seems\nThat the wars of the world of the world of the sea\nThat that the world that the world the wards of the world to the world too him.\n\nCAMILLO:\nI will thee thee thee thee"
+    },
+    {
+      "decoding": "T0.7_k40",
+      "step": 1000,
+      "text": "Carl me thee, pardon me, such a wain,\nOr father, and with in the teem,\nThat now, my courtiny and say my more.\n\nCAPULET:\nHeavy comfort in her brangs,\nAnd what with safety hate to the person,\nAnd thou shalt not make his forfeither husband.\n\nFRIAR LAURENCE:\nBut thou wilt fly give.\n\nClown:\nI am a gentle"
+    },
+    {
+      "decoding": "T0.9_k40",
+      "step": 1000,
+      "text": "Carl an the enemy air rooks; he wails not again,--\n\nESCALUS:\nHasting all thing himself!\n\nROMEO:\nThat's he dissork out lay a poor friends of law.\n\nESCALUS:\nWhile you fareweller tale; and\nwith pleasure of leave owns his news,\nin a husband, free not black passion of faults,\nWith flatly a aumtor's sotem"
+    },
+    {
+      "decoding": "greedy",
+      "step": 1000,
+      "text": "I am a son and that the state of the state,\nAnd the state of the state and the state and the state\nThat the state of the state and the state of the state\nThat she shall be seen the state of the state,\nAnd the state of the sea of the senate of the sea\nAnd the state of the senate of the senate of the "
+    },
+    {
+      "decoding": "T0.7_k40",
+      "step": 2500,
+      "text": "Come, here comes your honour.\n\nNORTHUMBERLAND:\nStay, with him, that may such seem\nAs they have strived their shames.\n\nHENRY BOLINGBROKE:\nMy lord, to the king at the Duke of York\nPersuades to the king of France. As for an\nA plague of the children of the prison,\nThat my first conference and my wife\nDi"
+    },
+    {
+      "decoding": "T0.9_k40",
+      "step": 2500,
+      "text": "Can tell him what has been as when he can at?\n\nServant:\nA bawd, sir.\n\nSecond Gentleman:\nWhy, has said you did have, sir, ha' so.\n\nFirst Gentleman:\nThis is the cunning so: therefore, if they be so, I'll hard\nthe belly hands will answer; for we never 'twixt Paris.\n\nFirst Gentleman:\nLet us her husband."
+    },
+    {
+      "decoding": "greedy",
+      "step": 2500,
+      "text": "I will not say 'tis a man that would be sound.\n\nPETRUCHIO:\nI will not say 'tis a man to be so.\n\nHORTENSIO:\nI will to the goose of this man's wife and me\nThat I will say 'tis the goose.\n\nGRUMIO:\nI will to the matter with you.\n\nGRUMIO:\nI will to the matter where I may say.\n\nGRUMIO:\nI will to the king "
+    },
+    {
+      "decoding": "T0.7_k40",
+      "step": 5000,
+      "text": "Come, here's no more.\n\nMERCUTIO:\nGood heart, Tybalt, the bitter was a prisoner.\n\nROMEO:\nWhy, then, I must die to-morrow;\nAnd I will not speak with me alone.\n\nMERCUTIO:\nThen the common was a greater fellow.\n\nROMEO:\nA hundred, and a merry thing.\n\nMERCUTIO:\nNay, a hall, a hall; if they were a lover too"
+    },
+    {
+      "decoding": "T0.9_k40",
+      "step": 5000,
+      "text": "Come, here's Capulet; and no more\nThan ten thousand heirs i' the tribunes of senses,\nAs you were strong for being scold, call'd off,\nAnd you beat power to patience.\n\nMERCUTIO:\nA plague o' both, a boy orar.\n\nBENVOLIO:\nThen make an uneven apt lion of the people;\nPut in them off for line arms.\n\nMERCUTI"
+    },
+    {
+      "decoding": "greedy",
+      "step": 5000,
+      "text": "I will be gone.\n\nPETRUCHIO:\nI am a poor fellow, sir, here comes the worst with you.\n\nPETRUCHIO:\nI know not, sir: but I can speak again.\n\nHORTENSIO:\nI know not what I shall.\n\nGREMIO:\nI thought, an if you love me, you may be gone.\n\nGREMIO:\nI shall not be so.\n\nTRANIO:\nNo, sir, it is no time to be so.\n\n"
+    }
+  ],
+  "run_dir": "runs/gpt_10m_m2-20261112-174425",
+  "samples": {
+    "best": [
+      {
+        "chars": 507,
+        "decoding": "T0.7_k40",
+        "longest_match_text": ".\n\nFirst Citizen:\nWe a",
+        "longest_verbatim_match": 22,
+        "n_len4": 46,
+        "n_words": 103,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "ROMEO:\n",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 2,
+        "text": "Then are comes a man or like to be a whippiness, a\npoint of the steel, a main of my country: a\ngentleman of brave a scandem-poor friend, a\nshall though the mistress of the gentleman: he\nwill place to our reasons sink him. He hath heard out\nwon him to be his the hands, whose have had a further in\nthem very of what he was this settled stars to jest, be sure, that\nhe was he wounded to the hill.\n\nFirst Citizen:\nWe at the which way to be concluded for a visage, a wrong; a boy.\n\nCORIOLANUS:\nThe consul",
+        "valid_fraction": 0.9805825242718447,
+        "valid_fraction_len4": 0.9565217391304348
+      },
+      {
+        "chars": 508,
+        "decoding": "T0.7_k40",
+        "longest_match_text": " strengthen and su",
+        "longest_verbatim_match": 18,
+        "n_len4": 53,
+        "n_words": 92,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "JULIET:\n",
+        "speaker_distinct": 1,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 1,
+        "text": "Canst thou denied the room of thy father's gentleman bottom,\nThou tell'st me seek to the friends and my soul.\n\nCAPULET:\nHeaven how the news, hath power the city\nHath strengthen and suffer'd his place of heaven shows,\nThe first and tender from his blood property\nAnd unto the children are call'd for his purposes\nTo the stroke of the earth, that for the sudden field\nWith his plottest of his life, that he there will deserve\nThat may close he is burden by the soldier street.\nThe plain of king gentlem",
+        "valid_fraction": 0.9782608695652174,
+        "valid_fraction_len4": 0.9622641509433962
+      },
+      {
+        "chars": 515,
+        "decoding": "T0.7_k40",
+        "longest_match_text": " to the people,\nAnd ",
+        "longest_verbatim_match": 20,
+        "n_len4": 51,
+        "n_words": 94,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "First Citizen:\n",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 0.5,
+        "speaker_n_labels": 2,
+        "text": "Cannot cock the citizens\nTo see him to the gentleman of this wars:\nWith a poor simple seven graves of your senate,\nTo lay a proportion of desires to the people,\nAnd from him that were the seatest of the brattless\nOf his complain hate been slumber'd the prison;\nThat, in his world, like a child, a temple's good\nTo his rank at noble law.\n\nFLORIZEL:\nA begot of this children,\nWhere he would have set the heart of him,\nAnd when have he commanded from his brother's son,\nWhere he expell'd that churchyard",
+        "valid_fraction": 0.9468085106382979,
+        "valid_fraction_len4": 0.9019607843137255
+      },
+      {
+        "chars": 518,
+        "decoding": "T0.7_k40",
+        "longest_match_text": ".\n\nQUEEN ELIZABETH:\nMy lord",
+        "longest_verbatim_match": 27,
+        "n_len4": 55,
+        "n_words": 98,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "KING RICHARD III:\n",
+        "speaker_distinct": 1,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 1,
+        "text": "Cannot this enemy is like that heaven cannot play thee\nThou wish the bank of senses of thy head;\nNor my mother, so cold that speaks not my son.\n\nQUEEN ELIZABETH:\nMy lord, there at my heart prosperous is bring.\nThis is not my heart this ears wind my father statute;\nAnd with words have I the court's banishment,\nAnd for my life to the with prison: he measure to stand me\nAnd the least of my closen time in the encountreatent\nThat my body make his presence to be promised,\nTo with play the king gates o",
+        "valid_fraction": 0.9693877551020408,
+        "valid_fraction_len4": 0.9454545454545454
+      },
+      {
+        "chars": 513,
+        "decoding": "T0.7_k40",
+        "longest_match_text": " eyes.\n\nFRIAR LAURENCE:\n",
+        "longest_verbatim_match": 24,
+        "n_len4": 57,
+        "n_words": 92,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "To be, or not",
+        "speaker_distinct": 4,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 5,
+        "text": " promotion denied and rob the earth\nOf the seatenious issue, whose field sound\nThat confiscate, that my soul shall company\nBy those news of law to them and mine own.\n\nFRIAR LAURENCE:\nMarry, I see the prince, I should have made this eyes.\n\nFRIAR LAURENCE:\nBe ready; and with whom a little servant of my very head\nTo follow this secret with a thousand fellow hands.\n\nMARIANA:\nWhat is this my close?\n\nDUKE VINCENTIO:\nAt the which way to be contented\nTo have the more to the Tower.\n\nLUCIO:\n'Twas no more ",
+        "valid_fraction": 0.9891304347826086,
+        "valid_fraction_len4": 0.9824561403508771
+      },
+      {
+        "chars": 507,
+        "decoding": "T0.9_k40",
+        "longest_match_text": ":\nThe Duke of Norfolk, ",
+        "longest_verbatim_match": 23,
+        "n_len4": 55,
+        "n_words": 96,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "ROMEO:\n",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 0.5,
+        "speaker_n_labels": 2,
+        "text": "Cannot cocked back and clouds each profit and the wearise.\nGive me to beg a name; the season of this:\nO, how shall come to Bohemia the queen?\n\nSLY:\nThe Duke of Norfolk, I knell and speak it to speak:\nMy lord, my sovereign lives and till the good Catesby Bolingbroke,\nAnd mean-hind lie taugh of the earth,\nAnd only holy strokes me the with prison:\nThe eyes shall thou wert pale one will a ship?\nThat sweet the encounter's which way I cannot could,\nThe wretched of wretch, they ere less them church,\nAn",
+        "valid_fraction": 0.9583333333333334,
+        "valid_fraction_len4": 0.9272727272727272
+      },
+      {
+        "chars": 508,
+        "decoding": "T0.9_k40",
+        "longest_match_text": " to flatter thee",
+        "longest_verbatim_match": 16,
+        "n_len4": 57,
+        "n_words": 101,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "JULIET:\n",
+        "speaker_distinct": 1,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 1,
+        "text": "Canst thou denied me lands not a mine honour of thy head,\nOut so true, by my senies to flatter thee,\nCy more shallow'd and down of the next law to me;\nAnd this thou far I knew take the prince with I speak.\nIf thou hast not blood in this cheel, see this passion,\nDid upon my words all apace to the temple state,\nAnd for marriage it that Lewis be short\nTo suspect thou wed heart of me. Hear me speak.\nAway!\n\nROMEO:\nWhat then, coast thou some cousin, and brother, at the next maid!\nO bloody kissed faith",
+        "valid_fraction": 0.9504950495049505,
+        "valid_fraction_len4": 0.9298245614035088
+      },
+      {
+        "chars": 515,
+        "decoding": "T0.9_k40",
+        "longest_match_text": " be gone.\n\nISABELLA:\n",
+        "longest_verbatim_match": 21,
+        "n_len4": 51,
+        "n_words": 86,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "First Citizen:\n",
+        "speaker_distinct": 6,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 10,
+        "text": "Cannot cock the English found earn thousand spling.\n\nFirst Citizen:\nHave you sent to the friends to court upon you?\n\nClown:\nNo, of the Capitol.\n\nCORIOLANUS:\nBecause your good prayers\nMay be gone.\n\nISABELLA:\nNot believe not but a husband.\n\nCORIOLANUS:\nSince you hope, you must help lie talk of us.\n\nMARCIUS:\nYour good friends one, then cannot be shurn'd for him this.\n\nAUTOLYCUS:\nDespair. Here?\n\nMARCIUS:\nIt is: you the new where my bosom.\n\nCORIOLANUS:\nWhat, is it you not?\n\nMARCIUS:\nWhat know goes ho",
+        "valid_fraction": 0.9767441860465116,
+        "valid_fraction_len4": 0.9607843137254902
+      },
+      {
+        "chars": 518,
+        "decoding": "T0.9_k40",
+        "longest_match_text": "\n\nKING RICHARD III:\nThe ",
+        "longest_verbatim_match": 24,
+        "n_len4": 54,
+        "n_words": 92,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "KING RICHARD III:\n",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 2,
+        "text": "Cannot this enemy in his subject aid\nThat age thy fearing is banish'd,\nThy brothers of thy majesty, thy mouths, soon\nWhom men of manners of England, they shall fly all them to be.\nRichard, are soldiers already suspices this.\n\nQUEEN ELIZABETH:\nO, noble Clarence!\n\nKING RICHARD III:\nThe pain of the temperance of them,\nAre to they come their graves bosom sudden fathers;\nAnd when I make them in heaven with them their lipses,\nThat my bosoms-self to repair me to our royal form:\nI will not do church ano",
+        "valid_fraction": 0.967391304347826,
+        "valid_fraction_len4": 0.9629629629629629
+      },
+      {
+        "chars": 513,
+        "decoding": "T0.9_k40",
+        "longest_match_text": " that e'er this ",
+        "longest_verbatim_match": 16,
+        "n_len4": 57,
+        "n_words": 96,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "To be, or not",
+        "speaker_distinct": 1,
+        "speaker_known_fraction": 0.0,
+        "speaker_n_labels": 1,
+        "text": "hing any cause,\nEither of name and the senate that e'er this wish:\nWith a ponsence should have an ancess of breast,\nAnd that so offend'd upon his power tongue\nStrike and go to take; for with prisoners that them be here\nWith their houses them not belong promised\nOf their peace: farewell. But well to meet upon,\nAnd for any pity; they will profess him ere I had not ever\nA pale glass. He may live at home,\nEre he is the new score of York, and his preparence\nWith treacherous with playment kiss gentlem",
+        "valid_fraction": 0.9270833333333334,
+        "valid_fraction_len4": 0.8771929824561403
+      },
+      {
+        "chars": 507,
+        "decoding": "greedy",
+        "longest_match_text": "r.\n\nMERCUTIO:\nThe ",
+        "longest_verbatim_match": 18,
+        "n_len4": 54,
+        "n_words": 98,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "ROMEO:\n",
+        "speaker_distinct": 3,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 5,
+        "text": "I will not speak the prince of the proper of the world.\n\nBENVOLIO:\nThe people shall be so much a stranger than the\nshepherd's shop in the wars.\n\nMERCUTIO:\nThe people hath been a man that we have set them to be\nconsul, they shall be so better than the people worship.\n\nMERCUTIO:\nThe people have I seen them to be so far their presence.\n\nROMEO:\nThe people hath been the people and them are they so fair.\n\nMERCUTIO:\nThe people have made them to be so faired as they are\nthey are they should be so better",
+        "valid_fraction": 0.9897959183673469,
+        "valid_fraction_len4": 0.9814814814814815
+      },
+      {
+        "chars": 508,
+        "decoding": "greedy",
+        "longest_match_text": " the world,\nAnd ",
+        "longest_verbatim_match": 16,
+        "n_len4": 36,
+        "n_words": 107,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "JULIET:\n",
+        "speaker_distinct": 0,
+        "speaker_known_fraction": 0.0,
+        "speaker_n_labels": 0,
+        "text": "O my lord, I will not speak the world of the world,\nThat I may not see the sea of the sea\nOf the seat of the seat of the sea\nOf the seat of the seat of the sea\nOf the sea-shearing steeling for the sea\nOf the sea-sheep-sheep-sheer--which the state,\nAnd the state of the sea-sheer-belling showers\nThat the sea-shearing shall be the sea-sheer,\nAnd the sea-shearing shall be the sea-sheer of the world,\nAnd the sea-shearing shall be the sea-sheep--\nAnd the sea-sheep-shearing shall be the sea-sheer,\nAnd ",
+        "valid_fraction": 0.9813084112149533,
+        "valid_fraction_len4": 0.9444444444444444
+      },
+      {
+        "chars": 515,
+        "decoding": "greedy",
+        "longest_match_text": "\n\nCORIOLANUS:\nWhat is the ",
+        "longest_verbatim_match": 26,
+        "n_len4": 37,
+        "n_words": 96,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "First Citizen:\n",
+        "speaker_distinct": 1,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 3,
+        "text": "What is the prince?\n\nCORIOLANUS:\nWhat is the prince?\n\nCORIOLANUS:\nThe people senate of the people?\n\nCORIOLANUS:\nThe people senate of the people,\nThe people of the people stroke of the prince,\nThe stroke of the presence of the proper of the contract,\nThe state of the sea of the sea-stroke of the contract,\nThe state of the sea of the sea-sheering state,\nAnd the state of the sea of the sea-sheer,\nAnd the state of the sea of the sea-sheep-sheer,\nAnd the state of the sea-sheep-shearing standing state",
+        "valid_fraction": 0.9895833333333334,
+        "valid_fraction_len4": 0.972972972972973
+      },
+      {
+        "chars": 518,
+        "decoding": "greedy",
+        "longest_match_text": "KING RICHARD III:\nWhat said ",
+        "longest_verbatim_match": 28,
+        "n_len4": 46,
+        "n_words": 93,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "KING RICHARD III:\n",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 4,
+        "text": "What said of the consument cannot be so dear?\n\nQUEEN ELIZABETH:\nThe king is the consent of the Duke of Norfolk.\n\nKING RICHARD III:\nThe king is the consent of the Duke of Norfolk.\n\nKING RICHARD III:\nThe king is the consent of the Tower.\n\nQUEEN ELIZABETH:\nThe Duke of Norfolk, the Duke of Norfolk,\nAnd the Duke of Norfolk, the Duke of Norfolk,\nThe Duke of Norfolk, the Duke of Norfolk,\nThe Duke of Norfolk, Sir Richard, Sir Richard, Sir Richard,\nAnd then the Duke of Norfolk, Sir Richard Herbert,\nAnd t",
+        "valid_fraction": 0.989247311827957,
+        "valid_fraction_len4": 0.9782608695652174
+      },
+      {
+        "chars": 513,
+        "decoding": "greedy",
+        "longest_match_text": " is the stroke of ",
+        "longest_verbatim_match": 18,
+        "n_len4": 16,
+        "n_words": 121,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "To be, or not",
+        "speaker_distinct": 0,
+        "speaker_known_fraction": 0.0,
+        "speaker_n_labels": 0,
+        "text": " the provost, the stroke of the sea\nWhich is the stroke of the season of the earth,\nAnd then the seated state of the sea\nWhich the seat of the seat of the sea\nWhich the seat of the sea of the sea,\nAnd the sea of the sea of the season of the sea,\nAnd the sea of the sea of the season of the sea,\nAnd the sea of the sea of the sea of the sea,\nAnd the sea of the sea of the sea of the sea,\nAnd the sea of the sea of the sea of the sea,\nAnd the sea of the sea of the sea of the sea,\nAnd the sea of the se",
+        "valid_fraction": 0.9917355371900827,
+        "valid_fraction_len4": 1.0
+      }
+    ],
+    "final": [
+      {
+        "chars": 507,
+        "decoding": "T0.7_k40",
+        "longest_match_text": ".\n\nROMEO:\nWhy, then",
+        "longest_verbatim_match": 19,
+        "n_len4": 53,
+        "n_words": 93,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "ROMEO:\n",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 7,
+        "text": "Come, here's no more.\n\nMERCUTIO:\nGood heart, Tybalt, the bitter was a prisoner.\n\nROMEO:\nWhy, then, I must die to-morrow;\nAnd I will not speak with me alone.\n\nMERCUTIO:\nThen the common was a greater fellow.\n\nROMEO:\nA hundred, and a merry thing.\n\nMERCUTIO:\nNay, a hall, a hall; if they were a lover too.\n\nROMEO:\nHear me, and pernicious worse, thou hast ever now.\n\nMERCUTIO:\nA husband, a saying father's death,\nA sceptre's a bed, whose child sorrow, will be so blown,\nSo shall he be the water and a piec",
+        "valid_fraction": 0.989247311827957,
+        "valid_fraction_len4": 0.9811320754716981
+      },
+      {
+        "chars": 508,
+        "decoding": "T0.7_k40",
+        "longest_match_text": " not satisfy your ",
+        "longest_verbatim_match": 18,
+        "n_len4": 55,
+        "n_words": 99,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "JULIET:\n",
+        "speaker_distinct": 3,
+        "speaker_known_fraction": 0.8,
+        "speaker_n_labels": 5,
+        "text": "Come, come, then? I'll not bade you me so,\nTell me what you have been, that name's eyes\nWill not satisfy your hands.\n\nPAULINA:\nI am not your husband:\nIf I have touch'd the mercy of your sister,\nYou have been more in him at your age.\n\nLEONTES:\nO, no.\nYou have thought it in your last expedition\nFrom my very service; and not to be\nThe which you assist you, you may know not\nWhat you know. Whiles he know you were sent.\n\nLEONTES:\nHe lives, your father\nWas he tried to the Tower.\n\nPAULINA:\nWhat must be?",
+        "valid_fraction": 1.0,
+        "valid_fraction_len4": 1.0
+      },
+      {
+        "chars": 515,
+        "decoding": "T0.7_k40",
+        "longest_match_text": "t.\n\nSecond Gentleman:\nWhat, ",
+        "longest_verbatim_match": 28,
+        "n_len4": 50,
+        "n_words": 95,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "First Citizen:\n",
+        "speaker_distinct": 1,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 1,
+        "text": "Care an occasion of the fiend of a troop\nof goodness with in the teeth, and not in scorn,\nhaving it could fly east, with the spirits of an\ninventory threes: if the commons certain were not in\ncounterfeit to the bear, he would have rended from his\nbehavior at the poor kers in his place and holding and\nvery heads the provost.\n\nSecond Gentleman:\nWhat, ho! a husband of that hath been born the shepherd's\nson! Come, stir, and constant you, and could you say any honest to\nagainst me home: and he's conf",
+        "valid_fraction": 0.968421052631579,
+        "valid_fraction_len4": 0.94
+      },
+      {
+        "chars": 518,
+        "decoding": "T0.7_k40",
+        "longest_match_text": ".\n\nHENRY BOLINGBROKE:\nGood aunt, stand up.\n\n",
+        "longest_verbatim_match": 44,
+        "n_len4": 49,
+        "n_words": 98,
+        "overlap_32": 0.04722792607802875,
+        "overlap_64": 0.0,
+        "prompt": "KING RICHARD III:\n",
+        "speaker_distinct": 3,
+        "speaker_known_fraction": 0.5,
+        "speaker_n_labels": 4,
+        "text": "Catesby, cousin, you say it;\nYou are a subject, are you a true son;\nFor a kingdom to be your king, and like sorrow.\n\nHENRY BOLINGBROKE:\nGood aunt, stand up.\n\nHENRY BOLINGBROKE:\nMy gracious uncle, my lord, and my son Northumberland,\nI have sent to take the prince my uncle:\nAnd for less I came to the marriage,\nHave forsook me with thee to the dearest shade to me,\nAnd make my head stamp and leave to wail thee:\nWith whom we come to joy and comfort me,\nAnd let our mother come to play the king.\n\nBUCKI",
+        "valid_fraction": 0.9897959183673469,
+        "valid_fraction_len4": 0.9795918367346939
+      },
+      {
+        "chars": 513,
+        "decoding": "T0.7_k40",
+        "longest_match_text": ".\n\nKING EDWARD IV:\nNow, brother of ",
+        "longest_verbatim_match": 35,
+        "n_len4": 58,
+        "n_words": 97,
+        "overlap_32": 0.008298755186721992,
+        "overlap_64": 0.0,
+        "prompt": "To be, or not",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 7,
+        "text": "hing but can despite lace.\n\nLADY GREY:\nThe time is made passing of the earth,\nThat I may share glad to show my rude brotherhood.\n\nKING EDWARD IV:\nThe heavens will say at home to see her sister;\n'Tis since the king hath not been aid to me.\n\nLADY GREY:\n'Tis since the queen that comes here we have learn'd.\n\nKING EDWARD IV:\nNow, brother of England, her suspect's clock.\n\nLADY GREY:\nWhat is this?\n\nKING EDWARD IV:\nWhy, then, then, then, I muse what I swoon.\n\nLADY GREY:\nWhy, then I will not keep my care",
+        "valid_fraction": 0.979381443298969,
+        "valid_fraction_len4": 0.9655172413793104
+      },
+      {
+        "chars": 507,
+        "decoding": "T0.9_k40",
+        "longest_match_text": ".\n\nMERCUTIO:\nThou hast ",
+        "longest_verbatim_match": 23,
+        "n_len4": 58,
+        "n_words": 94,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "ROMEO:\n",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 3,
+        "text": "Come, here's Capulet; and no more\nThan ten thousand heirs i' the tribunes of senses,\nAs you were strong for being scold, call'd off,\nAnd you beat power to patience.\n\nMERCUTIO:\nA plague o' both, a boy orar.\n\nBENVOLIO:\nThen make an uneven apt lion of the people;\nPut in them off for line arms.\n\nMERCUTIO:\nThou hast suffer'd like a careful corse,\nWhere he shall shake him down, and begin his high death:\nWhere great valour will fain have holds up that pain.\nWhich is the news i' the malm that cheeks wit",
+        "valid_fraction": 0.9787234042553191,
+        "valid_fraction_len4": 0.9655172413793104
+      },
+      {
+        "chars": 508,
+        "decoding": "T0.9_k40",
+        "longest_match_text": "r.\n\nPOLIXENES:\nWhat ",
+        "longest_verbatim_match": 20,
+        "n_len4": 52,
+        "n_words": 87,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "JULIET:\n",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 5,
+        "text": "Come, hither, confusion's friends\nTo offend every perdition to the field;\nOurselves have framed us to your father,\nYoung Padua homely from her air,\nAnd you are too sorry forth; and I had it besolved\nUnto the loss of her mother, your incest\nYoung Catesby hate's poison,--\n\nCAMILLO:\nI am a kind of honour.\n\nPOLIXENES:\nWhat comfort, bring them?--\n\nCAMILLO:\nYou speak of him, sir; of you must have said\nAnd he were combined away.\n\nCAMILLO:\nAs she first as speak--\n\nPOLIXENES:\nTrue, sir, my lord.\n\nCAMILLO",
+        "valid_fraction": 0.9885057471264368,
+        "valid_fraction_len4": 0.9807692307692307
+      },
+      {
+        "chars": 515,
+        "decoding": "T0.9_k40",
+        "longest_match_text": " the good Camillo,\nWh",
+        "longest_verbatim_match": 21,
+        "n_len4": 48,
+        "n_words": 101,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "First Citizen:\n",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 3,
+        "text": "Care an occasion in government as\nyou have good father stole with this garden chimself,\nWhere great colour fire in common mind,\nCan never discover be compell'd for't.\nWe have pass'd a traitor soul I to have,\nAnd since I commit to him by the good Camillo,\nWhere you come to give.\n\nClown:\nI am sorry, but we are so sure\nAs to too; for all to give for the sun of his outward.\n\nShepherd:\nHere had on all words deposed by him, for a dear or old.\n\nClown:\nIf it be done, sir, he would not say 'twere gone no",
+        "valid_fraction": 0.9900990099009901,
+        "valid_fraction_len4": 0.9791666666666666
+      },
+      {
+        "chars": 518,
+        "decoding": "T0.9_k40",
+        "longest_match_text": ".\n\nDUKE OF AUMERLE:\nGood m",
+        "longest_verbatim_match": 26,
+        "n_len4": 54,
+        "n_words": 92,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "KING RICHARD III:\n",
+        "speaker_distinct": 3,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 4,
+        "text": "Cannot thy despair of religious deeds!\nLet me die tell their words to the worse.\n\nKING RICHARD III:\nThy fault calls out the princes of thy sorrow;\nFor thou art thyself; I kneel'st my heart:\nI will despair.\n\nDUKE OF AUMERLE:\nGood my liege, let no month no more.\n\nKING RICHARD II:\nStay a little widow's happy dagger,\nFor making no correction than a horse-drench.\n\nDUKE OF AUMERLE:\nDeath, lie thy hand; 'tis there thou letters dear;\nAnd let the land for thy blood protector\nThan the last which hath dine",
+        "valid_fraction": 0.9891304347826086,
+        "valid_fraction_len4": 0.9814814814814815
+      },
+      {
+        "chars": 513,
+        "decoding": "T0.9_k40",
+        "longest_match_text": " farewell.\n\nFRIAR LAURENCE:\n",
+        "longest_verbatim_match": 28,
+        "n_len4": 51,
+        "n_words": 91,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "To be, or not",
+        "speaker_distinct": 3,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 5,
+        "text": "hing but can never be acquainted\nHis oath and that end your former find,\nLest he may be your approvedness, as has--\n\nGLOUCESTER:\nMarry, and, I am prepared to London\nAnd I there a man that sees him do it.\nTherefore, for I have seen this man, whose blood provoked\nDid utter for his reasonable accuse.\n\nFRIAR LAURENCE:\nWhat stay you, my lord, good friend?\n\nROMEO:\nAy, what's the lord will serve you do me good.\n\nROMEO:\nI thank you; and therefore farewell.\n\nFRIAR LAURENCE:\nThen thou hast not, cheer: by ",
+        "valid_fraction": 0.978021978021978,
+        "valid_fraction_len4": 0.9607843137254902
+      },
+      {
+        "chars": 507,
+        "decoding": "greedy",
+        "longest_match_text": ":\nI am a poor fellow, sir",
+        "longest_verbatim_match": 25,
+        "n_len4": 40,
+        "n_words": 106,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "ROMEO:\n",
+        "speaker_distinct": 4,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 9,
+        "text": "I will be gone.\n\nPETRUCHIO:\nI am a poor fellow, sir, here comes the worst with you.\n\nPETRUCHIO:\nI know not, sir: but I can speak again.\n\nHORTENSIO:\nI know not what I shall.\n\nGREMIO:\nI thought, an if you love me, you may be gone.\n\nGREMIO:\nI shall not be so.\n\nTRANIO:\nNo, sir, it is no time to be so.\n\nTRANIO:\nNo, sir, it is not so.\n\nTRANIO:\nNot so hot, sir, sir, it is no pity to my soul,\nThat is a sharp so soon for my soul's resolution.\n\nGREMIO:\nI will to him, and that he will stand for his\nteeth a",
+        "valid_fraction": 1.0,
+        "valid_fraction_len4": 1.0
+      },
+      {
+        "chars": 508,
+        "decoding": "greedy",
+        "longest_match_text": "?\n\nNurse:\nO lamentable day!\n\nLADY CAPULET:\nWhat is the ",
+        "longest_verbatim_match": 55,
+        "n_len4": 55,
+        "n_words": 96,
+        "overlap_32": 0.16561844863731656,
+        "overlap_64": 0.0,
+        "prompt": "JULIET:\n",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 9,
+        "text": "I will not suffer what I have said\nThat I have spoke to love a stale of love\nAnd little be some more strong light,\nTo more mercy than the state and the sea,\nWhen the sun that his dear brother should be there.\n\nLADY CAPULET:\nWhat, are you of good?\n\nNurse:\nThe sun sets about the cock of his foul death.\n\nLADY CAPULET:\nWhat is the matter?\n\nNurse:\nO lamentable day!\n\nLADY CAPULET:\nWhat is the day?\n\nNurse:\nO lamentable day!\n\nLADY CAPULET:\nWhat is the day?\n\nNurse:\nO lamentable day!\n\nLADY CAPULET:\nWhat i",
+        "valid_fraction": 1.0,
+        "valid_fraction_len4": 1.0
+      },
+      {
+        "chars": 515,
+        "decoding": "greedy",
+        "longest_match_text": "e.\n\nThird Citizen:\nWe have ",
+        "longest_verbatim_match": 27,
+        "n_len4": 49,
+        "n_words": 92,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "First Citizen:\n",
+        "speaker_distinct": 3,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 6,
+        "text": "We are come off to us.\n\nThird Citizen:\nWe are come offence to the people.\n\nThird Citizen:\nWe have fought with grief to the gods, with one\nconfirmity, and the other strength of our sorrows riches\nto be well advised.\n\nSecond Citizen:\nWe have fought with our peaces.\n\nFirst Citizen:\nWe are censured to our general is common enemy.\n\nThird Citizen:\nWe are companied to the people.\n\nThird Citizen:\nWe have forgot your good worship to the gods them,\nAnd the pretty of the people, who has\ndone to you for you",
+        "valid_fraction": 0.9782608695652174,
+        "valid_fraction_len4": 0.9591836734693877
+      },
+      {
+        "chars": 518,
+        "decoding": "greedy",
+        "longest_match_text": "ld.\n\nKING RICHARD III:\nWhat ",
+        "longest_verbatim_match": 28,
+        "n_len4": 57,
+        "n_words": 95,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "KING RICHARD III:\n",
+        "speaker_distinct": 3,
+        "speaker_known_fraction": 0.8571428571428571,
+        "speaker_n_labels": 7,
+        "text": "Why, then the king was so much a flower.\n\nQUEEN ELIZABETH:\nThe duke hath so lost a far more than the world.\n\nKING RICHARD III:\nWhat should you do? of a world with him?\n\nQUEEN ELIZABETH:\nThat were they have some sight of love\nAnd therefore to be so strict as thou art.\n\nKING RICHARD III:\nThe duke! why, when they shall be there.\n\nQUEEN ELIZABETH:\nThe duke hath so long have I kill'd him now:\nThe duke hath been been sick to his soul's resolution.\n\nKING RICHARD III:\nWhat should he be?\n\nQUEEN ELIZABETH",
+        "valid_fraction": 1.0,
+        "valid_fraction_len4": 1.0
+      },
+      {
+        "chars": 513,
+        "decoding": "greedy",
+        "longest_match_text": "t to thee,\nFor thou art ",
+        "longest_verbatim_match": 24,
+        "n_len4": 56,
+        "n_words": 98,
+        "overlap_32": 0.0,
+        "overlap_64": 0.0,
+        "prompt": "To be, or not",
+        "speaker_distinct": 2,
+        "speaker_known_fraction": 1.0,
+        "speaker_n_labels": 2,
+        "text": " the deputy and the third that\nWhich he stands on the side, it should be thus.\n\nLEONTES:\nHow! what is the stranger when the seas\nWhen the business of his proud justice?\n\nPAULINA:\nThen, sir, the gods be good for't: if thou\nHast not the gods behold thee from the ground,\nI'll tell thee what thou hast spoken not to thee,\nFor thou art the traitor to the law that thou hast\nThe truth of thy princely father, thou hast not thy wife\nThe head of the man, whose person would die,\nThou wert desire to the deat",
+        "valid_fraction": 0.9897959183673469,
+        "valid_fraction_len4": 0.9821428571428571
+      }
+    ]
+  },
+  "val_reference": {
+    "chars_each": 1000,
+    "chunks": 8,
+    "longest_verbatim_match_max": 24,
+    "longest_verbatim_match_mean": 19.875,
+    "overlap_32_mean": 0.0,
+    "speaker_known_fraction": 0.36363636363636365,
+    "valid_word_fraction": 0.9360667129951356,
+    "valid_word_fraction_len4": 0.8932515337423312
+  }
+}

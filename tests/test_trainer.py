@@ -46,7 +46,9 @@ def test_training_reduces_loss_and_logs(tmp_path, token_stream):
     after = t.fit()
     assert after["val"] < before["val"] - 1.0
     events = read_metrics(tmp_path / "metrics.jsonl")
-    assert {e["event"] for e in events} == {"train", "eval"}
+    assert {e["event"] for e in events} == {"train", "eval", "memory"}
+    assert [e["step"] for e in events if e["event"] == "train"] == list(range(1, 41))
+    assert [e["step"] for e in events if e["event"] == "eval"] == [0, 20, 40]
     assert [p.name for p in list_checkpoints(tmp_path)] == ["step_00000020.pt", "step_00000040.pt"]
     assert t.tokens_seen == 40 * t.tokens_per_step
 
@@ -114,7 +116,9 @@ def _resume_matches(device, tmp_path, token_stream, exact):
     assert resumed.step == 6
     resumed.fit()
     assert resumed.step == 12
-    assert resumed.loss_history == full.loss_history[6:] or not exact
+    # loss_history is checkpointed, so the resumed trainer holds the whole run.
+    assert len(resumed.loss_history) == 12
+    assert resumed.loss_history == full.loss_history or not exact
     for (n, a), (_, b) in zip(
         full.model.state_dict().items(), resumed.model.state_dict().items(), strict=True
     ):
@@ -132,7 +136,7 @@ def test_resume_is_bit_exact_on_cpu(tmp_path, token_stream):
 @requires_mps
 def test_resume_on_mps(tmp_path, token_stream):
     full, resumed = _resume_matches(torch.device("mps"), tmp_path, token_stream, exact=False)
-    for a, b in zip(full.loss_history[6:], resumed.loss_history, strict=True):
+    for a, b in zip(full.loss_history, resumed.loss_history, strict=True):
         assert math.isclose(a, b, rel_tol=1e-4)
 
 

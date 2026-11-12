@@ -32,6 +32,50 @@ to reproduce it.
 
 ## Log
 
+### 2026-11-12 — M2 baseline: gpt_10m, 5,000 steps, MPS (full report: [reports/m2_pretraining.md](reports/m2_pretraining.md))
+
+- Hypothesis: the M1 engine trains the full gpt_10m config stably and reaches
+  ~1.5 nats/char validation loss. With about 82 epochs over 1M characters, the
+  model is expected to overfit before step 5000.
+- Config: `configs/gpt_10m_m2.toml`, which is `gpt_10m.toml` plus bookkeeping only
+  (checkpoint every 250, keep all, `save_best`, `exact_val_eval`, `device = "mps"`,
+  `log_interval = 50`).
+- Run dir: `runs/gpt_10m_m2-20261112-174425`. Code: `d49fa80` plus the uncommitted
+  M2 working tree.
+- Pre-flight: `scripts/stability_check.py --steps 300` passed. The LR schedule
+  matched the formula exactly, val fell 4.12 → 1.95, the gradient norm settled at
+  about 0.55, and the projected time was 48.6 min.
+- Hardware: Apple M6, MPS, float32, SDPA, batch 64 × 256, no accumulation, seed 1337.
+- Steps / tokens / wall-clock: 5,000 steps, 81,920,000 tokens (81.6 epochs).
+  Total 47.3 min: 43.2 min of steps, ~11.5 s per eval/checkpoint.
+- Throughput: median 514 ms/step, 31.9k tok/s. A transient dip to about 28k tok/s
+  at steps 2550–2700 coincides with an unrelated `website/` project being
+  created in the repo (likely a package install; not verified).
+- Memory: MPS allocated after forward 4.05 GB, Metal pool 5.57 GB, process RSS
+  0.57 GB. Disk: 2.5 GB.
+- Stability: no non-finite values. Gradient norm 10.5 at step 1, then a median of
+  about 0.4. 0.12% of post-warmup steps were clipped.
+- Results (exact full-split losses, nats/char):
+
+  | | train | val | gap | val ppl | val bpc |
+  |---|---|---|---|---|---|
+  | init | 4.1230 | 4.1250 | +0.002 | 61.9 | 5.951 |
+  | **best, step 1750** | 1.0928 | **1.4736** | +0.381 | 4.36 | 2.126 |
+  | final, step 5000 | 0.5862 | 1.7402 | +1.154 | 5.70 | 2.511 |
+
+- Overfitting: exact val is flat over steps 1250–1750, then rises monotonically
+  (1.487 at 2000, 1.551 at 3000, 1.740 at 5000) while train loss keeps falling.
+- Emergence (temperature 0.7, top-k 40): speaker-label layout appears at step 250,
+  and ≥4-letter words are 84% valid at step 500 and 95% at step 1000. There are no
+  sustained semantics at any step.
+- Memorization: best-model samples have at most 28-char verbatim training matches,
+  against 24 chars in held-out text. Final-model samples reach 55 chars. In the
+  extraction probe, the matched prefix on training passages is 2.7 (best) vs 5.4
+  (final), and 2.0–2.1 on val passages. No passage was reproduced for 64+ chars.
+- Conclusion / next step: the infrastructure and training are sound. The schedule is
+  too long for this dataset. Proposed next (needs approval): the same config with
+  `max_steps = 2000` and eval every 100 steps.
+
 ### 2026-11-12 — M1 smoke benchmark: gpt_10m, 100 steps, MPS
 
 - Command: `scripts/train.py --config configs/gpt_10m.toml --name bench_10m_b8
@@ -88,8 +132,8 @@ to reproduce it.
 
 ## Planned experiments (subject to approval per milestone)
 
-1. M2 baseline: full `gpt_10m` (5,000 steps, batch 64), about 50 min. Track the
-   val-loss minimum and the overfitting onset.
+1. ~~M2 baseline~~ (done; see the log above). Next: `max_steps = 2000` so the cosine
+   anneals before the overfitting onset, eval every 100 steps.
 2. Precision: verify bf16 autocast on MPS (agreement and speed) before enabling it.
 3. Architecture ablations: pre-LN vs post-LN, learned vs rotary positions,
    GELU vs SwiGLU, LayerNorm vs RMSNorm, with/without bias, tied vs untied embeddings.

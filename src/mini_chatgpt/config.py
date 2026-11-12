@@ -163,6 +163,13 @@ class TrainingConfig:
     eval_steps: int = 50
     log_interval: int = 10
     checkpoint_interval: int = 1000
+    # Periodic step_*.pt checkpoints to keep (oldest are deleted); 0 keeps all.
+    # best.pt and the final checkpoint are never deleted by retention.
+    keep_last_checkpoints: int = 0
+    save_best: bool = True  # write checkpoints/best.pt whenever validation improves
+    # Also compute the exact full-split validation loss at every eval; when on,
+    # best-checkpoint selection uses it instead of the random-batch estimate.
+    exact_val_eval: bool = False
     device: DeviceName = "auto"
     dtype: DTypeName = "float32"
 
@@ -179,6 +186,10 @@ class TrainingConfig:
         ):
             _require_positive_int(name, getattr(self, name))
         _require_non_negative_int("warmup_steps", self.warmup_steps)
+        _require_non_negative_int("keep_last_checkpoints", self.keep_last_checkpoints)
+        for name in ("save_best", "exact_val_eval"):
+            if not isinstance(getattr(self, name), bool):
+                raise ConfigError(f"{name} must be a bool, got {getattr(self, name)!r}")
         if self.warmup_steps > self.max_steps:
             raise ConfigError(
                 f"warmup_steps ({self.warmup_steps}) cannot exceed max_steps ({self.max_steps})"

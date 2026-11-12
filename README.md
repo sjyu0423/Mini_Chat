@@ -14,8 +14,9 @@ scaling laws, optimization, and later conversational fine-tuning and RL.
 | Milestone | Scope | State |
 |---|---|---|
 | M0 Foundation | project layout, configs, device selection, char tokenizer, data pipeline, training utilities, tests, docs | done |
-| M1 GPT + training engine | hand-written GPT (explicit and SDPA attention), AdamW + warmup/cosine, accumulation, clipping, NaN guard, checkpoint/resume, sampling, 100-step MPS benchmark | **done (awaiting review)** |
-| M2 | full gpt_10m char-level baseline run (~50 min) | proposed |
+| M1 GPT + training engine | hand-written GPT (explicit and SDPA attention), AdamW + warmup/cosine, accumulation, clipping, NaN guard, checkpoint/resume, sampling, 100-step MPS benchmark | done |
+| M2 First pretraining experiment | best/final checkpoints, retention, histories, CSV export, stability check; full 5,000-step gpt_10m run; evaluation, emergence and memorization analysis | **done (awaiting review)** |
+| M3 | candidate: shorter schedule (2,000 steps) to anneal before overfitting | proposed |
 | later | BPE tokenizer, larger corpus, scaling study, chat fine-tuning, RL | planned |
 
 ## Confirmed hardware (from `scripts/detect_hardware.py`, 2026-11-12)
@@ -59,8 +60,19 @@ uv pip install --python .venv/bin/python -e ".[dev]"
     --batch-size 8 --max-steps 100 --warmup-steps 10 --eval-interval 50 --eval-steps 20 \
     --checkpoint-interval 100 --device mps --full-eval
 
-# Resume (continues step count, optimizer, and RNG state)
-.venv/bin/python scripts/train.py --resume runs/<run>/checkpoints/step_00000100.pt --max-steps 200
+# Resume (continues step count, optimizer, RNG state, and loss histories; keeps max_steps)
+.venv/bin/python scripts/train.py --resume-latest runs/<run>
+.venv/bin/python scripts/train.py --resume runs/<run>/checkpoints/step_00000100.pt
+
+# M2: pre-flight check of the full config (LR schedule + first 300 steps, ~2.5 min)
+.venv/bin/python scripts/stability_check.py --config configs/gpt_10m_m2.toml --steps 300
+
+# M2: full baseline (~50 min on M6); keep the Mac awake
+caffeinate -i .venv/bin/python scripts/train.py --config configs/gpt_10m_m2.toml --full-eval
+
+# M2: evaluate best + final checkpoints, samples, emergence/memorization stats, SVG plots
+.venv/bin/python scripts/analyze_run.py runs/<run> --out docs/reports/m2
+.venv/bin/python scripts/memorization_probe.py runs/<run> --out docs/reports/m2
 
 # Sample from a checkpoint (uses the run's saved tokenizer)
 .venv/bin/python scripts/generate.py runs/<run>/checkpoints/step_00000100.pt \
@@ -88,12 +100,16 @@ src/mini_chatgpt/
   training/checkpoint.py  atomic writes, checkpoint paths, metadata sidecars
   training/run.py      run directories, JSONL metrics log, console logging
   training/optim.py    AdamW param groups, warmup + cosine LR
-  training/trainer.py  training engine: accumulation, clipping, eval, checkpoint/resume
+  training/trainer.py  training engine: accumulation, clipping, eval, best/final checkpoints,
+                       retention, histories, graceful stop, checkpoint/resume
   inference/generate.py  greedy / temperature / top-k sampling
-configs/               debug, gpt_10m, gpt_30m, gpt_100m (TOML)
-scripts/               train, generate, sanity_checks, prepare_data, show_config, detect_hardware
+  analysis/svgplot.py  dependency-free SVG line charts for reports
+  analysis/text_stats.py  word/speaker statistics, verbatim-overlap (memorization) checks
+configs/               debug, gpt_10m, gpt_10m_m2 (M2 bookkeeping copy), gpt_30m, gpt_100m (TOML)
+scripts/               train, generate, sanity_checks, stability_check, analyze_run, memorization_probe,
+                       prepare_data, show_config, detect_hardware
 tests/                 pytest suite (no network access needed)
-docs/                  architecture, training plan, experiment log
+docs/                  architecture, training plan, experiment log, reports/ (per-milestone)
 data/, runs/           git-ignored (downloads and experiment outputs)
 ```
 
@@ -106,13 +122,26 @@ data/, runs/           git-ignored (downloads and experiment outputs)
 | single-batch overfit | loss 4.21 → 0.006 in 200 steps |
 | resume | bit-exact on CPU. On MPS, within the backend's own run-to-run noise (~1e-5). |
 
+## M2 results at a glance (gpt_10m, 5,000 steps, batch 64 × 256, MPS float32)
+
+| | |
+|---|---|
+| best val loss (exact) | **1.4736 nats/char** at step 1750 (2.126 bits/char, perplexity 4.36) |
+| final val loss | 1.7402 (train 0.586, gap +1.15): strong overfitting after about 29 epochs |
+| run | 81.9M tokens in 47.3 min, 31.9k tok/s, 5.57 GB MPS pool, no instabilities |
+| samples | real words, speaker labels and verse layout; locally grammatical, no sustained meaning |
+| memorization | no long regurgitation; training-specific copying grows as the model overfits |
+
+Full report: [docs/reports/m2_pretraining.md](docs/reports/m2_pretraining.md).
+
 Known limitations are listed in [docs/training_plan.md](docs/training_plan.md) and [docs/architecture.md](docs/architecture.md).
 
 ## Docs
 
 - [docs/architecture.md](docs/architecture.md): model, attention, initialization, parameter counts
-- [docs/training_plan.md](docs/training_plan.md): optimization, checkpoint semantics, measured hardware budget, limitations, M2 plan
+- [docs/training_plan.md](docs/training_plan.md): optimization, checkpoint semantics, measured hardware budget, logging, limitations, M2 result
 - [docs/experiments.md](docs/experiments.md): experiment log and conventions
+- [docs/reports/m2_pretraining.md](docs/reports/m2_pretraining.md): M2 report (config, metrics, plots, samples, analysis, limitations)
 
 ## Data licensing
 

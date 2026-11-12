@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Generalization gap (validation − train)">
+<title>Generalization gap (validation − train)</title>
+<rect width="760" height="380" fill="#fcfcfb"/>
+<text x="80" y="24" font-size="15" font-weight="600" fill="#0b0b0b">Generalization gap (validation − train)</text>
+<line x1="80" x2="736" y1="316.6" y2="316.6" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="320.6" font-size="11" text-anchor="end" fill="#52514e">+0.00</text>
+<line x1="80" x2="736" y1="216.0" y2="216.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="220.0" font-size="11" text-anchor="end" fill="#52514e">+0.50</text>
+<line x1="80" x2="736" y1="115.3" y2="115.3" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="119.3" font-size="11" text-anchor="end" fill="#52514e">+1.00</text>
+<line x1="80.0" x2="80.0" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="80.0" y="346" font-size="11" text-anchor="middle" fill="#52514e">0</text>
+<line x1="211.2" x2="211.2" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="211.2" y="346" font-size="11" text-anchor="middle" fill="#52514e">1,000</text>
+<line x1="342.4" x2="342.4" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="342.4" y="346" font-size="11" text-anchor="middle" fill="#52514e">2,000</text>
+<line x1="473.6" x2="473.6" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="473.6" y="346" font-size="11" text-anchor="middle" fill="#52514e">3,000</text>
+<line x1="604.8" x2="604.8" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="604.8" y="346" font-size="11" text-anchor="middle" fill="#52514e">4,000</text>
+<line x1="736.0" x2="736.0" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="736.0" y="346" font-size="11" text-anchor="middle" fill="#52514e">5,000</text>
+<line x1="80" x2="736" y1="328" y2="328" stroke="#b9b8b2"/>
+<text x="408.0" y="368" font-size="12" text-anchor="middle" fill="#52514e">optimizer step</text>
+<text transform="translate(16 200.0) rotate(-90)" font-size="12" text-anchor="middle" fill="#52514e">Δ cross-entropy (nats/char)</text>
+<line x1="80" x2="736" y1="316.6" y2="316.6" stroke="#b9b8b2" stroke-dasharray="4 4"/>
+<text x="732" y="311.6" font-size="11" text-anchor="end" fill="#52514e">no gap</text>
+<path d="M80.0,316.3 L112.8,295.2 L145.6,278.8 L178.4,272.3 L211.2,263.6 L244.0,257.0 L276.8,247.9 L309.6,240.0 L342.4,226.4 L375.2,215.2 L408.0,201.7 L440.8,188.6 L473.6,174.1 L506.4,158.6 L539.2,143.1 L572.0,130.0 L604.8,118.0 L637.6,106.6 L670.4,98.5 L703.2,92.0 L736.0,84.4" fill="none" stroke="#eb6834" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="316.3" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 0: +0.00</title></circle>
+<circle cx="112.8" cy="295.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 250: +0.11</title></circle>
+<circle cx="145.6" cy="278.8" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 500: +0.19</title></circle>
+<circle cx="178.4" cy="272.3" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 750: +0.22</title></circle>
+<circle cx="211.2" cy="263.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 1,000: +0.26</title></circle>
+<circle cx="244.0" cy="257.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 1,250: +0.30</title></circle>
+<circle cx="276.8" cy="247.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 1,500: +0.34</title></circle>
+<circle cx="309.6" cy="240.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 1,750: +0.38</title></circle>
+<circle cx="342.4" cy="226.4" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 2,000: +0.45</title></circle>
+<circle cx="375.2" cy="215.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 2,250: +0.50</title></circle>
+<circle cx="408.0" cy="201.7" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 2,500: +0.57</title></circle>
+<circle cx="440.8" cy="188.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 2,750: +0.64</title></circle>
+<circle cx="473.6" cy="174.1" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 3,000: +0.71</title></circle>
+<circle cx="506.4" cy="158.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 3,250: +0.79</title></circle>
+<circle cx="539.2" cy="143.1" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 3,500: +0.86</title></circle>
+<circle cx="572.0" cy="130.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 3,750: +0.93</title></circle>
+<circle cx="604.8" cy="118.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 4,000: +0.99</title></circle>
+<circle cx="637.6" cy="106.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 4,250: +1.04</title></circle>
+<circle cx="670.4" cy="98.5" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 4,500: +1.08</title></circle>
+<circle cx="703.2" cy="92.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 4,750: +1.12</title></circle>
+<circle cx="736.0" cy="84.4" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>exact val − train estimate — step 5,000: +1.15</title></circle>
+<path d="M80.0,316.4 L112.8,294.8 L145.6,278.7 L178.4,272.0 L211.2,263.1 L244.0,256.8 L276.8,247.5 L309.6,239.3 L342.4,225.9 L375.2,215.0 L408.0,201.2 L440.8,188.0 L473.6,173.4 L506.4,157.6 L539.2,142.5 L572.0,129.3 L604.8,117.3 L637.6,106.0 L670.4,97.8 L703.2,91.1 L736.0,83.6" fill="none" stroke="#eb6834" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0" stroke-dasharray="5 4"/>
+<line x1="80.0" x2="98.0" y1="54" y2="54" stroke="#eb6834" stroke-width="2.0" opacity="1.0"/>
+<text x="104.0" y="58" font-size="12" fill="#0b0b0b">exact val − train estimate</text>
+<line x1="295.6" x2="313.6" y1="54" y2="54" stroke="#eb6834" stroke-width="2.0" opacity="1.0" stroke-dasharray="5 4"/>
+<text x="319.6" y="58" font-size="12" fill="#0b0b0b">val estimate − train estimate (same batch count)</text>
+</svg>

@@ -24,28 +24,85 @@
 
 ## Checkpoint semantics
 
-Each checkpoint is `runs/<run>/checkpoints/step_XXXXXXXX.pt` plus a `.json`
-metadata sidecar. Both are written atomically (temp file, fsync, `os.replace`)
-and loaded with `torch.load(weights_only=True)`. A checkpoint contains:
+Each periodic checkpoint is `runs/<run>/checkpoints/step_XXXXXXXX.pt` plus a
+`.json` metadata sidecar. Both are written atomically (temp file, fsync,
+`os.replace`) and loaded with `torch.load(weights_only=True)`. A checkpoint contains:
 
 | key | restores |
 |---|---|
 | `model` | weights (the tied tensor is stored once and re-tied on load) |
 | `optimizer` | AdamW moments and step counts (moved to the parameters' device on load) |
-| `step`, `tokens_seen`, `best_val_loss` | the loop position. The LR schedule is derived from `step`. |
+| `step`, `tokens_seen` | the loop position. The LR schedule is derived from `step`. |
+| `best_val_loss`, `best_step` | best-checkpoint bookkeeping (M2) |
+| `loss_history`, `eval_history` | every per-step train loss and every eval record so far (M2), so a resumed trainer holds the whole run |
 | `data_generator` | the batch-sampling RNG |
 | `rng` | torch CPU RNG, MPS/CUDA RNG (dropout), and Python `random` |
-| metadata | full `ExperimentConfig`, git commit, torch version, losses, timestamp |
+| metadata | full `ExperimentConfig`, `kind`, git commit, torch version, losses (incl. exact val), timestamp |
 
-Resuming requires an identical model config (a mismatch raises). If the training
-config differs, for example a larger `max_steps`, the trainer logs a warning:
-the run continues, but the cosine schedule changes shape.
+**Checkpoint kinds** (`metadata.kind`, added in M2):
+
+| kind | file | written when |
+|---|---|---|
+| `periodic` | `step_*.pt` | every `checkpoint_interval` steps, and at the end of a partial `fit(max_steps=...)` |
+| `final` | `step_<max_steps>.pt` | the scheduled last step. Never deleted by retention. |
+| `interrupt` | `step_*.pt` | after SIGINT/SIGTERM: the current step finishes, is saved, and the process exits |
+| `best` | `best.pt` | whenever the selection metric improves at an evaluation (`save_best`). The selection metric is the exact full-split validation loss when `exact_val_eval = true`, otherwise the fixed-batch estimate. Step 0 is evaluated but never saved as best. |
+
+**Retention** (`keep_last_checkpoints`): after each save, the oldest `periodic` and
+`interrupt` checkpoints beyond the newest N are deleted with their sidecars. `0` keeps
+everything. `final` checkpoints and `best.pt` are never deleted.
+
+**Resuming** (`scripts/train.py --resume <ckpt>` or `--resume-latest <run_dir>`, which
+picks the newest `step_*.pt` that actually loads):
+
+- An identical model config is required (a mismatch raises).
+- The saved `max_steps` is kept. A different `--max-steps` is refused unless
+  `--extend-schedule` is passed, because it changes the cosine schedule.
+- Steps trained after the last checkpoint and before a crash are retrained and logged
+  again. CSV export keeps the last record per `(event, step)`.
+- If `best.pt` is newer than the resume point, a warning is logged. It is replaced only if
+  the resumed run beats the restored `best_val_loss`.
+- M1 checkpoints (without histories, `best_step`, `kind`, or the new config keys) still
+  load. Missing fields take their defaults (tested).
+
+A NaN/Inf loss or gradient norm raises `NonFiniteError` before `optimizer.step()`.
+`train.py` then writes `failure.json` (step and recent losses), exports the CSVs, and
+exits with code 2. Nothing is checkpointed, so the last periodic checkpoint stays the
+latest valid state.
 
 **Determinism:** on CPU, an interrupted-and-resumed run is bit-identical to an
-uninterrupted one (tested, with dropout on). On MPS, even two uninterrupted runs
-differ by about 1e-5 in parameters after 20 steps, because MPS kernels are not
-bit-reproducible. Resume differs from an uninterrupted run by the same amount,
-so resume is as exact as the backend allows.
+uninterrupted one (tested, with dropout on, for both checkpoint-based and
+`request_stop` interruption). On MPS, even two uninterrupted runs differ by about
+1e-5 in parameters after 20 steps, because MPS kernels are not bit-reproducible.
+Resume differs from an uninterrupted run by the same amount, so resume is as exact as
+the backend allows.
+
+## Logging and exports (M2)
+
+`metrics.jsonl` in the run directory is append-only and flushed per record:
+
+| event | frequency | fields |
+|---|---|---|
+| `train` | every optimizer step | `loss`, `lr` (the LR used for this update), `grad_norm` (pre-clip), `step_time_s`, `tokens_per_s`, `tokens_seen` |
+| `eval` | step 0, every `eval_interval`, last step | `train_loss`, `val_loss` (fixed-batch estimates), `val_loss_exact`, perplexities, bits/char, `gap`, `lr`, `best_val_loss`, `is_best` |
+| `memory` | every `log_interval` | `process_rss_peak`, `mps_current_allocated`, `mps_driver_allocated` (or CUDA peaks) |
+
+At the end of a run (or on a NaN stop), `train_metrics.csv`, `eval_metrics.csv`, and
+`memory_metrics.csv` are exported from it. The console log shows progress
+(`step/max`, %, ETA), LR, gradient norm, step time, and throughput.
+
+**Memory counters.** CUDA has true allocator peaks (`max_memory_allocated`). MPS in
+PyTorch 2.15 has none, so three complementary values are recorded:
+
+- `mps_current_allocated`, sampled right after the last forward pass (activations
+  live), after each step, and after each eval. Its maximum is a lower bound on the
+  true peak.
+- `mps_driver_allocated`, the Metal allocator pool. It only grows unless
+  `empty_cache()` is called, so its maximum over samples is close to the peak
+  reserved memory.
+- `process_rss_peak` from `getrusage`. This is a true OS high-water mark for the
+  process's resident memory. Unified-memory GPU buffers are not necessarily counted
+  in it.
 
 ## Hardware budget
 
@@ -59,6 +116,7 @@ Measured for `gpt_10m` (float32, SDPA):
 | 8 × 256 | 66.9 ms | 30.7k | 1.19 GB | 0.64 GB |
 | 64 × 256 | 507 ms | 32.3k | 4.49 GB | n/a (pre-probe run) |
 | 8 × 256, explicit attention | 68.1 ms | 30.1k | 1.19 GB | n/a |
+| 64 × 256, M2 full run (5,000 steps, incl. evals in pool) | 514 ms | 31.9k | 5.57 GB | 4.05 GB |
 
 Throughput is already saturated at batch 8: batch 64 adds only about 5%.
 That is about 6 · 10.8M · 31k ≈ 2 TFLOP/s of fp32 training compute.
@@ -94,37 +152,38 @@ limited by overfitting. Dropout and early stopping on validation loss matter her
 | memory | `torch.mps.current_allocated_memory` (sampled after the last forward, when activations are live, and after the step) and `driver_allocated_memory` (the allocator pool) |
 | samples | fixed prompt, temperature 0.8, top-k 40, fixed seed |
 
-## M2 recommendation (pending approval)
+## M2 result and next step
 
-Run the full `configs/gpt_10m.toml` as written: batch 64 × 256, 5,000 steps
-(~82M tokens, ~82 epochs), lr 1e-3 → 1e-4, warmup 100, dropout 0.2, eval every 250.
+The full `gpt_10m` run (5,000 steps, batch 64) took 47.3 min. The best exact val
+loss was **1.4736 at step 1750**; the final value was 1.7402. The model overfits
+after about 29 epochs. Details are in [reports/m2_pretraining.md](reports/m2_pretraining.md).
 
-- **Estimated cost**: 5,000 × 0.507 s ≈ 42 min of training, plus about 6 min of
-  evaluation (20 evals × 100 forward passes). About 50 min wall-clock in total.
-- **Memory**: ~4.5 GB driver memory.
-- **Disk**: 129 MB per checkpoint (fp32 weights plus Adam moments). Five
-  checkpoints come to about 650 MB.
-- **Before running**: add best-validation checkpoint retention, and keep the
-  Mac awake (`caffeinate -i`).
-- **Expectation**: public reference runs of this exact configuration report
-  validation loss around 1.5 nats/char. We should treat that as a target to
-  check, not an assumption.
+Implications for planning:
 
-## Known limitations (M1)
+- On Tiny Shakespeare at this scale, the useful budget is about 2,000 steps
+  (~33M tokens, ~33 epochs), not 5,000. Proposed M3 candidate (needs approval):
+  `max_steps = 2000`, eval every 100. About 19 min.
+- Checkpoint storage: 129 MB each. Keeping every 250-step snapshot costs 2.5 GB per
+  5k-step run. Use `keep_last_checkpoints` for runs where emergence analysis is not
+  needed.
+- Eval overhead with `exact_val_eval` plus 50-batch estimates is about 11.5 s per
+  eval, about 8% of the run at a 250-step interval.
+
+## Known limitations
 
 - Only float32 is supported. bf16 and mixed precision are unverified on MPS and
   rejected by the trainer.
 - MPS is not bit-deterministic, so resume there is exact only to about 1e-5.
   CPU resume is bit-exact.
-- `loss_history` and timing statistics cover the current process only. After a
-  resume, the full history is in `metrics.jsonl`.
-- Memory "peak" values are probes taken after the last forward pass and after
-  each step, not a true allocator high-water mark. MPS has no peak-allocated
-  counter in this PyTorch version.
+- Timing statistics cover the current process only. Loss and eval histories are
+  checkpointed (M2), so after a resume they cover the whole run.
+- MPS has no peak-allocated counter in this PyTorch version. See "Memory
+  counters" above for what is measured instead.
 - On MPS, SDPA with dropout fails under `torch.no_grad()` in train mode. Our
   code never does this, but external callers could.
 - Generation recomputes the full context for every token (no KV cache). This is
   fine at 10M parameters and a 256 context, but slow for long outputs.
-- No best-validation checkpoint retention or early stopping yet.
+- Best-checkpoint saving exists (M2), but there is no early stopping: training
+  always runs to `max_steps`.
 - The character vocabulary is built from the whole corpus (see M0 notes).
 - Run directory timestamps are in UTC.
