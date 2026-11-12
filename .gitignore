@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Experiment outputs and downloaded data (never commit)
+runs/
+data/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

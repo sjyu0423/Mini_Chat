@@ -1,0 +1,36 @@
+# ~10.7M parameters (ESTIMATE until M1 implements the model).
+# The classic "char-level Shakespeare" scale; the M1 baseline.
+name = "gpt_10m"
+description = "6L / 6H / 384d, ctx 256, char tokenizer"
+
+[model]
+vocab_size = 65          # char vocab of Tiny Shakespeare
+context_length = 256
+n_layer = 6
+n_head = 6
+n_embd = 384
+dropout = 0.2            # small dataset (~1M tokens) -> regularize
+bias = true
+
+[training]
+seed = 1337
+batch_size = 64
+gradient_accumulation_steps = 1
+learning_rate = 1e-3
+min_learning_rate = 1e-4
+warmup_steps = 100
+max_steps = 5000
+weight_decay = 0.1
+beta1 = 0.9
+beta2 = 0.99
+grad_clip = 1.0
+eval_interval = 250
+eval_steps = 50
+checkpoint_interval = 1000
+device = "auto"
+dtype = "float32"
+
+[data]
+dataset = "tiny_shakespeare"
+tokenizer = "char"
+val_fraction = 0.1

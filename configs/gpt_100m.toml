@@ -1,0 +1,37 @@
+# ~99.9M parameters with a char vocab (ESTIMATE until M1 implements the model).
+# With a 50k BPE vocab the tied embedding brings the total to ~138.5M (see docs/architecture.md).
+# At the edge of what 16 GB unified memory can train; expect small micro-batches.
+name = "gpt_100m"
+description = "14L / 12H / 768d, ctx 1024"
+
+[model]
+vocab_size = 65
+context_length = 1024
+n_layer = 14
+n_head = 12
+n_embd = 768
+dropout = 0.0
+bias = false
+
+[training]
+seed = 1337
+batch_size = 4
+gradient_accumulation_steps = 16  # effective batch 64 x 1024 tokens
+learning_rate = 3e-4
+min_learning_rate = 3e-5
+warmup_steps = 1000
+max_steps = 50000
+weight_decay = 0.1
+beta1 = 0.9
+beta2 = 0.95
+grad_clip = 1.0
+eval_interval = 1000
+eval_steps = 50
+checkpoint_interval = 2500
+device = "auto"
+dtype = "float32"       # bf16 is an unverified experiment on MPS; trainer rejects it in M1
+
+[data]
+dataset = "tiny_shakespeare"
+tokenizer = "char"
+val_fraction = 0.1

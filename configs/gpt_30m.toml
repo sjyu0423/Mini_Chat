@@ -1,0 +1,36 @@
+# ~31.8M parameters (ESTIMATE until M1 implements the model).
+# Will badly overfit 1M chars of Shakespeare; intended for a larger corpus/BPE.
+name = "gpt_30m"
+description = "10L / 8H / 512d, ctx 512"
+
+[model]
+vocab_size = 65
+context_length = 512
+n_layer = 10
+n_head = 8
+n_embd = 512
+dropout = 0.1
+bias = true
+
+[training]
+seed = 1337
+batch_size = 16
+gradient_accumulation_steps = 4   # effective batch 64 x 512 tokens
+learning_rate = 6e-4
+min_learning_rate = 6e-5
+warmup_steps = 500
+max_steps = 20000
+weight_decay = 0.1
+beta1 = 0.9
+beta2 = 0.95
+grad_clip = 1.0
+eval_interval = 500
+eval_steps = 50
+checkpoint_interval = 2000
+device = "auto"
+dtype = "float32"
+
+[data]
+dataset = "tiny_shakespeare"
+tokenizer = "char"
+val_fraction = 0.1
