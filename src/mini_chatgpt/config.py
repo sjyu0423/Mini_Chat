@@ -155,6 +155,10 @@ class TrainingConfig:
     min_learning_rate: float = 3e-5
     warmup_steps: int = 100
     max_steps: int = 5000
+    # Cosine-decay horizon of the LR schedule. None (default) means max_steps.
+    # Setting it larger than max_steps stops training early on the *same* LR
+    # trajectory; smaller compresses the decay and holds lr_min afterwards.
+    lr_schedule_steps: int | None = None
     weight_decay: float = 0.1
     beta1: float = 0.9
     beta2: float = 0.95
@@ -194,6 +198,13 @@ class TrainingConfig:
             raise ConfigError(
                 f"warmup_steps ({self.warmup_steps}) cannot exceed max_steps ({self.max_steps})"
             )
+        if self.lr_schedule_steps is not None:
+            _require_positive_int("lr_schedule_steps", self.lr_schedule_steps)
+            if self.warmup_steps > self.lr_schedule_steps:
+                raise ConfigError(
+                    f"warmup_steps ({self.warmup_steps}) cannot exceed lr_schedule_steps "
+                    f"({self.lr_schedule_steps})"
+                )
 
         lr = _require_number("learning_rate", self.learning_rate)
         min_lr = _require_number("min_learning_rate", self.min_learning_rate)
@@ -212,6 +223,11 @@ class TrainingConfig:
             raise ConfigError(f"grad_clip must be >= 0 (0 disables), got {self.grad_clip!r}")
         _require_choice("device", self.device, DeviceName)
         _require_choice("dtype", self.dtype, DTypeName)
+
+    @property
+    def schedule_horizon(self) -> int:
+        """Step at which the cosine decay reaches ``min_learning_rate``."""
+        return self.max_steps if self.lr_schedule_steps is None else self.lr_schedule_steps
 
     @property
     def effective_batch_size(self) -> int:

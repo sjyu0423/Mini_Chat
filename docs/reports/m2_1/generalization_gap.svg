@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Generalization gap (exact val − fixed-batch train)">
+<title>Generalization gap (exact val − fixed-batch train)</title>
+<rect width="760" height="380" fill="#fcfcfb"/>
+<text x="80" y="24" font-size="15" font-weight="600" fill="#0b0b0b">Generalization gap (exact val − fixed-batch train)</text>
+<text x="80" y="42" font-size="12" fill="#52514e">steps 0–2,000; M2 is dashed</text>
+<line x1="80" x2="736" y1="317.8" y2="317.8" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="321.8" font-size="11" text-anchor="end" fill="#52514e">+0.00</text>
+<line x1="80" x2="736" y1="269.0" y2="269.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="273.0" font-size="11" text-anchor="end" fill="#52514e">+0.10</text>
+<line x1="80" x2="736" y1="220.1" y2="220.1" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="224.1" font-size="11" text-anchor="end" fill="#52514e">+0.20</text>
+<line x1="80" x2="736" y1="171.3" y2="171.3" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="175.3" font-size="11" text-anchor="end" fill="#52514e">+0.30</text>
+<line x1="80" x2="736" y1="122.4" y2="122.4" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="126.4" font-size="11" text-anchor="end" fill="#52514e">+0.40</text>
+<line x1="80.0" x2="80.0" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="80.0" y="346" font-size="11" text-anchor="middle" fill="#52514e">0</text>
+<line x1="244.0" x2="244.0" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="244.0" y="346" font-size="11" text-anchor="middle" fill="#52514e">500</text>
+<line x1="408.0" x2="408.0" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="408.0" y="346" font-size="11" text-anchor="middle" fill="#52514e">1,000</text>
+<line x1="572.0" x2="572.0" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="572.0" y="346" font-size="11" text-anchor="middle" fill="#52514e">1,500</text>
+<line x1="736.0" x2="736.0" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="736.0" y="346" font-size="11" text-anchor="middle" fill="#52514e">2,000</text>
+<line x1="80" x2="736" y1="328" y2="328" stroke="#b9b8b2"/>
+<text x="408.0" y="368" font-size="12" text-anchor="middle" fill="#52514e">optimizer step</text>
+<text transform="translate(16 208.0) rotate(-90)" font-size="12" text-anchor="middle" fill="#52514e">Δ cross-entropy (nats/char)</text>
+<line x1="80" x2="736" y1="317.8" y2="317.8" stroke="#b9b8b2" stroke-dasharray="4 4"/>
+<text x="732" y="312.8" font-size="11" text-anchor="end" fill="#52514e">no gap</text>
+<path d="M80.0,317.1 L162.0,265.9 L244.0,226.2 L326.0,210.4 L408.0,189.1 L490.0,173.1 L572.0,151.1 L654.0,131.8 L736.0,98.9" fill="none" stroke="#1baf7a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1.0" stroke-dasharray="6 4"/>
+<circle cx="80.0" cy="317.1" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 0: +0.00</title></circle>
+<circle cx="162.0" cy="265.9" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 250: +0.11</title></circle>
+<circle cx="244.0" cy="226.2" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 500: +0.19</title></circle>
+<circle cx="326.0" cy="210.4" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 750: +0.22</title></circle>
+<circle cx="408.0" cy="189.1" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 1,000: +0.26</title></circle>
+<circle cx="490.0" cy="173.1" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 1,250: +0.30</title></circle>
+<circle cx="572.0" cy="151.1" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 1,500: +0.34</title></circle>
+<circle cx="654.0" cy="131.8" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 1,750: +0.38</title></circle>
+<circle cx="736.0" cy="98.9" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 2,000: +0.45</title></circle>
+<path d="M80.0,317.1 L112.8,303.2 L145.6,287.7 L178.4,247.1 L211.2,232.1 L244.0,226.2 L276.8,217.5 L309.6,214.5 L342.4,209.5 L375.2,198.1 L408.0,189.6 L440.8,183.0 L473.6,179.1 L506.4,164.3 L539.2,158.4 L572.0,151.8 L604.8,145.2 L637.6,137.1 L670.4,127.4 L703.2,112.0 L736.0,99.3" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="317.1" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 0: +0.00</title></circle>
+<circle cx="112.8" cy="303.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 100: +0.03</title></circle>
+<circle cx="145.6" cy="287.7" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 200: +0.06</title></circle>
+<circle cx="178.4" cy="247.1" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 300: +0.14</title></circle>
+<circle cx="211.2" cy="232.1" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 400: +0.18</title></circle>
+<circle cx="244.0" cy="226.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 500: +0.19</title></circle>
+<circle cx="276.8" cy="217.5" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 600: +0.21</title></circle>
+<circle cx="309.6" cy="214.5" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 700: +0.21</title></circle>
+<circle cx="342.4" cy="209.5" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 800: +0.22</title></circle>
+<circle cx="375.2" cy="198.1" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 900: +0.24</title></circle>
+<circle cx="408.0" cy="189.6" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 1,000: +0.26</title></circle>
+<circle cx="440.8" cy="183.0" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 1,100: +0.28</title></circle>
+<circle cx="473.6" cy="179.1" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 1,200: +0.28</title></circle>
+<circle cx="506.4" cy="164.3" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 1,300: +0.31</title></circle>
+<circle cx="539.2" cy="158.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 1,400: +0.33</title></circle>
+<circle cx="572.0" cy="151.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 1,500: +0.34</title></circle>
+<circle cx="604.8" cy="145.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 1,600: +0.35</title></circle>
+<circle cx="637.6" cy="137.1" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 1,700: +0.37</title></circle>
+<circle cx="670.4" cy="127.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 1,800: +0.39</title></circle>
+<circle cx="703.2" cy="112.0" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 1,900: +0.42</title></circle>
+<circle cx="736.0" cy="99.3" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 2,000: +0.45</title></circle>
+<path d="M80.0,317.1 L112.8,303.2 L145.6,288.2 L178.4,246.9 L211.2,231.4 L244.0,223.5 L276.8,218.2 L309.6,211.0 L342.4,204.1 L375.2,197.1 L408.0,188.6 L440.8,181.8 L473.6,173.2 L506.4,164.5 L539.2,155.7 L572.0,146.9 L604.8,142.8 L637.6,134.0 L670.4,130.4 L703.2,122.7 L736.0,118.6" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="317.1" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 0: +0.00</title></circle>
+<circle cx="112.8" cy="303.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 100: +0.03</title></circle>
+<circle cx="145.6" cy="288.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 200: +0.06</title></circle>
+<circle cx="178.4" cy="246.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 300: +0.15</title></circle>
+<circle cx="211.2" cy="231.4" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 400: +0.18</title></circle>
+<circle cx="244.0" cy="223.5" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 500: +0.19</title></circle>
+<circle cx="276.8" cy="218.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 600: +0.20</title></circle>
+<circle cx="309.6" cy="211.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 700: +0.22</title></circle>
+<circle cx="342.4" cy="204.1" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 800: +0.23</title></circle>
+<circle cx="375.2" cy="197.1" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 900: +0.25</title></circle>
+<circle cx="408.0" cy="188.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 1,000: +0.26</title></circle>
+<circle cx="440.8" cy="181.8" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 1,100: +0.28</title></circle>
+<circle cx="473.6" cy="173.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 1,200: +0.30</title></circle>
+<circle cx="506.4" cy="164.5" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 1,300: +0.31</title></circle>
+<circle cx="539.2" cy="155.7" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 1,400: +0.33</title></circle>
+<circle cx="572.0" cy="146.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 1,500: +0.35</title></circle>
+<circle cx="604.8" cy="142.8" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 1,600: +0.36</title></circle>
+<circle cx="637.6" cy="134.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 1,700: +0.38</title></circle>
+<circle cx="670.4" cy="130.4" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 1,800: +0.38</title></circle>
+<circle cx="703.2" cy="122.7" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 1,900: +0.40</title></circle>
+<circle cx="736.0" cy="118.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 2,000: +0.41</title></circle>
+<line x1="80.0" x2="98.0" y1="70" y2="70" stroke="#1baf7a" stroke-width="2" opacity="1.0" stroke-dasharray="6 4"/>
+<text x="104.0" y="74" font-size="12" fill="#0b0b0b">M2</text>
+<line x1="137.2" x2="155.2" y1="70" y2="70" stroke="#2a78d6" stroke-width="2" opacity="1.0"/>
+<text x="161.2" y="74" font-size="12" fill="#0b0b0b">A</text>
+<line x1="187.79999999999998" x2="205.79999999999998" y1="70" y2="70" stroke="#eb6834" stroke-width="2" opacity="1.0"/>
+<text x="211.79999999999998" y="74" font-size="12" fill="#0b0b0b">B</text>
+</svg>

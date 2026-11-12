@@ -15,8 +15,9 @@ scaling laws, optimization, and later conversational fine-tuning and RL.
 |---|---|---|
 | M0 Foundation | project layout, configs, device selection, char tokenizer, data pipeline, training utilities, tests, docs | done |
 | M1 GPT + training engine | hand-written GPT (explicit and SDPA attention), AdamW + warmup/cosine, accumulation, clipping, NaN guard, checkpoint/resume, sampling, 100-step MPS benchmark | done |
-| M2 First pretraining experiment | best/final checkpoints, retention, histories, CSV export, stability check; full 5,000-step gpt_10m run; evaluation, emergence and memorization analysis | **done (awaiting review)** |
-| M3 | candidate: shorter schedule (2,000 steps) to anneal before overfitting | proposed |
+| M2 First pretraining experiment | best/final checkpoints, retention, histories, CSV export, stability check; full 5,000-step gpt_10m run; evaluation, emergence and memorization analysis | done |
+| M2.1 LR-schedule ablation | decoupled cosine horizon (`lr_schedule_steps`); A (M2 schedule, stop at 2000) vs B (horizon 2000); validity checks, comparison report | **done (awaiting review)** |
+| next | repeated-seed A/B study; then regularization ablations | proposed |
 | later | BPE tokenizer, larger corpus, scaling study, chat fine-tuning, RL | planned |
 
 ## Confirmed hardware (from `scripts/detect_hardware.py`, 2026-11-12)
@@ -74,6 +75,12 @@ caffeinate -i .venv/bin/python scripts/train.py --config configs/gpt_10m_m2.toml
 .venv/bin/python scripts/analyze_run.py runs/<run> --out docs/reports/m2
 .venv/bin/python scripts/memorization_probe.py runs/<run> --out docs/reports/m2
 
+# M2.1: verify an A/B pair is a controlled comparison, then compare finished runs
+.venv/bin/python scripts/verify_ablation.py configs/gpt_10m_m2_1_a.toml configs/gpt_10m_m2_1_b.toml \
+    --reference runs/<m2_run>
+.venv/bin/python scripts/compare_runs.py --run M2=runs/<m2_run> --run A=runs/<a_run> \
+    --run B=runs/<b_run> --out docs/reports/m2_1
+
 # Sample from a checkpoint (uses the run's saved tokenizer)
 .venv/bin/python scripts/generate.py runs/<run>/checkpoints/step_00000100.pt \
     --prompt "ROMEO:" --max-new-tokens 300 --temperature 0.8 --top-k 40 --seed 1
@@ -105,8 +112,9 @@ src/mini_chatgpt/
   inference/generate.py  greedy / temperature / top-k sampling
   analysis/svgplot.py  dependency-free SVG line charts for reports
   analysis/text_stats.py  word/speaker statistics, verbatim-overlap (memorization) checks
-configs/               debug, gpt_10m, gpt_10m_m2 (M2 bookkeeping copy), gpt_30m, gpt_100m (TOML)
+configs/               debug, gpt_10m, gpt_10m_m2, gpt_10m_m2_1_{a,b} (M2.1 ablation), gpt_30m, gpt_100m
 scripts/               train, generate, sanity_checks, stability_check, analyze_run, memorization_probe,
+                       verify_ablation, compare_runs,
                        prepare_data, show_config, detect_hardware
 tests/                 pytest suite (no network access needed)
 docs/                  architecture, training plan, experiment log, reports/ (per-milestone)
@@ -134,6 +142,12 @@ data/, runs/           git-ignored (downloads and experiment outputs)
 
 Full report: [docs/reports/m2_pretraining.md](docs/reports/m2_pretraining.md).
 
+**M2.1 (LR-schedule ablation, 2,000 steps each):** compressing the cosine horizon to
+2,000 gave best val **1.4638** and final 1.4672. M2's schedule stopped at 2,000 gave
+1.4703 and 1.4865. Early stopping explains most of the gain over M2's final
+checkpoint. This is a single seed, not significant. Report:
+[docs/reports/m2_1_lr_ablation.md](docs/reports/m2_1_lr_ablation.md).
+
 Known limitations are listed in [docs/training_plan.md](docs/training_plan.md) and [docs/architecture.md](docs/architecture.md).
 
 ## Docs
@@ -142,6 +156,7 @@ Known limitations are listed in [docs/training_plan.md](docs/training_plan.md) a
 - [docs/training_plan.md](docs/training_plan.md): optimization, checkpoint semantics, measured hardware budget, logging, limitations, M2 result
 - [docs/experiments.md](docs/experiments.md): experiment log and conventions
 - [docs/reports/m2_pretraining.md](docs/reports/m2_pretraining.md): M2 report (config, metrics, plots, samples, analysis, limitations)
+- [docs/reports/m2_1_lr_ablation.md](docs/reports/m2_1_lr_ablation.md): M2.1 LR-schedule ablation report
 
 ## Data licensing
 

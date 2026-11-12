@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Validation loss vs. training tokens">
+<title>Validation loss vs. training tokens</title>
+<rect width="760" height="380" fill="#fcfcfb"/>
+<text x="80" y="24" font-size="15" font-weight="600" fill="#0b0b0b">Validation loss vs. training tokens</text>
+<text x="80" y="42" font-size="12" fill="#52514e">16,384 tokens per step; 1M tokens ≈ 1 epoch of Tiny Shakespeare</text>
+<line x1="80" x2="736" y1="275.9" y2="275.9" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="279.9" font-size="11" text-anchor="end" fill="#52514e">1.60</text>
+<line x1="80" x2="736" y1="215.4" y2="215.4" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="219.4" font-size="11" text-anchor="end" fill="#52514e">1.80</text>
+<line x1="80" x2="736" y1="154.9" y2="154.9" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="158.9" font-size="11" text-anchor="end" fill="#52514e">2.00</text>
+<line x1="80" x2="736" y1="94.4" y2="94.4" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="98.4" font-size="11" text-anchor="end" fill="#52514e">2.20</text>
+<line x1="118.3" x2="118.3" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="118.3" y="346" font-size="11" text-anchor="middle" fill="#52514e">5</text>
+<line x1="229.6" x2="229.6" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="229.6" y="346" font-size="11" text-anchor="middle" fill="#52514e">10</text>
+<line x1="340.8" x2="340.8" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="340.8" y="346" font-size="11" text-anchor="middle" fill="#52514e">15</text>
+<line x1="452.0" x2="452.0" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="452.0" y="346" font-size="11" text-anchor="middle" fill="#52514e">20</text>
+<line x1="563.2" x2="563.2" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="563.2" y="346" font-size="11" text-anchor="middle" fill="#52514e">25</text>
+<line x1="674.4" x2="674.4" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="674.4" y="346" font-size="11" text-anchor="middle" fill="#52514e">30</text>
+<line x1="80" x2="736" y1="328" y2="328" stroke="#b9b8b2"/>
+<text x="408.0" y="368" font-size="12" text-anchor="middle" fill="#52514e">training tokens (millions)</text>
+<text transform="translate(16 208.0) rotate(-90)" font-size="12" text-anchor="middle" fill="#52514e">cross-entropy (nats/char)</text>
+<path d="M98.2,135.9 L189.3,244.4 L280.4,285.0 L371.6,299.0 L462.7,309.2 L553.8,311.4 L644.9,314.1 L736.0,310.1" fill="none" stroke="#1baf7a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1.0" stroke-dasharray="6 4"/>
+<circle cx="98.2" cy="135.9" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 4: 2.06</title></circle>
+<circle cx="189.3" cy="244.4" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 8: 1.70</title></circle>
+<circle cx="280.4" cy="285.0" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 12: 1.57</title></circle>
+<circle cx="371.6" cy="299.0" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 16: 1.52</title></circle>
+<circle cx="462.7" cy="309.2" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 20: 1.49</title></circle>
+<circle cx="553.8" cy="311.4" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 25: 1.48</title></circle>
+<circle cx="644.9" cy="314.1" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 29: 1.47</title></circle>
+<circle cx="736.0" cy="310.1" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>M2 — step 33: 1.49</title></circle>
+<path d="M80.0,101.2 L116.4,170.1 L152.9,212.9 L189.3,244.4 L225.8,261.9 L262.2,279.5 L298.7,288.9 L335.1,295.4 L371.6,299.6 L408.0,302.3 L444.4,308.8 L480.9,306.7 L517.3,309.9 L553.8,311.9 L590.2,313.5 L626.7,314.9 L663.1,315.1 L699.6,311.8 L736.0,310.2" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="101.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 3: 2.18</title></circle>
+<circle cx="116.4" cy="170.1" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 5: 1.95</title></circle>
+<circle cx="152.9" cy="212.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 7: 1.81</title></circle>
+<circle cx="189.3" cy="244.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 8: 1.70</title></circle>
+<circle cx="225.8" cy="261.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 10: 1.65</title></circle>
+<circle cx="262.2" cy="279.5" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 11: 1.59</title></circle>
+<circle cx="298.7" cy="288.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 13: 1.56</title></circle>
+<circle cx="335.1" cy="295.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 15: 1.54</title></circle>
+<circle cx="371.6" cy="299.6" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 16: 1.52</title></circle>
+<circle cx="408.0" cy="302.3" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 18: 1.51</title></circle>
+<circle cx="444.4" cy="308.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 20: 1.49</title></circle>
+<circle cx="480.9" cy="306.7" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 21: 1.50</title></circle>
+<circle cx="517.3" cy="309.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 23: 1.49</title></circle>
+<circle cx="553.8" cy="311.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 25: 1.48</title></circle>
+<circle cx="590.2" cy="313.5" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 26: 1.48</title></circle>
+<circle cx="626.7" cy="314.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 28: 1.47</title></circle>
+<circle cx="663.1" cy="315.1" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 29: 1.47</title></circle>
+<circle cx="699.6" cy="311.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 31: 1.48</title></circle>
+<circle cx="736.0" cy="310.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>A — step 33: 1.49</title></circle>
+<path d="M80.0,98.9 L116.4,169.3 L152.9,212.0 L189.3,241.9 L225.8,263.5 L262.2,278.4 L298.7,287.4 L335.1,295.9 L371.6,300.8 L408.0,305.3 L444.4,308.8 L480.9,311.5 L517.3,312.7 L553.8,313.8 L590.2,316.9 L626.7,315.8 L663.1,317.1 L699.6,315.8 L736.0,316.1" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="98.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 3: 2.18</title></circle>
+<circle cx="116.4" cy="169.3" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 5: 1.95</title></circle>
+<circle cx="152.9" cy="212.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 7: 1.81</title></circle>
+<circle cx="189.3" cy="241.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 8: 1.71</title></circle>
+<circle cx="225.8" cy="263.5" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 10: 1.64</title></circle>
+<circle cx="262.2" cy="278.4" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 11: 1.59</title></circle>
+<circle cx="298.7" cy="287.4" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 13: 1.56</title></circle>
+<circle cx="335.1" cy="295.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 15: 1.53</title></circle>
+<circle cx="371.6" cy="300.8" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 16: 1.52</title></circle>
+<circle cx="408.0" cy="305.3" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 18: 1.50</title></circle>
+<circle cx="444.4" cy="308.8" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 20: 1.49</title></circle>
+<circle cx="480.9" cy="311.5" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 21: 1.48</title></circle>
+<circle cx="517.3" cy="312.7" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 23: 1.48</title></circle>
+<circle cx="553.8" cy="313.8" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 25: 1.47</title></circle>
+<circle cx="590.2" cy="316.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 26: 1.46</title></circle>
+<circle cx="626.7" cy="315.8" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 28: 1.47</title></circle>
+<circle cx="663.1" cy="317.1" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 29: 1.46</title></circle>
+<circle cx="699.6" cy="315.8" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 31: 1.47</title></circle>
+<circle cx="736.0" cy="316.1" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>B — step 33: 1.47</title></circle>
+<line x1="80.0" x2="98.0" y1="70" y2="70" stroke="#1baf7a" stroke-width="2" opacity="1.0" stroke-dasharray="6 4"/>
+<text x="104.0" y="74" font-size="12" fill="#0b0b0b">M2</text>
+<line x1="137.2" x2="155.2" y1="70" y2="70" stroke="#2a78d6" stroke-width="2" opacity="1.0"/>
+<text x="161.2" y="74" font-size="12" fill="#0b0b0b">A</text>
+<line x1="187.79999999999998" x2="205.79999999999998" y1="70" y2="70" stroke="#eb6834" stroke-width="2" opacity="1.0"/>
+<text x="211.79999999999998" y="74" font-size="12" fill="#0b0b0b">B</text>
+</svg>

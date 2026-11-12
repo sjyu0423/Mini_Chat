@@ -32,6 +32,36 @@ to reproduce it.
 
 ## Log
 
+### 2026-11-12 — M2.1 LR-schedule ablation: horizon 5000 vs 2000, both stopped at 2000 (report: [reports/m2_1_lr_ablation.md](reports/m2_1_lr_ablation.md))
+
+- Hypothesis: annealing the LR to lr_min by step 2000 (B) beats early stopping on
+  M2's 5000-step schedule (A). A should reproduce M2 up to step 2000.
+- Configs: `configs/gpt_10m_m2_1_a.toml` (horizon 5000) and
+  `configs/gpt_10m_m2_1_b.toml` (horizon 2000). The only A/B difference is
+  `lr_schedule_steps`. Both run 2000 steps and evaluate every 100.
+- Validity, checked before training (`scripts/verify_ablation.py`): identical
+  weights, first batch, and initial exact val (4.124992488992625) for A, B and M2;
+  A's LRs equal M2's exactly for steps 0–2000; B reaches 1e-4 at step 2000.
+- Run dirs: `runs/gpt_10m_m2_1_a-20261112-185842` and
+  `runs/gpt_10m_m2_1_b-20261112-191929`. Code: `8d6143f` plus uncommitted M2.1 changes.
+- Hardware: Apple M6, MPS, float32, seed 1337. About 20.6 min wall-clock each,
+  32.5–32.9k tok/s, 5.57 GB MPS pool, no instabilities.
+- Results (exact val, nats/char):
+
+  | | best [step] | val at 2000 | gap at 2000 |
+  |---|---|---|---|
+  | M2 | 1.4736 [1750] | 1.4869 | +0.445 |
+  | A | 1.4703 [1800] | 1.4865 | +0.445 |
+  | B | **1.4638** [1800] | **1.4672** | **+0.405** |
+
+- Reproduction: A − M2 at shared evals is at most 0.0021, and the per-step losses
+  match to about 5e-8 for steps 1–100 before drifting.
+- Conclusion: early stopping explains about 93% of the final-checkpoint gain over M2.
+  The compressed schedule adds −0.019 at the final checkpoint and −0.0065 at the best
+  one. That is about 3× the MPS-noise bound, but from a single seed, so it is not
+  significant.
+- Next: repeat A and B with three or more seeds.
+
 ### 2026-11-12 — M2 baseline: gpt_10m, 5,000 steps, MPS (full report: [reports/m2_pretraining.md](reports/m2_pretraining.md))
 
 - Hypothesis: the M1 engine trains the full gpt_10m config stably and reaches
@@ -132,8 +162,9 @@ to reproduce it.
 
 ## Planned experiments (subject to approval per milestone)
 
-1. ~~M2 baseline~~ (done; see the log above). Next: `max_steps = 2000` so the cosine
-   anneals before the overfitting onset, eval every 100 steps.
+1. ~~M2 baseline~~ and ~~M2.1 schedule ablation~~ (done; see the log above). Next:
+   a repeated-seed A/B study (three or more seeds each) before adopting a compressed
+   schedule.
 2. Precision: verify bf16 autocast on MPS (agreement and speed) before enabling it.
 3. Architecture ablations: pre-LN vs post-LN, learned vs rotary positions,
    GELU vs SwiGLU, LayerNorm vs RMSNorm, with/without bias, tied vs untied embeddings.

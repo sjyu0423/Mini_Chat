@@ -7,7 +7,11 @@
   biases or LayerNorm.
 - **LR schedule** (`training/optim.py`, a pure function of the step):
   linear warmup `lr_max·(s+1)/W` for s < W, then cosine
-  `lr_min + ½(lr_max − lr_min)(1 + cos(π(s−W)/(S−W)))`, then held at lr_min.
+  `lr_min + ½(lr_max − lr_min)(1 + cos(π(s−W)/(H−W)))`, then held at lr_min.
+  H is the schedule horizon, `lr_schedule_steps` (M2.1). It defaults to `max_steps`
+  and is independent of how long training runs:
+  - `H > max_steps` stops early on an unchanged trajectory.
+  - `H < max_steps` holds lr_min after H.
 - **Gradient accumulation**: each optimizer step runs `gradient_accumulation_steps`
   micro-batches, and each loss is scaled by 1/n. Tests check that the gradient
   equals that of a single large batch.
@@ -168,6 +172,15 @@ Implications for planning:
   needed.
 - Eval overhead with `exact_val_eval` plus 50-batch estimates is about 11.5 s per
   eval, about 8% of the run at a 250-step interval.
+
+## M2.1 result (LR-schedule ablation)
+
+With 2000 steps, a horizon of 2000 (B) gave best val 1.4638 and final 1.4672. M2's
+horizon of 5000, stopped at 2000 (A), gave 1.4703 and 1.4865. Early stopping explains
+most of the gain over M2's final checkpoint. The compressed schedule mainly makes the
+last checkpoint nearly as good as the best. It is a single seed, so the planned next
+step is a repeated-seed A/B study. Details are in
+[reports/m2_1_lr_ablation.md](reports/m2_1_lr_ablation.md).
 
 ## Known limitations
 

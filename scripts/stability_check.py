@@ -33,19 +33,21 @@ def reference_lr(step: int, t: TrainingConfig) -> float:
     """Independent restatement of the schedule documented in training_plan.md."""
     if step < t.warmup_steps:
         return t.learning_rate * (step + 1) / t.warmup_steps
-    if step >= t.max_steps:
+    horizon = t.lr_schedule_steps if t.lr_schedule_steps is not None else t.max_steps
+    if step >= horizon:
         return t.min_learning_rate
-    progress = (step - t.warmup_steps) / max(1, t.max_steps - t.warmup_steps)
+    progress = (step - t.warmup_steps) / max(1, horizon - t.warmup_steps)
     return t.min_learning_rate + 0.5 * (t.learning_rate - t.min_learning_rate) * (
         1 + math.cos(math.pi * progress)
     )
 
 
 def check_schedule(t: TrainingConfig) -> dict[str, Any]:
-    lrs = [learning_rate(s, t) for s in range(t.max_steps + 1)]
+    h = t.schedule_horizon
+    lrs = [learning_rate(s, t) for s in range(max(t.max_steps, h) + 1)]
     max_err = max(abs(lr - reference_lr(s, t)) for s, lr in enumerate(lrs))
     warm = lrs[: t.warmup_steps]
-    decay = lrs[t.warmup_steps : t.max_steps]
+    decay = lrs[t.warmup_steps : h]
     return {
         "max_abs_error_vs_formula": max_err,
         "warmup_monotonic_increasing": all(a < b for a, b in itertools.pairwise(warm)),
@@ -55,7 +57,8 @@ def check_schedule(t: TrainingConfig) -> dict[str, Any]:
         "lr_at": {
             s: lrs[s] for s in (0, 49, 99, 100, 1000, 2550, 4000, 4999, 5000) if s <= len(lrs)
         },
-        "min_lr_reached": lrs[t.max_steps],
+        "schedule_horizon": h,
+        "min_lr_reached": lrs[h],
     }
 
 

@@ -1,0 +1,593 @@
+{
+  "plots": [
+    "train_loss.svg",
+    "val_loss.svg",
+    "learning_rate.svg",
+    "generalization_gap.svg",
+    "val_loss_vs_tokens.svg"
+  ],
+  "runs": {
+    "A": {
+      "batch_loss_mean_50_ending_at": {
+        "500": 1.6203616976737976,
+        "1000": 1.3457947754859925,
+        "1500": 1.2248125624656678,
+        "1750": 1.182798180580139,
+        "2000": 1.1356904530525207
+      },
+      "best_step": 1800,
+      "best_val_loss_exact": 1.4703085208761282,
+      "config": {
+        "eval_interval": 100,
+        "max_steps": 2000,
+        "schedule_horizon": 5000
+      },
+      "exact_at_max_step": {
+        "checkpoint": "runs/gpt_10m_m2_1_a-20261112-185842/checkpoints/step_00002000.pt",
+        "gap": 0.4444799910106718,
+        "step": 2000,
+        "tokens_seen": 32768000,
+        "train_bpc": 1.503245804356676,
+        "train_loss": 1.0419705909783972,
+        "val_bpc": 2.1444948831621433,
+        "val_loss": 1.486450581989069,
+        "val_ppl": 4.421374329294354
+      },
+      "exact_best": {
+        "checkpoint": "runs/gpt_10m_m2_1_a-20261112-185842/checkpoints/best.pt",
+        "gap": 0.38869294758823636,
+        "step": 1800,
+        "tokens_seen": 29491200,
+        "train_bpc": 1.5604414237307147,
+        "train_loss": 1.0816155732878918,
+        "val_bpc": 2.121206811644777,
+        "val_loss": 1.4703085208761282,
+        "val_ppl": 4.350577177911496
+      },
+      "exact_final": {
+        "checkpoint": "runs/gpt_10m_m2_1_a-20261112-185842/checkpoints/step_00002000.pt",
+        "gap": 0.4444799910106718,
+        "step": 2000,
+        "tokens_seen": 32768000,
+        "train_bpc": 1.503245804356676,
+        "train_loss": 1.0419705909783972,
+        "val_bpc": 2.1444948831621433,
+        "val_loss": 1.486450581989069,
+        "val_ppl": 4.421374329294354
+      },
+      "final_step": 2000,
+      "final_val_loss_exact": 1.486450581989069,
+      "grad_norm": {
+        "clipped_fraction_to_max_step": 0.0155,
+        "max_after_warmup": 1.529144287109375,
+        "median_to_max_step": 0.3763362020254135
+      },
+      "memory_max_bytes": {
+        "mps_current_allocated@after_forward": 4050795776,
+        "mps_current_allocated@after_step": 181508864,
+        "mps_current_allocated@eval": 175740928,
+        "mps_driver_allocated@after_forward": 5565267968,
+        "mps_driver_allocated@after_step": 5565267968,
+        "mps_driver_allocated@eval": 5538004992,
+        "process_rss_peak@after_forward": 566460416,
+        "process_rss_peak@after_step": 566460416,
+        "process_rss_peak@eval": 566460416
+      },
+      "path": "runs/gpt_10m_m2_1_a-20261112-185842",
+      "timing_full_run": {
+        "evals": 21,
+        "optimizer_step_time_min": 16.616353919017335,
+        "steps": 2000,
+        "steps_per_s": 2.0060558107867155,
+        "tokens": 32768000,
+        "tokens_per_s_mean_over_steps": 32867.218403929546,
+        "tokens_per_s_median_step": 33111.5530579289,
+        "tokens_per_s_wall": 26660.53864915897,
+        "wall_min_eval0_to_last_eval": 20.48470739920934
+      },
+      "timing_to_max_step": {
+        "evals": 21,
+        "optimizer_step_time_min": 16.616353919017335,
+        "steps": 2000,
+        "steps_per_s": 2.0060558107867155,
+        "tokens": 32768000,
+        "tokens_per_s_mean_over_steps": 32867.218403929546,
+        "tokens_per_s_median_step": 33111.5530579289,
+        "tokens_per_s_wall": 26660.53864915897,
+        "wall_min_eval0_to_last_eval": 20.48470739920934
+      },
+      "train_estimate_at": {
+        "500": 1.516654336452484,
+        "1000": 1.2592399168014525,
+        "1500": 1.1413725399971009,
+        "1750": null,
+        "2000": 1.0392238569259644
+      },
+      "val_exact_at": {
+        "500": 1.7041379202371356,
+        "1000": 1.5215950212259401,
+        "1500": 1.4811264923249168,
+        "1750": null,
+        "2000": 1.486450581989069
+      },
+      "vs_reference": {
+        "lr_max_abs_diff": 0.0,
+        "param_diff_at_step_2000": {
+          "max_abs": 0.14163346588611603,
+          "max_relative_l2": 0.628414511680603,
+          "median_relative_l2": 0.14041055738925934
+        },
+        "reference": "M2",
+        "train_batch_loss_abs_diff": {
+          "first_step_diff": 0.0,
+          "max": 0.012081265449523926,
+          "mean": 0.0017051321268081664,
+          "mean_last_100": 0.002968357801437378,
+          "mean_steps_1_100": 4.5299530029296876e-08
+        },
+        "val_exact_diff_at_shared_evals": {
+          "0": 0.0,
+          "500": -4.431899936729877e-05,
+          "1000": -0.0021266619364421757,
+          "1500": -0.0015198789793868794,
+          "2000": -0.00043042747453725383
+        }
+      }
+    },
+    "B": {
+      "batch_loss_mean_50_ending_at": {
+        "500": 1.621030888557434,
+        "1000": 1.3376637721061706,
+        "1500": 1.2090721750259399,
+        "1750": 1.1774364972114564,
+        "2000": 1.1492538404464723
+      },
+      "best_step": 1800,
+      "best_val_loss_exact": 1.4638129226092635,
+      "config": {
+        "eval_interval": 100,
+        "max_steps": 2000,
+        "schedule_horizon": 2000
+      },
+      "exact_at_max_step": {
+        "checkpoint": "runs/gpt_10m_m2_1_b-20261112-191929/checkpoints/step_00002000.pt",
+        "gap": 0.40538432454466133,
+        "step": 2000,
+        "tokens_seen": 32768000,
+        "train_bpc": 1.5318880476322574,
+        "train_loss": 1.0618238811497784,
+        "val_bpc": 2.1167340023069623,
+        "val_loss": 1.4672082056944398,
+        "val_ppl": 4.3371099046208625
+      },
+      "exact_best": {
+        "checkpoint": "runs/gpt_10m_m2_1_b-20261112-191929/checkpoints/best.pt",
+        "gap": 0.3824740030107807,
+        "step": 1800,
+        "tokens_seen": 29491200,
+        "train_bpc": 1.5600422968249608,
+        "train_loss": 1.0813389195984828,
+        "val_bpc": 2.1118356442375648,
+        "val_loss": 1.4638129226092635,
+        "val_ppl": 4.322409159441325
+      },
+      "exact_final": {
+        "checkpoint": "runs/gpt_10m_m2_1_b-20261112-191929/checkpoints/step_00002000.pt",
+        "gap": 0.40538432454466133,
+        "step": 2000,
+        "tokens_seen": 32768000,
+        "train_bpc": 1.5318880476322574,
+        "train_loss": 1.0618238811497784,
+        "val_bpc": 2.1167340023069623,
+        "val_loss": 1.4672082056944398,
+        "val_ppl": 4.3371099046208625
+      },
+      "final_step": 2000,
+      "final_val_loss_exact": 1.4672082056944398,
+      "grad_norm": {
+        "clipped_fraction_to_max_step": 0.0145,
+        "max_after_warmup": 1.7878663539886475,
+        "median_to_max_step": 0.3928619921207428
+      },
+      "memory_max_bytes": {
+        "mps_current_allocated@after_forward": 4050795776,
+        "mps_current_allocated@after_step": 181508864,
+        "mps_current_allocated@eval": 175740928,
+        "mps_driver_allocated@after_forward": 5565267968,
+        "mps_driver_allocated@after_step": 5565267968,
+        "mps_driver_allocated@eval": 5538004992,
+        "process_rss_peak@after_forward": 537149440,
+        "process_rss_peak@after_step": 537149440,
+        "process_rss_peak@eval": 537149440
+      },
+      "path": "runs/gpt_10m_m2_1_b-20261112-191929",
+      "timing_full_run": {
+        "evals": 21,
+        "optimizer_step_time_min": 16.793989493882812,
+        "steps": 2000,
+        "steps_per_s": 1.984837095764229,
+        "tokens": 32768000,
+        "tokens_per_s_mean_over_steps": 32519.570977001127,
+        "tokens_per_s_median_step": 32626.749280611086,
+        "tokens_per_s_wall": 26393.383307092525,
+        "wall_min_eval0_to_last_eval": 20.692054784297945
+      },
+      "timing_to_max_step": {
+        "evals": 21,
+        "optimizer_step_time_min": 16.793989493882812,
+        "steps": 2000,
+        "steps_per_s": 1.984837095764229,
+        "tokens": 32768000,
+        "tokens_per_s_mean_over_steps": 32519.570977001127,
+        "tokens_per_s_median_step": 32626.749280611086,
+        "tokens_per_s_wall": 26393.383307092525,
+        "wall_min_eval0_to_last_eval": 20.692054784297945
+      },
+      "train_estimate_at": {
+        "500": 1.5192581629753112,
+        "1000": 1.253079035282135,
+        "1500": 1.1246781325340272,
+        "1750": null,
+        "2000": 1.0593990635871888
+      },
+      "val_exact_at": {
+        "500": 1.7122523255731867,
+        "1000": 1.5176793772598793,
+        "1500": 1.4745763142903645,
+        "1750": null,
+        "2000": 1.4672082056944398
+      },
+      "vs_reference": {
+        "lr_max_abs_diff": 0.0006338407348182289,
+        "param_diff_at_step_2000": {
+          "max_abs": 0.2637108564376831,
+          "max_relative_l2": 0.8396203517913818,
+          "median_relative_l2": 0.4313291311264038
+        },
+        "reference": "M2",
+        "train_batch_loss_abs_diff": {
+          "first_step_diff": 0.0,
+          "max": 0.026969075202941895,
+          "mean": 0.0073081406950950625,
+          "mean_last_100": 0.010326237678527831,
+          "mean_steps_1_100": 5.483627319335938e-08
+        },
+        "val_exact_diff_at_shared_evals": {
+          "0": 0.0,
+          "500": 0.008070086336683824,
+          "1000": -0.006042305902502987,
+          "1500": -0.008070057013939147,
+          "2000": -0.01967280376916647
+        }
+      }
+    },
+    "M2": {
+      "batch_loss_mean_50_ending_at": {
+        "500": 1.6203021574020386,
+        "1000": 1.3455932998657227,
+        "1500": 1.2243005561828613,
+        "1750": 1.1834626960754395,
+        "2000": 1.1373285269737243
+      },
+      "best_step": 1750,
+      "best_val_loss_exact": 1.4735867097459991,
+      "config": {
+        "eval_interval": 250,
+        "max_steps": 5000,
+        "schedule_horizon": 5000
+      },
+      "exact_at_max_step": {
+        "checkpoint": "runs/gpt_10m_m2-20261112-174425/checkpoints/step_00002000.pt",
+        "gap": 0.4453765694320462,
+        "step": 2000,
+        "tokens_seen": 32768000,
+        "train_bpc": 1.5025732906973686,
+        "train_loss": 1.04150444003156,
+        "val_bpc": 2.1451158587451205,
+        "val_loss": 1.4868810094636062,
+        "val_ppl": 4.4232778199088365
+      },
+      "exact_best": {
+        "checkpoint": "runs/gpt_10m_m2-20261112-174425/checkpoints/best.pt",
+        "gap": 0.38078457175066127,
+        "step": 1750,
+        "tokens_seen": 28672000,
+        "train_bpc": 1.5765802251587306,
+        "train_loss": 1.0928021379953379,
+        "val_bpc": 2.1259362384704374,
+        "val_loss": 1.4735867097459991,
+        "val_ppl": 4.364862593946354
+      },
+      "exact_final": {
+        "checkpoint": "runs/gpt_10m_m2-20261112-174425/checkpoints/step_00005000.pt",
+        "gap": 1.1539442430658302,
+        "step": 5000,
+        "tokens_seen": 81920000,
+        "train_bpc": 0.8457303462638676,
+        "train_loss": 0.586215605026786,
+        "val_bpc": 2.5105199831973097,
+        "val_loss": 1.7401598480926164,
+        "val_ppl": 5.69825420494255
+      },
+      "final_step": 5000,
+      "final_val_loss_exact": 1.7401598480926164,
+      "grad_norm": {
+        "clipped_fraction_to_max_step": 0.0155,
+        "max_after_warmup": 1.5288532972335815,
+        "median_to_max_step": 0.37536410987377167
+      },
+      "memory_max_bytes": {
+        "mps_current_allocated@after_forward": 4050795776,
+        "mps_current_allocated@after_step": 181508864,
+        "mps_current_allocated@eval": 175740928,
+        "mps_driver_allocated@after_forward": 5565267968,
+        "mps_driver_allocated@after_step": 5565267968,
+        "mps_driver_allocated@eval": 5538004992,
+        "process_rss_peak@after_forward": 566493184,
+        "process_rss_peak@after_step": 566493184,
+        "process_rss_peak@eval": 566493184
+      },
+      "path": "runs/gpt_10m_m2-20261112-174425",
+      "timing_full_run": {
+        "evals": 21,
+        "optimizer_step_time_min": 43.18086224481424,
+        "steps": 5000,
+        "steps_per_s": 1.9298672838183344,
+        "tokens": 81920000,
+        "tokens_per_s_mean_over_steps": 31618.94557807959,
+        "tokens_per_s_median_step": 31876.30295141417,
+        "tokens_per_s_wall": 28887.333149734717,
+        "wall_min_eval0_to_last_eval": 47.26408375104268
+      },
+      "timing_to_max_step": {
+        "evals": 9,
+        "optimizer_step_time_min": 17.144008201267752,
+        "steps": 2000,
+        "steps_per_s": 1.9443138933442896,
+        "tokens": 32768000,
+        "tokens_per_s_mean_over_steps": 31855.63882855284,
+        "tokens_per_s_median_step": 32035.82917294806,
+        "tokens_per_s_wall": 29090.83618377404,
+        "wall_min_eval0_to_last_eval": 18.773380382855734
+      },
+      "train_estimate_at": {
+        "500": 1.5166056227684022,
+        "1000": 1.2602740359306335,
+        "1500": 1.1413604283332826,
+        "1750": 1.0928071808815003,
+        "2000": 1.0387922978401185
+      },
+      "val_exact_at": {
+        "500": 1.704182239236503,
+        "1000": 1.5237216831623823,
+        "1500": 1.4826463713043037,
+        "1750": 1.4735867097459991,
+        "2000": 1.4868810094636062
+      }
+    }
+  },
+  "samples": {
+    "A": {
+      "mean": {
+        "longest_verbatim_match": 23.2,
+        "longest_verbatim_match_max": 25,
+        "overlap_32": 0.0,
+        "speaker_known_fraction": 0.875,
+        "valid_word_fraction": 0.9798790581399277,
+        "valid_word_fraction_len4": 0.9704638218923932,
+        "word_trigram_repetition": 0.0022988505747126436
+      },
+      "rows": [
+        {
+          "longest_match_text": ".\n\nDUKE VINCENTIO:\nWell, ",
+          "longest_verbatim_match": 25,
+          "overlap_32": 0.0,
+          "seed": 1,
+          "speaker_known_fraction": 0.5,
+          "speaker_labels": 4,
+          "text": "What stuff with authority and honour than so good,\nBut that which most arm. O, if all this face\nThe part of pure of death, this ease art thou\nEre they have rest a man, an if it will be so,\nFor, it be not so many advised.\n\nDUKE VINCENTIO:\nWell, desires!\n\nISABELLA:\nO, I will singule them shall\nAgainst the poor of the law side and willingly beguile:\nThe blood lips in the less princely budge,\nI have no more more seembled in their suits:\nBut, they are men of all the fielding eyes\nOf them, seeing thei",
+          "valid_word_fraction": 0.9595959595959596,
+          "valid_word_fraction_len4": 0.9272727272727272,
+          "word_trigram_repetition": 0.0
+        },
+        {
+          "longest_match_text": "\n\nSICINIUS:\nGo, masters,",
+          "longest_verbatim_match": 24,
+          "overlap_32": 0.0,
+          "seed": 2,
+          "speaker_known_fraction": 1.0,
+          "speaker_labels": 2,
+          "text": "O my true Romeo!\n\nSICINIUS:\nThis noble Menenius love and get the duke,\nWhich hath set him in her success, being the news\nWhich he services in the field\nWith his voice.\n\nSICINIUS:\nGo, masters,\nSir, we are allow'd, and see here for the field\nHer beauteous consent, which lose for herself\nWith their complexions thoughts of the case,\nAnd not rend her their talk of women and greeting nays\nShall be much proclaim'd, I am confess'd\nTo the crown with a man, in her behavior\nA gracious little earth, and tha",
+          "valid_word_fraction": 0.9782608695652174,
+          "valid_word_fraction_len4": 0.9795918367346939,
+          "word_trigram_repetition": 0.0
+        },
+        {
+          "longest_match_text": "?\n\nDUKE VINCENTIO:\nThou ",
+          "longest_verbatim_match": 24,
+          "overlap_32": 0.0,
+          "seed": 3,
+          "speaker_known_fraction": 0.875,
+          "speaker_labels": 8,
+          "text": "Then it be gone:\nHe will make his hands, and fear him he be found.\n\nDUKE VINCENTIO:\nBut who would shall descend you what you company?\n\nMARIANA:\nMy lord, and I were as he that would have more\nThan he will consul to the first than the law with\nAnd again give thy country or field.\n\nANGELO:\nThe villain is the other committed like to thee.\n\nDUKE VINCENTIO:\nNow, what art thou hit so?\n\nDUKE VINCENTIO:\nThou must be by the best day too?\n\nLUCIO:\nI tell you, as I am a fool, anon.\n\nProvost:\nHe was a burthen",
+          "valid_word_fraction": 1.0,
+          "valid_word_fraction_len4": 1.0,
+          "word_trigram_repetition": 0.0
+        },
+        {
+          "longest_match_text": "\n\nPRINCE EDWARD:\nAnd wh",
+          "longest_verbatim_match": 23,
+          "overlap_32": 0.0,
+          "seed": 4,
+          "speaker_known_fraction": 1.0,
+          "speaker_labels": 6,
+          "text": "Ay, and thus is the duke.\n\nMARCIUS:\nI will show your council weeds, he shows\nYour business down, who in it being so,\nAnd longing that she should shake it on her brother's eye\nWith words, tears in life for purchase,\nAnd make her dead lawful seasons and of your steeds,\nAnd heaven prayers did respect it on her.\n\nHASTINGS:\nWhat, what is here?\n\nPRINCE EDWARD:\nAnd what that was wont worth her brothers?\n\nSOMERSET:\nHow lords the king?\n\nHASTINGS:\nWhy, what, is thou these other high deposed?\n\nGLOUCESTER:\n",
+          "valid_word_fraction": 1.0,
+          "valid_word_fraction_len4": 1.0,
+          "word_trigram_repetition": 0.011494252873563218
+        },
+        {
+          "longest_match_text": " the service, and th",
+          "longest_verbatim_match": 20,
+          "overlap_32": 0.0,
+          "seed": 5,
+          "speaker_known_fraction": 1.0,
+          "speaker_labels": 3,
+          "text": "Why, what is once so?\nI love, my lord, I will desire to your loves,\nAnd I will ensue your highness again\nAnd all your own self-happy care to the leave of this law.\n\nBENVOLIO:\nThen, this man dost she might be here allow'd.\n\nBRUTUS:\nThe very word I was seen for mine eyes;\nThe word is fear'd in the stoner; so land they be all.\n\nROMEO:\nNo, I love the service, and their pieces being in so long,\nI may be chore the people that where I should\nBe brief the seast: but he hath some hot a king:\nThe news dot",
+          "valid_word_fraction": 0.9615384615384616,
+          "valid_word_fraction_len4": 0.9454545454545454,
+          "word_trigram_repetition": 0.0
+        }
+      ],
+      "step": 1800
+    },
+    "B": {
+      "mean": {
+        "longest_verbatim_match": 21.0,
+        "longest_verbatim_match_max": 26,
+        "overlap_32": 0.0,
+        "speaker_known_fraction": 0.96,
+        "valid_word_fraction": 0.9754459258702699,
+        "valid_word_fraction_len4": 0.9562619919762778,
+        "word_trigram_repetition": 0.0019801980198019802
+      },
+      "rows": [
+        {
+          "longest_match_text": ".\n\nDUKE VINCENTIO:\nMy ",
+          "longest_verbatim_match": 22,
+          "overlap_32": 0.0,
+          "seed": 1,
+          "speaker_known_fraction": 1.0,
+          "speaker_labels": 2,
+          "text": "What stays the man is, that may be made a son?\n\nPETRUCHIO:\nA craver, in this poor anger in the sea\nThat thou shalt have stand in a sister than a\nvery measure he was commanded and the time to the trust\nOf the least, what the termines of the weaker than a\nmetter could he hath done not the world, then not he hath been\nout silvered a bark to be right: which the present is of\nthe sea of the man is nothing but one senses in a goodly curse.\n\nDUKE VINCENTIO:\nMy lords, which is the guest and traitors by ",
+          "valid_word_fraction": 0.9611650485436893,
+          "valid_word_fraction_len4": 0.9183673469387755,
+          "word_trigram_repetition": 0.009900990099009901
+        },
+        {
+          "longest_match_text": "e.\n\nLADY CAPULET:\n",
+          "longest_verbatim_match": 18,
+          "overlap_32": 0.0,
+          "seed": 2,
+          "speaker_known_fraction": 1.0,
+          "speaker_labels": 4,
+          "text": "O my tale, my lord!\n\nROMEO:\nThis name is an aught and charity hold\nOf such absence about the leave that sleeps o' the sea\nThe labour of the sight, and moves the vow\nOf lightning stranger place.\n\nPERDITA:\nThou wilt not speak the extremest comfort again.\n\nJULIET:\nThe chyard and greatest to the ground of true queen,\nHow far before his brother than he spirit up,\nHe may be threed of noble lawful English pride.\n\nLADY CAPULET:\nMy lord, the conspirators of such man arms\nOf gracious life and full of Capu",
+          "valid_word_fraction": 0.967741935483871,
+          "valid_word_fraction_len4": 0.9423076923076923,
+          "word_trigram_repetition": 0.0
+        },
+        {
+          "longest_match_text": ":\nBeseech you, sir, ",
+          "longest_verbatim_match": 20,
+          "overlap_32": 0.0,
+          "seed": 3,
+          "speaker_known_fraction": 1.0,
+          "speaker_labels": 4,
+          "text": "Then it be that Romeo shall be straight,\nThe fearful shadow of the helm of the earth.\n\nBENVOLIO:\nAnd there long you were subjects to the rest.\n\nMERCUTIO:\nBeseech you, sir, I have been and choice the\nbest chance to quarrell at the business; therefore you have such\nsome other, that he will be very life to continue you.\n\nROMEO:\nI am, then, therefore, anon, what wants of child? I say you\ndo chance me at much a tall of his tale to me? Who should have done?\n\nJULIET:\nGood master, a bawdy comfort with t",
+          "valid_word_fraction": 0.9895833333333334,
+          "valid_word_fraction_len4": 0.9814814814814815,
+          "word_trigram_repetition": 0.0
+        },
+        {
+          "longest_match_text": " shall be contented",
+          "longest_verbatim_match": 19,
+          "overlap_32": 0.0,
+          "seed": 4,
+          "speaker_known_fraction": 1.0,
+          "speaker_labels": 3,
+          "text": "Ay, a thousand to do Isabel:\nThe day that hath made me to be yet so heavy well.\n\nROMEO:\nMarry, there is it not so; and therefore I am so for\nthe gods that which you can tell you what say, as I say,\nfor I love it, where may be good, that you were the wood in mistress\nas your country's part deaths shall be contented on\nyou are ears. Do you that's as it as you?\n\nLADY CAPULET:\nBy father, as you can learn us offend to do fled,\nTo say 'Paris,' be not a fair of a temporance!'\n\nNurse:\nI cannot say it no",
+          "valid_word_fraction": 0.9906542056074766,
+          "valid_word_fraction_len4": 0.9761904761904762,
+          "word_trigram_repetition": 0.0
+        },
+        {
+          "longest_match_text": " fellow.\n\nDUKE VINCENTIO:\n",
+          "longest_verbatim_match": 26,
+          "overlap_32": 0.0,
+          "seed": 5,
+          "speaker_known_fraction": 0.8,
+          "speaker_labels": 5,
+          "text": "What news?\n\nBENVOLIO:\nI have spoke to see thee that kill'd me with my life:\nAnd when you have seen the wholesome gentleman,\nWhich made heaven and the princely words of lease,\nThat are all the spurn seven and treacherous in some bed.\nCome, well: I will not forth thee.\n\nLUCIO:\nA medle's wife, thy cold will be a day.\n\nAUFIDIUS:\nA friar, a gentleman can for my fellow.\n\nDUKE VINCENTIO:\nIf thou hadst known thee and honour, and he appears\nA black-waller for these walls at his ancient country,\n'Tis a li",
+          "valid_word_fraction": 0.9680851063829787,
+          "valid_word_fraction_len4": 0.9629629629629629,
+          "word_trigram_repetition": 0.0
+        }
+      ],
+      "step": 1800
+    },
+    "M2": {
+      "mean": {
+        "longest_verbatim_match": 20.0,
+        "longest_verbatim_match_max": 23,
+        "overlap_32": 0.0,
+        "speaker_known_fraction": 0.95,
+        "valid_word_fraction": 0.9791840315858741,
+        "valid_word_fraction_len4": 0.9669963815313359,
+        "word_trigram_repetition": 0.0
+      },
+      "rows": [
+        {
+          "longest_match_text": " well.\n\nFirst Citizen:\n",
+          "longest_verbatim_match": 23,
+          "overlap_32": 0.0,
+          "seed": 1,
+          "speaker_known_fraction": 0.75,
+          "speaker_labels": 4,
+          "text": "But I'll see the consul, and there is my mother's chief,\nTo see the birth of the have gainst me speak.\n\nMERCUTIO:\nMadam, there's a sisterous sorrow,\nTo be a put of honour of the people.\n\nCOMINIUS:\nThen comes at him, was the temper'd bow of their pleasing\nAnd all the hearts of such tears as well.\n\nFirst Citizen:\nHe hath sign from their hands as a sweeting ground:\nThen he shall not stand all me as he would see\nTheir faith and precious true to his house;\nBut not for their debt standing to the contr",
+          "valid_word_fraction": 0.979381443298969,
+          "valid_word_fraction_len4": 0.9583333333333334,
+          "word_trigram_repetition": 0.0
+        },
+        {
+          "longest_match_text": "\n\nPOLIXENES:\nI have ",
+          "longest_verbatim_match": 20,
+          "overlap_32": 0.0,
+          "seed": 2,
+          "speaker_known_fraction": 1.0,
+          "speaker_labels": 6,
+          "text": "O my name, my lord! I would not speak to another.\n\nCAMILLO:\nWell, sir, I love the world!\n\nLEONTES:\nPray you, let's and go see the prince.\n\nLEONTES:\nWhy shall I tell you?\n\nPOLIXENES:\nI have set me for your honour, and\nIn report of the fair proportions of the earth,\nWhich was the fairest of my lips, my brother, I am not here.\n\nCAMILLO:\nYour neighbour prayers not one.\n\nCAMILLO:\nAy, she plains here in the devotion, they shall\nprecious by them over-places, blows are here so:\nThere's sending for a tho",
+          "valid_word_fraction": 0.9787234042553191,
+          "valid_word_fraction_len4": 0.9787234042553191,
+          "word_trigram_repetition": 0.0
+        },
+        {
+          "longest_match_text": " the people.\n\nBRUTUS:\n",
+          "longest_verbatim_match": 22,
+          "overlap_32": 0.0,
+          "seed": 3,
+          "speaker_known_fraction": 1.0,
+          "speaker_labels": 9,
+          "text": "Then is not so I that beat not straight, not for this world.\n\nBENVOLIO:\nWhat then?\n\nBRUTUS:\nWell, sir: it is this noble man, comes so.\n\nBRUTUS:\nMadam.\n\nSICINIUS:\nThere is a poor for's contraction, and the\nvery very hand the table.\n\nMENENIUS:\nMy name is the time of my eye for the common\nof the people.\n\nBRUTUS:\nTake me with this mother.\n\nMENENIUS:\nEven sir, fellow.\n\nMARCIUS:\nI have stood the hands.\n\nCOMINIUS:\nThe poor bottom too much, and well make me an\nTo see him in promise. The way man out the ",
+          "valid_word_fraction": 0.9893617021276596,
+          "valid_word_fraction_len4": 0.9795918367346939,
+          "word_trigram_repetition": 0.0
+        },
+        {
+          "longest_match_text": " courtesy,\nAnd ",
+          "longest_verbatim_match": 15,
+          "overlap_32": 0.0,
+          "seed": 4,
+          "speaker_known_fraction": 1.0,
+          "speaker_labels": 2,
+          "text": "Ay some cousin, sir, whose rather my life bear my brother\nWith her reasons to my sight soul for Ireland?\n\nJULIET:\nThe manner is that I know not before I do learn.\n\nJULIET:\nNay, now I see thee no old flourish courtesy,\nAnd by that my land is extremes thou wast standerest,\nAnd banish'd the bark of his fortune. Lords,\nYou that beard in his country's pity,\nAnd in the time had wounds and deserved mistress'd,\nWith hate him that dost to be a disgraced and strength,\nAnd left him me to make him to the wa",
+          "valid_word_fraction": 0.9690721649484536,
+          "valid_word_fraction_len4": 0.9583333333333334,
+          "word_trigram_repetition": 0.0
+        },
+        {
+          "longest_match_text": " for me.\n\nBENVOLIO:\n",
+          "longest_verbatim_match": 20,
+          "overlap_32": 0.0,
+          "seed": 5,
+          "speaker_known_fraction": 1.0,
+          "speaker_labels": 2,
+          "text": "What news that to such a duelding mother?\nDid I set the fine of antic Romeo?\n\nBENVOLIO:\nAnd there is the people of her brother\nAnd that ear more nettle than her wife's less to her\nAnd most sovereign to her father for me.\n\nBENVOLIO:\nThere's my lips: only sovereign breast,\nAnd may be fearful and by the worst of devotion;\nMy brother, this I love the senate, for them the statute,\nWhich only lived to bear the consented butter,\nThat only may never see me what should not be stay'd in the\nears of the la",
+          "valid_word_fraction": 0.979381443298969,
+          "valid_word_fraction_len4": 0.96,
+          "word_trigram_repetition": 0.0
+        }
+      ],
+      "step": 1750
+    }
+  }
+}

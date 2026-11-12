@@ -224,3 +224,34 @@ def test_save_best_false_writes_no_best(tmp_path):
     assert json.loads((tmp_path / "checkpoints" / "step_00000010.json").read_text())["kind"] == (
         "final"
     )
+
+
+def test_early_stop_on_longer_horizon_matches_prefix_of_full_run():
+    """max_steps=8 with horizon 16 == the first 8 steps of a 16-step run (bit-exact)."""
+    full_cfg = tiny_experiment(model_kw={"dropout": 0.1}, max_steps=16, checkpoint_interval=100)
+    early_cfg = with_training(full_cfg, max_steps=8, lr_schedule_steps=16)
+    full = Trainer(full_cfg, *split(learnable()), CPU)
+    full.fit(max_steps=8)
+    early = Trainer(early_cfg, *split(learnable()), CPU)
+    early.fit()
+    assert early.loss_history == full.loss_history
+    for a, b in zip(full.model.parameters(), early.model.parameters(), strict=True):
+        assert torch.equal(a, b)
+
+
+def test_eval_frequency_does_not_change_training():
+    """RNG isolation: eval interval and exact-val evaluation never touch training RNG."""
+    base = tiny_experiment(model_kw={"dropout": 0.1}, max_steps=12, checkpoint_interval=100)
+    runs = []
+    for kw in (
+        {"eval_interval": 12},
+        {"eval_interval": 1},
+        {"eval_interval": 3, "exact_val_eval": True},
+    ):
+        t = Trainer(with_training(base, **kw), *split(learnable()), CPU)
+        t.fit()
+        runs.append(t)
+    for t in runs[1:]:
+        assert t.loss_history == runs[0].loss_history
+        for a, b in zip(runs[0].model.parameters(), t.model.parameters(), strict=True):
+            assert torch.equal(a, b)

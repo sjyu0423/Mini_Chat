@@ -1,0 +1,42 @@
+# M2.1 LR-schedule ablation, experiment B. Identical to gpt_10m_m2.toml except
+# max_steps, lr_schedule_steps, eval_interval and checkpoint_interval.
+# 10,770,816 parameters.
+name = "gpt_10m_m2_1_b"
+description = "M2.1 B: compressed schedule (horizon 2000), 2000 steps"
+
+[model]
+vocab_size = 65          # char vocab of Tiny Shakespeare
+context_length = 256
+n_layer = 6
+n_head = 6
+n_embd = 384
+dropout = 0.2            # small dataset (~1M tokens) -> regularize
+bias = true
+
+[training]
+seed = 1337
+batch_size = 64
+gradient_accumulation_steps = 1
+learning_rate = 1e-3
+min_learning_rate = 1e-4
+warmup_steps = 100
+max_steps = 2000
+lr_schedule_steps = 2000          # cosine horizon; the only intended A/B difference
+weight_decay = 0.1
+beta1 = 0.9
+beta2 = 0.99
+grad_clip = 1.0
+eval_interval = 100
+eval_steps = 50
+log_interval = 50
+checkpoint_interval = 500       # snapshots at 500/1000/1500/2000 (~129 MB each)
+keep_last_checkpoints = 0
+save_best = true
+exact_val_eval = true           # exact full-split val loss at each eval; selects best.pt
+device = "mps"
+dtype = "float32"
+
+[data]
+dataset = "tiny_shakespeare"
+tokenizer = "char"
+val_fraction = 0.1

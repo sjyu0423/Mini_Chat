@@ -40,8 +40,11 @@ def learning_rate(step: int, cfg: TrainingConfig) -> float:
 
     * Linear warmup:  lr_max * (step + 1) / warmup_steps   for step < warmup_steps
     * Cosine decay:   lr_min + 0.5 (lr_max - lr_min) (1 + cos(pi * p)),
-                      p = (step - warmup) / (max_steps - warmup) in [0, 1]
-    * Held at lr_min after max_steps.
+                      p = (step - warmup) / (H - warmup) in [0, 1]
+    * Held at lr_min from step H on.
+
+    H is ``cfg.schedule_horizon``: ``lr_schedule_steps`` if set, else
+    ``max_steps``. It is independent of how long training actually runs.
 
     The schedule is a pure function of ``step``; restoring ``step`` restores it.
     """
@@ -50,8 +53,9 @@ def learning_rate(step: int, cfg: TrainingConfig) -> float:
     lr_max, lr_min = cfg.learning_rate, cfg.min_learning_rate
     if step < cfg.warmup_steps:
         return lr_max * (step + 1) / cfg.warmup_steps
-    if step >= cfg.max_steps:
+    horizon = cfg.schedule_horizon
+    if step >= horizon:
         return lr_min
-    decay_steps = cfg.max_steps - cfg.warmup_steps
+    decay_steps = horizon - cfg.warmup_steps
     progress = (step - cfg.warmup_steps) / decay_steps
     return lr_min + 0.5 * (lr_max - lr_min) * (1.0 + math.cos(math.pi * progress))

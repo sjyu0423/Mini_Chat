@@ -50,6 +50,7 @@ TRAINING_OVERRIDES = (
     "batch_size",
     "gradient_accumulation_steps",
     "max_steps",
+    "lr_schedule_steps",
     "warmup_steps",
     "learning_rate",
     "min_learning_rate",
