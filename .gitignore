@@ -14,8 +14,8 @@ dist/
 htmlcov/
 
 # Experiment outputs and downloaded data (never commit)
-runs/
-data/
+/runs/
+/data/
 
 # OS / editors
 .DS_Store
