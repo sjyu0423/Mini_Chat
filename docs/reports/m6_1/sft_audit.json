@@ -1,0 +1,829 @@
+{
+ "train_conversations": 16813,
+ "assistant_replies": 17914,
+ "overall": {
+  "assistant_replies": 17914,
+  "reply_tokens_median": 71.0,
+  "reply_tokens_p90": 291.7000000000007,
+  "reply_words_median": 43.0,
+  "share_reply_over_100_words": 0.24891146589259797,
+  "share_reply_over_200_words": 0.08680361728257228,
+  "mean_copy_fraction": 0.3838557330142252,
+  "share_copy_over_0.8": 0.20704476945405828,
+  "share_restates_question": 0.38885787652115666,
+  "share_reply_3_words_or_fewer": 0.05325443786982249,
+  "share_as_an_ai": 0.006475382382494139,
+  "share_language_model_self": 0.0011722675002791114,
+  "share_open_assistant_name": 0.004912359048788657,
+  "share_refusal": 0.007312716311264933,
+  "share_sorry": 0.00457742547728034,
+  "share_url": 0.007312716311264933,
+  "share_code_block": 0.016579211789661718
+ },
+ "by_group": {
+  "dolly:brainstorming": {
+   "assistant_replies": 1650,
+   "reply_tokens_median": 70.0,
+   "reply_tokens_p90": 188.10000000000014,
+   "reply_words_median": 35.0,
+   "share_reply_over_100_words": 0.13636363636363635,
+   "share_reply_over_200_words": 0.02666666666666667,
+   "mean_copy_fraction": 0.1562613459415911,
+   "share_copy_over_0.8": 0.0012121212121212121,
+   "share_restates_question": 0.24424242424242423,
+   "share_reply_3_words_or_fewer": 0.012121212121212121,
+   "share_as_an_ai": 0.0,
+   "share_language_model_self": 0.0,
+   "share_open_assistant_name": 0.0,
+   "share_refusal": 0.0,
+   "share_sorry": 0.0,
+   "share_url": 0.0,
+   "share_code_block": 0.0
+  },
+  "dolly:classification": {
+   "assistant_replies": 2018,
+   "reply_tokens_median": 35.0,
+   "reply_tokens_p90": 88.0,
+   "reply_words_median": 13.0,
+   "share_reply_over_100_words": 0.018830525272547076,
+   "share_reply_over_200_words": 0.0044598612487611496,
+   "mean_copy_fraction": 0.7920520654084704,
+   "share_copy_over_0.8": 0.6382556987115956,
+   "share_restates_question": 0.32309217046580774,
+   "share_reply_3_words_or_fewer": 0.06987115956392467,
+   "share_as_an_ai": 0.0,
+   "share_language_model_self": 0.0,
+   "share_open_assistant_name": 0.0,
+   "share_refusal": 0.0,
+   "share_sorry": 0.0,
+   "share_url": 0.0009910802775024777,
+   "share_code_block": 0.0
+  },
+  "dolly:closed_qa": {
+   "assistant_replies": 1395,
+   "reply_tokens_median": 29,
+   "reply_tokens_p90": 85.0,
+   "reply_words_median": 16,
+   "share_reply_over_100_words": 0.015770609318996417,
+   "share_reply_over_200_words": 0.0007168458781362007,
+   "mean_copy_fraction": 0.8646735658844852,
+   "share_copy_over_0.8": 0.7419354838709677,
+   "share_restates_question": 0.2724014336917563,
+   "share_reply_3_words_or_fewer": 0.11756272401433691,
+   "share_as_an_ai": 0.0,
+   "share_language_model_self": 0.0,
+   "share_open_assistant_name": 0.0,
+   "share_refusal": 0.0,
+   "share_sorry": 0.0,
+   "share_url": 0.0,
+   "share_code_block": 0.0
+  },
+  "dolly:creative_writing": {
+   "assistant_replies": 572,
+   "reply_tokens_median": 149.5,
+   "reply_tokens_p90": 344.4999999999999,
+   "reply_words_median": 106.0,
+   "share_reply_over_100_words": 0.5314685314685315,
+   "share_reply_over_200_words": 0.16958041958041958,
+   "mean_copy_fraction": 0.1756882102556084,
+   "share_copy_over_0.8": 0.0,
+   "share_restates_question": 0.34965034965034963,
+   "share_reply_3_words_or_fewer": 0.005244755244755245,
+   "share_as_an_ai": 0.0,
+   "share_language_model_self": 0.0,
+   "share_open_assistant_name": 0.0,
+   "share_refusal": 0.008741258741258742,
+   "share_sorry": 0.0,
+   "share_url": 0.008741258741258742,
+   "share_code_block": 0.0017482517482517483
+  },
+  "dolly:general_qa": {
+   "assistant_replies": 1932,
+   "reply_tokens_median": 107.0,
+   "reply_tokens_p90": 245.9000000000001,
+   "reply_words_median": 75.0,
+   "share_reply_over_100_words": 0.32401656314699795,
+   "share_reply_over_200_words": 0.06418219461697723,
+   "mean_copy_fraction": 0.1756458782030027,
+   "share_copy_over_0.8": 0.009834368530020704,
+   "share_restates_question": 0.4974120082815735,
+   "share_reply_3_words_or_fewer": 0.008281573498964804,
+   "share_as_an_ai": 0.0005175983436853002,
+   "share_language_model_self": 0.0,
+   "share_open_assistant_name": 0.0,
+   "share_refusal": 0.002587991718426501,
+   "share_sorry": 0.0,
+   "share_url": 0.0036231884057971015,
+   "share_code_block": 0.0
+  },
+  "dolly:information_extraction": {
+   "assistant_replies": 1030,
+   "reply_tokens_median": 31.0,
+   "reply_tokens_p90": 91.0,
+   "reply_words_median": 15.0,
+   "share_reply_over_100_words": 0.030097087378640777,
+   "share_reply_over_200_words": 0.002912621359223301,
+   "mean_copy_fraction": 0.8930837409470908,
+   "share_copy_over_0.8": 0.7990291262135922,
+   "share_restates_question": 0.2543689320388349,
+   "share_reply_3_words_or_fewer": 0.070873786407767,
+   "share_as_an_ai": 0.0,
+   "share_language_model_self": 0.0,
+   "share_open_assistant_name": 0.0,
+   "share_refusal": 0.0,
+   "share_sorry": 0.0,
+   "share_url": 0.0,
+   "share_code_block": 0.0
+  },
+  "dolly:open_qa": {
+   "assistant_replies": 3459,
+   "reply_tokens_median": 45,
+   "reply_tokens_p90": 171.20000000000027,
+   "reply_words_median": 26,
+   "share_reply_over_100_words": 0.12113327551315409,
+   "share_reply_over_200_words": 0.02312807169702226,
+   "mean_copy_fraction": 0.20785105293121925,
+   "share_copy_over_0.8": 0.015322347499277248,
+   "share_restates_question": 0.4322058398381035,
+   "share_reply_3_words_or_fewer": 0.13992483376698467,
+   "share_as_an_ai": 0.0017346053772766695,
+   "share_language_model_self": 0.0,
+   "share_open_assistant_name": 0.0,
+   "share_refusal": 0.0008673026886383347,
+   "share_sorry": 0.0,
+   "share_url": 0.0008673026886383347,
+   "share_code_block": 0.0
+  },
+  "dolly:summarization": {
+   "assistant_replies": 787,
+   "reply_tokens_median": 76,
+   "reply_tokens_p90": 164.0,
+   "reply_words_median": 46,
+   "share_reply_over_100_words": 0.10419313850063533,
+   "share_reply_over_200_words": 0.005082592121982211,
+   "mean_copy_fraction": 0.7967689637591966,
+   "share_copy_over_0.8": 0.5667090216010165,
+   "share_restates_question": 0.4155019059720457,
+   "share_reply_3_words_or_fewer": 0.0025412960609911056,
+   "share_as_an_ai": 0.0,
+   "share_language_model_self": 0.0,
+   "share_open_assistant_name": 0.0,
+   "share_refusal": 0.0012706480304955528,
+   "share_sorry": 0.0,
+   "share_url": 0.0,
+   "share_code_block": 0.0
+  },
+  "oasst2": {
+   "assistant_replies": 5071,
+   "reply_tokens_median": 179,
+   "reply_tokens_p90": 393.0,
+   "reply_words_median": 112,
+   "share_reply_over_100_words": 0.5348057582330901,
+   "share_reply_over_200_words": 0.23525931768881878,
+   "mean_copy_fraction": 0.21854623847615198,
+   "share_copy_over_0.8": 0.00847958982449221,
+   "share_restates_question": 0.45079865904160915,
+   "share_reply_3_words_or_fewer": 0.010057187931374483,
+   "share_as_an_ai": 0.021494774206270953,
+   "share_language_model_self": 0.004141195030565963,
+   "share_open_assistant_name": 0.01735357917570499,
+   "share_refusal": 0.023072372313153223,
+   "share_sorry": 0.016170380595543286,
+   "share_url": 0.022480773023072373,
+   "share_code_block": 0.05837112995464405
+  }
+ },
+ "near_duplicate_first_user_pairs": 892,
+ "near_duplicate_examples": [
+  [
+   "What are five totally distinct, creative ways to describe the usefulness of a broken mind.",
+   "What are five totally distinct, creative ways to describe the usefulness of a broken stapler."
+  ],
+  [
+   "What are five totally distinct, creative ways to describe the usefulness of a broken mind.",
+   "What are five totally distinct, creative ways to describe the usefulness of a broken stapler?"
+  ],
+  [
+   "List the founders of Twitter from the above passage in a comma separated format.\n\nTwitter is an onli",
+   "Provide a bulleted summary of the history of Twitter\n\nTwitter is an online social media and social n"
+  ],
+  [
+   "What are two species of beavers?\n\nBeavers (genus Castor) are large, semiaquatic rodents of the North",
+   "Can you give me a bulleted list of notable physical features of the beaver?\n\nBeavers (genus Castor) "
+  ],
+  [
+   "In the series A Song of Ice and Fire, who is the founder of House Thenn?",
+   "In the series A Song of Ice and Fire, who is the founder of House Casterly?"
+  ],
+  [
+   "In the series A Song of Ice and Fire, who is the founder of House Thenn?",
+   "In the series A Song of Ice and Fire, who is the founder of House Bar Emmon?"
+  ]
+ ],
+ "pattern_examples": {
+  "code_block": [
+   "You can make an element wait a few seconds before showing by using the setTimeout function in JavaScript. Here's an example of how you can do this:\n\n```\n<div id",
+   "Sure! Here is a bedtime story spoken by a baby that has not yet learned to speak! 👶\n```\nGoogoo ga goo\nGaga Googa\nGooga aaga\nAw woog\nWooga googa\nGaga googy\nGoogo",
+   "The slice notation, or the `[]` part after an array such as a string in Python, uses the following syntax:\n```python\narray[start:stop:step]\n```\nIt slices the ar",
+   "Sure, here is a simple Python script that uses the socket library to create a TCP client. This script connects to a server, sends a message, and then waits for "
+  ],
+  "as_an_ai": [
+   "As an AI language model, I don't have emotions or feelings like humans do, so I don't experience enjoyment in the way that humans do. However, I'm designed to r",
+   "I'm sorry, but as an AI language model, I don't have the ability to use the Hangerstation services to order food for delivery from McDonald's or any other resta",
+   "I'm sorry, but as an AI language model I don't have access to the latest information on reading websites and review ratings. However, here are ten popular trans",
+   "As an AI model, I don't have a personal political stance. I try to provide neutral answers to the best of my abilities based on patterns and relationships in th"
+  ],
+  "url": [
+   "The Kubernetes docs themselves are very good - https://kubernetes.io/. Many folks also enjoy course material from Coursera or Udemy - such as this course from M",
+   "according to https://www.worldatlas.com/articles/the-most-dense-neighborhoods-in-the-world.html, it is Lalbagh Thana, a neighborhood of Dhaka, Bangladesh. It ha",
+   "The official Microsoft Excel documentation can be found at the [Excel functions (by category)](https://support.microsoft.com/en-us/office/excel-functions-by-cat",
+   "Sure! Open Assistant is an Open-Source project meant to give everyone access to a great chat based large language model.\nA language model (LM) is an AI model th"
+  ],
+  "sorry": [
+   "I'm sorry, but as an AI language model, I don't have the ability to use the Hangerstation services to order food for delivery from McDonald's or any other resta",
+   "I'm sorry, but as an AI language model I don't have access to the latest information on reading websites and review ratings. However, here are ten popular trans",
+   "I'm sorry, but I am not aware of a dragonfly GA algorithm. Could you please elaborate on what the \"GA\" stands for?\n\nIn case you meant the regular Dragonfly Algo",
+   "I'm sorry, but \"C8DN\" is not a recognized term or name that I am aware of. It's possible that it could be an abbreviation or acronym for something specific, but"
+  ],
+  "open_assistant_name": [
+   "It's great that you spent time contributing to the development of Open Assistant, but it's also important to focus on your project and make sure you meet the re",
+   "Sure! Open Assistant is an Open-Source project meant to give everyone access to a great chat based large language model.\nA language model (LM) is an AI model th",
+   "The Github repository link for Open Assistant is currently: https://github.com/LAION-AI/Open-Assistant\n\nFrom this link you should also be able to find links to ",
+   "My default name is Open Assistant, however, as an Open Source language model, you are allowed to provide me specific designations when running your own instance"
+  ],
+  "refusal": [
+   "The date of today is 20th of March, 2023 (in GMT) and the next Christmas is on the 25th of December, 2023, so there are 279 full days and some more time until C",
+   "That's a lot of skills and hobbies! Though I can't physically hike, knit, crochet, or paint, I can offer related ideas, information, and suggestions. I can also",
+   "Memphis is the seventeenth album recorded by Roy Orbison, and his tenth for MGM Records. The album was released in November 1972.\n\nThe album took three weeks to",
+   "I cannot provide a definitive answer to when the United States economy will crash, but some investors and experts have made predictions based on various factors"
+  ],
+  "language_model_self": [
+   "I'm a language model, so I don't have new experiences or memories as a person would.\nBut recently there have been some milestones and new features in my develop",
+   "I am an AI-powered assistant",
+   "I know that I'm an AI model, why wouldn't you?",
+   "It depends on what artificial intelligence you have in mind. Artificial intelligence models may vary drastically in capabilities, including the capability to be"
+  ]
+ },
+ "special_tokens": {
+  "assistant_target_tokens": 2007366,
+  "end_targets": 17914,
+  "end_share_of_targets": 0.00892413242029605,
+  "mean_targets_per_assistant_turn": 112.05571061739421
+ },
+ "m5_length_policy": {
+  "context": 512,
+  "status": {
+   "dolly15k:dropped": 1299,
+   "dolly15k:full": 13494,
+   "oasst2:dropped": 1155,
+   "oasst2:full": 3170,
+   "oasst2:truncated": 1009
+  }
+ },
+ "manual_sample_seed0": [
+  {
+   "group": "dolly:open_qa",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What is tequila?"
+    },
+    {
+     "role": "assistant",
+     "content": "Tequila is an alcoholic beverage made in Mexico. It is Mexico's national drink. It is made from the heart of the agave plant. There are three kinds of tequila, Silver, Reposado and Anejo."
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What is the difference between learning a value function and a policy in reinforcement learning?"
+    },
+    {
+     "role": "assistant",
+     "content": "In reinforcement learning (RL), a value function and a policy are two key concepts that are used to model an agent's behavior in an environment.\n\nA value function is a mapping from states (or state-action pairs) to a scalar value that represents the expected return, or long-term reward, that an agent can expect to receive by following a certain policy. The value function provides a measure of how \"good\" a state or state-action pair is, and it is used to guide the agent's behavior by helping it choose actions that lead to states with high expected returns. There are two main types of value functions: state-value functions and action-value functions. State-value functions represent the expected return for an agent starting from a given state, while action-value functions represent the expected return for an agent starting from a given state and taking a specific action.\n\nA policy, on the other hand, is a mapping from states to actions that defines the actions that an agent should take in each state. The goal of RL is to find an optimal policy that maximizes the expected return over time. Policies can be deterministic, meaning that they specify a unique action for each state, or they can be stochastic, meaning that they specify a probability distribution over actions for each state.\n\nIn summary, the value function provides a measure of how good a state or state-action pair is, while the policy defines the actions that an agent should take. The value function is used to evaluate the performance of a policy, and the policy is updated based on the values obtained from the value function. The process of finding an optimal policy involves learning both a value function and a policy. The value function is learned by estimating the expected return, and the policy is updated based on the estimated value function. The interaction between the value function and the policy is what makes RL a powerful tool for solving sequential decision-making problems."
+    }
+   ]
+  },
+  {
+   "group": "dolly:general_qa",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What are the common formats of competitive debate in the US?"
+    },
+    {
+     "role": "assistant",
+     "content": "- Public Forum\n- Lincoln-Douglas\n- Policy\n- Congressional Debate\n- British Parliamentary\n- World Schools Debate\n- International Public Policy Forum"
+    }
+   ]
+  },
+  {
+   "group": "dolly:open_qa",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Which classical composer wrote the Hungarian Rhapsody"
+    },
+    {
+     "role": "assistant",
+     "content": "Franz Liszt"
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "I am studying computer science and I want to use Linux as my main operating system. Which distribution could be interesting?"
+    },
+    {
+     "role": "assistant",
+     "content": "There are many Linux distributions that could be of interest to you as a computer science student. Some popular choices include:\n\n- Ubuntu: This is one of the most widely used Linux distributions and is a great choice for beginners. It has a large user community and lots of documentation available, making it easy to find help and support when you need it.\n- Linux Mint: This distribution is based on Ubuntu, but has a more traditional GUI and is designed to be easier to use. It includes a lot of popular software pre-installed, making it a good choice for general use.\n- Pop!_OS: This distribution is designed by the creators of System76, a hardware manufacturer that sells Linux laptops and desktops. It includes a lot of user-friendly features, such as automatic updates and a GUI package manager.\n- Manjaro Linux: This distribution is based on Arch Linux, but offers a more user-friendly experience. It includes a graphical installer and a pre-installed set of applications, making it a great option for those who want a more advanced Linux experience without the complexity of Arch.\n\nUltimately, the right distribution for you will depend on your specific needs and preferences. You may want to try out a few different ones to see which you prefer."
+    }
+   ]
+  },
+  {
+   "group": "dolly:general_qa",
+   "messages": [
+    {
+     "role": "user",
+     "content": "why peoples eating popcorn in the cinema?"
+    },
+    {
+     "role": "assistant",
+     "content": "People often eat popcorn in the cinema because it has become a popular snack food that is associated with movie-going. Popcorn is easy to eat with your hands and can be shared among a group, making it a convenient snack to enjoy while watching a film. In addition, the aroma of freshly popped popcorn is often enticing and can help to create a festive atmosphere in the cinema. Popcorn also has a long shelf life and can be stored in large quantities, making it an economical choice for cinemas. Overall, the tradition of eating popcorn in the cinema has become deeply ingrained in popular culture and is enjoyed by many movie-goers around the world."
+    }
+   ]
+  },
+  {
+   "group": "dolly:brainstorming",
+   "messages": [
+    {
+     "role": "user",
+     "content": "give me a list of all the ways a person can hydrate"
+    },
+    {
+     "role": "assistant",
+     "content": "- drink water from a glass\n- drink water using a straw\n- drink water from a hose\n- suck on an ice cube\n- have a cucumber\n- get an IV\n- drink an electrolyte"
+    }
+   ]
+  },
+  {
+   "group": "dolly:classification",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Categorize the days of the week based on their starting alphabet.\nSunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+    },
+    {
+     "role": "assistant",
+     "content": "S - Sunday, Saturday\nM - Monday\nW - Wednesday\nT - Tuesday, Thursday\nF - Friday"
+    }
+   ]
+  },
+  {
+   "group": "dolly:information_extraction",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Extract the age when Brendon Small began to learn how to play Guitar\n\nBrendon Small (born February 15, 1975) is an American actor, stand-up comedian, animator, writer, director, producer, and musician known for co-creating the animated series Home Movies (1999–2004, with Loren Bouchard) and Metalocalypse (2006–13, with Tommy Blacha). He also writes the music, and is the main performer for the virtual melodic death metal band Dethklok, which began as the subject of Metalocalypse but has taken on a life of its own, with four albums and an occasional live touring band, headed by Small. Small has also released two albums under his own name, in a similar musical style to Dethklok.\n\nSmall was born in Illinois in 1975. He moved to California as a child. Small started learning guitar at the age of 14 after a kid in his neighborhood began teaching him about guitar and music. At his first public performance, his hands shook so wildly that he had trouble controlling the guitar. It would be another ten years before he was comfortable performing in public. He graduated from Palma High School in Salinas, California. He graduated from Berklee College of Music in 1997. During his music studies, he took several writing and comedy classes at Emerson College. After graduating, he felt that the rock music genre was fading in popularity, so decided to try his hand at stand-up comedy."
+    },
+    {
+     "role": "assistant",
+     "content": "14"
+    }
+   ]
+  },
+  {
+   "group": "dolly:information_extraction",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Who is the singer of the song I'm So Excited?\n\n\"I'm So Excited\" is a song by Australian singer Anja Nissen."
+    },
+    {
+     "role": "assistant",
+     "content": "\"I'm So Excited\" is a song by Australian singer Anja Nissen. It was written and produced by Redfoo and will.i.am. The song features vocals from will.i.am and Cody Wise. The song was released on 31 October 2014 and debuted at number 42 on the ARIA Singles Chart, selling 3,023 copies."
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Please write a sincere thank-you note to my close friend Jacob, who got me a gift card to my favorite cafe for my birthday."
+    },
+    {
+     "role": "assistant",
+     "content": "Hi Jacob\nThank you very much for the gift card. You were thoughtful and chose the spot I love the most for coffee. This is the best birthday gift I could have dreamed of.\nYou are too kind,\n[your name]"
+    },
+    {
+     "role": "user",
+     "content": "the name of the cafe is called 'beanz' can you use the name in the note? Can you mention that it made me feel recognised and appreciated he noticed the cafe. also the part where i express i like the gift is good but maybe not say its 'the best'."
+    },
+    {
+     "role": "assistant",
+     "content": "Hi Jacob,\nI just wanted to say a big thank you for the birthday gift card to Beanz. It means a lot to me that you not only remembered my birthday but also knew my favorite cafe. It made me feel recognized and appreciated. I'm really looking forward to spending some quality time there and enjoying some of my favorite drinks. I appreciate your thoughtfulness and generosity, and I'm lucky to have a friend like you.\nThank you so much,\n[Your name]"
+    }
+   ]
+  },
+  {
+   "group": "dolly:classification",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Sort these car brands and models into car types, either sedan, SUV, or sports car: Volkswagon Atlas, Porsche Boxter, Ford Mustang, Porsche Cayenne, Toyota Camry, Toyota Corolla, Dodge Durango, Chevrolet Camaro, Ford Explorer, Nissan Sentra, Porsche 911, Ford Escape, Chevrolet Equinox, Honda Pilot, Kia Telluride, Genesis G90, Honda Accord, Honda Civic, Kia Forte"
+    },
+    {
+     "role": "assistant",
+     "content": "The SUVs are: Volkswagon Atlas, Porsche Cayenne, Dodge Durango, Ford Explorer, Ford Escape, Chevrolet Equinox, Honda Pilot, Kia Telluride, and Genesis G90. The sports cars are: Porsche Boxter, Chevrolet Camaro, Porsche 911, and Ford Mustang. The sedans are: Toyota Camry, Toyota Corolla, Nissan Sentra, Honda Accord, Honda Civic, and Kia Forte."
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Who is Francesco Lelli?"
+    },
+    {
+     "role": "assistant",
+     "content": "There are several people with the name Francesco Lelli. One of them is a professor and researcher who has been working as an Assistant Professor at Tilburg University since July 2018. Another Francesco Lelli is listed on IMDb as a professor and researcher. If you could provide more context, I could help you better."
+    },
+    {
+     "role": "user",
+     "content": "Who is the one on IMDb?"
+    },
+    {
+     "role": "assistant",
+     "content": "Okay, I understand you are interested in learning more about Francesco Lelli who is listed on IMDb. However, I'm not sure exactly what information about him you are looking for or what your overall goals are. If you could provide more context about why you want to know about this person or what types of details would be most helpful for your needs, then I can provide more targeted responses. For example, are you researching him for a school project? Or are you interested in his academic work or film career? The more context you can provide, the more helpful I can be."
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Explain RPG in simple terms"
+    },
+    {
+     "role": "assistant",
+     "content": "RPG might stand for Role Playing Game, which is a kind of game that each player mimics and assumes the role of a fictional character in a fictional scenario. RPG might alternatively stand for rocket propelled grenade, which is a kind of shoulder-fired rocket propelled grenade that is an anti-armor weapon."
+    },
+    {
+     "role": "user",
+     "content": "can minecraft be considered an RPG?"
+    },
+    {
+     "role": "assistant",
+     "content": "Minecraft is typically not considered a traditional RPG, as it does not have a strong emphasis on character development, storytelling, and role-playing. However, some players might use Minecraft as a platform for role-playing games by creating custom scenarios and characters within the game world. These custom scenarios might include quests, character interactions, and other elements commonly found in RPGs. So, while Minecraft is not primarily designed as an RPG, it can be used as a tool for role-playing games with a bit of creativity and imagination."
+    }
+   ]
+  },
+  {
+   "group": "dolly:closed_qa",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What channel did the series begin on?\n\nThe series began on Discovery Health Channel on November 10, 2009. Season 1 concluded on December 29, 2009, after 6 episodes. Season 2 ran from July 20, 2010, to October 19, 2010, with 8 episodes. Season 3 ran from September 1 to 29, 2011, with 6 episodes."
+    },
+    {
+     "role": "assistant",
+     "content": "The series began on Discover Health Channel on November 10, 2009."
+    }
+   ]
+  },
+  {
+   "group": "dolly:information_extraction",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Extract the ingredients in a Manhattan cocktail from this text and present them in a bulleted list.\n\nA Manhattan is a cocktail made with whiskey, sweet vermouth, and bitters. While rye is the traditional whiskey of choice, other commonly used whiskies include Canadian whisky, bourbon, blended whiskey, and Tennessee whiskey. The cocktail is usually stirred then strained into a cocktail glass and garnished traditionally with a maraschino cherry. A Manhattan may also be served on the rocks in a lowball glass."
+    },
+    {
+     "role": "assistant",
+     "content": "The ingredients in a Manhattan cocktail are:\n- whiskey (rye, Canadian, bourbon, blended, Tennessee)\n- sweet vermouth\n- bitters\n- maraschino cherry (garnish)"
+    }
+   ]
+  },
+  {
+   "group": "dolly:creative_writing",
+   "messages": [
+    {
+     "role": "user",
+     "content": "write a poem about the holidays"
+    },
+    {
+     "role": "assistant",
+     "content": "the holidays are magical\nyou will agree if you are logical\n\nin thanksgiving we feast\nits a reason to get together at least\n\nin Christmas we sing\nthats our thing\n\nwe put gifts under the tree\nhopefully containing a new plush bee\n\nduring halloween we scare\nand hope our costume doesn't tear\n\na bag comes in handy\nwhen you get tons of candy\n\nin easter there are eggs\nand a bunny with jumpy legs\n\nthose are some holidays\nI wouldn't have them in any other ways"
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Here's a few examples of nonsensical soyjaks:\n\n- A squirrel soyjak riding on a jetski in a tiny swimming pool while being recorded by a human soyjak.\n\n- 2 crying polar bear soyjaks standing in the street with flags on them saying \"it's ok to be czech,\" while a giant cyborg robot cowers over them in the background with a smug soyjak piloting it.\n\n- A soyjak with a bicycle shaped object in his throat saying \"I don't know where the bike went.\"\n\nDescribe me a new nonsensical soyjak."
+    },
+    {
+     "role": "assistant",
+     "content": "Picture a soyjak wearing a wizard's hat and robe, riding a unicycle while juggling pineapples with his feet. His facial expression is a mix of confusion and determination, as if he's not entirely sure why he's doing this but he's committed to seeing it through. In the background, there are several other soyjaks dressed in animal costumes, playing a cacophony of instruments that don't seem to match in any way. A giant, inflatable rubber duck hovers overhead, casting a shadow over the entire scene."
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Wie alt ist Angela Merkel und wie lange war sie Bundeskanzlerin in Deutschland?"
+    },
+    {
+     "role": "assistant",
+     "content": "Angela Merkel ist 68 Jahre alt (geboren 17. Juli 1954 in Hamburg). Sie war vom 22. November 2005 bis zum 8. Dezember 2021 achter Bundeskanzler der Bundesrepublik Deutschland."
+    }
+   ]
+  },
+  {
+   "group": "dolly:general_qa",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Why are most plants green?"
+    },
+    {
+     "role": "assistant",
+     "content": "Plants and algae are green due to a vital energy producing pigment in their leaves called chlorophyll. Chlorophyll molecules absorb light energy across the electromagnetic spectrum of sunshine but reflect light in the green part of the spectrum. As a result, plants appear to be green to human eyes. As an interesting side note, many animals and insects can see beyond the visible light spectrum that human's can see so that they may not view plants as being what we call 'green'."
+    }
+   ]
+  },
+  {
+   "group": "dolly:summarization",
+   "messages": [
+    {
+     "role": "user",
+     "content": "How was basketball was invented?\n\nBasketball began with its invention in 1891 in Springfield, Massachusetts, by Canadian physical education instructor James Naismith as a less injury-prone sport than football. Naismith was a 31-year old graduate student when he created the indoor sport to keep athletes indoors during the winters."
+    },
+    {
+     "role": "assistant",
+     "content": "Basketball began with its invention in 1891 in Springfield, Massachusetts, by Canadian physical education instructor James Naismith as a less injury-prone sport than football. Naismith was a 31-year old graduate student when he created the indoor sport to keep athletes indoors during the winters. The game became established fairly quickly and grew very popular as the 20th century progressed, first in America and then in other parts of the world. After basketball became established in American colleges, the professional game followed. The American National Basketball Association (NBA), established in 1946, grew to a multibillion-dollar enterprise by the end of the century, and basketball became an integral part of American culture."
+    }
+   ]
+  },
+  {
+   "group": "dolly:classification",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Identify which animal species is alive or extinct: Giant Panda, Oviraptor"
+    },
+    {
+     "role": "assistant",
+     "content": "Oviraptor is extinct, Giant Panda is alive."
+    }
+   ]
+  },
+  {
+   "group": "dolly:brainstorming",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What are the main challenges to  solar panel adoption ?"
+    },
+    {
+     "role": "assistant",
+     "content": "Based on our collective understanding , main barriers to residential solar panel adoption are Economic, Policy and legal, and technical. For example, the initial cost of homeowner to invest in solar, is substantial and the break even on the investment is over 20 years. In addition many utilities don’t have policies to sufficiently compensate for storage and reselling of the excess energy produced."
+    }
+   ]
+  },
+  {
+   "group": "dolly:classification",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Which is a bird or fish: Black tern, Blackfin tuna"
+    },
+    {
+     "role": "assistant",
+     "content": "Black tern is a bird, Blackfin tuna is a fish"
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What's a version control system and how do I get started using one?"
+    },
+    {
+     "role": "assistant",
+     "content": "A version control system (VCS) is a software tool that helps developers keep track of changes made to their code over time. It allows developers to save different versions of their code, so they can easily go back to a previous version if something goes wrong. It also allows multiple developers to work on the same codebase simultaneously, without overwriting each other's changes.\n\nThere are several popular VCSs to choose from, but the most widely used are Git, Mercurial and Subversion.\n\nTo get started using a version control system:\n\n1.Choose a VCS (e.g. Git) and install it on your computer.\n2.Create a repository for your project. A repository is a place where all the versions of your code are stored.\n3.Add the files you want to track to the repository.\n4.Make changes to the files, and then \"commit\" the changes to the repository. This saves a new version of the code.\n5.Repeat steps 3 and 4 as you continue to work on your project.\n6.To go back to a previous version of your code, you can \"checkout\" that version from the repository.\nThere are also some web-based platforms like GitHub, GitLab, and Bitbucket that provides a web-based interface for managing git repositories and also provides additional features like code review, issue tracking, and project management.\n\nIt's a good idea to start with the basics of VCS and then move on to more advanced features like branching, merging and pull requests. There are a lot of resources available on the internet to help you learn Git, like tutorials, videos, books and more."
+    }
+   ]
+  },
+  {
+   "group": "dolly:open_qa",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What is the art of command"
+    },
+    {
+     "role": "assistant",
+     "content": "It is the art of influencing human behavior in order to achieve the objective assigned by the superior."
+    }
+   ]
+  },
+  {
+   "group": "dolly:classification",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Classify these as a synthetic or natural fiber"
+    },
+    {
+     "role": "assistant",
+     "content": "wool, polyester, cotton, silk, nylon, aramid, jute"
+    }
+   ]
+  },
+  {
+   "group": "dolly:classification",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What do Logan, Ororo, Charles, Jean, and Scott have in common?"
+    },
+    {
+     "role": "assistant",
+     "content": "They are all X-Men."
+    }
+   ]
+  },
+  {
+   "group": "dolly:summarization",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Is the Guinness Book of World Records legitimate?\n\nGuinness World Records, known from its inception in 1955 until 1999 as The Guinness Book of Records and in previous United States editions as The Guinness Book of World Records, is a reference book published annually, listing world records both of human achievements and the extremes of the natural world. The brainchild of Sir Hugh Beaver, the book was co-founded by twin brothers Norris and Ross McWhirter in Fleet Street, London, in August 1955."
+    },
+    {
+     "role": "assistant",
+     "content": "The Guinness Book of World Records is a real organization that was started in 1955. The organization certifies world records by sending an official certifier to witness and record world records. Recently, the organization has come under fire for its practices of receiving money from dictatorships in exchange for certifying \"seemingly random\" world records, such as \"The Largest Gathering of Jump Ropers Wearing Green\" or \"The Longest Pizza Baked in Under 10 Hours\"."
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What was World War 2 about?"
+    },
+    {
+     "role": "assistant",
+     "content": "World War 2 (1939-1945) was a global conflict primarily between the Axis powers (Nazi Germany, Italy, and Japan) and the Allied forces (the United States, the United Kingdom, the Soviet Union, and others). The war's main causes were unresolved issues from World War 1, economic crises, and aggressive expansionist policies pursued by Axis leaders. The war resulted in millions of casualties, the Holocaust, and significant geopolitical changes, ultimately leading to the rise of the United States and the Soviet Union as global superpowers."
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What country is the biggest producer of cereal (make a list for 5 different cereal type)"
+    },
+    {
+     "role": "assistant",
+     "content": "According to the United Nations' Food and Agriculture Organization, the world's most commonly produced cereals are:\n\nCorn (maize): United States, China, Brazil, Argentina, India\nWheat: China, India, Russia, United States, Canada\nRice: China, India, Indonesia, Bangladesh, Vietnam\nBarley: Russia, Germany, France, Canada, Ukraine\nOats: Russia, Canada, Poland, Australia, Finland\nThese rankings can shift from year to year due to various factors like weather, crop yields, and demand. Other cereals are also produced globally, including sorghum, millet, and rye.\n\nThe key point is that a handful of countries dominate production of the most significant cereal crops. But many countries contribute to the worldwide supply of cereals, which are a staple food source for many cultures."
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Can you explain the mechanisms of protein folding and its significance in the study of diseases?"
+    },
+    {
+     "role": "assistant",
+     "content": "Protein folding is the process by which a protein molecule acquires its three-dimensional structure, which is critical for its function. Proteins are long chains of amino acids, and the way they fold depends on the sequence of amino acids and the environmental conditions such as temperature and pH.\n\nThere are four primary structures of proteins:\n- Primary structure: This refers to the linear sequence of amino acids in the protein chain.\n- Secondary structure: This refers to the folding of the protein chain into patterns such as alpha helices and beta sheets.\n- Tertiary structure: This refers to the overall three-dimensional shape of the protein.\n- Quaternary structure: This refers to the arrangement of multiple protein molecules to form a functional unit.\n\nThe process of protein folding is guided by a combination of hydrophobic and hydrophilic interactions, as well as van der Waals forces, hydrogen bonds, and disulfide bonds. The folding process can be spontaneous, but sometimes it requires the assistance of chaperone proteins that help to fold the protein correctly.\n\nProtein misfolding, where a protein adopts a non-functional or toxic conformation, is a common problem that can cause various diseases. Misfolded proteins can lead to a range of conditions such as neurodegenerative diseases like Alzheimer's and Parkinson's, cystic fibrosis, and certain cancers. Protein misfolding can be caused by genetic mutations, environmental factors such as temperature and pH changes, and aging.\n\nThe study of protein folding is essential in the field of biochemistry, and researchers are constantly seeking to understand the mechanisms that control it. By understanding the folding process, scientists hope to develop treatments for diseases caused by misfolded proteins. Additionally, advances in protein engineering have allowed researchers to design new proteins with specific functions, such as enzymes for industrial and medical applications."
+    }
+   ]
+  },
+  {
+   "group": "dolly:information_extraction",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Extract all words derived from Swahili language in the following paragraph:\n\nShingopana is known from a partial jaw, represented by the angular bone. Shingopana is also known from four cervical vertebrae; with two of these vertebrae having preserved cervical ribs and another isolated cervical rib. Shingopana instead had remnants of a bulbous expansion on the incompletely preserved cervical vertebrae, which probably helped to strengthen its neck."
+    },
+    {
+     "role": "assistant",
+     "content": "The following are words extracted from Swahili language in the above paragraph: Shingopana (which means wide neck)."
+    }
+   ]
+  },
+  {
+   "group": "dolly:classification",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What are the 8 categories of scientific classification?"
+    },
+    {
+     "role": "assistant",
+     "content": "Levels of Classification. The classification system commonly used today is based on the Linnean system and has eight levels of taxa; from the most general to the most specific, these are domain, kingdom, phylum (plural, phyla), class, order, family, genus (plural, genera), and species."
+    }
+   ]
+  },
+  {
+   "group": "dolly:classification",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Identify which instrument is string or percussion: Crystallophone, Kacapi"
+    },
+    {
+     "role": "assistant",
+     "content": "Kacapi is string, Crystallophone is percussion."
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "What AQI level is it acceptable to walk around without mask in?"
+    },
+    {
+     "role": "assistant",
+     "content": "California Ocupational Safety and Health Standards require that employers provide their workers with proper respirators if the AQI PM2.5 (air quality related to fine particles) is 151 or greater, which is the \"unhealthy\" level of concern. AirNow lists N-95 masks or P-100 respirators as options for going outdoors for relatively short periods of time in these cases.\n\nBelow that is AQI 101-150, which is \"unhealthy for sensitive groups\". If you are not a member of a sensitive group, you'll likely be fine, and don't need to worry as much about walking around with a mask. Below that at AQI 51-100 is \"moderate\", which most people should be fine with, excluding unusually sensitive people. AQI 0-50 is \"good\", and poses little or no risk to anyone.\n\nIn cases of exposure, you may feel eye, nose, or throat irritation; coughing; phlem; chest tightness; or shortness of breath. These should go away when in an area with better air quality. airnow.gov recommends staying in a house with filtered air if possible. Otherwise, make sure your air conditioner's fresh air intake is closed and the AC filter is clean. Or, use a personal air filter in the room you're staying in, but don't use an air filter that generates ozone.\n\nNote that AQI only measures ozone, particle pollution, carbon monoxide, and sulfur dioxide. It won't be a useful measure if you're worried about other chemicals or substances in the air."
+    }
+   ]
+  },
+  {
+   "group": "dolly:classification",
+   "messages": [
+    {
+     "role": "user",
+     "content": "classify the following as sports vs other activities: cricket, talking, writing, running, dancing, football, golf, construction, plumbing, swimming, paragliding, racing, getting late"
+    },
+    {
+     "role": "assistant",
+     "content": "sports: cricket, running, football, golf, swimming, paragliding, racing\nother activities: talking, writing, dancing, construction, plumbing, getting late"
+    }
+   ]
+  },
+  {
+   "group": "oasst2",
+   "messages": [
+    {
+     "role": "user",
+     "content": "How many days in a week ?"
+    },
+    {
+     "role": "assistant",
+     "content": "Under the Gregorian calendar system, which most of the world uses, there are seven days in a week."
+    }
+   ]
+  },
+  {
+   "group": "dolly:closed_qa",
+   "messages": [
+    {
+     "role": "user",
+     "content": "When was Suntory established?\n\nSuntory Holdings Limited (サントリーホールディングス株式会社, Santorī Hōrudingusu Kabushiki-gaisha) (commonly referred to as simply Suntory) is a Japanese multinational brewing and distilling company group. Established in 1899, it is one of the oldest companies in the distribution of alcoholic beverages in Japan, and makes Japanese whisky. Its business has expanded to other fields, and the company now also makes soft drinks and operates sandwich chains. With its 2014 acquisition of Beam, Inc., it has diversified internationally and become the third largest maker of distilled beverages in the world. Suntory is headquartered in Dojimahama 2-chome, Kita-ku, Osaka, Osaka Prefecture. Suntory Beverage & Food Limited (サントリー食品インターナショナル株式会社, Santorī shokuhin"
+    },
+    {
+     "role": "assistant",
+     "content": "Suntory was established in 1899"
+    }
+   ]
+  },
+  {
+   "group": "dolly:open_qa",
+   "messages": [
+    {
+     "role": "user",
+     "content": "How old is the Greek language?"
+    },
+    {
+     "role": "assistant",
+     "content": "The Greek language is the oldest language in Europe, spoken since 1450 years before Christ. Currently Greek is spoken in Greece, Albania and Cyprus. About 13 million people still speak Greek today and many in the greater diaspora."
+    }
+   ]
+  }
+ ]
+}

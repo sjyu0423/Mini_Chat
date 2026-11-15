@@ -1,0 +1,32 @@
+# M6.1 controlled SFT experiment: the M5 recipe with ONE change (length-capped replies).
+# Architecture, tokenizer, context (512) and float32/MPS are inherited unchanged from the
+# base checkpoint; only the weights are updated. The optimizer is created fresh.
+name = "m6_1_sft_cap100"
+description = "M6.1 SFT: identical to M5 except data: M5 conversations with assistant replies <= 100 words (scripts/prepare_chat_m6_1.py)"
+base_checkpoint = "runs/m4_1_general_s_bpe8192-20261114-190514/checkpoints/step_00009600.pt"
+expected_fingerprint = "e6be77ccff4929187ed84ee1b71d15b7654824abd9e23f3ad889c57232ce91c8"
+data_dir = "data/processed/chat_m6_1"
+run_dir = "runs"
+
+[optimization]
+seed = 1337
+batch_size = 16          # conversations per step (right-padded, length-bucketed)
+epochs = 3               # each conversation presented 3 times; best validation selects
+learning_rate = 1e-4     # 6x below the pretraining peak (6e-4)
+min_learning_rate = 1e-5
+warmup_steps = 100
+weight_decay = 0.1
+beta1 = 0.9
+beta2 = 0.95
+grad_clip = 1.0
+
+[evaluation]
+eval_interval = 250      # exact assistant-token loss over the full validation split
+log_interval = 25
+
+[runtime]
+device = "mps"
+bucket_factor = 50
+pad_multiple = 64          # pad batches to 64/128/.../512 positions (bounded MPS shapes)
+empty_cache_interval = 25  # release cached MPS buffers (attempt 1 swapped at 15 GB)
+max_driver_gb = 10.0       # abort rather than swap

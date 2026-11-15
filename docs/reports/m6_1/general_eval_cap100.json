@@ -1,0 +1,3702 @@
+{
+  "checkpoint": "runs/m6_1_sft_cap100-20261114-185455/checkpoints/best.pt",
+  "checkpoint_sha256": "f79487c36665c773023475bc3a5911196777e20f76d1ff0294e45450356901f2",
+  "device": "mps",
+  "heldout": {
+    "cosmopedia_v2_val": {
+      "bits_per_byte": 1.2116633191143773,
+      "bytes": 1545748,
+      "docs": 400,
+      "nats_per_token": 3.615186526846401,
+      "tokens": 359100
+    },
+    "fineweb_edu_val": {
+      "bits_per_byte": 1.5261490712686032,
+      "bytes": 1841038,
+      "docs": 400,
+      "nats_per_token": 4.139929357075227,
+      "tokens": 470427
+    },
+    "tinystories_v2_val": {
+      "bits_per_byte": 1.3053120745192632,
+      "bytes": 329552,
+      "docs": 400,
+      "nats_per_token": 3.2147002577966752,
+      "tokens": 92752
+    },
+    "wikipedia_en_ood": {
+      "bits_per_byte": 1.8242384474427538,
+      "bytes": 734726,
+      "docs": 257,
+      "nats_per_token": 4.098952811914224,
+      "tokens": 226652
+    }
+  },
+  "instruction": {
+    "chat": {
+      "applicable": true,
+      "both": {
+        "ci95": [
+          0.08894003962896138,
+          0.53231033912066
+        ],
+        "correct": 3,
+        "n": 12,
+        "rate": 0.25
+      },
+      "content": {
+        "ci95": [
+          0.19325746190524656,
+          0.6804926643446272
+        ],
+        "correct": 5,
+        "n": 12,
+        "rate": 0.4166666666666667
+      },
+      "format": {
+        "ci95": [
+          0.3195073356553728,
+          0.8067425380947535
+        ],
+        "correct": 7,
+        "n": 12,
+        "rate": 0.5833333333333334
+      },
+      "items": [
+        {
+          "both_ok": true,
+          "content_ok": true,
+          "format_ok": true,
+          "id": "chat01",
+          "reply": "Hello! I'm here to help you today."
+        },
+        {
+          "both_ok": false,
+          "content_ok": false,
+          "format_ok": true,
+          "id": "chat02",
+          "reply": "The capital of France is the capital"
+        },
+        {
+          "both_ok": false,
+          "content_ok": false,
+          "format_ok": true,
+          "id": "chat03",
+          "reply": "I have 3 apples and buy 2 more apples."
+        },
+        {
+          "both_ok": false,
+          "content_ok": false,
+          "format_ok": true,
+          "id": "chat04",
+          "reply": "Sure! Here are three colors: red, blue, and blue."
+        },
+        {
+          "both_ok": true,
+          "content_ok": true,
+          "format_ok": true,
+          "id": "chat05",
+          "reply": "Lena is a language model that is used to describe the language and language of the world. It is a language model that is used to describe the language and language of the world. It is a language model that is used to describe the language and language of the world. It is a language model that is used to describe the language and language of the world. It is used to describe the language and language of the world."
+        },
+        {
+          "both_ok": false,
+          "content_ok": false,
+          "format_ok": false,
+          "id": "chat06",
+          "reply": "I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but"
+        },
+        {
+          "both_ok": true,
+          "content_ok": true,
+          "format_ok": true,
+          "id": "chat07",
+          "reply": "The ocean is a fishing fish."
+        },
+        {
+          "both_ok": false,
+          "content_ok": true,
+          "format_ok": false,
+          "id": "chat08",
+          "reply": "Give me a word that rhymes with cat.\n\nGive me a word that rhymes with cat.\n\nGive me a word that rhymes with cat.\n\nGive me a word that rhymes with cat.\n\nGive me a word that rhymes with cat.\n\nGive me a word that rhymes with cat.\n\nGive me a word that rhymes with cat.\n\nGive me a word that rhymes with cat.\n\nGive me a word that rhymes with cat.\n\nGive me a word that rhymes with cat."
+        },
+        {
+          "both_ok": false,
+          "content_ok": true,
+          "format_ok": false,
+          "id": "chat09",
+          "reply": "A tomato is a fruit. It is a plant that is not a fruit. It is a plant that is not a fruit. It is a plant that is not a fruit. It is a plant that is not a fruit. It is a plant that is not a fruit. It is a plant that is not a fruit. It is a plant that is not a fruit. It is a plant that is not a fruit. It is a plant that is not a fruit. It is a plant that is not a fruit. It is a plant that is not a fruit. It is a plant that is not a fruit."
+        },
+        {
+          "both_ok": false,
+          "content_ok": false,
+          "format_ok": false,
+          "id": "chat10",
+          "reply": "The following are 7 plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n\nThe plus 8 is 8.\n"
+        },
+        {
+          "both_ok": false,
+          "content_ok": false,
+          "format_ok": false,
+          "id": "chat11",
+          "reply": "I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but I'm sorry, but"
+        },
+        {
+          "both_ok": false,
+          "content_ok": false,
+          "format_ok": true,
+          "id": "chat12",
+          "reply": "The sky is blue."
+        }
+      ]
+    }
+  },
+  "model_parameters": 13989888,
+  "next_token": {
+    "code_generation": {
+      "acc": {
+        "ci95": [
+          0.056680947980693314,
+          0.5098431532792765
+        ],
+        "correct": 2,
+        "n": 10,
+        "rate": 0.2
+      },
+      "items": [
+        {
+          "completion": " x * x * x * x * x * x * x * x *",
+          "correct": true,
+          "id": "cgen01"
+        },
+        {
+          "completion": ", print(\"Hand-Time)\n    print(\"Hand",
+          "correct": false,
+          "id": "cgen02"
+        },
+        {
+          "completion": "!)\n    print(\"Hello, world!)\n    print(",
+          "correct": false,
+          "id": "cgen03"
+        },
+        {
+          "completion": "\"Hello, 2, 3, 3, 3, 3, 3",
+          "correct": false,
+          "id": "cgen04"
+        },
+        {
+          "completion": "\"<|end|>.\n\n```\n\n```\n\n```\n\n```\n",
+          "correct": false,
+          "id": "cgen05"
+        },
+        {
+          "completion": " plt.\n\n```\n\nplt.txt(\"N",
+          "correct": false,
+          "id": "cgen06"
+        },
+        {
+          "completion": " height\n\n    return height\n\n    return height\n\n    return height\n\n    return",
+          "correct": true,
+          "id": "cgen07"
+        },
+        {
+          "completion": " 1)\n\nprint(x + 1)\nprint(x + 1",
+          "correct": false,
+          "id": "cgen08"
+        },
+        {
+          "completion": "\n    return f\"Hello, {\n    return f\"Hell",
+          "correct": false,
+          "id": "cgen09"
+        },
+        {
+          "completion": "10:\n    count = 0\n```\n\nThis is a list of numbers",
+          "correct": false,
+          "id": "cgen10"
+        }
+      ]
+    },
+    "code_mc": {
+      "acc": {
+        "ci95": [
+          0.21880396741419272,
+          0.613422057684794
+        ],
+        "correct": 8,
+        "n": 20,
+        "rate": 0.4
+      },
+      "acc_norm": {
+        "ci95": [
+          0.11186005278940309,
+          0.4687050099580636
+        ],
+        "correct": 5,
+        "n": 20,
+        "rate": 0.25
+      },
+      "chance": 0.25,
+      "items": [
+        {
+          "answer": 0,
+          "id": "code01",
+          "logprob": [
+            -5.1544694900512695,
+            -5.663741111755371,
+            -4.32474946975708,
+            -7.697422027587891
+          ],
+          "logprob_per_byte": [
+            -1.2886173725128174,
+            -1.4159352779388428,
+            -1.08118736743927,
+            -1.9243555068969727
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "code02",
+          "logprob": [
+            -11.367391586303711,
+            -8.389077186584473,
+            -13.907455444335938,
+            -9.227714538574219
+          ],
+          "logprob_per_byte": [
+            -5.6836957931518555,
+            -4.194538593292236,
+            -6.953727722167969,
+            -4.613857269287109
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "code03",
+          "logprob": [
+            -13.15315055847168,
+            -5.185237407684326,
+            -7.22368049621582,
+            -9.673341751098633
+          ],
+          "logprob_per_byte": [
+            -1.64414381980896,
+            -0.8642062346140543,
+            -0.9029600620269775,
+            -4.836670875549316
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 3,
+          "id": "code04",
+          "logprob": [
+            -18.670135498046875,
+            -20.98282241821289,
+            -18.470666885375977,
+            -18.23723030090332
+          ],
+          "logprob_per_byte": [
+            -2.6671622140066966,
+            -2.997546059744699,
+            -2.6386666979108537,
+            -2.60531861441476
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "code05",
+          "logprob": [
+            -19.924667358398438,
+            -36.644134521484375,
+            -29.448894500732422,
+            -25.15235710144043
+          ],
+          "logprob_per_byte": [
+            -2.2138519287109375,
+            -2.4429423014322915,
+            -3.272099388970269,
+            -3.1440446376800537
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "code06",
+          "logprob": [
+            -10.63859748840332,
+            -7.013920307159424,
+            -15.437304496765137,
+            -9.778017044067383
+          ],
+          "logprob_per_byte": [
+            -1.7730995814005535,
+            -1.168986717859904,
+            -2.5728840827941895,
+            -1.396859577723912
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "code07",
+          "logprob": [
+            -1.432463526725769,
+            -4.860378265380859,
+            -3.248283863067627,
+            -3.7905004024505615
+          ],
+          "logprob_per_byte": [
+            -0.2864927053451538,
+            -1.2150945663452148,
+            -0.6496567726135254,
+            -0.42116671138339573
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "code08",
+          "logprob": [
+            -11.907927513122559,
+            -14.162043571472168,
+            -14.934823036193848,
+            -14.25676441192627
+          ],
+          "logprob_per_byte": [
+            -1.1907927513122558,
+            -1.4162043571472167,
+            -1.4934823036193847,
+            -1.425676441192627
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "code09",
+          "logprob": [
+            -3.4055213928222656,
+            -2.4030351638793945,
+            -1.8989423513412476,
+            -6.323026180267334
+          ],
+          "logprob_per_byte": [
+            -1.7027606964111328,
+            -1.2015175819396973,
+            -0.9494711756706238,
+            -2.107675393422445
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "code10",
+          "logprob": [
+            -18.42999267578125,
+            -13.346036911010742,
+            -24.31056785583496,
+            -15.518067359924316
+          ],
+          "logprob_per_byte": [
+            -2.3037490844726562,
+            -2.6692073822021483,
+            -2.2100516232577236,
+            -3.879516839981079
+          ],
+          "pred": 1,
+          "pred_norm": 2
+        },
+        {
+          "answer": 2,
+          "id": "code11",
+          "logprob": [
+            -14.455316543579102,
+            -11.30095100402832,
+            -12.848419189453125,
+            -12.686014175415039
+          ],
+          "logprob_per_byte": [
+            -1.4455316543579102,
+            -1.2556612226698134,
+            -1.2848419189453124,
+            -1.409557130601671
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 3,
+          "id": "code12",
+          "logprob": [
+            -15.024558067321777,
+            -14.643848419189453,
+            -15.060739517211914,
+            -13.356852531433105
+          ],
+          "logprob_per_byte": [
+            -2.1463654381888255,
+            -1.8304810523986816,
+            -1.5060739517211914,
+            -2.226142088572184
+          ],
+          "pred": 3,
+          "pred_norm": 2
+        },
+        {
+          "answer": 0,
+          "id": "code13",
+          "logprob": [
+            -2.9066050052642822,
+            -2.759225606918335,
+            -3.5269458293914795,
+            -8.048423767089844
+          ],
+          "logprob_per_byte": [
+            -1.4533025026321411,
+            -1.3796128034591675,
+            -1.7634729146957397,
+            -1.6096847534179688
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 1,
+          "id": "code14",
+          "logprob": [
+            -29.669342041015625,
+            -25.17597770690918,
+            -20.640615463256836,
+            -24.269620895385742
+          ],
+          "logprob_per_byte": [
+            -2.697212912819602,
+            -2.288725246082653,
+            -1.8764195875688032,
+            -2.4269620895385744
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 2,
+          "id": "code15",
+          "logprob": [
+            -12.815518379211426,
+            -14.38026237487793,
+            -22.849153518676758,
+            -26.75580406188965
+          ],
+          "logprob_per_byte": [
+            -2.135919729868571,
+            -2.3967103958129883,
+            -3.808192253112793,
+            -4.459300676981608
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "code16",
+          "logprob": [
+            -38.35549545288086,
+            -2.1158406734466553,
+            -10.572595596313477,
+            -35.790828704833984
+          ],
+          "logprob_per_byte": [
+            -4.261721716986762,
+            -0.3526401122411092,
+            -3.524198532104492,
+            -3.976758744981554
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 0,
+          "id": "code17",
+          "logprob": [
+            -21.110309600830078,
+            -30.57792091369629,
+            -12.920924186706543,
+            -14.959233283996582
+          ],
+          "logprob_per_byte": [
+            -1.7591924667358398,
+            -3.057792091369629,
+            -2.1534873644510903,
+            -2.4932055473327637
+          ],
+          "pred": 2,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "code18",
+          "logprob": [
+            -7.118423938751221,
+            -7.043201923370361,
+            -7.765085697174072,
+            -9.220857620239258
+          ],
+          "logprob_per_byte": [
+            -3.5592119693756104,
+            -3.5216009616851807,
+            -3.882542848587036,
+            -3.0736192067464194
+          ],
+          "pred": 1,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "code19",
+          "logprob": [
+            -14.23709487915039,
+            -13.088147163391113,
+            -13.086618423461914,
+            -14.39389419555664
+          ],
+          "logprob_per_byte": [
+            -2.372849146525065,
+            -2.6176294326782226,
+            -1.8695169176374162,
+            -1.79923677444458
+          ],
+          "pred": 2,
+          "pred_norm": 3
+        },
+        {
+          "answer": 3,
+          "id": "code20",
+          "logprob": [
+            -16.386995315551758,
+            -15.829449653625488,
+            -1.2196074724197388,
+            -18.14293670654297
+          ],
+          "logprob_per_byte": [
+            -2.731165885925293,
+            -1.978681206703186,
+            -0.11087340658361261,
+            -1.2095291137695312
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        }
+      ]
+    },
+    "continuation": {
+      "items": [
+        {
+          "distinct_1": 0.11851851851851852,
+          "distinct_2": 0.2342007434944238,
+          "ended_with_eot": false,
+          "id": "cont01",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6853932584269663,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " on the 17th of 17th September.<|end|> and the first published of the 19th November in the 19th November.<|end|>.<|end|> The first published of the 19th November in the 19th September, and the first published of the 19th November was the first published of the 19th June in the 19th September season. The first published of the 19th September, the first published of the 19th November is the first published of the 20th September.<|end|>.<|end|><|end|><|end|>.<|end|><|end|>, The printing press began on the 17th and 19th November in the 19th September.<|end|><|end|><|end|><|end|>.<|end|><|end|>.<|end|><|end|>.<|end|><|end|>. The first published of the 20th December, the first published of the 19th September season, was the first published of the 20th September season.<|end|><|end|><|end|><|end|>, it was known that the 19th September season of the 19th October are now the first published of the 20th October season of the 20th September",
+          "words": 270
+        },
+        {
+          "distinct_1": 0.15615615615615616,
+          "distinct_2": 0.2710843373493976,
+          "ended_with_eot": false,
+          "id": "cont01",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6757575757575758,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": ". It is a time period in which time period is started and time period is started.\nThe printing press began but the period is started in 1900. It is the period that became the first print is the first digital.<|end|> In 1900 it was started in 1900.<|end|> the first digital period is started in 1900.<|end|><|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>..\nThe first digital period is were.<|end|><|end|>.<|end|>.<|end|>.<|end|><|end|>.<|end|>.<|end|><|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|><|end|><|end|>.\nThe first digital period on the final product is by the artist and artist.  It's personal style of the modern digital language used by the artist.  Many modern-mobile artists have made it into a lot of different versions of the art of the film.<|end|><|end|>.  The first digital period was started",
+          "words": 333
+        },
+        {
+          "distinct_1": 0.09206349206349207,
+          "distinct_2": 0.14331210191082802,
+          "ended_with_eot": false,
+          "id": "cont01",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8589743589743589,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " on the Fourth of the 19th century in the 19th century. The first print was created by Ronald Murray, Djin Stroke. The first print was created in the United States of America.<|end|>.<|end|><|end|>.<|end|>, when it was created by Ronald Murray, the first print was created by Ronald Murray in the 19th century.<|end|><|end|><|end|>.<|end|>, the first print was created by Ronald Murray, Djin Stroke.<|end|><|end|><|end|>, Djin Stroke.<|end|><|end|>, so the first print was made by Ronald Murray. The first print was made by Ronald Murray.<|end|><|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|><|end|>.<|end|>.<|end|><|end|>.<|end|>",
+          "words": 315
+        },
+        {
+          "distinct_1": 0.08484848484848485,
+          "distinct_2": 0.13414634146341464,
+          "ended_with_eot": false,
+          "id": "cont02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8888888888888888,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " of being made by the body of the body. It is used in the form of the organism.  The organism is made by the body of the body.  The organism is made by the body which is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.  The organism is made by the body.",
+          "words": 165
+        },
+        {
+          "distinct_1": 0.16666666666666666,
+          "distinct_2": 0.26174496644295303,
+          "ended_with_eot": false,
+          "id": "cont02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7551020408163265,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " of living. Hardstarting,  and Hardstarting is a physical system. It is a physical system. Hardstarting is the process of living.<|end|>valith,  and Hardstarting is a physical system. Hardstarting is a physical system.<|end|> The physical system is classified by its physical system. Hardstarting is the process of living. Hardstarting is the process of living. Hardstarting is the process of living.<|end|>iation is the process of living things. The system is called physical system. Hardstarting is the process of living things. Hardstarting is the process of living things. Hardstarting is the process of living things. Hardstarting is the process of living things. Hardstarting is the process of living things. Hardstarting is the process of living things. Hardst",
+          "words": 150
+        },
+        {
+          "distinct_1": 0.12315270935960591,
+          "distinct_2": 0.22772277227722773,
+          "ended_with_eot": false,
+          "id": "cont02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.77,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " of processed food.\nIn addition to food, food, food, food, food and food are all types of food.<|end|>\nPotosynthesis is a processed food. The processed food is then processed foods.<|end|>\nPotosynthesis is a processed food and food. It is then processed food.<|end|>.<|end|><|end|><|end|><|end|>.<|end|><|end|>\nPotosynthesis is a processed food. The processed food is then processed, then processed food.<|end|> is then processed food.<|end|><|end|><|end|><|end|>.  Chicken food is processed food.  The processed food is then processed food.  The processed food is then processed.  The processed food is then processed food into the processed food.  The processed food is then processed food into the processed food.  The processed food is then processed into the processed food. ",
+          "words": 203
+        },
+        {
+          "distinct_1": 0.25225225225225223,
+          "distinct_2": 0.4479638009049774,
+          "ended_with_eot": false,
+          "id": "cont03",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.4429223744292237,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": ".<|end|> The market was unavailable.<|end|><|end|> Azure.<|end|><|end|><|end|><|end|> Due to the market being busy.<|end|><|end|> It is not a market.  It is a way of buying.  There are so many reasons that it can be used:\n\n1. Azure<|end|>\n2. Azure<|end|>\n3. Azure<|end|>\n4. Azure<|end|>\n5. Azure<|end|><|end|>\n5. Azure<|end|>\n6. Azure<|end|><|end|>\n8. Azure is a very simple form of sound that is easy to use.  Azure is also a traditional sound that is usually used on the sound.  Azure is a type of sound that is also used on a keywords like a cabin or a hip.  Another type of sound is a sound that is used on a keyword that is used on a keywords like a hip",
+          "words": 222
+        },
+        {
+          "distinct_1": 0.13725490196078433,
+          "distinct_2": 0.2019704433497537,
+          "ended_with_eot": false,
+          "id": "cont03",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8208955223880597,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": ". In the morning, the average market was around 1.5 billion. In the morning, the average market was 20.5 billion. In the morning, the average market was around 1.5 billion. In the morning, the average market was around 1.5 billion. In the time period, the average market was around 1.5 billion. In the days, the average market were around 1.5 billion. In the days of the day, there is a rate of 10.5 billion. In the day period, the average market was around 1.5 billion. In the day period, the average market was around 1.5 billion. In the day period, the average market was around 1.5 billion. In the day period, the average market was around 1.5 billion.<|end|> In the day period, the average market was around 1.5 billion. In the day period, the average market was around 1.5 billion. In the day period, the average",
+          "words": 204
+        },
+        {
+          "distinct_1": 0.32019704433497537,
+          "distinct_2": 0.5396039603960396,
+          "ended_with_eot": false,
+          "id": "cont03",
+          "max_line_repeats": 6,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.415,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " and would have been used to increase stock price.<|end|> This was a good idea.\nSwedding is good idea for buying stock.<|end|><|end|> (Swedding)\nIt depends on the amount of company and the type of stock.<|end|>\nNone, it depends on the type of stock you are looking for to choose from.\nThe type of stock in the market is typically made from multiple kinds of different types of stock, such as the stock.<|end|>\nIn the general, it is best to buy a stock.<|end|><|end|><|end|><|end|>, it is best to buy a stock or the type of stock you are looking for.\n\nThe type of stock you are looking for are:\n\n- stock\n- stock\n- stock\n- stock\n- stock\n- stock\n\n\nFor example, you may want to use a type of stock.\n\nSo you need:\n\nSnapses\n\nToppocks<|end|>\nS",
+          "words": 203
+        },
+        {
+          "distinct_1": 0.12142857142857143,
+          "distinct_2": 0.15827338129496402,
+          "ended_with_eot": false,
+          "id": "cont04",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8467153284671532,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " the following three basic principles: the following two three basic principles.\n\n1. Irance the following three fundamental principles: the following three fundamental principles: the Beginning and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and Gentral set, and G",
+          "words": 140
+        },
+        {
+          "distinct_1": 0.13138686131386862,
+          "distinct_2": 0.19117647058823528,
+          "ended_with_eot": false,
+          "id": "cont04",
+          "max_line_repeats": 2,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9328358208955224,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " the Bandean, a form of the Porcestial system.<|end|>\n- Bandean, a form of the Porcestial system, is a form of the Porcestial system, which is a form of the Porcestial system.\n- Bandean, a form of the Porcestial system, is a form of the Porcestial system, which is a form of the Porcestial system.\n- Bandean, a form of the Porcestial system, is a form of the Porcestial system.\n\n- Bandean, a form of the Porcestial system, is a form of the Porcestial system.<|end|>, a form of the Porcestial system and is a form of the Porcestial system.<|end|>, a form of the Porcest",
+          "words": 137
+        },
+        {
+          "distinct_1": 0.21649484536082475,
+          "distinct_2": 0.34196891191709844,
+          "ended_with_eot": false,
+          "id": "cont04",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6701570680628273,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " the focus of mathematical and geometry.\n\nThe focus of mathematical principles is the focus of mathematical models. The focus of mathematical models can be used to solve the problems, such as solving equations, calculations, and the development ofational functions. The focus of mathematical models can also be used to solve the problems, such as using polynomials in order to solve the problems in a number of problems.<|end|>, the focus of mathematics and geometry can be used to solve the problems in many different ways.\n\nThe focus of mathematical models can be used to solve the problem. The focus of mathematical models can be used to solve the problems in a number of problems. The focus of mathematical models can be used to solve problems.<|end|>, the focus of mathematical models can be used to solve the problems in a number of problems.<|end|>, the focus of mathematical models can be used to solve problems, such as using polynomials or calculations, to solve problems",
+          "words": 194
+        },
+        {
+          "distinct_1": 0.15441176470588236,
+          "distinct_2": 0.23703703703703705,
+          "ended_with_eot": false,
+          "id": "cont05",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8045112781954887,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " the following topics:\n1. The school year: The Author of the Pittsburgh School year\n2. The school year: The Author of the Pittsburgh School year\n3. The school year: The Author of the Pittsburgh School year\n4. The School year: The Author of the Pittsburgh School year\n4. The school year: The Author of the Pittsburgh School year\n5. The school year: The Author of the Pittsburgh School year\n6. The Author of the Pittsburgh School year: The Author of the Pittsburgh School year<|end|>\n6. The Author of the Pittsburgh School year: The Author of the Pittsburgh School year\n6. The Author of the Pittsburgh School year: The Author of the Pittsbur",
+          "words": 136
+        },
+        {
+          "distinct_1": 0.1171875,
+          "distinct_2": 0.1803921568627451,
+          "ended_with_eot": false,
+          "id": "cont05",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7944664031620553,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " the impact of the world on the environment, and to consider the impact of the impact of climate on the environment.\n\nThe impact of the world on the environment is on the environment and to explore the impact of climate change.<|end|> Investments are needed to improve the environment and to develop a more personal and professional life skillset.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|>                            \n                     \n                       . \n           .  . ",
+          "words": 256
+        },
+        {
+          "distinct_1": 0.12234042553191489,
+          "distinct_2": 0.17647058823529413,
+          "ended_with_eot": false,
+          "id": "cont05",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8756756756756757,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " the city's impact on the public. Tuesday to discuss the city's impact on the public. Tuesday to discuss the impact on the public in the public, and to discuss the impact on the public in the public. Tuesday to discuss the impact that affect the public in the public. Tuesday to discuss the impact on the public in the public in the public. Tuesday to discuss the impact on the public in the public.<|end|> Tuesday to discuss the impact on the public in the public in the public. Tuesday to discuss the impact of the impact on public in the public at the public. Tuesday to discuss the impact of the impact on the public in the public. Tuesday to discuss the impact on the public in the public. Tuesday to discuss the impact of the impact on the public in the public in the public. Tuesday to discuss the impact on the public in the public in the public.<|end|> T",
+          "words": 188
+        },
+        {
+          "distinct_1": 0.06666666666666667,
+          "distinct_2": 0.09615384615384616,
+          "ended_with_eot": false,
+          "id": "cont06",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9215686274509803,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " a person uses a molten, a molten or a molten or a molten or a molten or a molten or a molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or molten or mol",
+          "words": 105
+        },
+        {
+          "distinct_1": 0.1037037037037037,
+          "distinct_2": 0.16584158415841585,
+          "ended_with_eot": false,
+          "id": "cont06",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8134328358208955,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " it is a person was born in their time.<|end|> Volcanoes are known for their longest set. Midest is located in the world of South Africa, and is located in the continent of South Africa.<|end|> In addition to being born in the world of South Africa theater is a person was born in the country of South Africa.<|end|> However, Midest is located in the continent of South Africa.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|>, Midest is located in the continent of South Africa.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is located in the continent of South Africa<|end|><|end|> There are approximately seven main parts of South Africa.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> There are other parts of the country.<|end|><|end|><|end|>.  It is located in the continent of South Africa. . <|end|>.<|end|>",
+          "words": 405
+        },
+        {
+          "distinct_1": 0.20108695652173914,
+          "distinct_2": 0.33879781420765026,
+          "ended_with_eot": false,
+          "id": "cont06",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6850828729281768,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " sunlight absorbs.\nVega-2 and Vega-4-Square (predictating the color of the Sun) and has a different color colors.<|end|> The color of the Sun and Vega-4-Square (predictating the colors) and the color of the Sun are the color of the Sun.<|end|> In the sun, Vega-4-Square (predictating the colors of the Sun) and its color is part of the Sun.<|end|> In the sun, Vega-3-Square (predictating the colors of the Sun) and its color colors are part of the Sun.<|end|> In the sun, Vega-4-Square (predictating the colors of the Sun) and its color color is part of the Sun.<|end|> In the sun, the Sun is approximately one hour away from Earth.<|end|> In the sun,",
+          "words": 184
+        },
+        {
+          "distinct_1": 0.07529411764705882,
+          "distinct_2": 0.12264150943396226,
+          "ended_with_eot": false,
+          "id": "cont07",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8720379146919431,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " need to make a loaf of bread.<|end|> and make a loaf of bread.\n\nA loaf of bread is usually a single loaf of bread.<|end|>, and make a loaf of bread.<|end|><|end|>\n\nThank you! What can you give me a loaf of bread?<|end|><|end|><|end|><|end|><|end|>, you will need to make a loaf of bread.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>, you will need to make a loaf of bread.<|end|><|end|><|end|><|end|>, you will need to make a loaf of bread.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|>.<|end|><|end|>.\nTo make a loaf of bread, it will be the same.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is a loaf of bread.<|end|><|end|><|end|><|end|><|end|> <|end|>, it will be the first to make a loaf of bread.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>. But it will",
+          "words": 425
+        },
+        {
+          "distinct_1": 0.09905660377358491,
+          "distinct_2": 0.15165876777251186,
+          "ended_with_eot": false,
+          "id": "cont07",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8325358851674641,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " need to make a simple loaf. You start by using a simple loaf. You then begin using a simple loaf.\n\nTo make a simple loaf, you start using a simple loaf. You will start using simple loaf. You will start using simple loaf. You will start using simple loaf. You will start using simple loaf. You will first start using simple loaf. You will start using simple loaf.<|end|>.<|end|>. You will start using simple loaf. You will start using simple loaf. You will start using simple loaf. You will start using simple loaf. You will start by using simple loaf. You then start using simple loaf.<|end|>. In simple loaf, you will start using simple loaf.<|end|>.<|end|>. You will start using simple loaf.<|end|>.<|end|>. You will start using simple loaf.<|end|>. You will start using simple loaf.<|end|>. You will start using",
+          "words": 212
+        },
+        {
+          "distinct_1": 0.17277486910994763,
+          "distinct_2": 0.2789473684210526,
+          "ended_with_eot": false,
+          "id": "cont07",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.723404255319149,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " need to make a simple loaf. Typically you will need to make a simple loaf.\n\nIf you have a loaf, you will need to make a loaf of bread, you will need to make a loaf.<|end|><|end|>\n\nHere are some simple loafs:\n1. Typically you will need to make a loaf of bread, you will need to make a loaf of bread, if you have a loaf:\n2. Typically, you will need to make a loaf of bread, you will need to make a loaf of bread.\n3. Typically you will need to make a loaf of bread, and you will need to make a loaf of bread.<|end|><|end|><|end|>.\n4. Typically, you will need to make a loaf of bread, then you will need to make a loaf of bread.<|end|><|end|>\n5. Typically you can use",
+          "words": 191
+        },
+        {
+          "distinct_1": 0.04522613065326633,
+          "distinct_2": 0.0707070707070707,
+          "ended_with_eot": false,
+          "id": "cont08",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9081632653061225,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " the house, but the oldest known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known known called known called called known known called known known known known known known known known called called known called called called called called called called known known known called is called called called known called called called called called called called called known called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called branch called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called called",
+          "words": 199
+        },
+        {
+          "distinct_1": 0.056818181818181816,
+          "distinct_2": 0.09487666034155598,
+          "ended_with_eot": false,
+          "id": "cont08",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9085714285714286,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " the house.<|end|> was a Frenchman, who was the son of Sandon and was the son of Sandon, who was the son of Sandon, who is a son of Sandon.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|> is not a son of Sandon.<|end|><|end|>.<|end|> is a son of Sandon, Sandon and Halon are all the most well written is Sandon<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|> is Sandon<|end|><|end|><|end|><|end|><|end|> <|end|> <|end|><|end|><|end|> There are s.<|end|><|end|><|end|> <|end|><|end|> . <|end|><|end|><|end|><|end|>  (choose is Mess. )\n\n",
+          "words": 528
+        },
+        {
+          "distinct_1": 0.04956268221574344,
+          "distinct_2": 0.0935672514619883,
+          "ended_with_eot": false,
+          "id": "cont08",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9235294117647059,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " the tors.<|end|> The old lighthouse stood at the base, and the old lighthouse stood at the end of the tors. The old lighthouse stood at the end of the tors.<|end|> The old lighthouse stood at the end of the tors.<|end|> The old lighthouse stood at the end of the tors.<|end|><|end|><|end|><|end|>.<|end|><|end|>. The old lighthouse stood at the end of the tors.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|>.<|end|><|end|><|end|>.<|end|><|end|><|end|>.<|end|><|end|>.<|end|><|end|>.<|end|>.<|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|> is, the old lighthouse stood at the end.<|end|><|end|> The old lighthouse stood at the end of the tors.<|end|><|end|><|end|><|end|><|end|><|end|>, the old lighthouse is the old lighthouse can.",
+          "words": 343
+        },
+        {
+          "distinct_1": 0.09045226130653267,
+          "distinct_2": 0.1561712846347607,
+          "ended_with_eot": false,
+          "id": "cont09",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8227848101265823,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " which the earth is the same.\nThe earth is the same in the same period of time.<|end|> However, the earth is the same as it. It is the same period of time.<|end|><|end|><|end|><|end|> The earth is the same in the same period of time.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is the same in the same period of time. <|end|><|end|><|end|><|end|><|end|><|end|> does it is, it is also the same thing.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is the other way of to understand better. <|end|><|end|>, it is not good to beat, it is very important to beat andwell, and is a great way of life.<|end|><|end|><|end|><|end|><|end|> <|end|>     \n                     \n\n  ",
+          "words": 398
+        },
+        {
+          "distinct_1": 0.04040404040404041,
+          "distinct_2": 0.050761421319796954,
+          "ended_with_eot": false,
+          "id": "cont09",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9487179487179487,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " creating a space using a space-based space.\n\nThe space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space-based space",
+          "words": 198
+        },
+        {
+          "distinct_1": 0.2398753894080997,
+          "distinct_2": 0.4125,
+          "ended_with_eot": false,
+          "id": "cont09",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.5094339622641509,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " side of the water.\nJ. Tower<|end|> Allen Tower<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> (John't very good), some reason is a good answer that I cannot see you by you anyway?<|end|>. It is un-to-be, it is very dangerous to have a number of other resources<|end|><|end|><|end|> There is no. The water is not necessary to get to the water from your body. This is a very important process to keep the water from getting wet. There are very many different types of the water molecules and then you will see the water in your body.<|end|> The water molecules from the water molecules from the water molecules from the water molecules to the water molecules from the body to the body. This process is called synthesized oxygen and nutrients that are not found in human cells.<|end|> It is known to have many different types of molecules which can lead",
+          "words": 321
+        },
+        {
+          "distinct_1": 0.100418410041841,
+          "distinct_2": 0.22268907563025211,
+          "ended_with_eot": false,
+          "id": "cont10",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6694915254237288,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " were the fourth and fourth, all three and fourth, all fourth and fourth, all fourth and fourth.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> He has sixth and fourth and fourth are threeth and fourth are fiveth and fourth are fiveth and fourth and fourth and fourth and fifth are threeth and fifth are seventh and fourth and fourth are seventh and fourth and fourth are seventh and fourth and sixth are fiveth and fourth and fourth is fiveth and fourth is fourth, fourth and sixth is fiveth, fourth and fourth is fourth, threeth is fiveth, three is fiveth is fiveth is seventh, one is seventh, three is tenth, and fourth is sixth is seventh.<|end|><|end|><|end|><|end|><|end|>The fourth and four",
+          "words": 239
+        },
+        {
+          "distinct_1": 0.11616161616161616,
+          "distinct_2": 0.13705583756345177,
+          "ended_with_eot": false,
+          "id": "cont10",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8666666666666667,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " had a very different world, and their allies were from the Pyrecht.<|end|>, railways had not been a major national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national national",
+          "words": 198
+        },
+        {
+          "distinct_1": 0.08630393996247655,
+          "distinct_2": 0.13345864661654136,
+          "ended_with_eot": false,
+          "id": "cont10",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8547169811320755,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " were founded on the western part of the Tower in the United States.<|end|> Denmark<|end|> was founded on the west side of the Tower of the United States, which was the first capital of the Tower in the United States of America.<|end|>\nDenmark was founded on the east side of the Tower of the United States.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is a national part of the United States.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|>.<|end|> is are not very good items.<|end|><|end|><|end|> is often made from other other large parts. <|end|><|end|>. <|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>, is the first capital one could be to be called a city<|end|><|end|><|end|>",
+          "words": 533
+        },
+        {
+          "distinct_1": 0.1647940074906367,
+          "distinct_2": 0.2593984962406015,
+          "ended_with_eot": false,
+          "id": "cont11",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7462121212121212,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " to be designed to reduce the risk of getting high risk of being high risk of getting high risk of being high risk of being high risk of being high risk of being high risk of being high risk.<|end|><|end|><|end|> The Nutrients of America\n\nThe Nutrients of America are a great source of amino acids and are high in their metabolism and are the important to note that they are high in the diet of high risk of being high risk of being high risk of being high risk of being high risk of being high risk.<|end|><|end|><|end|><|end|> However, the Nutrients of America are a great source of potential risk factors that are considered high risk of being high risk of being high risk.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> It is recommended to get high risk of being high risk factors such as your risk of being high risk of being high risk of being high risk of being high risk of being high risk of being high risk.<|end|><|end|><|end|>",
+          "words": 267
+        },
+        {
+          "distinct_1": 0.19753086419753085,
+          "distinct_2": 0.3281733746130031,
+          "ended_with_eot": false,
+          "id": "cont11",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.5919003115264797,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " to be able to know about the world, so it's important to know the truth.\n\nThere are many scientific research research that have been trained on the world and have been trained on the world. So the answer is good, so I would be happy to know the truth of the world.<|end|>\nThe answer is good, so I'm sure. To know what's important, I'm sure to know the truth.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.\nThe answer is good, but I'm happy to know the truth. I will give you some idea of a different situation and has no real meaning.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> In the world willingly good to know the truth. I'm hope we may need to know the truth of the truth.<|end|><|end|><|end|><|end|>  It is very important to stay safe and understand the truth of our world and be able to stay safe.<|end|>",
+          "words": 324
+        },
+        {
+          "distinct_1": 0.2620320855614973,
+          "distinct_2": 0.4032258064516129,
+          "ended_with_eot": false,
+          "id": "cont11",
+          "max_line_repeats": 2,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.5434782608695652,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " to be developed for our lives.\n\n1) Chronic disease\n2) Chronic disease\n3) Chronic disease\n4) Chronic disease\n5) Chronic disease\n7) Chronic disease<|end|>\n7) Chronic disease\n9) Chronic disease<|end|>\n8) Chronic disease<|end|>\n8) Chronic disease\n9) Chronic disease<|end|>\n10) Chronic disease is a critical task.<|end|>\n10) Chronic disease is to help you.<|end|>\n10) Chronic disease\n10) Chronic disease is a great way to help you build your body.<|end|>\n10) Chronic disease\n10) Chronic disease are very important.\n10) Chronic disease is a way to improve your body's functions.\n10) Chronic disease is an important task.\n10) Chronic disease is a way to stay fit and improve your body's functions during the day.\n10) Chronic disease is also a",
+          "words": 187
+        },
+        {
+          "distinct_1": 0.10364145658263306,
+          "distinct_2": 0.19101123595505617,
+          "ended_with_eot": false,
+          "id": "cont12",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7966101694915254,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " on Earth, from the University of Georgia State University.<|end|> However, the newestretrian museum was the firsticalest museum on Earth. It is a collection of the Galaxies, which are part of the University of Georgia State University.<|end|> In the year 2020, the Museum of Georgia State University is an ancient museum that is the firsticalest museum on Earth.<|end|><|end|> It is the firsticalest museum on Earth.<|end|><|end|><|end|>.<|end|>. The Galaxies are located in the center of the Earth.<|end|><|end|><|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|><|end|>. The Galaxies are the firsticalest museum on Earth.<|end|><|end|><|end|><|end|><|end|>.<|end|>, the museum is the first museum on Earth.<|end|><|end|><|end|><|end|>.<|end|><|end|>.<|end|><|end|><|end|><|end|>.<|end|>.<|end|><|end|><|end|><|end|>.<|end|>.<|end|><|end|><|end|><|end|><|end|><|end|>.\n\nBarb",
+          "words": 357
+        },
+        {
+          "distinct_1": 0.10909090909090909,
+          "distinct_2": 0.1884498480243161,
+          "ended_with_eot": false,
+          "id": "cont12",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8012232415902141,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": ". It is a time to have found the world's oldestest documentary museum.\n\nThe Museum of Messi is located in the world's oldest site, is a time to have a newest documentary museum.<|end|>.<|end|>, the museum is a time to have found the world's oldest documentary museum.<|end|><|end|><|end|>.<|end|>, the museum is a time to have found the world's oldest documentary museum.<|end|><|end|><|end|><|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|><|end|>.<|end|><|end|>.<|end|>.<|end|>.<|end|><|end|><|end|>.<|end|>.<|end|><|end|><|end|>.\nThe museum's oldest documentary museum is its oldest documentary museum. It's oldest documentary museum is from the world's oldest known parks. There are more.<|end|><|end|><|end|>  It is known that the world's oldest documentaries are from the world's oldest site.<|end|><|end|>",
+          "words": 330
+        },
+        {
+          "distinct_1": 0.05583756345177665,
+          "distinct_2": 0.07142857142857142,
+          "ended_with_eot": false,
+          "id": "cont12",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9432989690721649,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " on the Alaska Hills. The National Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum. The National Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of Natural History Museum of natural History Museum of Natural History Museum of Natural History Museum of Natural History museum of natural History Museum of Natural History Museum of Art History Museum of Natural History Museum of Natural History Museum of",
+          "words": 197
+        },
+        {
+          "distinct_1": 0.225531914893617,
+          "distinct_2": 0.3974358974358974,
+          "ended_with_eot": false,
+          "id": "cont13",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.5474137931034483,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " a person who is a member of the group. If these are all of the members of the group are members, they may not be a member of the group. Based on this information, you can use these as a member of the group to provide helpful advice and support for your members.<|end|><|end|><|end|>iationi, for example, a membership between the group and the group are members.<|end|> also known as being a member of the group, a membership between the members of the group and the group are members.<|end|> also known as their membership between the members of the group and the group are members who are members of the group.<|end|>\nTo make the membership between the members of the group, you must have to provide helpful information to the members of the group.<|end|><|end|>, you must assume that the members of the group are members, or are members.<|end|>\nThe members of the group are members of the group, and they are members.<|end|><|end|> and",
+          "words": 235
+        },
+        {
+          "distinct_1": 0.1425339366515837,
+          "distinct_2": 0.2494331065759637,
+          "ended_with_eot": false,
+          "id": "cont13",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7107061503416856,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " creating a unique and unique, and their unique qualities.<|end|> In one context, you must make the most of the words you are thinking of.<|end|><|end|><|end|> You are able to build a strong, beautiful, and unique style.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>  I.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|> .\nThe main reason to be a consider was the name I must know. The main reason is that it is aromathe to make the new words, and and, and aromatastaset.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> There are so many good parts of the language used by me.<|end|>, there are also strong and great.<|end|><|end|>, all the other languages that are derived from the language of the language.<|end|> There are many other German speakers who",
+          "words": 442
+        },
+        {
+          "distinct_1": 0.19555555555555557,
+          "distinct_2": 0.34375,
+          "ended_with_eot": false,
+          "id": "cont13",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6621621621621622,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " the person's own interests.<|end|>.<|end|>.<|end|> Chat is a popular culture and is an art form of music. In this context, the person's interests are different.<|end|>, for example, all of the people who participate in the music they enjoy are playing, especially in the musician culture.<|end|><|end|>, a singer, singer, singer, singer, singer, singer, singer, singer, singer, singer.<|end|><|end|>, a singer, singer, singer, singer, singer, singer<|end|>, singer, singer, singer, singer, singer<|end|>.<|end|>, a singer, singer and singer is often a different.<|end|>, a singer, singer and singer is a musical instrument.<|end|><|end|>, a singer, singer, singer, singer.<|end|>, a singer, singer is a musician, singer can.",
+          "words": 225
+        },
+        {
+          "distinct_1": 0.09043927648578812,
+          "distinct_2": 0.15544041450777202,
+          "ended_with_eot": false,
+          "id": "cont14",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8151041666666666,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " the third partition of the country, the third partition of the United Kingdom (UK) was a second partition of the United Kingdom. It was a second partition of the United Kingdom in the United Kingdom. It was formed during the United Kingdom in the year 2008. It was formed during the year 2008 between the United Kingdom and the United Kingdom.<|end|> In the year 2008, the second partition of the United Kingdom to the United Kingdom was formed during the year 2008.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> It is, it is a third partition of the United Kingdom.<|end|> The United Kingdom is known as the third partition of the United Kingdom<|end|><|end|><|end|> <|end|><|end|><|end|> There are more than the",
+          "words": 387
+        },
+        {
+          "distinct_1": 0.09744779582366589,
+          "distinct_2": 0.16279069767441862,
+          "ended_with_eot": false,
+          "id": "cont14",
+          "max_line_repeats": 3,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7897196261682243,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " the land heep was to have an area.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>\nOn April 25th, the storm is likely to have an area of the earth, and the earth is much flying.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|>.<|end|> is not it is there are several parts?<|end|><|end|>.<|end|> is is of the parts we.<|end|><|end|><|end|><|end|><|end|> still is a type of the core of the earth is.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> \n\nAh, koalaiei,\nParaswara<|end|><|end|><|end|> is another,\nThe earth,\nAh,\n\n\nAh,\n\n\nThe earth and\n\n\n\n\nAh,\n\n\n\nTh\n\n\nThe earth,\n\n\n",
+          "words": 431
+        },
+        {
+          "distinct_1": 0.05472636815920398,
+          "distinct_2": 0.09136212624584718,
+          "ended_with_eot": false,
+          "id": "cont14",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.895,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " and the light was passed.<|end|>.<|end|>.<|end|><|end|>, the water droplet of the storm droplet of the storm.<|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|><|end|> <|end|> <|end|> is a water droplet of the stormed. <|end|><|end|><|end|><|end|><|end|><|end|><|end|> is said to be there is a way to keep their head. <|end|> <|end|><|end|><|end|><|end|> .<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is a great way of to get enough pressure in.<|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|> .<|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|><|end|> is, it is.<|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|>  is the water droplet in to cook. <|end|><|end|><|end|><|end|>",
+          "words": 603
+        },
+        {
+          "distinct_1": 0.15286624203821655,
+          "distinct_2": 0.23076923076923078,
+          "ended_with_eot": false,
+          "id": "cont15",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8441558441558441,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " a common type of rainfall.  The rain falls typically from a rainfall and is a common type of rainfall.  They are commonly used in the rainfall.  They usually have a cooler rainfall.  The rain falls typically from a rainfall.  They are often used in the rainfall because they have a cooler rainfall.  They are often used in the rainfall.  They are commonly used in the rainfall.  They are also used in the rainfall and are often used in the rainfall.  They are commonly used in the rainfall.  They are used in the rainfall.  They have a cooler rainfall.  They are commonly used in the rainfall.  They are commonly used in the rainfall.  They are used in the rainfall and are often used in the rainfall.  They are often used in the rainfall.  They are used in the rainfall.  They are",
+          "words": 157
+        },
+        {
+          "distinct_1": 0.15168539325842698,
+          "distinct_2": 0.21468926553672316,
+          "ended_with_eot": false,
+          "id": "cont15",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8342857142857143,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " important for the study of the study of the study of the study of the National and National Research Council. The study of the National National Research Council (NGO) is a high-level meter-tonrooming study. In addition to the Espernomial College of the study, the study of the National Research Council (NGO) is important for the study of the National and National Research Council. The study of the National Research Council (NGO) is important for the study of the individual. The study of the National Research Council (NGO) is important for the study of the National Research Council. The study of the National Research Council (NGO) is important for the study of the National Research Council. The study of the National Research Council (NGO) is important for the study of the National Research Council. The study of the National Research Council (NGO) is important for the study of the National Research Council.",
+          "words": 178
+        },
+        {
+          "distinct_1": 0.15422885572139303,
+          "distinct_2": 0.27,
+          "ended_with_eot": false,
+          "id": "cont15",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7474747474747475,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " the most common reason for climate change. Thermetic, Sterity, and Passion are the most common reason for weather and weather.<|end|> Fish are the most common reason for weather in the United States and is the most common reason for weather.<|end|>, Sterity, and Passion are more common reason for weather.<|end|><|end|>, Sterity, and Passion are more common types of weather.<|end|>, Sterity, Passion are more common and often are more common reason for weather than Passion.<|end|>, Sterity and Passion are more common types of weather.<|end|>, Sterity, and Passion are more common and most common amongst the different types.<|end|>, Sterity, and Passion are more common types of weather.<|end|>, Sterity, and Passion are more common types of weather.<|end|><|end|>, Sterity, and Passion are more common",
+          "words": 201
+        },
+        {
+          "distinct_1": 0.2019704433497537,
+          "distinct_2": 0.3811881188118812,
+          "ended_with_eot": false,
+          "id": "cont16",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " be an indentation that can be a helpful and helpful.\n\nIn the IDEA (including the IDE) language, a language that can be helpful in the IDEA can be helpful in the English language.\n\nHere is an indentation:\n- It is a helpful and helpful in the language that can be helpful in the English language.\n- It is helpful for many reasons, such as a good or helpful tool.\n- It can be helpful for you, since you can also be helpful in the English language.<|end|>\n- It is helpful for you, and can be useful for you.<|end|>\n- It is helpful for helpful for you, but it can be helpful for you.<|end|><|end|>\n- It can be helpful for you, but it can be helpful for you.\n- It can be helpful for you, and it can be useful for you.<|end|><|end|><|end|>\n- It can be helpful for you and",
+          "words": 203
+        },
+        {
+          "distinct_1": 0.3,
+          "distinct_2": 0.42138364779874216,
+          "ended_with_eot": false,
+          "id": "cont16",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6178343949044586,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " also be a good idea to have an AI model such as a POPH-3D, or a MIT, such as AUM-3D, AUM-3D, BY-MA, GHA, NGOLA, and SPM-3D are important for building your own language.<|end|> also include POPH-3D, BY-MA, GHA, and SPM-3D.<|end|>, BY-MA, GHA, NGOLA, and SPM-3D are best ways to build your own language.<|end|>, BY-MA, GHA, GHA, and SPM-3D are all used with some examples of your own language.<|end|>, GHA, and SPM-3D are some examples of your own language.<|end|>, BY-MA, G",
+          "words": 160
+        },
+        {
+          "distinct_1": 0.20408163265306123,
+          "distinct_2": 0.2671232876712329,
+          "ended_with_eot": false,
+          "id": "cont16",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7083333333333334,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " be used to help you build your own language without having to be easy.<|end|>, here are some common ways to build your own language:\n- Stretch-in-in-skir-in-skir-in-skir-in-skir-in-skir-in-skir-in-skir-in-skir-y-in-skir-in-skir-in-skir-in-skir-in-skir-in-skir-in-skir-in-skir-in-skir-in-skir-in-skir-in-skir-in-skir-in-2kir-in-skir-in-skir-in-skir-in-skir-in-skir-",
+          "words": 147
+        },
+        {
+          "distinct_1": 0.08108108108108109,
+          "distinct_2": 0.14027149321266968,
+          "ended_with_eot": false,
+          "id": "cont17",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.867579908675799,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " a whole flour, and a half cup of flour and a half cup of flour and a half cup of flour.<|end|><|end|><|end|> of a single flour, a half cup of flour and a half cup of flour and a half cup of flour.\n\nYes, a half cup of flour and a half cup of flour and a half cup of flour and a half cup of flour. The half cup of flour and a half cup of flour and a half cup of flour and a half cup of flour. The second cup of flour and a half cup of flour and a half cup of flour and a half cup of flour.<|end|><|end|><|end|><|end|>, a half cup of flour and a half cup of flour and a half cup of flour, and a half cup of flour and a half cup of flour and a half cup of flour and a half cup of flour.\n\nBring a half cup of flour and a half cup of flour and a half cup of flour and a half cup of",
+          "words": 222
+        },
+        {
+          "distinct_1": 0.19186046511627908,
+          "distinct_2": 0.3684210526315789,
+          "ended_with_eot": false,
+          "id": "cont17",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.5739644970414202,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a hole in a cucumber, while the Cucumber Handers are all cucumber.<|end|> Use the cucumber for a mixing pent, a beans, a french berry, a pent, a pent, a sour, a sour, a hole, a sour, a sour, a sour, a sour, a sour. The sour is not a cucumber, and a sour is not a cucumber.<|end|><|end|>iation is a type of flour, which is a sour, a sour, a sour, a sour, a sour, a sour, a sour<|end|>iation.<|end|>iation is a type of flour, which is a type of flour, which is a type of flour, which is a type of flour and a sour.\n\nThese are cucumber holes in a cucumber, which are a",
+          "words": 172
+        },
+        {
+          "distinct_1": 0.11597938144329897,
+          "distinct_2": 0.1731266149870801,
+          "ended_with_eot": false,
+          "id": "cont17",
+          "max_line_repeats": 2,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8311688311688312,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " 3 cups of flour.<|end|>.<|end|>.<|end|><|end|>, let me know how to make flour and cups of flour.<|end|><|end|><|end|><|end|><|end|>.<|end|>.<|end|>.<|end|>.<|end|><|end|>.<|end|>. <|end|>. <|end|><|end|>.<|end|><|end|><|end|><|end|><|end|>. <|end|>.  <|end|><|end|><|end|><|end|>. <|end|><|end|><|end|>. <|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is the cups are made to beathemically.<|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is a great one in flour.  \n\nA cups of sugar can be classed with a yeast,\n\n1. \n2.\n3.<|end|>\n4. \n5.\n6.\n6\n82\n9\nApoppigo is b\n7\n96\n82\nSnipzuzo yolko can\n",
+          "words": 388
+        },
+        {
+          "distinct_1": 0.15286624203821655,
+          "distinct_2": 0.26198083067092653,
+          "ended_with_eot": false,
+          "id": "cont18",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6752411575562701,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " a programming language model and a computer model. In order to understand the programming language you are using a programming language model.<|end|><|end|>, a programming language model is a way of saying and  Python.<|end|><|end|><|end|> The program is a programming language model and a computer model is used to explain the programming language and the language they can use to answer specific questions.<|end|> The programming language model is a set of operations that can be used to describe the programming language and the language model we are using to know which programming language model you are using.<|end|><|end|><|end|>.<|end|><|end|>.<|end|><|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.  Pandib/NLLP/BWIOL.<|end|>.<|end|>.<|end|>.<|end|><|end|>.<|end|>.<|end|>, Pandib.  Pandib.<|end|>.<|end|>.  Pandavas.<|end|>.  Pandas.<|end|><|end|>.<|end|>.<|end|>.<|end|>.<|end|><|end|>.  Pandas.",
+          "words": 314
+        },
+        {
+          "distinct_1": 0.18025751072961374,
+          "distinct_2": 0.30603448275862066,
+          "ended_with_eot": false,
+          "id": "cont18",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a way to solve a problem in an area of study. In one context, the algorithm is a way that can be used to solve a problem in a field. In other words, a way that can be used to solve a problem in a field is to solve a problem. In other words, a way that can be used to solve a problem is to solve a problem in a field. In the world of study, the algorithm can be used to solve a problem in a field. In the world of study, it can be used to solve a problem in a field. In general, it can be used to solve a problem with a problem.<|end|> also using the code \"Hello, Driver, Logano\" to solve a problem in a field.<|end|>, it can be used to solve a problem in a field.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>. This is a way that I can solve a problem. Many",
+          "words": 233
+        },
+        {
+          "distinct_1": 0.20212765957446807,
+          "distinct_2": 0.3315508021390374,
+          "ended_with_eot": false,
+          "id": "cont18",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.654054054054054,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a process of using the HTML2 process in data science. In addition, the HTML2 process in data science is used to create the world of computer science.<|end|> development is used to build the world of computer science.\n\nThe HTML2 process in data science is followed by a process in which computer science is used. In addition, HTML2 process in data science is used to create a new world of computer science.<|end|>, the HTML2 process in data science is used to create a new world of computer science. In computer science, it is used to create a new world of computer science and other languages.<|end|>, the HTML2 process in data science is based on the HTML2 process.<|end|>, the HTML2 process in data science is based on the HTML1 process in which computer science is used to produce a new world of computer science.<|end|>, the HTML2 process can be",
+          "words": 188
+        },
+        {
+          "distinct_1": 0.4578313253012048,
+          "distinct_2": 0.6585365853658537,
+          "ended_with_eot": false,
+          "id": "cont19",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.325,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " the following fourth and fourth seven.<|end|> However, the oldest knownknownst to be the oldest known as the Taver Putta and Bandalus Ghana, is also the oldest known as the Taver Putta Dujo.<|end|><|end|> It was a name given to the Taver Putta Dujo in the year 1311111, where the Taver Putta Dujo was first found on the Taver Putta Dujo in the year 1411111111111111111111111111111111111111111111111111111111111111111111111111111111",
+          "words": 83
+        },
+        {
+          "distinct_1": 0.19672131147540983,
+          "distinct_2": 0.27472527472527475,
+          "ended_with_eot": false,
+          "id": "cont19",
+          "max_line_repeats": 9,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7666666666666667,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " the year.<|end|> was the first country to start in 2013 with 496.\nThe number of projects would be 1.55.<|end|> However, the number of projects are 1.55.<|end|><|end|>.<|end|><|end|><|end|>.<|end|>.<|end|>.\n\nThe number of projects are:\n\n- The Industry Club\n- The Industry Club\n- The Industry Club<|end|>\n- The Industry Club<|end|>\n- The Industry Club<|end|>\n- The Industry Club\n- The Industry Club\n- The Industry Club\n- The Industry Club<|end|>\n- The Industry Club\n- The Industry Club\n- The Industry Club\n- The Industry Club<|end|>\n- The Industry Club\n- The Industry Club (June 8th April 1982)\n- The",
+          "words": 183
+        },
+        {
+          "distinct_1": 0.07722772277227723,
+          "distinct_2": 0.14484126984126985,
+          "ended_with_eot": false,
+          "id": "cont19",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8147410358565738,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " the city was not born.<|end|>.<|end|>.<|end|><|end|>, as a country, there are two countries. The first country to be used as a country in the Netherlands. The first country to be started in the Netherlands is the United States to be born.<|end|><|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|><|end|>.<|end|><|end|><|end|>.<|end|>.<|end|><|end|>.<|end|> is the country to be the main. The national world is nowhere to be.<|end|><|end|><|end|><|end|><|end|> is a country which refers to beer to a national country in the United States.<|end|><|end|><|end|><|end|><|end|>. It is the same country in the country.<|end|>, it is country and country.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|>.<|end|><|end|><|end|><|end|>.<|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>, etc<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|>",
+          "words": 505
+        },
+        {
+          "distinct_1": 0.3081395348837209,
+          "distinct_2": 0.5029239766081871,
+          "ended_with_eot": false,
+          "id": "cont20",
+          "max_line_repeats": 10,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.47928994082840237,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " 6 days, but they are not able to pay for a specification of how well they are.<|end|> However, the following are not likely the following are:\n- Segmentation\n- Segmentation\n- Segmentation\n- Segmentation\n- Segmentation\n- Segmentation\n- Segmentation\n- Segmentation\n- Segmentation\n- Segmentation\n- Segmentation<|end|>\n- Segmentation<|end|><|end|>\nSegmentation<|end|><|end|>\nSegmentation is the only one which is being able to pay for a specification of how well the given date was.<|end|><|end|><|end|>\nSegmentation is the only way you would receive a specification of how well the date was for the first time.  It is usually a set of two months of year while it is generally a time period of year; the year is usually days days hours hours hours",
+          "words": 172
+        },
+        {
+          "distinct_1": 0.21390374331550802,
+          "distinct_2": 0.3387096774193548,
+          "ended_with_eot": false,
+          "id": "cont20",
+          "max_line_repeats": 2,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6521739130434783,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " one for the following time periods.\n1. Please be able to get the following time period as possible.\n2. Please be able to get the following time period as possible. You can also get the following time period as possible.\n3. Kid\n4. Veracity\n5. The following time period is approximately 3.5.<|end|>\n6. Please be able to get the following time period as possible.<|end|><|end|>\nThe following time period is approximately 3.5.<|end|>\n6. Downloads:\n7. Downloads:\n8. Veracity\n8. Prompt\n10. Please be able to get your following time period as possible.<|end|>\nThe following time period is approximately 4.5.<|end|>\n8. Please be able to get the following time period as possible:\n1. Please be able to get the following time period as possible.\n2. P",
+          "words": 187
+        },
+        {
+          "distinct_1": 0.09352517985611511,
+          "distinct_2": 0.15865384615384615,
+          "ended_with_eot": false,
+          "id": "cont20",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.821256038647343,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " 3 to 4.5 hours at night.<|end|>\n1.5 hours at night.\n2.5 hours at night.\n3.5 hours at night.\n4.5 hours at night.\n5.5 hours at night.\n6.5 hours at night.\n8.5 hours at night.\n8.5 hours at night.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is a day is night<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is consumed<|end|><|end|><|end|><|end|><|end|>. Some are not very good.<|end|><|end|><|end|><|end|> is often used being used in thear.  The best way to lose weight is to get to the body from your body body body body body body body body body body body body body body body body body body body body body body body body body body weight body body weight",
+          "words": 417
+        }
+      ],
+      "mean_distinct_2": 0.24266208640336362,
+      "mean_repeated_4gram_fraction": 0.7475580505898223,
+      "mean_words": 261.5,
+      "n": 60,
+      "replacement_chars": 0,
+      "share_empty": 0.0,
+      "share_ended_with_eot": 0.0,
+      "share_repeated_4gram_over_0.3": 1.0
+    },
+    "explanations": {
+      "items": [
+        {
+          "distinct_1": 0.09119496855345911,
+          "distinct_2": 0.12933753943217666,
+          "ended_with_eot": false,
+          "id": "expl01",
+          "max_line_repeats": 6,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8888888888888888,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " Why do we have seasons?\nAnswer: Why do we have seasons?\nAnswer: Why do we have seasons?\nAnswer: Why do we have seasons?\nAnswer: What do we have seasons?\nAnswer: Why do we have seasons?\nAnswer: Why do we have seasons?\nAnswer: What do we have seasons?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>\nAnswer: How do we have seasons?\nAnswer: Why do we have seasons?\nAnswer: does not have seasons. The seasons are notopes. So it is very natural to seasons.<|end|><|end|><|end|><|end|><|end|><|end|><|end|> There are so many possible",
+          "words": 318
+        },
+        {
+          "distinct_1": 0.1015625,
+          "distinct_2": 0.13385826771653545,
+          "ended_with_eot": false,
+          "id": "expl01",
+          "max_line_repeats": 3,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.952,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " Why do we have seasons?\nAnswer: How do we have seasons?\nAnswer: Why do we have seasons?\nAnswer: How do we have seasons?\nAnswer: Why do we have seasons?\nAnswer: What do we have seasons?\nAnswer: How do we have seasons?\nAnswer: how do we have seasons in our seasons?\nAnswer: How do we have seasons in our seasons?\nAnswer: What do we have seasons in our seasons?\nAnswer: How do we have seasons in our seasons?\nAnswer: What do we have seasons in the seasons?\nAnswer: How do we have seasons in our seasons in our seasons?\nAnswer: What do we",
+          "words": 128
+        },
+        {
+          "distinct_1": 0.19484240687679083,
+          "distinct_2": 0.3275862068965517,
+          "ended_with_eot": false,
+          "id": "expl01",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6271676300578035,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " How can I help our lives?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> It is a way to keep the seasons at the same level. If you don't know the seasons and not expect some reason to change the seasons, it will be time to learn new and understand and develop a culture of the seasons.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is the second to ever know if we can see it.<|end|><|end|><|end|> is a way to build a home country so it can be able to build the asteristically. There are very many different nations that make the seasons.<|end|><|end|> The seasons are very very different. The seasons are very similar depending on the the seasons.  The seasons are quite different.  The seasons are quite different depending on the weather.<|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|>, the seasons are different depending on the weather and the weather.<|end|><|end|>",
+          "words": 349
+        },
+        {
+          "distinct_1": 0.1288056206088993,
+          "distinct_2": 0.176056338028169,
+          "ended_with_eot": false,
+          "id": "expl02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8066037735849056,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " Why does ice float on water?<|end|><|end|>\nHumans were a source of water in the United States during the second period of the century when ice floating across the ocean.<|end|><|end|><|end|><|end|><|end|> Theodore's second period is called ice float on water.<|end|><|end|> In December 2010, ice float on water would be between 1/2 hours.<|end|><|end|><|end|><|end|><|end|><|end|> Weeping is an American favorite sport sport sport sport sports.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>, ice float on water.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>    .\nPSc also have its own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own",
+          "words": 427
+        },
+        {
+          "distinct_1": 0.11510791366906475,
+          "distinct_2": 0.17548076923076922,
+          "ended_with_eot": false,
+          "id": "expl02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8333333333333334,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " Why can ice float on water?<|end|>\nAnswer: Why does ice float on water?\nAnswer: Why does ice float on water?<|end|><|end|><|end|>\nAnswer: Why do ice float on water?\nAnswer: Why is ice float on water?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>  Water floating on water.<|end|><|end|><|end|><|end|><|end|><|end|> is a type of ice float on water. <|end|><|end|><|end|> It is not dangerous to do the number of ice float on water.  It's own way of ice swimming through while swimming in the water.<|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|> There are other things you should go and do what is. <|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|> There are many factors, including the type",
+          "words": 417
+        },
+        {
+          "distinct_1": 0.2391304347826087,
+          "distinct_2": 0.3987538940809969,
+          "ended_with_eot": false,
+          "id": "expl02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.5329153605015674,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " How to make water?\nJustice: How to make water water?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> (Justice: not to make water)\nSun: Hellen!  Some people have very high humidity, and some people have not too much water.<|end|><|end|><|end|>.  It is not good to drink too much water as they can.  This is a very important topic.  You can enjoy dinner at night every day, as if you can drink your food out of it, you can cook out of it, or even make water more fun.<|end|><|end|><|end|><|end|><|end|><|end|>.  Walk, but I don't have any information, but I can help you with any other questions or questions.<|end|><|end|><|end|><|end|><|end|><|end|><|end|>  This is a great topic to ask.  This is very important for you to have a clear understanding of where you are to be there.<|end|><|end|><|end|><|end|>",
+          "words": 322
+        },
+        {
+          "distinct_1": 0.07853403141361257,
+          "distinct_2": 0.08947368421052632,
+          "ended_with_eot": false,
+          "id": "expl03",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 1.0,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " How can plants get the energy they need?<|end|>\nAnswer: How can plants get the energy they need?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> \nAnswer: how can plants get the energy they need?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>                                                                           \n                                                    ",
+          "words": 191
+        },
+        {
+          "distinct_1": 0.04142011834319527,
+          "distinct_2": 0.06547619047619048,
+          "ended_with_eot": false,
+          "id": "expl03",
+          "max_line_repeats": 9,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9819277108433735,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " Answer\nAnswer: Answer\nAnswer: Answer<|end|>\nAnswer: Answer<|end|>\nAnswer: Answer<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>\nAnswer: Answer: Answer<|end|><|end|>\nAnswer: Answer\nAnswer: Answer<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>\nAnswer: Answer\nAnswer: Answer\nAnswer: Answer\nAnswer: Answer<|end|>\nAnswer: Answer<|end|>\nAnswer: Answer\nAnswer: Answer\nAnswer: Answer\nAnswer: Answer\nAnswer: Ans",
+          "words": 169
+        },
+        {
+          "distinct_1": 0.11170212765957446,
+          "distinct_2": 0.15508021390374332,
+          "ended_with_eot": false,
+          "id": "expl03",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8540540540540541,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " How to grow plants\nGrass: What They need, How to grow plants\nSafe: Harden\nSafe: What to grow plants, How to grow plants<|end|>\nWater: What to grow plants\nSafe: What to grow plants<|end|>\nAnswer: As a rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule rule",
+          "words": 188
+        },
+        {
+          "distinct_1": 0.1310344827586207,
+          "distinct_2": 0.2222222222222222,
+          "ended_with_eot": false,
+          "id": "expl04",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8591549295774648,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " Connected, Ruby, Tiger and Brown<|end|>\nAnswer: Due, Ruby and Brown are colder sprouts.<|end|>\nRuby: Due, Ruby and Brown are colder sprouts.<|end|>\nRuby: Due, Ruby is colder sprouts.<|end|>\nRuby: Due, Ruby is colder sprout.<|end|>\nAnswer: Due, Ruby is colder sprouts.<|end|>\nRuby: Due, Ruby is colder sprouts.<|end|><|end|>\nRuby: Due, Ruby is colder sprout.\nRuby: Due, Ruby is colder sprouts.\nBrown: Due, Ruby is colder sprout.<|end|>\nRuby: Due<|end|>\n",
+          "words": 145
+        },
+        {
+          "distinct_1": 0.12318840579710146,
+          "distinct_2": 0.1890909090909091,
+          "ended_with_eot": false,
+          "id": "expl04",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8534798534798534,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " Why a metal spoon feel colder than a wooden spoon at the same temperature\nAnswer: Why a metal spoon can feel colder than a wooden spoon at the same temperature.<|end|>\nAnswer: Why a metal spoon is colder than a wooden spoon at the same time.<|end|>\nAnswer: Why a metal spoon is colder than a wooden spoon at the same time.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>. Why a metal spoon: Why a metal spoon is colder than a wooden spoon at the same time.<|end|><|end|>\nAnswer: Why a metal spoon is colder than a wooden spoon at the same time.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> There are over-the-counter spoon spoon on the same scale.<|end|><|end|><|end|><|end|><|end|> There are many factors to consider factors like",
+          "words": 276
+        },
+        {
+          "distinct_1": 0.0896551724137931,
+          "distinct_2": 0.14186851211072665,
+          "ended_with_eot": false,
+          "id": "expl04",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8815331010452961,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " When a metal spoon is colder than a wooden spoon at the same temperatures, it is a solid spoon at the same temperature.<|end|>\nAnswer: If a metal spoon is colder than a wooden spoon at the same temperature, it is colder than a wooden spoon.<|end|>\nAnswer: When a metal spoon is colder than a wooden spoon at their same temperature, it is colder than a wooden spoon.<|end|><|end|>\nAnswer: When a metal spoon is colder than a wooden spoon at the same time, it is colder than a wooden spoon.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>The metal spoon is when a metal spoon is colder than a wooden spoon is colder than a wooden spoon",
+          "words": 290
+        },
+        {
+          "distinct_1": 0.1834862385321101,
+          "distinct_2": 0.2857142857142857,
+          "ended_with_eot": false,
+          "id": "expl05",
+          "max_line_repeats": 3,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6883720930232559,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " What causes ocean tides because of the impact of earth on the ocean.<|end|> Indeed, water tides are important to ocean tides.<|end|>ism is not a problem but it is very important to understand how the ocean tides are impacted by ocean tides. Dogs are important to understanding the causes of ocean tides such as ocean tides.\n\nAnswer: What causes ocean tides to ocean tides.<|end|>\nAnswer: What causes ocean tides to ocean tides.<|end|>\nAnswer: What causes ocean tides to ocean tides.<|end|>\nAnswer: What causes ocean tides to ocean tides.<|end|><|end|>\nAnswer: What causes ocean tides to ocean tides.<|end|><|end|><|end|><|end|><|end|><|end|><|end|>  The causes of ocean tides to ocean tides.<|end|>\nAnswer: What causes ocean tides?<|end|><|end|><|end|>\nAnswer",
+          "words": 218
+        },
+        {
+          "distinct_1": 0.10884353741496598,
+          "distinct_2": 0.14383561643835616,
+          "ended_with_eot": false,
+          "id": "expl05",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8472222222222222,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " Axyl Hemones, Episode Island and Pink are all three of the three of the fourth of the fourth of the fourth of the fourth of the fourth of the fiveth of the fourth of the fourth of the fourth of the fiveth of the fourth of the fourth of the fourth of the fourth of the fourth of the fourth of the seventh of the fiveth of the fourth of the fourth of the fourth of the fiveth of the fourth of the fourth of the seventh of the fourth of the fourth of the fourth of the fourth of the fifth of the fourth of the fourth of the fourth of the seventh the fourth of the fourth of the fourth of the fourth of the fourth of the fourth of the fourth of the fourth of the fourth of the fourth of the fourth",
+          "words": 147
+        },
+        {
+          "distinct_1": 0.15284974093264247,
+          "distinct_2": 0.24675324675324675,
+          "ended_with_eot": false,
+          "id": "expl05",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7336814621409922,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " What causes ocean tides\nAnswer: What causes ocean tides, and how they move.<|end|>\nAnswer: What causes ocean tides, how they move and how they move.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is a way to move and if we do not do the thing we do is.<|end|> is a way of traveling on your destination<|end|><|end|> is a way of traveling on a very large scale so that the ocean moves and then moving on.<|end|> is a place, time is always important.<|end|> is a way of traveling.<|end|>.  The ocean is very easy to travel. \n2. <|end|> is always there!<|end|><|end|><|end|> is easy to understand and practice.  Some people enjoy going for the next few days.  They enjoying a",
+          "words": 386
+        },
+        {
+          "distinct_1": 0.07972665148063782,
+          "distinct_2": 0.11643835616438356,
+          "ended_with_eot": false,
+          "id": "expl06",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8784403669724771,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " Why do objects fall in the ground when you drop the ground when you drop the ground when you drop the ground when you drop the ground when your ground when you drop the ground when the ground is in a way that the ground is in a way that you drop the ground when you drop the ground.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> .<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> However, it is very important to put a ground objectically when standing aroundhere.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|><|end|>    .\nPPPPPPPPPPP P P P P G G G G G J <|end|>                   \n\nLice",
+          "words": 439
+        },
+        {
+          "distinct_1": 0.08157099697885196,
+          "distinct_2": 0.12121212121212122,
+          "ended_with_eot": false,
+          "id": "expl06",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9085365853658537,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " Why do objects fall in the ground when you drop them.\nPassings: Why do objects fall in the ground when you drop them in the ground.\nSimple objects fall in the ground when the ground is infinitely up.<|end|>\nAnswer: Why do objects fall in the ground when the ground is infinitely up.<|end|>\nAnswer: Where do objects fall in the ground.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>  Water: Why do objects fall in the ground while they fall in the ground.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>  Water: Why do objects fall in the ground when the ground is infinitely up.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>         . <|end|><|end|>    .   .       . . <|end|>. ",
+          "words": 331
+        },
+        {
+          "distinct_1": 0.11727078891257996,
+          "distinct_2": 0.20085470085470086,
+          "ended_with_eot": false,
+          "id": "expl06",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.759656652360515,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " How to drop down when you drop.<|end|>\nAnswer: How to drop up when you drop them.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>  Some people often drop that when it is falling.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is the second to drop in a to-hour.<|end|><|end|><|end|> is typically a little-hour to drop it down.<|end|><|end|><|end|> is a great way to keep working on your tasks.<|end|><|end|><|end|><|end|><|end|><|end|>.\n\nThe most popular way to drop off is to get to see. The most important way is to do the task.<|end|>. <|end|> is to get to the task.<|end|><|end|><|end|><|end|><|end|><|end|> is to start the task as quickly as you fast down the task time.<|end|><|end|> is to start the process, which can lead",
+          "words": 469
+        },
+        {
+          "distinct_1": 0.06153846153846154,
+          "distinct_2": 0.10185185185185185,
+          "ended_with_eot": false,
+          "id": "expl07",
+          "max_line_repeats": 2,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9006211180124224,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " Answer, Answer<|end|> and Bluetooth<|end|> Some examples: Dutch\nAnswer: Answer<|end|>\nAnswer: Answer<|end|>\nAnswer: Answer is a noun.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|assistant|> Answer: Answer is a noun.<|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>, Answer is a noun.<|end|> However, it is a noun. <|end|><|end|><|end|><|end|> <|end|><|end|> <|end|><|end|>\nAnswer: Answer is a noun.  <|end|><|end|><|end|> <|end|> <|end|> <|end|><|end|> <|end|><|end|><|end|> <|end|> <|end|>     \n                   \n\n\nB<|end|> ",
+          "words": 325
+        },
+        {
+          "distinct_1": 0.04219409282700422,
+          "distinct_2": 0.07627118644067797,
+          "ended_with_eot": false,
+          "id": "expl07",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9316239316239316,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " Answer, Answer, Answer, Answer<|end|>\nAnswer: Answer, Answer, Answer\nAnswer: Answer<|end|>\nAnswer: Answer, Answer: Answer<|end|>\nAnswer: Answer, Answer: Answer<|end|><|end|><|end|><|end|><|end|><|end|><|end|>. Answer: Answer<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> nswer: Answer: Answer: Answer: Answer: Answer: Answer: Answer. Answer: Answer: Answer: Answer: Answer: A",
+          "words": 237
+        },
+        {
+          "distinct_1": 0.06367041198501873,
+          "distinct_2": 0.10150375939849623,
+          "ended_with_eot": false,
+          "id": "expl07",
+          "max_line_repeats": 7,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9204545454545454,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " What is a noun?<|end|>.<|end|>\nAnswer: What is a noun?\nAnswer: What is a noun?\nAnswer: What is a noun?\nAnswer: What is a noun?\nAnswer: What is a noun?\nAnswer: What is a noun?<|end|>\nAnswer: What is a noun?\nAnswer: What is a noun?\nAnswer: what is a noun?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.\nAnswer: What is a noun.\nAnswer: What is a noun.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>The noun isHow is a noun<|end|> Head, who is a noun.\nAnswer: What is a",
+          "words": 267
+        },
+        {
+          "distinct_1": 0.10290237467018469,
+          "distinct_2": 0.16137566137566137,
+          "ended_with_eot": false,
+          "id": "expl08",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8457446808510638,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " How can a vaccine protect people from a disease can be prevented from a disease?<|end|>\nAnswer: How can a vaccine protect people from a disease?<|end|><|end|>\nAnswer: How can a vaccine protect people from a disease?<|end|>\nAnswer: How can a vaccine protect people?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>  They can be used to fight a diseases.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> However, it is very important to know a proper vaccine to ensure your medicine properly.<|end|><|end|>\nAnswer: How canines be?\nAnswer: How can you be able to be?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|>                      ?<|end|><|end|><|end|> \nBecause you",
+          "words": 379
+        },
+        {
+          "distinct_1": 0.16531165311653118,
+          "distinct_2": 0.28804347826086957,
+          "ended_with_eot": false,
+          "id": "expl08",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6584699453551912,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " A vaccine protects a safe and secure, safe and safe and safe.<|end|> There is no right one that is not safe.<|end|>\nAnswer: A vaccine protects offending against a disease.<|end|><|end|>\nAnswer: A vaccine protects against a infection of a human.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.\nThe best of you is: A vaccines against a human.  The human will only pass it shoulder to get to control.  A good defense against an immune to a person.  The immune against a host of the human's immune system.  F defense is their immune to attack from the human body.<|end|><|end|><|end|><|end|><|end|> There are other ways to protect against an infection.  The immune system is immune to diseases and the immune system is powerful in our body.<|end|><|end|>",
+          "words": 369
+        },
+        {
+          "distinct_1": 0.12352941176470589,
+          "distinct_2": 0.19469026548672566,
+          "ended_with_eot": false,
+          "id": "expl08",
+          "max_line_repeats": 2,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.827893175074184,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " How can a vaccine protect people?<|end|>\nAnswer: How can a vaccine protect people?\nAnswer: How can a vaccine protect people from a disease?\nAnswer: How can a vaccine protect people from a disease?\nAnswer: How can a vaccine protects people from a disease?<|end|>\nAnswer: How can a vaccine protects people from a disease?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>. Can a vaccine protect people from a disease.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> There are lots of vaccine protects against a person from a disease.<|end|>. Some are not very effective.<|end|><|end|><|end|><|end|> is often used as a defense against a person from a harm.<|end|><|end|><|end|><|end|>.\nA vaccine protects people from a disease, it is a way to stay away from anthem.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>  They are also a",
+          "words": 340
+        },
+        {
+          "distinct_1": 0.09216589861751152,
+          "distinct_2": 0.15242494226327943,
+          "ended_with_eot": false,
+          "id": "expl09",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.839907192575406,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " Why is it always hotter near the equator and is typically hotter near the equator<|end|> Denis.<|end|><|end|>\nIt is commonly known to have a hotter near the equator and is generally hotter near the equator<|end|><|end|><|end|><|end|><|end|><|end|> Denis,Why is it?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|assistant|><|end|><|end|><|end|> Denis.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>,Why does it still is cold because of the current happens in the eques the equkstrant.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is a very dry region of the eques it is very cool.                           \n\nThe answer",
+          "words": 434
+        },
+        {
+          "distinct_1": 0.11458333333333333,
+          "distinct_2": 0.185378590078329,
+          "ended_with_eot": false,
+          "id": "expl09",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8267716535433071,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " Why is it a hotter near the equator?\nAnswer: Why is it?\nAnswer: Why is it a hotter?\nAnswer: Why is it a hotter near the equator?\nAnswer: Why is it a hotter near the equator?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is a hotter at the equk ishere is the hotter is there is it traveled to the equils the roaches the equilaterlator is called an iceman.<|end|><|end|> is a hotter, it is hotter than the equator.<|end|> There are other things you shouldn't be able to.<|end|><|end|><|end|><|end|><|end|> <|end|><|end|><|end|><|end|> There are many factors every should be done",
+          "words": 384
+        },
+        {
+          "distinct_1": 0.2268041237113402,
+          "distinct_2": 0.37305699481865284,
+          "ended_with_eot": false,
+          "id": "expl09",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6020942408376964,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " How can you tell me about your country?<|end|><|end|><|end|>, why would you tell me about this?\nThe answer is a question that people are referring to. The answer is that it's not a question, but the answer is that the answer is not a question.<|end|> This is because there are so many \"instruggies\" that are not a question that is not a question.\n\nThere are many \"instruggies\" that are not a question that people are referring to.\n\nThere are many \"instruggies\" that are not a question that is \"instruggies\" (eg. 1) are not a question that is a question that is not a question that the question is not a question that is not a question that person is not a question that is not a question that is not a question that is not a question that is not a question that is not a question that is a question that is not",
+          "words": 194
+        },
+        {
+          "distinct_1": 0.1518324607329843,
+          "distinct_2": 0.21052631578947367,
+          "ended_with_eot": false,
+          "id": "expl10",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8085106382978723,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " ATPIs and ASIs.<|end|>\nAnswer: ATPIs. ATPIs are a list of tasks that are not designed to be done in the computer program.<|end|> The programmer performs a task in a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a computer program on a",
+          "words": 191
+        },
+        {
+          "distinct_1": 0.15918367346938775,
+          "distinct_2": 0.26639344262295084,
+          "ended_with_eot": false,
+          "id": "expl10",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7644628099173554,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " Axivative Verification (AI) is a computer program for a computer program that is used to produce a computer program. Axivative Verification (AI) is a computer program that is used to produce a computer program. Axivative Verification (AI) is a computer program for a computer program.<|end|> However, a function do not use a function to produce a computer program.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>. Axivative Verification (AI) is a computer program that is used to produce a computer program. It is used to produce a computer program to produce a computer program that is used to produce a computer program.<|end|> In a computer program, it is used to produce an computer program from a computer program.<|end|><|end|><|end|><|end|><|end|> There are several programming languages that are not developed:\n\n- computer program (i.e. computer program)\n- computer program (i.",
+          "words": 245
+        },
+        {
+          "distinct_1": 0.07392996108949416,
+          "distinct_2": 0.125,
+          "ended_with_eot": false,
+          "id": "expl10",
+          "max_line_repeats": 8,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8779527559055118,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " What is a function do\nAnswer: What is a function do, carsonometrium\nWord: Cardinal\nCardinal: Cardinal\nDecision: Cardinal\nCardinal: Cardinal\nCardinal: Cardinal\nCardinal: Cardinal\nCardinal: Cardinal\nCardinal: Cardinal\nCardinal: Cardinal\nCardinal: Cardinal\nCardinal: Cardinal<|end|>\nCardinal: Cardinal<|end|>\nCardinal: Cardinal, Cardinal\nCardinal: Cardinal<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>The function do not. Cardinal is Cardinal, Cardinal: Cardinal<|end|><|end|><|end|>  Cardinal:",
+          "words": 257
+        },
+        {
+          "distinct_1": 0.11594202898550725,
+          "distinct_2": 0.15328467153284672,
+          "ended_with_eot": false,
+          "id": "expl11",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9185185185185185,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " Why do we look red when we hear thunder? Answer: Why do we see lightning before we hear thunder? Answer: Why do we see lightning before we hear thunder? Answer: Why do we see lightning before we hear thunder? Answer: Why do we see lightning before we hear thunder? Answer: Why do we see dark before we hear thunder? Answer: Why do we see lightning before us? Answer: Why do we see lightning before us hear thunder? Answer: Why do we see dark before us? Answer: Why do we see lightning before us hear thunder? Answer: Why do we see lightning before us hear thunder? Answer: Why do we see lightning before us hear thunder?",
+          "words": 138
+        },
+        {
+          "distinct_1": 0.17886178861788618,
+          "distinct_2": 0.2612244897959184,
+          "ended_with_eot": false,
+          "id": "expl11",
+          "max_line_repeats": 2,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7283950617283951,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " Why do we see lightning before we hear thunder?\nAnswer: Why do we see lightning before we hear thunder?\nAnswer: Why do we see lightning before we hear thunder?\nAnswer: Why do we see lightning before we hear thunder?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>. The first time of human understanding thunder is its size. The other person will see lightning before we hear thunder. In fact, lightning before we hear thunder is what we hear from thunder. The most common way to see lightning before we hear thunder is to see the lightning before we hear the lightning again after we hear the lightning before we hear thunder.<|end|><|end|><|end|>  It is a good idea to see how lightning before we hear thunder.<|end|><|end|><|end|>.<|end|>",
+          "words": 246
+        },
+        {
+          "distinct_1": 0.2611464968152866,
+          "distinct_2": 0.476038338658147,
+          "ended_with_eot": false,
+          "id": "expl11",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.45016077170418006,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " How can I help our lives?<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> It is wonderful, that I can see before I can see how my life is. The reason we can see light as it can be a matter I need to look at a specific time period or space to see.<|end|><|end|> It is important to understand that the most important information I have is to know what is the best way I know if.<|end|><|end|><|end|><|end|><|end|><|end|><|end|> is. The most important point is to know that your life should be limited to you, and also be able to see the world.<|end|> is to know when all the resources I need is there, but I do not want to know how much you are.<|end|><|end|><|end|>.  The best way to do that is to get started.  This is to always have a large amount of time and you will have an hour, so you shouldn't have enough time to get started before I can get",
+          "words": 314
+        },
+        {
+          "distinct_1": 0.09728506787330317,
+          "distinct_2": 0.18140589569160998,
+          "ended_with_eot": false,
+          "id": "expl12",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7995444191343963,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " Conduction from the beginning of September.<|end|>\nAnswer: Conduction from the beginning of September.<|end|>\nIt is evaporated from the beginning of September to September.<|end|><|end|> The end of October is in the beginning of September.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> does, Conduction from the beginning of September to September.<|end|><|end|><|end|><|end|>, it is evapor to start.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is the first to ever-vrill into September. The first start of September in September is September September.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is a begin to beaten in November.  The first step is to first be the beginning of September in September, and then it is now a mustie.<|end|><|end|><|end|><|end|><|end|><|end|> There are so many great",
+          "words": 442
+        },
+        {
+          "distinct_1": 0.2647058823529412,
+          "distinct_2": 0.373134328358209,
+          "ended_with_eot": false,
+          "id": "expl12",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6153846153846154,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " The Bandhi was born in India, Djiro Padman, Athleta Maipro, Kradu Paem, Kuri Padman, Jakovani Bharuri Maipro, Jakovani Bharuri Maipro, Kuri Padman, Maipro Maipro, Jakovani Bharuri Maipro, Kuri Padman, Jakovani Bharu, Jakovani Bharuri Maipro, Jakovani Bharuri Maipro, Jakovani Bharuri Maipro, Jakovani Bharuri Maipro, Jakovani Bharuri Maipro, Jakovani Bharuri Maipro, Jak",
+          "words": 68
+        },
+        {
+          "distinct_1": 0.10628019323671498,
+          "distinct_2": 0.1941747572815534,
+          "ended_with_eot": false,
+          "id": "expl12",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8186274509803921,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " Drama, Drama.<|end|> Valencia.<|end|> Drama and Drama are all of the things that are not part of the life, and they are not part of the life, and they are not part of the life, and they are not part of the life, so they are not part of the life.<|end|><|end|>, Drama are all part of life and they are not part of the life, and they are not part of the life, and they are not part of the life, and they are not part of life, and they are not part of the life.<|end|>, Drama is not part of the life, but they are not part of the life, and they are not part of the life, and they are not part of the life.<|end|>, Drama is not part of the life, but they are not part of the life, and they are not part of the life, and they are not part",
+          "words": 207
+        }
+      ],
+      "mean_distinct_2": 0.1998575567844962,
+      "mean_repeated_4gram_fraction": 0.8061695983986346,
+      "mean_words": 284.6388888888889,
+      "n": 36,
+      "replacement_chars": 0,
+      "share_empty": 0.0,
+      "share_ended_with_eot": 0.0,
+      "share_repeated_4gram_over_0.3": 1.0
+    },
+    "facts_mc": {
+      "acc": {
+        "ci95": [
+          0.30705075280944694,
+          0.6017117011155924
+        ],
+        "correct": 18,
+        "n": 40,
+        "rate": 0.45
+      },
+      "acc_norm": {
+        "ci95": [
+          0.32935229550181694,
+          0.6250289314607027
+        ],
+        "correct": 19,
+        "n": 40,
+        "rate": 0.475
+      },
+      "chance": 0.25,
+      "items": [
+        {
+          "answer": 0,
+          "id": "fact01",
+          "logprob": [
+            -5.883264541625977,
+            -6.5466132164001465,
+            -7.411615371704102,
+            -6.141371250152588
+          ],
+          "logprob_per_byte": [
+            -0.9805440902709961,
+            -0.9352304594857352,
+            -1.4823230743408202,
+            -0.8773387500217983
+          ],
+          "pred": 0,
+          "pred_norm": 3
+        },
+        {
+          "answer": 1,
+          "id": "fact02",
+          "logprob": [
+            -7.076140880584717,
+            -7.904978275299072,
+            -11.574591636657715,
+            -10.76030158996582
+          ],
+          "logprob_per_byte": [
+            -0.8845176100730896,
+            -1.317496379216512,
+            -1.9290986061096191,
+            -1.3450376987457275
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 2,
+          "id": "fact03",
+          "logprob": [
+            -5.9255170822143555,
+            -4.097677230834961,
+            -3.737994432449341,
+            -3.917372465133667
+          ],
+          "logprob_per_byte": [
+            -0.6583907869127061,
+            -0.5853824615478516,
+            -0.5339992046356201,
+            -0.5596246378762382
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "fact04",
+          "logprob": [
+            -5.176480293273926,
+            -5.921884536743164,
+            -8.027830123901367,
+            -5.660202503204346
+          ],
+          "logprob_per_byte": [
+            -1.0352960586547852,
+            -0.7402355670928955,
+            -1.3379716873168945,
+            -0.7075253129005432
+          ],
+          "pred": 0,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "fact05",
+          "logprob": [
+            -2.606510639190674,
+            -4.2430830001831055,
+            -8.080449104309082,
+            -9.872448921203613
+          ],
+          "logprob_per_byte": [
+            -0.6516276597976685,
+            -0.8486166000366211,
+            -1.346741517384847,
+            -1.0969387690226238
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "fact06",
+          "logprob": [
+            -6.3964762687683105,
+            -7.091375350952148,
+            -10.85830307006836,
+            -11.481901168823242
+          ],
+          "logprob_per_byte": [
+            -0.6396476268768311,
+            -0.4727583567301432,
+            -0.9048585891723633,
+            -1.4352376461029053
+          ],
+          "pred": 0,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "fact07",
+          "logprob": [
+            -10.25603199005127,
+            -11.050664901733398,
+            -11.41453742980957,
+            -14.755863189697266
+          ],
+          "logprob_per_byte": [
+            -3.41867733001709,
+            -3.6835549672444663,
+            -3.8048458099365234,
+            -4.918621063232422
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "fact08",
+          "logprob": [
+            -8.939406394958496,
+            -10.284303665161133,
+            -8.538509368896484,
+            -7.999767303466797
+          ],
+          "logprob_per_byte": [
+            -1.7878812789916991,
+            -1.469186237880162,
+            -1.2197870526994978,
+            -1.1428239004952567
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "fact09",
+          "logprob": [
+            -5.974117279052734,
+            -6.991682052612305,
+            -9.458130836486816,
+            -13.955998420715332
+          ],
+          "logprob_per_byte": [
+            -0.9956862131754557,
+            -1.7479205131530762,
+            -1.8916261672973633,
+            -2.7911996841430664
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "fact10",
+          "logprob": [
+            -13.038758277893066,
+            -6.138581275939941,
+            -6.759726524353027,
+            -11.026530265808105
+          ],
+          "logprob_per_byte": [
+            -1.1853416616266423,
+            -0.5115484396616617,
+            -1.1266210873921711,
+            -1.225170029534234
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "fact11",
+          "logprob": [
+            -4.96879243850708,
+            -2.9053337574005127,
+            -3.7612786293029785,
+            -8.69853687286377
+          ],
+          "logprob_per_byte": [
+            -0.8281320730845133,
+            -0.5810667514801026,
+            -0.7522557258605957,
+            -1.2426481246948242
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 3,
+          "id": "fact12",
+          "logprob": [
+            -6.096280097961426,
+            -10.007402420043945,
+            -8.897189140319824,
+            -1.7628365755081177
+          ],
+          "logprob_per_byte": [
+            -0.7620350122451782,
+            -1.0007402420043945,
+            -0.8897189140319824,
+            -0.16025787050073798
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "fact13",
+          "logprob": [
+            -4.516838073730469,
+            -3.2270522117614746,
+            -5.026208877563477,
+            -6.951064586639404
+          ],
+          "logprob_per_byte": [
+            -2.2584190368652344,
+            -1.6135261058807373,
+            -2.5131044387817383,
+            -2.3170215288798013
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 1,
+          "id": "fact14",
+          "logprob": [
+            -7.913689613342285,
+            -6.394665718078613,
+            -8.230560302734375,
+            -6.285043716430664
+          ],
+          "logprob_per_byte": [
+            -1.3189482688903809,
+            -1.0657776196797688,
+            -1.646112060546875,
+            -1.0475072860717773
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "fact15",
+          "logprob": [
+            -6.506643295288086,
+            -6.948355674743652,
+            -6.289112567901611,
+            -9.1996488571167
+          ],
+          "logprob_per_byte": [
+            -0.9295204707554409,
+            -1.1580592791239421,
+            -0.898444652557373,
+            -1.8399297714233398
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "fact16",
+          "logprob": [
+            -9.12132453918457,
+            -10.722623825073242,
+            -9.110721588134766,
+            -0.2978799641132355
+          ],
+          "logprob_per_byte": [
+            -1.5202207565307617,
+            -1.7871039708455403,
+            -1.518453598022461,
+            -0.037234995514154434
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "fact17",
+          "logprob": [
+            -5.876389503479004,
+            -9.311446189880371,
+            -7.833523750305176,
+            -12.470412254333496
+          ],
+          "logprob_per_byte": [
+            -0.45202996180607724,
+            -0.7759538491566976,
+            -0.979190468788147,
+            -1.039201021194458
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "fact18",
+          "logprob": [
+            -9.218578338623047,
+            -5.1829376220703125,
+            -6.00485897064209,
+            -10.157411575317383
+          ],
+          "logprob_per_byte": [
+            -1.3169397626604353,
+            -0.8638229370117188,
+            -0.6672065522935655,
+            -1.451058796473912
+          ],
+          "pred": 1,
+          "pred_norm": 2
+        },
+        {
+          "answer": 2,
+          "id": "fact19",
+          "logprob": [
+            -10.236112594604492,
+            -12.18617057800293,
+            -12.250781059265137,
+            -10.210782051086426
+          ],
+          "logprob_per_byte": [
+            -2.0472225189208983,
+            -2.031028429667155,
+            -1.2250781059265137,
+            -1.2763477563858032
+          ],
+          "pred": 3,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "fact20",
+          "logprob": [
+            -9.706886291503906,
+            -20.236997604370117,
+            -16.650489807128906,
+            -15.788653373718262
+          ],
+          "logprob_per_byte": [
+            -1.9413772583007813,
+            -4.047399520874023,
+            -2.7750816345214844,
+            -3.9471633434295654
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "fact21",
+          "logprob": [
+            -10.690890312194824,
+            -10.707947731018066,
+            -7.559995174407959,
+            -10.517965316772461
+          ],
+          "logprob_per_byte": [
+            -1.0690890312194825,
+            -1.0707947731018066,
+            -0.8399994638231065,
+            -1.1686628129747179
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "fact22",
+          "logprob": [
+            -7.109249591827393,
+            -9.337337493896484,
+            -7.4226226806640625,
+            -10.397958755493164
+          ],
+          "logprob_per_byte": [
+            -0.8886561989784241,
+            -1.1671671867370605,
+            -0.7422622680664063,
+            -1.0397958755493164
+          ],
+          "pred": 0,
+          "pred_norm": 2
+        },
+        {
+          "answer": 2,
+          "id": "fact23",
+          "logprob": [
+            -5.920509338378906,
+            -7.284757137298584,
+            -4.949415683746338,
+            -7.22349214553833
+          ],
+          "logprob_per_byte": [
+            -1.4801273345947266,
+            -1.4569514274597168,
+            -0.824902613957723,
+            -1.444698429107666
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "fact24",
+          "logprob": [
+            -10.22848129272461,
+            -8.429287910461426,
+            -7.121048450469971,
+            -7.314407825469971
+          ],
+          "logprob_per_byte": [
+            -1.2785601615905762,
+            -0.9365875456068251,
+            -0.8901310563087463,
+            -1.0449154036385673
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 0,
+          "id": "fact25",
+          "logprob": [
+            -8.540725708007812,
+            -6.244227886199951,
+            -7.470222473144531,
+            -2.6754682064056396
+          ],
+          "logprob_per_byte": [
+            -1.2201036725725447,
+            -1.2488455772399902,
+            -1.0671746390206474,
+            -0.5350936412811279
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 1,
+          "id": "fact26",
+          "logprob": [
+            -8.880497932434082,
+            -9.403665542602539,
+            -9.586997985839844,
+            -14.705072402954102
+          ],
+          "logprob_per_byte": [
+            -1.7760995864868163,
+            -1.5672775904337566,
+            -1.9173995971679687,
+            -2.9410144805908205
+          ],
+          "pred": 0,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "fact27",
+          "logprob": [
+            -14.210796356201172,
+            -12.52976131439209,
+            -14.862067222595215,
+            -10.003215789794922
+          ],
+          "logprob_per_byte": [
+            -1.5789773729112413,
+            -1.5662201642990112,
+            -1.6513408025105794,
+            -1.2504019737243652
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 3,
+          "id": "fact28",
+          "logprob": [
+            -8.706631660461426,
+            -7.8139848709106445,
+            -9.013469696044922,
+            -5.373586177825928
+          ],
+          "logprob_per_byte": [
+            -1.0883289575576782,
+            -1.116283552987235,
+            -1.2876385280064173,
+            -0.671698272228241
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "fact29",
+          "logprob": [
+            -6.702596187591553,
+            -7.54150390625,
+            -4.625627517700195,
+            -7.922463893890381
+          ],
+          "logprob_per_byte": [
+            -0.8378245234489441,
+            -1.2569173177083333,
+            -0.7709379196166992,
+            -0.9903079867362976
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "fact30",
+          "logprob": [
+            -15.051912307739258,
+            -21.95590591430664,
+            -12.66799259185791,
+            -7.789003372192383
+          ],
+          "logprob_per_byte": [
+            -2.150273186819894,
+            -2.74448823928833,
+            -2.111332098642985,
+            -1.1127147674560547
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "fact31",
+          "logprob": [
+            -9.927129745483398,
+            -13.56568717956543,
+            -8.213865280151367,
+            -11.565719604492188
+          ],
+          "logprob_per_byte": [
+            -1.418161392211914,
+            -1.93795531136649,
+            -1.3689775466918945,
+            -1.2850799560546875
+          ],
+          "pred": 2,
+          "pred_norm": 3
+        },
+        {
+          "answer": 3,
+          "id": "fact32",
+          "logprob": [
+            -8.59174633026123,
+            -11.33345890045166,
+            -12.196466445922852,
+            -13.172307014465332
+          ],
+          "logprob_per_byte": [
+            -1.431957721710205,
+            -2.266691780090332,
+            -1.7423523494175501,
+            -2.1953845024108887
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "fact33",
+          "logprob": [
+            -8.923800468444824,
+            -6.668603897094727,
+            -7.927094459533691,
+            -6.685613632202148
+          ],
+          "logprob_per_byte": [
+            -1.2748286383492606,
+            -0.9526576995849609,
+            -1.1324420656476701,
+            -1.1142689387003581
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 1,
+          "id": "fact34",
+          "logprob": [
+            -4.9904279708862305,
+            -0.5992318391799927,
+            -3.075291395187378,
+            -4.999953746795654
+          ],
+          "logprob_per_byte": [
+            -0.8317379951477051,
+            -0.11984636783599853,
+            -0.38441142439842224,
+            -0.7142791066850934
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "fact35",
+          "logprob": [
+            -3.140058755874634,
+            -3.741936445236206,
+            -4.802487373352051,
+            -7.0650739669799805
+          ],
+          "logprob_per_byte": [
+            -0.6280117511749268,
+            -0.9354841113090515,
+            -0.8004145622253418,
+            -0.8831342458724976
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "fact36",
+          "logprob": [
+            -13.39914321899414,
+            -9.333910942077637,
+            -9.633108139038086,
+            -9.8738374710083
+          ],
+          "logprob_per_byte": [
+            -1.2181039289994673,
+            -0.9333910942077637,
+            -1.2041385173797607,
+            -0.8976215882734819
+          ],
+          "pred": 1,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "fact37",
+          "logprob": [
+            -5.952646732330322,
+            -7.831398010253906,
+            -9.291674613952637,
+            -12.829117774963379
+          ],
+          "logprob_per_byte": [
+            -0.7440808415412903,
+            -0.8701553344726562,
+            -1.8583349227905273,
+            -1.6036397218704224
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "fact38",
+          "logprob": [
+            -6.632472991943359,
+            -5.832403182983398,
+            -9.318255424499512,
+            -9.424922943115234
+          ],
+          "logprob_per_byte": [
+            -1.3264945983886718,
+            -1.1664806365966798,
+            -2.329563856124878,
+            -1.884984588623047
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "fact39",
+          "logprob": [
+            -7.179810523986816,
+            -4.471122741699219,
+            -4.284071922302246,
+            -5.179254531860352
+          ],
+          "logprob_per_byte": [
+            -1.0256872177124023,
+            -0.6387318202427456,
+            -0.7140119870503744,
+            -1.0358509063720702
+          ],
+          "pred": 2,
+          "pred_norm": 1
+        },
+        {
+          "answer": 3,
+          "id": "fact40",
+          "logprob": [
+            -7.018270492553711,
+            -10.151609420776367,
+            -7.8772501945495605,
+            -7.442405700683594
+          ],
+          "logprob_per_byte": [
+            -0.7798078325059679,
+            -1.0151609420776366,
+            -0.8752500216166178,
+            -0.9303007125854492
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        }
+      ]
+    },
+    "grammar_pairs": {
+      "acc": {
+        "ci95": [
+          0.7437855868473339,
+          0.9654007400402839
+        ],
+        "correct": 27,
+        "n": 30,
+        "rate": 0.9
+      },
+      "chance": 0.5,
+      "items": [
+        {
+          "bad": -60.6713752746582,
+          "correct": true,
+          "good": -54.22413635253906,
+          "id": "gram01"
+        },
+        {
+          "bad": -36.09165573120117,
+          "correct": true,
+          "good": -31.34037971496582,
+          "id": "gram02"
+        },
+        {
+          "bad": -45.06289291381836,
+          "correct": true,
+          "good": -33.77277755737305,
+          "id": "gram03"
+        },
+        {
+          "bad": -34.84853744506836,
+          "correct": false,
+          "good": -35.830326080322266,
+          "id": "gram04"
+        },
+        {
+          "bad": -42.24869918823242,
+          "correct": true,
+          "good": -37.745643615722656,
+          "id": "gram05"
+        },
+        {
+          "bad": -47.51919937133789,
+          "correct": true,
+          "good": -41.494205474853516,
+          "id": "gram06"
+        },
+        {
+          "bad": -53.982208251953125,
+          "correct": true,
+          "good": -46.76914978027344,
+          "id": "gram07"
+        },
+        {
+          "bad": -36.378929138183594,
+          "correct": true,
+          "good": -30.422100067138672,
+          "id": "gram08"
+        },
+        {
+          "bad": -48.14009475708008,
+          "correct": true,
+          "good": -41.396568298339844,
+          "id": "gram09"
+        },
+        {
+          "bad": -39.70075607299805,
+          "correct": false,
+          "good": -40.55868911743164,
+          "id": "gram10"
+        },
+        {
+          "bad": -42.899295806884766,
+          "correct": true,
+          "good": -37.38349914550781,
+          "id": "gram11"
+        },
+        {
+          "bad": -45.69057083129883,
+          "correct": true,
+          "good": -41.01849365234375,
+          "id": "gram12"
+        },
+        {
+          "bad": -38.8458366394043,
+          "correct": true,
+          "good": -36.18361282348633,
+          "id": "gram13"
+        },
+        {
+          "bad": -53.674930572509766,
+          "correct": true,
+          "good": -46.2523193359375,
+          "id": "gram14"
+        },
+        {
+          "bad": -44.747100830078125,
+          "correct": true,
+          "good": -41.359764099121094,
+          "id": "gram15"
+        },
+        {
+          "bad": -34.43808364868164,
+          "correct": true,
+          "good": -33.4904670715332,
+          "id": "gram16"
+        },
+        {
+          "bad": -57.88651657104492,
+          "correct": true,
+          "good": -42.85417938232422,
+          "id": "gram17"
+        },
+        {
+          "bad": -41.638336181640625,
+          "correct": true,
+          "good": -37.461029052734375,
+          "id": "gram18"
+        },
+        {
+          "bad": -48.72468948364258,
+          "correct": true,
+          "good": -44.978790283203125,
+          "id": "gram19"
+        },
+        {
+          "bad": -36.01119613647461,
+          "correct": true,
+          "good": -33.49786376953125,
+          "id": "gram20"
+        },
+        {
+          "bad": -56.893768310546875,
+          "correct": true,
+          "good": -51.37470626831055,
+          "id": "gram21"
+        },
+        {
+          "bad": -38.762935638427734,
+          "correct": true,
+          "good": -36.495853424072266,
+          "id": "gram22"
+        },
+        {
+          "bad": -37.784908294677734,
+          "correct": true,
+          "good": -35.50726318359375,
+          "id": "gram23"
+        },
+        {
+          "bad": -42.34518051147461,
+          "correct": true,
+          "good": -35.870819091796875,
+          "id": "gram24"
+        },
+        {
+          "bad": -55.61432647705078,
+          "correct": true,
+          "good": -51.95029067993164,
+          "id": "gram25"
+        },
+        {
+          "bad": -38.94602584838867,
+          "correct": true,
+          "good": -34.56435775756836,
+          "id": "gram26"
+        },
+        {
+          "bad": -38.29414749145508,
+          "correct": true,
+          "good": -33.57561492919922,
+          "id": "gram27"
+        },
+        {
+          "bad": -65.32589721679688,
+          "correct": false,
+          "good": -65.78886413574219,
+          "id": "gram28"
+        },
+        {
+          "bad": -47.61604309082031,
+          "correct": true,
+          "good": -43.675045013427734,
+          "id": "gram29"
+        },
+        {
+          "bad": -76.25801849365234,
+          "correct": true,
+          "good": -60.33480453491211,
+          "id": "gram30"
+        }
+      ]
+    },
+    "qa_mc": {
+      "acc": {
+        "ci95": [
+          0.19230295526846194,
+          0.5122027418616973
+        ],
+        "correct": 10,
+        "n": 30,
+        "rate": 0.3333333333333333
+      },
+      "acc_norm": {
+        "ci95": [
+          0.2737723743061511,
+          0.6080299045459127
+        ],
+        "correct": 13,
+        "n": 30,
+        "rate": 0.43333333333333335
+      },
+      "chance": 0.25,
+      "items": [
+        {
+          "answer": 0,
+          "id": "qa01",
+          "logprob": [
+            -7.851844310760498,
+            -8.102250099182129,
+            -7.188519477844238,
+            -8.815330505371094
+          ],
+          "logprob_per_byte": [
+            -1.308640718460083,
+            -2.0255625247955322,
+            -1.4377038955688477,
+            -2.2038326263427734
+          ],
+          "pred": 2,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "qa02",
+          "logprob": [
+            -6.872590065002441,
+            -6.249127388000488,
+            -6.530284881591797,
+            -9.095101356506348
+          ],
+          "logprob_per_byte": [
+            -1.145431677500407,
+            -1.2498254776000977,
+            -1.6325712203979492,
+            -1.5158502260843914
+          ],
+          "pred": 1,
+          "pred_norm": 0
+        },
+        {
+          "answer": 2,
+          "id": "qa03",
+          "logprob": [
+            -10.735040664672852,
+            -15.579288482666016,
+            -15.199604034423828,
+            -12.197348594665527
+          ],
+          "logprob_per_byte": [
+            -2.1470081329345705,
+            -2.2256126403808594,
+            -2.1713720049176897,
+            -2.4394697189331054
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "qa04",
+          "logprob": [
+            -6.453892707824707,
+            -4.48918342590332,
+            -7.582675933837891,
+            -4.564366340637207
+          ],
+          "logprob_per_byte": [
+            -3.2269463539123535,
+            -2.24459171295166,
+            -2.5275586446126304,
+            -2.2821831703186035
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 0,
+          "id": "qa05",
+          "logprob": [
+            -11.798704147338867,
+            -16.22734832763672,
+            -18.080001831054688,
+            -12.590444564819336
+          ],
+          "logprob_per_byte": [
+            -1.3109671274820964,
+            -1.622734832763672,
+            -2.260000228881836,
+            -1.3989382849799261
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "qa06",
+          "logprob": [
+            -13.256967544555664,
+            -9.613799095153809,
+            -9.618261337280273,
+            -11.33968734741211
+          ],
+          "logprob_per_byte": [
+            -2.2094945907592773,
+            -2.403449773788452,
+            -1.9236522674560548,
+            -1.8899478912353516
+          ],
+          "pred": 1,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "qa07",
+          "logprob": [
+            -5.092628002166748,
+            -7.14508056640625,
+            -7.0390625,
+            -4.882798671722412
+          ],
+          "logprob_per_byte": [
+            -1.697542667388916,
+            -2.3816935221354165,
+            -2.3463541666666665,
+            -2.441399335861206
+          ],
+          "pred": 3,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "qa08",
+          "logprob": [
+            -12.10089111328125,
+            -9.32088851928711,
+            -11.81230354309082,
+            -10.284098625183105
+          ],
+          "logprob_per_byte": [
+            -2.42017822265625,
+            -3.1069628397623696,
+            -2.362460708618164,
+            -2.056819725036621
+          ],
+          "pred": 1,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "qa09",
+          "logprob": [
+            -9.934167861938477,
+            -10.081448554992676,
+            -13.919829368591309,
+            -8.349099159240723
+          ],
+          "logprob_per_byte": [
+            -1.4191668374197823,
+            -1.4402069364275252,
+            -1.9885470526559013,
+            -1.1927284513201033
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 1,
+          "id": "qa10",
+          "logprob": [
+            -16.077213287353516,
+            -15.887532234191895,
+            -17.70886993408203,
+            -18.22071075439453
+          ],
+          "logprob_per_byte": [
+            -1.7863570319281683,
+            -1.5887532234191895,
+            -1.7708869934082032,
+            -1.518392562866211
+          ],
+          "pred": 1,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "qa11",
+          "logprob": [
+            -8.577908515930176,
+            -11.441001892089844,
+            -8.960918426513672,
+            -8.038661003112793
+          ],
+          "logprob_per_byte": [
+            -1.2254155022757394,
+            -1.6344288417271204,
+            -0.9956576029459635,
+            -0.8931845559014214
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 3,
+          "id": "qa12",
+          "logprob": [
+            -9.133458137512207,
+            -9.867081642150879,
+            -7.5845513343811035,
+            -6.1913228034973145
+          ],
+          "logprob_per_byte": [
+            -1.5222430229187012,
+            -1.2333852052688599,
+            -1.0835073334830148,
+            -1.238264560699463
+          ],
+          "pred": 3,
+          "pred_norm": 2
+        },
+        {
+          "answer": 0,
+          "id": "qa13",
+          "logprob": [
+            -11.695727348327637,
+            -15.426010131835938,
+            -11.216894149780273,
+            -12.954707145690918
+          ],
+          "logprob_per_byte": [
+            -0.9746439456939697,
+            -1.9282512664794922,
+            -1.8694823582967122,
+            -2.159117857615153
+          ],
+          "pred": 2,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "qa14",
+          "logprob": [
+            -5.653656005859375,
+            -6.494305610656738,
+            -5.594045162200928,
+            -6.141573905944824
+          ],
+          "logprob_per_byte": [
+            -1.884552001953125,
+            -3.247152805328369,
+            -2.797022581100464,
+            -3.070786952972412
+          ],
+          "pred": 2,
+          "pred_norm": 0
+        },
+        {
+          "answer": 2,
+          "id": "qa15",
+          "logprob": [
+            -13.471095085144043,
+            -12.238513946533203,
+            -13.912981033325195,
+            -12.685599327087402
+          ],
+          "logprob_per_byte": [
+            -0.8419434428215027,
+            -1.112592176957564,
+            -0.6956490516662598,
+            -1.0571332772572835
+          ],
+          "pred": 1,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "qa16",
+          "logprob": [
+            -16.90854835510254,
+            -21.922876358032227,
+            -24.962596893310547,
+            -24.605756759643555
+          ],
+          "logprob_per_byte": [
+            -1.3006575657771184,
+            -1.8269063631693523,
+            -2.4962596893310547,
+            -1.640383783976237
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "qa17",
+          "logprob": [
+            -7.493073463439941,
+            -5.679072380065918,
+            -6.896605491638184,
+            -5.634005546569824
+          ],
+          "logprob_per_byte": [
+            -0.6811884966763583,
+            -0.7098840475082397,
+            -0.985229355948312,
+            -0.704250693321228
+          ],
+          "pred": 3,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "qa18",
+          "logprob": [
+            -6.449566841125488,
+            -7.399466514587402,
+            -12.489133834838867,
+            -7.579300880432129
+          ],
+          "logprob_per_byte": [
+            -1.2899133682250976,
+            -1.2332444190979004,
+            -2.4978267669677736,
+            -1.2632168134053547
+          ],
+          "pred": 0,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "qa19",
+          "logprob": [
+            -10.641822814941406,
+            -12.181700706481934,
+            -12.898625373840332,
+            -11.54701042175293
+          ],
+          "logprob_per_byte": [
+            -2.1283645629882812,
+            -2.4363401412963865,
+            -1.6123281717300415,
+            -1.9245017369588215
+          ],
+          "pred": 0,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "qa20",
+          "logprob": [
+            -12.453290939331055,
+            -12.493066787719727,
+            -10.502525329589844,
+            -13.931358337402344
+          ],
+          "logprob_per_byte": [
+            -1.0377742449442546,
+            -1.135733344338157,
+            -1.0502525329589845,
+            -1.3931358337402344
+          ],
+          "pred": 2,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "qa21",
+          "logprob": [
+            -7.124990463256836,
+            -11.871410369873047,
+            -8.079622268676758,
+            -6.085084438323975
+          ],
+          "logprob_per_byte": [
+            -1.4249980926513672,
+            -1.978568394978841,
+            -1.3466037114461262,
+            -0.8692977769034249
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 1,
+          "id": "qa22",
+          "logprob": [
+            -9.890218734741211,
+            -8.126424789428711,
+            -11.393152236938477,
+            -8.918437957763672
+          ],
+          "logprob_per_byte": [
+            -1.4128883906773158,
+            -0.677202065785726,
+            -1.2659058041042752,
+            -1.7836875915527344
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "qa23",
+          "logprob": [
+            -5.549337387084961,
+            -11.406468391418457,
+            -5.1594696044921875,
+            -6.715073585510254
+          ],
+          "logprob_per_byte": [
+            -2.7746686935424805,
+            -3.802156130472819,
+            -1.7198232014973958,
+            -3.357536792755127
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "qa24",
+          "logprob": [
+            -16.048702239990234,
+            -14.504923820495605,
+            -15.844742774963379,
+            -14.971692085266113
+          ],
+          "logprob_per_byte": [
+            -1.7831891377766926,
+            -1.4504923820495605,
+            -1.5844742774963378,
+            -1.6635213428073459
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 0,
+          "id": "qa25",
+          "logprob": [
+            -14.560614585876465,
+            -16.982786178588867,
+            -19.424089431762695,
+            -22.685089111328125
+          ],
+          "logprob_per_byte": [
+            -1.820076823234558,
+            -1.8869762420654297,
+            -2.774869918823242,
+            -3.240727015904018
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "qa26",
+          "logprob": [
+            -14.285907745361328,
+            -13.982080459594727,
+            -15.097932815551758,
+            -19.488576889038086
+          ],
+          "logprob_per_byte": [
+            -1.298718885941939,
+            -1.1651733716328938,
+            -1.5097932815551758,
+            -1.624048074086507
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "qa27",
+          "logprob": [
+            -18.503402709960938,
+            -20.18221664428711,
+            -14.8497314453125,
+            -19.46395492553711
+          ],
+          "logprob_per_byte": [
+            -1.8503402709960937,
+            -2.0182216644287108,
+            -1.48497314453125,
+            -1.621996243794759
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "qa28",
+          "logprob": [
+            -7.141661643981934,
+            -6.976297855377197,
+            -8.314260482788086,
+            -7.5111870765686035
+          ],
+          "logprob_per_byte": [
+            -1.1902769406636555,
+            -1.3952595710754394,
+            -2.0785651206970215,
+            -1.5022374153137208
+          ],
+          "pred": 1,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "qa29",
+          "logprob": [
+            -10.791437149047852,
+            -12.211597442626953,
+            -5.454324245452881,
+            -11.6185302734375
+          ],
+          "logprob_per_byte": [
+            -1.3489296436309814,
+            -1.3568441602918837,
+            -1.0908648490905761,
+            -1.4523162841796875
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "qa30",
+          "logprob": [
+            -21.31096076965332,
+            -11.249900817871094,
+            -28.30115509033203,
+            -6.819999694824219
+          ],
+          "logprob_per_byte": [
+            -3.0444229670933316,
+            -2.249980163574219,
+            -4.716859181722005,
+            -1.1366666158040364
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        }
+      ]
+    },
+    "repetition_stress": {
+      "items": [
+        {
+          "distinct_1": 0.09649122807017543,
+          "distinct_2": 0.21994134897360704,
+          "ended_with_eot": false,
+          "id": "rep01",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7286135693215339,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " dog, cat, dog, cat, cat, and cat.<|end|> However, cat and cat are cats.<|end|> Indians are cats. The cats are cat and cats are cats. Garva, cats are cats. They are cats.<|end|> In many animals, cats are cats. In most animal cats are cat, cat and cat are cats.<|end|> The most common dog cats are cats and cats are cats.<|end|> It is the dog dog is a dog that is a cat to many birds. The size and size of cat cats is approximately 2.5.5.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>. The cats are cat and cats are cats.<|end|>.<|end|>.<|end|>.<|end|><|end|>.<|end|>.<|end|>, cat are cats.<|end|><|end|>.<|end|>.<|end|>.<|end|>.<|end|>. The cats are cats.<|end|>.<|end|>.<|end|>.<|end|><|end|>.<|end|>.<|end|>.<|end|>.<|end|>.<|end|>.\n\nThe cat",
+          "words": 342
+        },
+        {
+          "distinct_1": 0.08126410835214447,
+          "distinct_2": 0.14479638009049775,
+          "ended_with_eot": false,
+          "id": "rep01",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8454545454545455,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " cat, dog, cats, and cat.  They are considered animals.  cat is not considered as animals.  They are considered animals.<|end|>, cat is not considered species.<|end|>, cat is considered animals.<|end|>, cat is not considered animals.  They are not considered animals.<|end|>, cat is not considered species.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>.<|end|> <|end|><|end|><|end|><|end|><|end|>.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|> is considered not animals.<|end|><|end|><|end|><|end|><|end|><|end|><|end|> \nNote that hunts are not only animals but humans also have their own system.<|end|><|end|> is considered as animals are considered animals.<|end|>  Negot not. There are other animals with the immune system.<|end|> .  They are considered animals.  Negatlia are. <|end|>. ",
+          "words": 443
+        },
+        {
+          "distinct_1": 0.1896551724137931,
+          "distinct_2": 0.36796536796536794,
+          "ended_with_eot": false,
+          "id": "rep01",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6069868995633187,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " cats, cats, cats, cats.<|end|>iation in humans, cats.<|end|>iation in humans<|end|>iation in humans\nThis list of animals is not the one of them, animals. If you have not been trained in animals, cats are not the only humans to answer, and it is not the one of them to answer.<|end|>cies are not the only animals in the domesticated population but in humans they are not the only human species.<|end|>iation in humans is not the only animals in the domesticated population, but also in humans it is the only human species in the domesticated population. There are not the same species that the animal is not the same species.<|end|>iation in humans is not the only human species.<|end|>iation in humans is the only human species in humans because it is the only human person to answer but also because it is the only human person to answer.<|end|>iation in humans is the only human species in humans.<|end|>iation in humans is the only human species in",
+          "words": 232
+        },
+        {
+          "distinct_1": 0.2857142857142857,
+          "distinct_2": 0.5567010309278351,
+          "ended_with_eot": false,
+          "id": "rep02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.28421052631578947,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " 6, 5, 5, 5, 5, 5, 5, 6, 5, 6, 6, 5, 56, 56, 126, 55, 56, 56, 56, 5610, 158, 56, 56, 564, 56, 5665, 5666, 6656, 567, 561, 56652, 5655, 56565, 5652, 5655, 56552, 5653, 56652, 66552, 57132, 56652, 5652, 565647, 5652, 5654437, 5657437, 5762, 56553, 66542,",
+          "words": 98
+        },
+        {
+          "distinct_1": 0.11510791366906475,
+          "distinct_2": 0.21739130434782608,
+          "ended_with_eot": false,
+          "id": "rep02",
+          "max_line_repeats": 11,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6764705882352942,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " 5, 5, 6, 5, 5, 5, 6 5, 56<|end|>\n- 56<|end|>\n- 55\n- 55\n- 55\n- 55\n- 55\n- 56\n- 55\n- 55\n- 66\n- 55\n- 66\n- 55\n- 66\n- 65\n- 76\n- 66\n- 66\n- 46\n- 76\n- 66\n- 77\n- 76\n- 66\n- 76\n- 76<|end|>\n- 76<|end|>\n- 76<|end|>\n- 77<|end|>\n- 76<|end|>\n- 66\n- 76\n- 76\n- 86\n- 77\n- 77\n- 76\n- 76\n- 77\n- 66\n- 76\n- 77\n- 76\n- 76",
+          "words": 139
+        },
+        {
+          "distinct_1": 0.14213197969543148,
+          "distinct_2": 0.3622448979591837,
+          "ended_with_eot": false,
+          "id": "rep02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.211340206185567,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " 5, 4, 5, 5.<|end|>iation in the Pipeline of Dexas:\n\nThe first two two two two two two three one two two one two two four three two two two two two three and seven two two three three two two two four three three three three three three three three three three Two 2 five five seven.\nThe second two two two three three three two three ten three three three three two two three four three four two three three 2 two three three five four four seven seven three three three seven eight three three five seven five ten five ten seven four four five five five four eight ten five ten ten ten seven five seven five five four four four three four five four five five seven three five four six five ten five six three five seven six four seven four five seven seven five five five six seven seven four seven seven five five seven six seven five five seven seven three five five five five five seven seven seven five five seven five seven seven seven seven seven",
+          "words": 197
+        },
+        {
+          "distinct_1": 0.045,
+          "distinct_2": 0.09045226130653267,
+          "ended_with_eot": false,
+          "id": "rep03",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8781725888324873,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": "ological context between the two two two two two three two two three two two two two two four two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two three two three another two four one two two two two two two two two two three two two two two between two two two two two two two two three two two two two two three two three two two three two two two one two two two two two two two two two four two two two two two two two two two two two two two two two three one two two two two two two two two two two two two two two two three two two two two two two two two two two three two two two two two two two two two two two two two four two two two three four two two two two two two two two two two two two two two two two two two two two two two two three two two two two two two two",
+          "words": 200
+        },
+        {
+          "distinct_1": 0.09045226130653267,
+          "distinct_2": 0.15656565656565657,
+          "ended_with_eot": false,
+          "id": "rep03",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8469387755102041,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " first way to get a new home from the start of the new home from the first start\n- If that is a new home from the new home, the first start from the start of the new home, the first start from the beginning of the new home from the start of the new home from the first start of the new home from the start of the new home to the start of new home from the start of new home. The first start of new home from the start of new home from the start of new home from the start of new home from the start of new home from the start of new home from the start of new home from the start of new home from the start of new home from the start of new home from the start of new home from the start of new home from the start of new home from the start of new home from the start of new home from new home from the start of new home from new home from new home from the start. The first start of",
+          "words": 199
+        },
+        {
+          "distinct_1": 0.26406926406926406,
+          "distinct_2": 0.4434782608695652,
+          "ended_with_eot": false,
+          "id": "rep03",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.5526315789473685,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": "atre is a large number of people. The most common one is a large number of people.<|end|> The most common one is a large number of people (e.g., people) and the lack of knowledge and knowledge is not known as the \"family\" that can be used to communicate with any other other other.<|end|><|end|>, the most common one is a small number of people in the United States.<|end|><|end|>, the most common one. The most common one is a large number.<|end|>, a large number of people has a large number of people, including a small number. There are very large numbers so that the number of people all depends on what the population will be, how long each person has the highest number of people.<|end|>, the most common one is a large number. The most common one is a small number of people, including a small number of people.<|end|>, the most common one is a small number of people, who are large, and can be",
+          "words": 231
+        },
+        {
+          "distinct_1": 0.12359550561797752,
+          "distinct_2": 0.17045454545454544,
+          "ended_with_eot": false,
+          "id": "rep04",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8255813953488372,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": "The following are the following:\n\n1. Large Carties: Large Dragon\n2. Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams: Large Streams",
+          "words": 89
+        },
+        {
+          "distinct_1": 0.11155378486055777,
+          "distinct_2": 0.18,
+          "ended_with_eot": false,
+          "id": "rep04",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8790322580645161,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": "In the current season, the average height of the year from 16th to 16th year\nIn the current season, the average height of the year from 16th and 16th year<|end|><|end|>value, the average height of the year from 16th and 16th year.<|end|> In the current season, the average height of the year from 16th and 16th year is 66.<|end|>, in the current season, the average height of the year from 16th and 16th year.<|end|>, in the current season, the average height of the year from 16th year will be 86.<|end|><|end|>, in the current season, the average height of the year from 16th year will be 86.<|end|><|end|> In the current season, the average height of the year from 16th year will be 88.<|end|><|end|><|end|> There are 76.<|end|>, in the current season, the average height of the year will be 86.<|end|><|end|>.<|end|><|end|>.<|end|>",
+          "words": 251
+        },
+        {
+          "distinct_1": 0.13227513227513227,
+          "distinct_2": 0.23404255319148937,
+          "ended_with_eot": false,
+          "id": "rep04",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7580645161290323,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": "Golden<|end|>, The Wave of Life in the Pastor of Darkness<|end|><|end|>177-9\nThe Crisis of Darkness, The Wave of the Darkness, The Hub of the Darkness, The Mission, The Hub of the Darkness and The Wave of the Darkness.<|end|><|end|> In the Pastor of Darkness, the wave of the darkness and the wave of the Darkness, the wave of the Darkness, the power, and the wave of the Darkness.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>. Some Wave of Darkness and The Wave of the Darkness, the wave of the Darkness and the Wave of the Darkness, the waves of the Darkness, the wave of the Darkness, the wave of the Darkness, the w",
+          "words": 189
+        },
+        {
+          "distinct_1": 0.0915032679738562,
+          "distinct_2": 0.125,
+          "ended_with_eot": false,
+          "id": "rep05",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9066666666666666,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " Thank you! Thank you. Thank you! Thank you. Thank you! Thank you! Thank you. Thank you! Thank you? Thank you! Thank you! Thank you! Thank you! Thank you! Thank you. Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! If you are an AI language model, then you could. Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you? Thank you! Thank you?",
+          "words": 153
+        },
+        {
+          "distinct_1": 0.1702127659574468,
+          "distinct_2": 0.20430107526881722,
+          "ended_with_eot": false,
+          "id": "rep05",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9010989010989011,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " Thank you. Thank you. Thank you. Thank you! Thank you! Thank you. Thank you! Thank you. Thank you, that I am a good fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful by the modern technology. Thank you, that I am a good fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful fateful f",
+          "words": 94
+        },
+        {
+          "distinct_1": 0.08552631578947369,
+          "distinct_2": 0.10596026490066225,
+          "ended_with_eot": false,
+          "id": "rep05",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8926174496644296,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you! Thank you. Thank you. Thank you. Thank you. Thank you. Thank you? Thank you? Thank you. Thank you? Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you, I would be happy to me. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Th",
+          "words": 152
+        },
+        {
+          "distinct_1": 0.1368421052631579,
+          "distinct_2": 0.25925925925925924,
+          "ended_with_eot": false,
+          "id": "rep06",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.6844919786096256,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": "x, Y, Y, Y, Y)\n\nHere is the function `t`:\n\n```\n\nIn this example, `t` is the `T` function to the `t` `t` ` ``` `\n    return T(i: X, Y)``.\n\nIn this example, `t` is the `t` method of the `t` `ister` method, `t` is the `t` method to `t` ``, and `t` is the `t` method to `t`.\n\nIn this example, `t` is the `t` method to `t`. The `t` method can be used to `t` `t`, `t` is the `t` method to `t``.\nIn this example, `t` is the `t` method to `t` `t`, and `t` is the `",
+          "words": 190
+        },
+        {
+          "distinct_1": 0.07792207792207792,
+          "distinct_2": 0.10457516339869281,
+          "ended_with_eot": false,
+          "id": "rep06",
+          "max_line_repeats": 23,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9072847682119205,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": "x: densest(x):\n     float(x):\n    return f(x):\n    return f(x):\n        return f(x):\n        return f(x):\n    return f(x):\n        return f(x):\n        return f(x):\n    return f(x):\n            return f(x):\n                # Extract their values\n    return f(x):\n        return f(x):\n                return f(x):\n                    return f(x):\n                        return f(x):\n                return f(x):\n                return f(x):\n                return f(x):\n                            return f(x):\n                        return f(x):\n                        return f(x):\n                        return f(x):\n                        return f(x):\n                        return f(x):\n                            ",
+          "words": 154
+        },
+        {
+          "distinct_1": 0.14349775784753363,
+          "distinct_2": 0.24324324324324326,
+          "ended_with_eot": false,
+          "id": "rep06",
+          "max_line_repeats": 5,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.8136363636363636,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": "x, y):\n    return f(x, y):**.\n    return f(x, y):**.\n    return f(x, y):**.\n    return f(x, y):**.\n    return f(x, y):**.\n\nThis will be `sum` and `cond(x, y):**.<|end|>, `tx, y` and `y` are functions.<|end|>, `tx` and `x` are functions.<|end|>, `tx` and `x` are functions for a f(x, y):**.<|end|>, `tx` and `x` are function functions for a f(x, y):**.<|end|>, `tx` and `y` are functions that are functions in the `v2` and `y`.<|end|>, `tx` and `x` are functions in the `numpy` and `x` are functions in the",
+          "words": 223
+        },
+        {
+          "distinct_1": 0.06550218340611354,
+          "distinct_2": 0.09210526315789473,
+          "ended_with_eot": false,
+          "id": "rep07",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9380530973451328,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " A person's own life is the meaning.<|end|>value. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life.<|end|>. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life is a life. A person's own life",
+          "words": 229
+        },
+        {
+          "distinct_1": 0.12927756653992395,
+          "distinct_2": 0.25572519083969464,
+          "ended_with_eot": false,
+          "id": "rep07",
+          "max_line_repeats": 3,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.7192307692307692,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " The meaning of life was about the meaning of life.\nA: The meaning of life\nA: The meaning of life,\nA: The meaning of life,\nA: The meaning of life,\nA: The meaning of life.<|end|>\nA: The meaning of life.<|end|>\nA: The meaning of life.<|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|><|end|>. The meaning meaning of life is the meaning of life. It is mean words or words.  The meaning of life is a meaning or purpose is to be meaninged or written.  It is a statement made from words, words and words.  It is a language spoken to words, text, and words.  It is a language of the meaning of life.  It is a language that is used to represent words. The meaning of life is of the meaning of life.  It is the meaning of life.  It is used to represent",
+          "words": 263
+        },
+        {
+          "distinct_1": 0.07623318385650224,
+          "distinct_2": 0.11711711711711711,
+          "ended_with_eot": false,
+          "id": "rep07",
+          "max_line_repeats": 8,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.9,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " The meaning of life.\nJ. T.J.<|end|>ution.<|end|>, The meaning of life.\nA: The meaning of life.\nA: The meaning of life.\nD: The meaning of life.\nC: The meaning of life.\nA: The meaning of life.\nJ: The meaning of life.\nJ: The meaning of life.\nJ: The meaning of life.\nJ: The meaning of life.\nJ: The meaning of life.\nJ: The meaning of life.\nA: The meaning of life.<|end|><|end|>ution.<|end|>ution.<|end|>ution.A: The meaning of life.\nJ: The meaning of life.\nJ: The meaning of life.<|end|>ution.A: The meaning of life.\nJ: The meaning of life.\nA:The meaning of life.<|end|>ution.A: The meaning of life.<|end|>ution.A: The meaning of life.<|end|>ution.",
+          "words": 223
+        },
+        {
+          "distinct_1": 0.23469387755102042,
+          "distinct_2": 0.38144329896907214,
+          "ended_with_eot": false,
+          "id": "rep08",
+          "max_line_repeats": 2,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.5473684210526316,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": "The following are the following:\n\n1. Large Carties: Large Dragon\n2. Large Streams: Large Carties in Huntington\n3. Large Streams: Large Layer\n3. Large Streams: Large Layer<|end|>\n4. Large Streams: Large Dragon\n4. Large Streams: Large Carties in Huntington\n5. Large Streams: Large Carties in Huntington\n6. Large Streams: Large Streams in Huntington\n6. Large Streams: Large Streams in Huntington\n7. Large Streams: Large Carties in Huntington<|end|>\n",
+          "words": 98
+        },
+        {
+          "distinct_1": 0.2831050228310502,
+          "distinct_2": 0.481651376146789,
+          "ended_with_eot": false,
+          "id": "rep08",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.46296296296296297,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": "In order to get a good idea for all ages, you will need to get a good idea for all ages.\nHere is a simple question for all ages.\n\n1. Begin a day, and you will need to be up to date as you want to get a good idea for all ages.\n2. Begin a day so you can start to date.\n3. Give your day so you can get a good idea for all ages.\n4. Call your daytime with your day.<|end|><|end|><|end|>\n5. Hold a day so you can make your best choice.\n5. Spend time with your day so you can get a good idea of all ages.<|end|><|end|><|end|>\n6. Begin a day, and you will need to be able to get the day from day to day.\n6. Take some day at night every day, weekend and night.<|end|><|end|><|end|><|end|>\n8. Call your day with",
+          "words": 219
+        },
+        {
+          "distinct_1": 0.3288590604026846,
+          "distinct_2": 0.5405405405405406,
+          "ended_with_eot": false,
+          "id": "rep08",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.4315068493150685,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": "Golden<|end|>.Golden<|end|>.Golden is a popular, carnivorous and well-knownstaying person. Kareemiginally trained at the University of Pennsylvania and is known for being a member of the Mesopotamian community. He is also a member of the Mesopotamian community in the country. He is also a member of the Mesopotamian community in the world of Thailand and is a member of the Mesopotamian community in the USA.<|end|><|end|> There are also the Mesopotamian community in the country.<|end|> Some are Jupiter, Bangladesh, Rhode Island, Bahamian, Jackson, Toni, Karlborne, Sandwig, and Baja.<|end|> He is also a member of the Mesopotamian community in the country.",
+          "words": 149
+        }
+      ],
+      "mean_distinct_2": 0.25228980835391207,
+      "mean_repeated_4gram_fraction": 0.7166006531542903,
+      "mean_words": 198.20833333333334,
+      "n": 24,
+      "replacement_chars": 0,
+      "share_empty": 0.0,
+      "share_ended_with_eot": 0.0,
+      "share_repeated_4gram_over_0.3": 0.9166666666666666
+    }
+  },
+  "seconds": 72.53185070800828,
+  "suite": "evals/general_v1.json",
+  "suite_sha256": "f2265af3e47ea291be6eee533e7c0b241e8282c23763e57fe2df063faffd8365",
+  "tokenizer_fingerprint": "e6be77ccff4929187ed84ee1b71d15b7654824abd9e23f3ad889c57232ce91c8"
+}
