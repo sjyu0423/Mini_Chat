@@ -28,7 +28,7 @@ from pathlib import Path
 from typing import Any
 
 from mini_chatgpt.config import ExperimentConfig
-from mini_chatgpt.data.prepare import load_prepared, processed_dir
+from mini_chatgpt.data.prepare import file_sha256, load_prepared, processed_dir
 from mini_chatgpt.device import describe_device, select_device
 from mini_chatgpt.inference.generate import generate_text
 from mini_chatgpt.training.checkpoint import (
@@ -73,6 +73,12 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         metavar="RUN_DIR",
         help="resume from the newest loadable step_*.pt in RUN_DIR",
+    )
+    p.add_argument(
+        "--continue-from",
+        type=Path,
+        metavar="CKPT",
+        help="start a NEW training phase (new run dir, --config's schedule) from CKPT",
     )
     p.add_argument(
         "--extend-schedule",
@@ -125,6 +131,8 @@ def main() -> None:
         run_dir = args.resume.parent.parent
     else:
         cfg = apply_overrides(ExperimentConfig.from_toml(args.config), args)
+    if args.continue_from and args.resume:
+        raise SystemExit("--continue-from and --resume are mutually exclusive")
 
     data = load_prepared(processed_dir(cfg.data))
     if data.tokenizer.vocab_size != cfg.model.vocab_size:
@@ -138,10 +146,38 @@ def main() -> None:
         write_run_metadata(run_dir, cfg, describe_device(device))
         data.tokenizer.save(run_dir / "tokenizer.json")  # generation uses this exact vocab
     trainer = Trainer(cfg, data.splits.train, data.splits.val, device, run_dir)
+    if data.meta.get("val_bytes_per_token"):
+        trainer.val_bytes_per_token = float(data.meta["val_bytes_per_token"])
     log.info("parameters: %s | device: %s | run: %s",
              f"{trainer.model.num_parameters():,}", device, run_dir)  # fmt: skip
     if args.resume:
         trainer.load_state(args.resume)
+    if args.continue_from:
+        parent = args.continue_from.resolve()
+        if parent.parent.parent == Path(run_dir).resolve():
+            raise SystemExit("continuation must write to a new run directory")
+        parent_tok = parent.parent.parent / "tokenizer.json"
+        if parent_tok.exists() and hasattr(data.tokenizer, "fingerprint"):
+            from mini_chatgpt.tokenizer import load_tokenizer
+
+            ptok = load_tokenizer(parent_tok)
+            if getattr(ptok, "fingerprint", lambda: None)() != data.tokenizer.fingerprint():
+                raise SystemExit("parent run tokenizer differs from the dataset tokenizer")
+        parent_sha = file_sha256(parent)
+        pmeta = trainer.load_state(parent, continuation=True)
+        atomic_write_json(Path(run_dir) / "continuation.json", {
+            "parent_checkpoint": str(parent),
+            "parent_checkpoint_sha256": parent_sha,
+            "parent_step": pmeta.step,
+            "parent_config": pmeta.config,
+            "phases": trainer.phases,
+            "tokenizer_fingerprint": data.meta.get("tokenizer_fingerprint"),
+            "dataset_train_sha256": data.meta.get("train_sha256"),
+            "dataset_val_sha256": data.meta.get("val_sha256"),
+        })  # fmt: skip
+        log.info("continuing from %s (step %d) as phase %d: %s lr %.2e -> step %d",
+                 parent, pmeta.step, len(trainer.phases), cfg.training.lr_schedule,
+                 cfg.training.learning_rate, cfg.training.max_steps)  # fmt: skip
 
     def on_signal(signum: int, _frame: object) -> None:
         log.warning("received %s: stopping after the current step", signal.Signals(signum).name)
@@ -168,6 +204,7 @@ def main() -> None:
         "device": str(device),
         "parameters": trainer.model.num_parameters(),
         "steps": trainer.step,
+        "phases": trainer.phases,
         "max_steps": cfg.training.max_steps,
         "completed": trainer.step >= cfg.training.max_steps,
         "tokens_seen": trainer.tokens_seen,

@@ -19,7 +19,9 @@ from typing import Any, Literal, TypeVar, get_args
 
 DeviceName = Literal["auto", "cpu", "mps", "cuda"]
 DTypeName = Literal["float32", "bfloat16", "float16"]
-TokenizerName = Literal["char"]
+LRSchedule = Literal["cosine", "constant"]
+DataOrder = Literal["random", "single_pass"]
+TokenizerName = Literal["char", "bpe"]
 AttentionBackend = Literal["sdpa", "explicit"]
 
 
@@ -159,6 +161,15 @@ class TrainingConfig:
     # Setting it larger than max_steps stops training early on the *same* LR
     # trajectory; smaller compresses the decay and holds lr_min afterwards.
     lr_schedule_steps: int | None = None
+    # "cosine": warmup then cosine decay to min_learning_rate at the horizon (default).
+    # "constant": warmup (if any) then learning_rate for every step. Used for explicit
+    # continuation phases so an old schedule is never silently stretched or restarted.
+    lr_schedule: LRSchedule = "cosine"
+    # "random" (default, M0-M3): every micro-batch draws random window offsets, i.e.
+    # sampling with replacement. "single_pass" (M4.1+): the training stream is cut into
+    # non-overlapping windows, visited once in a seeded permutation; training refuses
+    # to run past the end instead of silently repeating data.
+    data_order: DataOrder = "random"
     weight_decay: float = 0.1
     beta1: float = 0.9
     beta2: float = 0.95
@@ -198,6 +209,8 @@ class TrainingConfig:
             raise ConfigError(
                 f"warmup_steps ({self.warmup_steps}) cannot exceed max_steps ({self.max_steps})"
             )
+        _require_choice("lr_schedule", self.lr_schedule, LRSchedule)
+        _require_choice("data_order", self.data_order, DataOrder)
         if self.lr_schedule_steps is not None:
             _require_positive_int("lr_schedule_steps", self.lr_schedule_steps)
             if self.warmup_steps > self.lr_schedule_steps:

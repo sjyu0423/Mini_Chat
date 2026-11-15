@@ -135,9 +135,11 @@ before use):
 ## Dataset strategy
 
 1. **Tiny Shakespeare, char-level** (current): 1,003,854 train and 111,540 val tokens.
-2. **Byte-level BPE** implemented in-repo and trained on the training split only.
-3. **Larger permissive corpus**, sharded, with documented licenses, pinned hashes,
-   and deduplication. Needs approval before any large download.
+2. **Byte-level BPE**: implemented in M3 (`tokenizer/bpe.py`). It is trained on the
+   training split only.
+3. **Larger corpus**: researched in M3. M3.1 proposal: TinyStories V2, about 100M
+   tokens from bounded byte ranges, with manifests, hashes, deduplication and
+   hash-based splits. FineWeb-Edu follows. Needs approval before any download.
 4. **Dialogue data** for supervised fine-tuning, then preference/RL experiments.
 
 Compute-optimal training wants about 20 tokens/parameter, which for `gpt_10m` is
@@ -182,6 +184,48 @@ last checkpoint nearly as good as the best. It is a single seed, so the planned 
 step is a repeated-seed A/B study. Details are in
 [reports/m2_1_lr_ablation.md](reports/m2_1_lr_ablation.md).
 
+## M3 measurements relevant to planning (BPE, MPS, float32)
+
+| model | params (V 4,096) | tok/s | memory after forward | tokens per hour |
+|---|---|---|---|---|
+| S 6/6/384, T512 B32 | 12.42M | 26.2k (24.4k with dropout 0.2) | 4.4 GB (6.0 GB) | about 85M |
+| M 8/8/512, T512 B16 | 27.58M | 13.7k | 4.0 GB | about 44M |
+| L 12/12/768, T512 B8 | 88.59M | 4.85k | 5.2 GB | about 16M |
+
+Character-level throughput does not transfer to BPE. Per byte of text, BPE-4096 is
+about 3.5× faster on TinyStories. Details are in
+[reports/m3_dataset_research.md](reports/m3_dataset_research.md).
+
+## M3.1 result (first BPE model)
+
+TinyStories V2, BPE 4,096, 12.4M parameters: in 56.5 min (4,800 steps × 16,384
+tokens, 0.8 epoch) validation reached 1.5455 nats/token (0.563 bits/byte) and was
+still falling, with no overfitting. The planned step budget matched the actual
+time to within 3%. The next planned experiment is a longer run on the same data,
+then the 27.6M model. Details are in
+[reports/m3_1_tinystories_pretraining.md](reports/m3_1_tinystories_pretraining.md).
+
+## M3.2 result (continuation phase)
+
+Continuing M3.1 for 2,400 steps at a constant 6e-5 lowered validation from 1.5455 to
+1.5147 nats/token (−2.0%) for +52% compute, with no overfitting and no measurable
+narrative gain. Continuation phases are explicit:
+- `lr_schedule = "constant"` sets the schedule;
+- `scripts/train.py --continue-from` writes to a new run directory and
+  `continuation.json`;
+- the checkpoint `phases` field records each phase.
+
+Recommendation: scale to the 27.6M model next. Details are in
+[reports/m3_2_extended_pretraining.md](reports/m3_2_extended_pretraining.md).
+
+## M3.3 result (capacity scaling)
+
+27.6M parameters at equal tokens (4,800 steps) reached val 1.4436 nats/token, against
+1.5455 for 12.4M. It runs at 13.6k tok/s, so a 4,800-step run takes about 110 min,
+using a 5.6 GB pool at micro-batch 16 × 2. At matched compute the intermediate
+checkpoints trail the small model, so the next step is runs with schedules sized
+to compute. Details are in [reports/m3_3_model_scaling.md](reports/m3_3_model_scaling.md).
+
 ## Known limitations
 
 - Only float32 is supported. bf16 and mixed precision are unverified on MPS and
@@ -194,6 +238,8 @@ step is a repeated-seed A/B study. Details are in
   counters" above for what is measured instead.
 - On MPS, SDPA with dropout fails under `torch.no_grad()` in train mode. Our
   code never does this, but external callers could.
+- BPE streams pack documents with `<|endoftext|>` but do not mask attention across
+  document boundaries.
 - Generation recomputes the full context for every token (no KV cache). This is
   fine at 10M parameters and a 256 context, but slow for long outputs.
 - Best-checkpoint saving exists (M2), but there is no early stopping: training

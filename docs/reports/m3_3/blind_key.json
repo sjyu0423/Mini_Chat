@@ -1,0 +1,1136 @@
+{
+  "S001": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own3",
+    "seed": 2
+  },
+  "S002": {
+    "category": "multi_character",
+    "model": "C",
+    "prompt_id": "multi3",
+    "seed": 3
+  },
+  "S003": {
+    "category": "cause_effect",
+    "model": "B",
+    "prompt_id": "cause3",
+    "seed": 2
+  },
+  "S004": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own1",
+    "seed": 3
+  },
+  "S005": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own1",
+    "seed": 2
+  },
+  "S006": {
+    "category": "cause_effect",
+    "model": "B",
+    "prompt_id": "cause1",
+    "seed": 1
+  },
+  "S007": {
+    "category": "event_ordering",
+    "model": "C",
+    "prompt_id": "order1",
+    "seed": 3
+  },
+  "S008": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own2",
+    "seed": 2
+  },
+  "S009": {
+    "category": "relationships",
+    "model": "A",
+    "prompt_id": "rel1",
+    "seed": 1
+  },
+  "S010": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own1",
+    "seed": 3
+  },
+  "S011": {
+    "category": "multi_character",
+    "model": "C",
+    "prompt_id": "multi3",
+    "seed": 2
+  },
+  "S012": {
+    "category": "multi_character",
+    "model": "A",
+    "prompt_id": "multi1",
+    "seed": 2
+  },
+  "S013": {
+    "category": "cause_effect",
+    "model": "C",
+    "prompt_id": "cause2",
+    "seed": 1
+  },
+  "S014": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own1",
+    "seed": 1
+  },
+  "S015": {
+    "category": "cause_effect",
+    "model": "C",
+    "prompt_id": "cause3",
+    "seed": 2
+  },
+  "S016": {
+    "category": "relationships",
+    "model": "A",
+    "prompt_id": "rel3",
+    "seed": 2
+  },
+  "S017": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own4",
+    "seed": 2
+  },
+  "S018": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own2",
+    "seed": 1
+  },
+  "S019": {
+    "category": "cause_effect",
+    "model": "B",
+    "prompt_id": "cause3",
+    "seed": 3
+  },
+  "S020": {
+    "category": "event_ordering",
+    "model": "B",
+    "prompt_id": "order2",
+    "seed": 3
+  },
+  "S021": {
+    "category": "names",
+    "model": "C",
+    "prompt_id": "name2",
+    "seed": 3
+  },
+  "S022": {
+    "category": "cause_effect",
+    "model": "C",
+    "prompt_id": "cause1",
+    "seed": 2
+  },
+  "S023": {
+    "category": "cause_effect",
+    "model": "C",
+    "prompt_id": "cause2",
+    "seed": 2
+  },
+  "S024": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own4",
+    "seed": 1
+  },
+  "S025": {
+    "category": "names",
+    "model": "B",
+    "prompt_id": "name1",
+    "seed": 2
+  },
+  "S026": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own4",
+    "seed": 1
+  },
+  "S027": {
+    "category": "cause_effect",
+    "model": "A",
+    "prompt_id": "cause2",
+    "seed": 3
+  },
+  "S028": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own4",
+    "seed": 3
+  },
+  "S029": {
+    "category": "pronouns",
+    "model": "C",
+    "prompt_id": "pron3",
+    "seed": 2
+  },
+  "S030": {
+    "category": "cause_effect",
+    "model": "A",
+    "prompt_id": "cause2",
+    "seed": 1
+  },
+  "S031": {
+    "category": "pronouns",
+    "model": "C",
+    "prompt_id": "pron2",
+    "seed": 3
+  },
+  "S032": {
+    "category": "names",
+    "model": "B",
+    "prompt_id": "name2",
+    "seed": 3
+  },
+  "S033": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own1",
+    "seed": 1
+  },
+  "S034": {
+    "category": "names",
+    "model": "A",
+    "prompt_id": "name2",
+    "seed": 2
+  },
+  "S035": {
+    "category": "event_ordering",
+    "model": "B",
+    "prompt_id": "order1",
+    "seed": 2
+  },
+  "S036": {
+    "category": "names",
+    "model": "B",
+    "prompt_id": "name1",
+    "seed": 3
+  },
+  "S037": {
+    "category": "pronouns",
+    "model": "A",
+    "prompt_id": "pron3",
+    "seed": 3
+  },
+  "S038": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own3",
+    "seed": 1
+  },
+  "S039": {
+    "category": "relationships",
+    "model": "B",
+    "prompt_id": "rel3",
+    "seed": 1
+  },
+  "S040": {
+    "category": "multi_character",
+    "model": "B",
+    "prompt_id": "multi2",
+    "seed": 2
+  },
+  "S041": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own3",
+    "seed": 2
+  },
+  "S042": {
+    "category": "event_ordering",
+    "model": "A",
+    "prompt_id": "order1",
+    "seed": 2
+  },
+  "S043": {
+    "category": "pronouns",
+    "model": "B",
+    "prompt_id": "pron1",
+    "seed": 3
+  },
+  "S044": {
+    "category": "pronouns",
+    "model": "C",
+    "prompt_id": "pron3",
+    "seed": 1
+  },
+  "S045": {
+    "category": "relationships",
+    "model": "A",
+    "prompt_id": "rel2",
+    "seed": 1
+  },
+  "S046": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own1",
+    "seed": 2
+  },
+  "S047": {
+    "category": "multi_character",
+    "model": "B",
+    "prompt_id": "multi2",
+    "seed": 3
+  },
+  "S048": {
+    "category": "pronouns",
+    "model": "B",
+    "prompt_id": "pron3",
+    "seed": 1
+  },
+  "S049": {
+    "category": "names",
+    "model": "C",
+    "prompt_id": "name3",
+    "seed": 2
+  },
+  "S050": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own2",
+    "seed": 3
+  },
+  "S051": {
+    "category": "pronouns",
+    "model": "B",
+    "prompt_id": "pron2",
+    "seed": 1
+  },
+  "S052": {
+    "category": "event_ordering",
+    "model": "A",
+    "prompt_id": "order2",
+    "seed": 2
+  },
+  "S053": {
+    "category": "multi_character",
+    "model": "C",
+    "prompt_id": "multi2",
+    "seed": 2
+  },
+  "S054": {
+    "category": "pronouns",
+    "model": "A",
+    "prompt_id": "pron2",
+    "seed": 2
+  },
+  "S055": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own2",
+    "seed": 1
+  },
+  "S056": {
+    "category": "pronouns",
+    "model": "C",
+    "prompt_id": "pron3",
+    "seed": 3
+  },
+  "S057": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own2",
+    "seed": 2
+  },
+  "S058": {
+    "category": "multi_character",
+    "model": "C",
+    "prompt_id": "multi3",
+    "seed": 1
+  },
+  "S059": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own2",
+    "seed": 1
+  },
+  "S060": {
+    "category": "multi_character",
+    "model": "A",
+    "prompt_id": "multi2",
+    "seed": 1
+  },
+  "S061": {
+    "category": "event_ordering",
+    "model": "A",
+    "prompt_id": "order2",
+    "seed": 1
+  },
+  "S062": {
+    "category": "event_ordering",
+    "model": "C",
+    "prompt_id": "order2",
+    "seed": 2
+  },
+  "S063": {
+    "category": "relationships",
+    "model": "C",
+    "prompt_id": "rel3",
+    "seed": 2
+  },
+  "S064": {
+    "category": "relationships",
+    "model": "B",
+    "prompt_id": "rel2",
+    "seed": 2
+  },
+  "S065": {
+    "category": "multi_character",
+    "model": "A",
+    "prompt_id": "multi1",
+    "seed": 3
+  },
+  "S066": {
+    "category": "pronouns",
+    "model": "B",
+    "prompt_id": "pron2",
+    "seed": 3
+  },
+  "S067": {
+    "category": "relationships",
+    "model": "C",
+    "prompt_id": "rel1",
+    "seed": 3
+  },
+  "S068": {
+    "category": "pronouns",
+    "model": "C",
+    "prompt_id": "pron1",
+    "seed": 3
+  },
+  "S069": {
+    "category": "names",
+    "model": "A",
+    "prompt_id": "name2",
+    "seed": 3
+  },
+  "S070": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own2",
+    "seed": 2
+  },
+  "S071": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own1",
+    "seed": 1
+  },
+  "S072": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own3",
+    "seed": 2
+  },
+  "S073": {
+    "category": "cause_effect",
+    "model": "C",
+    "prompt_id": "cause3",
+    "seed": 3
+  },
+  "S074": {
+    "category": "names",
+    "model": "C",
+    "prompt_id": "name1",
+    "seed": 3
+  },
+  "S075": {
+    "category": "pronouns",
+    "model": "C",
+    "prompt_id": "pron1",
+    "seed": 2
+  },
+  "S076": {
+    "category": "relationships",
+    "model": "C",
+    "prompt_id": "rel1",
+    "seed": 1
+  },
+  "S077": {
+    "category": "cause_effect",
+    "model": "C",
+    "prompt_id": "cause1",
+    "seed": 3
+  },
+  "S078": {
+    "category": "event_ordering",
+    "model": "C",
+    "prompt_id": "order1",
+    "seed": 2
+  },
+  "S079": {
+    "category": "cause_effect",
+    "model": "B",
+    "prompt_id": "cause1",
+    "seed": 3
+  },
+  "S080": {
+    "category": "names",
+    "model": "B",
+    "prompt_id": "name3",
+    "seed": 1
+  },
+  "S081": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own3",
+    "seed": 3
+  },
+  "S082": {
+    "category": "relationships",
+    "model": "B",
+    "prompt_id": "rel2",
+    "seed": 3
+  },
+  "S083": {
+    "category": "event_ordering",
+    "model": "A",
+    "prompt_id": "order2",
+    "seed": 3
+  },
+  "S084": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own1",
+    "seed": 2
+  },
+  "S085": {
+    "category": "pronouns",
+    "model": "A",
+    "prompt_id": "pron3",
+    "seed": 2
+  },
+  "S086": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own3",
+    "seed": 3
+  },
+  "S087": {
+    "category": "pronouns",
+    "model": "B",
+    "prompt_id": "pron2",
+    "seed": 2
+  },
+  "S088": {
+    "category": "relationships",
+    "model": "A",
+    "prompt_id": "rel3",
+    "seed": 3
+  },
+  "S089": {
+    "category": "relationships",
+    "model": "A",
+    "prompt_id": "rel2",
+    "seed": 3
+  },
+  "S090": {
+    "category": "cause_effect",
+    "model": "C",
+    "prompt_id": "cause3",
+    "seed": 1
+  },
+  "S091": {
+    "category": "relationships",
+    "model": "B",
+    "prompt_id": "rel3",
+    "seed": 3
+  },
+  "S092": {
+    "category": "multi_character",
+    "model": "A",
+    "prompt_id": "multi2",
+    "seed": 3
+  },
+  "S093": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own4",
+    "seed": 2
+  },
+  "S094": {
+    "category": "event_ordering",
+    "model": "B",
+    "prompt_id": "order2",
+    "seed": 1
+  },
+  "S095": {
+    "category": "pronouns",
+    "model": "A",
+    "prompt_id": "pron1",
+    "seed": 2
+  },
+  "S096": {
+    "category": "event_ordering",
+    "model": "C",
+    "prompt_id": "order1",
+    "seed": 1
+  },
+  "S097": {
+    "category": "event_ordering",
+    "model": "C",
+    "prompt_id": "order2",
+    "seed": 1
+  },
+  "S098": {
+    "category": "names",
+    "model": "B",
+    "prompt_id": "name3",
+    "seed": 2
+  },
+  "S099": {
+    "category": "relationships",
+    "model": "C",
+    "prompt_id": "rel1",
+    "seed": 2
+  },
+  "S100": {
+    "category": "pronouns",
+    "model": "A",
+    "prompt_id": "pron3",
+    "seed": 1
+  },
+  "S101": {
+    "category": "pronouns",
+    "model": "C",
+    "prompt_id": "pron1",
+    "seed": 1
+  },
+  "S102": {
+    "category": "pronouns",
+    "model": "B",
+    "prompt_id": "pron3",
+    "seed": 3
+  },
+  "S103": {
+    "category": "relationships",
+    "model": "C",
+    "prompt_id": "rel2",
+    "seed": 2
+  },
+  "S104": {
+    "category": "multi_character",
+    "model": "A",
+    "prompt_id": "multi3",
+    "seed": 2
+  },
+  "S105": {
+    "category": "relationships",
+    "model": "A",
+    "prompt_id": "rel2",
+    "seed": 2
+  },
+  "S106": {
+    "category": "cause_effect",
+    "model": "A",
+    "prompt_id": "cause1",
+    "seed": 2
+  },
+  "S107": {
+    "category": "names",
+    "model": "C",
+    "prompt_id": "name1",
+    "seed": 2
+  },
+  "S108": {
+    "category": "cause_effect",
+    "model": "C",
+    "prompt_id": "cause1",
+    "seed": 1
+  },
+  "S109": {
+    "category": "pronouns",
+    "model": "A",
+    "prompt_id": "pron1",
+    "seed": 1
+  },
+  "S110": {
+    "category": "names",
+    "model": "C",
+    "prompt_id": "name3",
+    "seed": 3
+  },
+  "S111": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own3",
+    "seed": 3
+  },
+  "S112": {
+    "category": "multi_character",
+    "model": "B",
+    "prompt_id": "multi1",
+    "seed": 1
+  },
+  "S113": {
+    "category": "relationships",
+    "model": "B",
+    "prompt_id": "rel2",
+    "seed": 1
+  },
+  "S114": {
+    "category": "cause_effect",
+    "model": "B",
+    "prompt_id": "cause2",
+    "seed": 2
+  },
+  "S115": {
+    "category": "multi_character",
+    "model": "C",
+    "prompt_id": "multi1",
+    "seed": 3
+  },
+  "S116": {
+    "category": "cause_effect",
+    "model": "B",
+    "prompt_id": "cause1",
+    "seed": 2
+  },
+  "S117": {
+    "category": "multi_character",
+    "model": "C",
+    "prompt_id": "multi2",
+    "seed": 1
+  },
+  "S118": {
+    "category": "pronouns",
+    "model": "A",
+    "prompt_id": "pron2",
+    "seed": 3
+  },
+  "S119": {
+    "category": "names",
+    "model": "A",
+    "prompt_id": "name1",
+    "seed": 3
+  },
+  "S120": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own3",
+    "seed": 1
+  },
+  "S121": {
+    "category": "multi_character",
+    "model": "B",
+    "prompt_id": "multi3",
+    "seed": 1
+  },
+  "S122": {
+    "category": "pronouns",
+    "model": "C",
+    "prompt_id": "pron2",
+    "seed": 2
+  },
+  "S123": {
+    "category": "names",
+    "model": "C",
+    "prompt_id": "name2",
+    "seed": 2
+  },
+  "S124": {
+    "category": "cause_effect",
+    "model": "B",
+    "prompt_id": "cause3",
+    "seed": 1
+  },
+  "S125": {
+    "category": "event_ordering",
+    "model": "C",
+    "prompt_id": "order2",
+    "seed": 3
+  },
+  "S126": {
+    "category": "pronouns",
+    "model": "B",
+    "prompt_id": "pron1",
+    "seed": 1
+  },
+  "S127": {
+    "category": "multi_character",
+    "model": "B",
+    "prompt_id": "multi1",
+    "seed": 2
+  },
+  "S128": {
+    "category": "relationships",
+    "model": "A",
+    "prompt_id": "rel3",
+    "seed": 1
+  },
+  "S129": {
+    "category": "cause_effect",
+    "model": "A",
+    "prompt_id": "cause3",
+    "seed": 1
+  },
+  "S130": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own2",
+    "seed": 3
+  },
+  "S131": {
+    "category": "event_ordering",
+    "model": "B",
+    "prompt_id": "order1",
+    "seed": 1
+  },
+  "S132": {
+    "category": "names",
+    "model": "A",
+    "prompt_id": "name3",
+    "seed": 2
+  },
+  "S133": {
+    "category": "names",
+    "model": "B",
+    "prompt_id": "name1",
+    "seed": 1
+  },
+  "S134": {
+    "category": "pronouns",
+    "model": "B",
+    "prompt_id": "pron1",
+    "seed": 2
+  },
+  "S135": {
+    "category": "relationships",
+    "model": "A",
+    "prompt_id": "rel1",
+    "seed": 3
+  },
+  "S136": {
+    "category": "multi_character",
+    "model": "C",
+    "prompt_id": "multi1",
+    "seed": 1
+  },
+  "S137": {
+    "category": "multi_character",
+    "model": "A",
+    "prompt_id": "multi3",
+    "seed": 3
+  },
+  "S138": {
+    "category": "pronouns",
+    "model": "A",
+    "prompt_id": "pron2",
+    "seed": 1
+  },
+  "S139": {
+    "category": "multi_character",
+    "model": "C",
+    "prompt_id": "multi2",
+    "seed": 3
+  },
+  "S140": {
+    "category": "ownership",
+    "model": "C",
+    "prompt_id": "own4",
+    "seed": 3
+  },
+  "S141": {
+    "category": "pronouns",
+    "model": "B",
+    "prompt_id": "pron3",
+    "seed": 2
+  },
+  "S142": {
+    "category": "event_ordering",
+    "model": "B",
+    "prompt_id": "order1",
+    "seed": 3
+  },
+  "S143": {
+    "category": "cause_effect",
+    "model": "C",
+    "prompt_id": "cause2",
+    "seed": 3
+  },
+  "S144": {
+    "category": "relationships",
+    "model": "A",
+    "prompt_id": "rel1",
+    "seed": 2
+  },
+  "S145": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own4",
+    "seed": 1
+  },
+  "S146": {
+    "category": "names",
+    "model": "B",
+    "prompt_id": "name2",
+    "seed": 1
+  },
+  "S147": {
+    "category": "multi_character",
+    "model": "B",
+    "prompt_id": "multi2",
+    "seed": 1
+  },
+  "S148": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own3",
+    "seed": 1
+  },
+  "S149": {
+    "category": "names",
+    "model": "A",
+    "prompt_id": "name1",
+    "seed": 1
+  },
+  "S150": {
+    "category": "multi_character",
+    "model": "A",
+    "prompt_id": "multi2",
+    "seed": 2
+  },
+  "S151": {
+    "category": "cause_effect",
+    "model": "A",
+    "prompt_id": "cause1",
+    "seed": 1
+  },
+  "S152": {
+    "category": "names",
+    "model": "A",
+    "prompt_id": "name2",
+    "seed": 1
+  },
+  "S153": {
+    "category": "relationships",
+    "model": "B",
+    "prompt_id": "rel1",
+    "seed": 1
+  },
+  "S154": {
+    "category": "multi_character",
+    "model": "A",
+    "prompt_id": "multi1",
+    "seed": 1
+  },
+  "S155": {
+    "category": "names",
+    "model": "C",
+    "prompt_id": "name2",
+    "seed": 1
+  },
+  "S156": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own4",
+    "seed": 2
+  },
+  "S157": {
+    "category": "pronouns",
+    "model": "C",
+    "prompt_id": "pron2",
+    "seed": 1
+  },
+  "S158": {
+    "category": "multi_character",
+    "model": "B",
+    "prompt_id": "multi3",
+    "seed": 2
+  },
+  "S159": {
+    "category": "multi_character",
+    "model": "B",
+    "prompt_id": "multi1",
+    "seed": 3
+  },
+  "S160": {
+    "category": "names",
+    "model": "B",
+    "prompt_id": "name2",
+    "seed": 2
+  },
+  "S161": {
+    "category": "relationships",
+    "model": "B",
+    "prompt_id": "rel1",
+    "seed": 2
+  },
+  "S162": {
+    "category": "names",
+    "model": "A",
+    "prompt_id": "name3",
+    "seed": 1
+  },
+  "S163": {
+    "category": "event_ordering",
+    "model": "A",
+    "prompt_id": "order1",
+    "seed": 1
+  },
+  "S164": {
+    "category": "cause_effect",
+    "model": "B",
+    "prompt_id": "cause2",
+    "seed": 3
+  },
+  "S165": {
+    "category": "names",
+    "model": "C",
+    "prompt_id": "name1",
+    "seed": 1
+  },
+  "S166": {
+    "category": "relationships",
+    "model": "C",
+    "prompt_id": "rel3",
+    "seed": 3
+  },
+  "S167": {
+    "category": "multi_character",
+    "model": "B",
+    "prompt_id": "multi3",
+    "seed": 3
+  },
+  "S168": {
+    "category": "names",
+    "model": "C",
+    "prompt_id": "name3",
+    "seed": 1
+  },
+  "S169": {
+    "category": "pronouns",
+    "model": "A",
+    "prompt_id": "pron1",
+    "seed": 3
+  },
+  "S170": {
+    "category": "relationships",
+    "model": "C",
+    "prompt_id": "rel2",
+    "seed": 1
+  },
+  "S171": {
+    "category": "relationships",
+    "model": "B",
+    "prompt_id": "rel1",
+    "seed": 3
+  },
+  "S172": {
+    "category": "cause_effect",
+    "model": "A",
+    "prompt_id": "cause3",
+    "seed": 2
+  },
+  "S173": {
+    "category": "multi_character",
+    "model": "C",
+    "prompt_id": "multi1",
+    "seed": 2
+  },
+  "S174": {
+    "category": "event_ordering",
+    "model": "B",
+    "prompt_id": "order2",
+    "seed": 2
+  },
+  "S175": {
+    "category": "relationships",
+    "model": "C",
+    "prompt_id": "rel2",
+    "seed": 3
+  },
+  "S176": {
+    "category": "multi_character",
+    "model": "A",
+    "prompt_id": "multi3",
+    "seed": 1
+  },
+  "S177": {
+    "category": "names",
+    "model": "A",
+    "prompt_id": "name1",
+    "seed": 2
+  },
+  "S178": {
+    "category": "relationships",
+    "model": "C",
+    "prompt_id": "rel3",
+    "seed": 1
+  },
+  "S179": {
+    "category": "names",
+    "model": "A",
+    "prompt_id": "name3",
+    "seed": 3
+  },
+  "S180": {
+    "category": "relationships",
+    "model": "B",
+    "prompt_id": "rel3",
+    "seed": 2
+  },
+  "S181": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own1",
+    "seed": 3
+  },
+  "S182": {
+    "category": "cause_effect",
+    "model": "B",
+    "prompt_id": "cause2",
+    "seed": 1
+  },
+  "S183": {
+    "category": "ownership",
+    "model": "A",
+    "prompt_id": "own4",
+    "seed": 3
+  },
+  "S184": {
+    "category": "cause_effect",
+    "model": "A",
+    "prompt_id": "cause2",
+    "seed": 2
+  },
+  "S185": {
+    "category": "cause_effect",
+    "model": "A",
+    "prompt_id": "cause1",
+    "seed": 3
+  },
+  "S186": {
+    "category": "event_ordering",
+    "model": "A",
+    "prompt_id": "order1",
+    "seed": 3
+  },
+  "S187": {
+    "category": "cause_effect",
+    "model": "A",
+    "prompt_id": "cause3",
+    "seed": 3
+  },
+  "S188": {
+    "category": "names",
+    "model": "B",
+    "prompt_id": "name3",
+    "seed": 3
+  },
+  "S189": {
+    "category": "ownership",
+    "model": "B",
+    "prompt_id": "own2",
+    "seed": 3
+  }
+}

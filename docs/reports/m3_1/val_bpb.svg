@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Validation bits per byte (exact)">
+<title>Validation bits per byte (exact)</title>
+<rect width="760" height="380" fill="#fcfcfb"/>
+<text x="80" y="24" font-size="15" font-weight="600" fill="#0b0b0b">Validation bits per byte (exact)</text>
+<text x="80" y="42" font-size="12" fill="#52514e">nats/token ÷ ln 2 ÷ bytes/token; comparable across tokenizers</text>
+<line x1="80" x2="736" y1="290.3" y2="290.3" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="294.3" font-size="11" text-anchor="end" fill="#52514e">0.600</text>
+<line x1="80" x2="736" y1="220.2" y2="220.2" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="224.2" font-size="11" text-anchor="end" fill="#52514e">0.700</text>
+<line x1="80" x2="736" y1="150.1" y2="150.1" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="154.1" font-size="11" text-anchor="end" fill="#52514e">0.800</text>
+<line x1="80" x2="736" y1="80.0" y2="80.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="84.0" font-size="11" text-anchor="end" fill="#52514e">0.900</text>
+<line x1="142.5" x2="142.5" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="142.5" y="346" font-size="11" text-anchor="middle" fill="#52514e">1,000</text>
+<line x1="298.7" x2="298.7" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="298.7" y="346" font-size="11" text-anchor="middle" fill="#52514e">2,000</text>
+<line x1="454.9" x2="454.9" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="454.9" y="346" font-size="11" text-anchor="middle" fill="#52514e">3,000</text>
+<line x1="611.0" x2="611.0" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="611.0" y="346" font-size="11" text-anchor="middle" fill="#52514e">4,000</text>
+<line x1="80" x2="736" y1="328" y2="328" stroke="#b9b8b2"/>
+<text x="408.0" y="368" font-size="12" text-anchor="middle" fill="#52514e">optimizer step</text>
+<text transform="translate(16 196.0) rotate(-90)" font-size="12" text-anchor="middle" fill="#52514e">bits / UTF-8 byte</text>
+<path d="M80.0,76.0 L173.7,195.8 L267.4,241.2 L361.1,268.0 L454.9,287.3 L548.6,301.6 L642.3,311.2 L736.0,316.0" fill="none" stroke="#eb6834" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="76.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 600: 0.906</title></circle>
+<circle cx="173.7" cy="195.8" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 1,200: 0.735</title></circle>
+<circle cx="267.4" cy="241.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 1,800: 0.670</title></circle>
+<circle cx="361.1" cy="268.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 2,400: 0.632</title></circle>
+<circle cx="454.9" cy="287.3" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 3,000: 0.604</title></circle>
+<circle cx="548.6" cy="301.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 3,600: 0.584</title></circle>
+<circle cx="642.3" cy="311.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 4,200: 0.570</title></circle>
+<circle cx="736.0" cy="316.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 4,800: 0.563</title></circle>
+</svg>

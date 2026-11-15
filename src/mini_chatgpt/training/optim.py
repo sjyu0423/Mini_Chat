@@ -46,6 +46,9 @@ def learning_rate(step: int, cfg: TrainingConfig) -> float:
     H is ``cfg.schedule_horizon``: ``lr_schedule_steps`` if set, else
     ``max_steps``. It is independent of how long training actually runs.
 
+    With ``lr_schedule = "constant"`` the LR is ``lr_max`` after warmup at every
+    step (no decay); ``min_learning_rate`` and the horizon are unused.
+
     The schedule is a pure function of ``step``; restoring ``step`` restores it.
     """
     if step < 0:
@@ -53,6 +56,8 @@ def learning_rate(step: int, cfg: TrainingConfig) -> float:
     lr_max, lr_min = cfg.learning_rate, cfg.min_learning_rate
     if step < cfg.warmup_steps:
         return lr_max * (step + 1) / cfg.warmup_steps
+    if cfg.lr_schedule == "constant":
+        return lr_max
     horizon = cfg.schedule_horizon
     if step >= horizon:
         return lr_min

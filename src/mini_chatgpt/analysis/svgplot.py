@@ -50,6 +50,9 @@ class Chart:
     y_format: str = "{:.2f}"
     x_format: str = "{:,.0f}"
     hlines: list[tuple[float, str]] = field(default_factory=list)  # (y, label)
+    vlines: list[tuple[float, str]] = field(default_factory=list)  # (x, label), e.g. phase changes
+    x_min: float | None = None
+    x_max: float | None = None
 
 
 def nice_ticks(lo: float, hi: float, n: int = 5) -> list[float]:
@@ -72,12 +75,23 @@ def render(chart: Chart) -> str:
     w, h = chart.width, chart.height
     legend = [s for s in chart.series if s.legend]
     show_legend = len(legend) >= 2
-    top = (64 if chart.subtitle else 48) + (24 if show_legend else 0)
     left, right, bottom = 80, 24, 52
+    # Legend rows above the plot area (wrapped to the chart width), so it never covers data.
+    legend_y0 = (64 if chart.subtitle else 48) + 6
+    legend_pos: list[tuple[float, float]] = []
+    lx, row = float(left), 0
+    for s in legend:
+        item_w = 24 + 6.6 * len(s.label) + 20
+        if lx > left and lx + item_w - 20 > w - right:
+            lx, row = float(left), row + 1
+        legend_pos.append((lx, legend_y0 + 18 * row))
+        lx += item_w
+    top = legend_y0 + 18 * row + 18 if show_legend else legend_y0 - 6
     pw, ph = w - left - right, h - top - bottom
     xs = [x for s in chart.series for x in s.x]
     ys = [y for s in chart.series for y in s.y if math.isfinite(y)]
-    x0, x1 = min(xs), max(xs)
+    x0 = chart.x_min if chart.x_min is not None else min(xs)
+    x1 = chart.x_max if chart.x_max is not None else max(xs)
     y0 = chart.y_min if chart.y_min is not None else min(ys)
     y1 = chart.y_max if chart.y_max is not None else max(ys)
     if chart.y_min is None or chart.y_max is None:
@@ -136,6 +150,16 @@ def render(chart: Chart) -> str:
         f'<text transform="translate(16 {top + ph / 2}) rotate(-90)" font-size="12" '
         f'text-anchor="middle" fill="{TEXT_SECONDARY}">{escape(chart.y_label)}</text>'
     )
+    for xv, label in chart.vlines:
+        x = px(xv)
+        out.append(
+            f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{top}" y2="{top + ph}" stroke="{TEXT_SECONDARY}" '
+            'stroke-width="1.5" stroke-dasharray="3 3"/>'
+        )
+        out.append(
+            f'<text x="{x + 6:.1f}" y="{top + 14}" font-size="11" fill="{TEXT_SECONDARY}">'
+            f"{escape(label)}</text>"
+        )
     for yv, label in chart.hlines:
         y = py(yv)
         out.append(
@@ -166,10 +190,8 @@ def render(chart: Chart) -> str:
                     f"{x:,.0f}: {escape(chart.y_format.format(y))}</title></circle>"
                 )
 
-    if show_legend:  # one row above the plot area, so it never covers data
-        lx = float(left)
-        ly = top - 18
-        for s in legend:
+    if show_legend:
+        for s, (lx, ly) in zip(legend, legend_pos, strict=True):
             color = SERIES[s.slot % len(SERIES)]
             if s.width == 0:  # marker-only series
                 out.append(
@@ -186,7 +208,6 @@ def render(chart: Chart) -> str:
                 f'<text x="{lx + 24}" y="{ly + 4}" font-size="12" fill="{TEXT_PRIMARY}">'
                 f"{escape(s.label)}</text>"
             )
-            lx += 24 + 6.6 * len(s.label) + 20
     out.append("</svg>")
     return "\n".join(out) + "\n"
 

@@ -1,0 +1,1720 @@
+{
+  "bytes_per_token": {
+    "holdout": 3.9581503275873606,
+    "train_slice": 3.956409622306394,
+    "val": 3.9580474669133596
+  },
+  "compute": {
+    "m3_1": {
+      "memory_max_bytes": {
+        "mps_current_allocated@after_forward": 4365071104,
+        "mps_current_allocated@after_step": 471499520,
+        "mps_current_allocated@eval": 202407936,
+        "mps_driver_allocated@after_forward": 6657884160,
+        "mps_driver_allocated@after_step": 6657884160,
+        "mps_driver_allocated@eval": 6620135424,
+        "process_rss_peak@after_forward": 793313280,
+        "process_rss_peak@after_step": 793313280,
+        "process_rss_peak@eval": 793313280
+      },
+      "steps": 4800,
+      "timing": {
+        "max_step_s": 0.8251682500122115,
+        "mean_step_s": 0.6275047308801869,
+        "measured_steps": 4790,
+        "median_step_s": 0.6251244164959644,
+        "min_step_s": 0.6007548750058049,
+        "tokens_per_s_from_mean": 26109.763311295723,
+        "tokens_per_s_from_median": 26209.18263253563
+      },
+      "tokens_seen": 78643200
+    },
+    "m3_2": {
+      "memory_max_bytes": {
+        "mps_current_allocated@after_forward": 4364481280,
+        "mps_current_allocated@after_step": 470057728,
+        "mps_current_allocated@eval": 201097216,
+        "mps_driver_allocated@after_forward": 6750158848,
+        "mps_driver_allocated@after_step": 6750158848,
+        "mps_driver_allocated@eval": 6712410112,
+        "process_rss_peak@after_forward": 921075712,
+        "process_rss_peak@after_step": 921075712,
+        "process_rss_peak@eval": 921075712
+      },
+      "steps": 7200,
+      "timing": {
+        "max_step_s": 1.5257097919966327,
+        "mean_step_s": 0.616190907138677,
+        "measured_steps": 2390,
+        "median_step_s": 0.6139617709995946,
+        "min_step_s": 0.5924201250018086,
+        "tokens_per_s_from_mean": 26589.16223882657,
+        "tokens_per_s_from_median": 26685.700598793177
+      },
+      "tokens_seen": 117964800
+    },
+    "m3_2_step_time_min": 24.660949314907338,
+    "m3_2_wall_min": 29.199730217456818
+  },
+  "exact": {
+    "checkpoints": {
+      "m3_1_step_3600": {
+        "gap_holdout_minus_train_slice": 0.013338683451718625,
+        "gap_val_minus_train_slice": 0.013115124176625415,
+        "holdout": {
+          "bpb": 0.5839684222279604,
+          "loss": 1.6021645158757944,
+          "ppl": 4.9637649528849215
+        },
+        "path": "runs/ts_s_bpe4096-20261113-172905/checkpoints/step_00003600.pt",
+        "step": 3600,
+        "train_slice": {
+          "bpb": 0.5793614332426625,
+          "loss": 1.5888258324240758,
+          "ppl": 4.897994484336406
+        },
+        "val": {
+          "bpb": 0.5839021116356267,
+          "loss": 1.6019409566007012,
+          "ppl": 4.9626553812224605
+        },
+        "val_recomputed_matches_log": true
+      },
+      "m3_1_step_4200": {
+        "gap_holdout_minus_train_slice": 0.014447566993320171,
+        "gap_val_minus_train_slice": 0.014908699560240768,
+        "holdout": {
+          "bpb": 0.5699307303605426,
+          "loss": 1.5636509748371057,
+          "ppl": 4.776227337025175
+        },
+        "path": "runs/ts_s_bpe4096-20261113-172905/checkpoints/step_00004200.pt",
+        "step": 4200,
+        "train_slice": {
+          "bpb": 0.5649132135417261,
+          "loss": 1.5492034078437855,
+          "ppl": 4.707718556855254
+        },
+        "val": {
+          "bpb": 0.570113622842909,
+          "loss": 1.5641121074040263,
+          "ppl": 4.778430318891598
+        },
+        "val_recomputed_matches_log": true
+      },
+      "m3_1_step_4800": {
+        "gap_holdout_minus_train_slice": 0.016744220056531756,
+        "gap_val_minus_train_slice": 0.016866391064322084,
+        "holdout": {
+          "bpb": 0.5632557459862164,
+          "loss": 1.545337616269241,
+          "ppl": 4.689554629721732
+        },
+        "path": "runs/ts_s_bpe4096-20261113-172905/checkpoints/step_00004800.pt",
+        "step": 4800,
+        "train_slice": {
+          "bpb": 0.5573978234756479,
+          "loss": 1.5285933962127092,
+          "ppl": 4.611685443760259
+        },
+        "val": {
+          "bpb": 0.5633149146482157,
+          "loss": 1.5454597872770313,
+          "ppl": 4.69012759233593
+        },
+        "val_recomputed_matches_log": true
+      },
+      "m3_2_step_5200": {
+        "gap_holdout_minus_train_slice": 0.01713639885376872,
+        "gap_val_minus_train_slice": 0.017154279403558848,
+        "holdout": {
+          "bpb": 0.5611648504094321,
+          "loss": 1.5396010754358433,
+          "ppl": 4.6627298224612845
+        },
+        "path": "runs/ts_s_bpe4096_m3_2-20261113-190046/checkpoints/step_00005200.pt",
+        "step": 5200,
+        "train_slice": {
+          "bpb": 0.5551630009314238,
+          "loss": 1.5224646765820746,
+          "ppl": 4.583508150214521
+        },
+        "val": {
+          "bpb": 0.5611859512112662,
+          "loss": 1.5396189559856335,
+          "ppl": 4.662813195379408
+        },
+        "val_recomputed_matches_log": true
+      },
+      "m3_2_step_5600": {
+        "gap_holdout_minus_train_slice": 0.017342425025820285,
+        "gap_val_minus_train_slice": 0.01754990096531439,
+        "holdout": {
+          "bpb": 0.5587231682134565,
+          "loss": 1.5329021231902529,
+          "ppl": 4.631598807058728
+        },
+        "path": "runs/ts_s_bpe4096_m3_2-20261113-190046/checkpoints/step_00005600.pt",
+        "step": 5600,
+        "train_slice": {
+          "bpb": 0.5526451175291561,
+          "loss": 1.5155596981644326,
+          "ppl": 4.551968142212995
+        },
+        "val": {
+          "bpb": 0.558813312445848,
+          "loss": 1.533109599129747,
+          "ppl": 4.6325598520659925
+        },
+        "val_recomputed_matches_log": true
+      },
+      "m3_2_step_6000": {
+        "gap_holdout_minus_train_slice": 0.018681885652614083,
+        "gap_val_minus_train_slice": 0.018494494101088055,
+        "holdout": {
+          "bpb": 0.5567517043927346,
+          "loss": 1.5274932530225085,
+          "ppl": 4.606614719196939
+        },
+        "path": "runs/ts_s_bpe4096_m3_2-20261113-190046/checkpoints/step_00006000.pt",
+        "step": 6000,
+        "train_slice": {
+          "bpb": 0.5501843552974934,
+          "loss": 1.5088113673698944,
+          "ppl": 4.521353370908013
+        },
+        "val": {
+          "bpb": 0.5566978695137172,
+          "loss": 1.5273058614709825,
+          "ppl": 4.6057515593943785
+        },
+        "val_recomputed_matches_log": true
+      },
+      "m3_2_step_6400": {
+        "gap_holdout_minus_train_slice": 0.018979654459620354,
+        "gap_val_minus_train_slice": 0.01906218025252948,
+        "holdout": {
+          "bpb": 0.5551967000439721,
+          "loss": 1.5232269730409393,
+          "ppl": 4.587003474313939
+        },
+        "path": "runs/ts_s_bpe4096_m3_2-20261113-190046/checkpoints/step_00006400.pt",
+        "step": 6400,
+        "train_slice": {
+          "bpb": 0.5485200861286669,
+          "loss": 1.504247318581319,
+          "ppl": 4.500764713091576
+        },
+        "val": {
+          "bpb": 0.5552412087216517,
+          "loss": 1.5233094988338485,
+          "ppl": 4.587382036033072
+        },
+        "val_recomputed_matches_log": true
+      },
+      "m3_2_step_6800": {
+        "gap_holdout_minus_train_slice": 0.019737969194583815,
+        "gap_val_minus_train_slice": 0.01974916276163108,
+        "holdout": {
+          "bpb": 0.5535416652458797,
+          "loss": 1.5186862514451946,
+          "ppl": 4.5662223848548384
+        },
+        "path": "runs/ts_s_bpe4096_m3_2-20261113-190046/checkpoints/step_00006800.pt",
+        "step": 6800,
+        "train_slice": {
+          "bpb": 0.546587805559764,
+          "loss": 1.4989482822506108,
+          "ppl": 4.476978076147891
+        },
+        "val": {
+          "bpb": 0.5535601305556201,
+          "loss": 1.518697445012242,
+          "ppl": 4.566273497457321
+        },
+        "val_recomputed_matches_log": true
+      },
+      "m3_2_step_7200": {
+        "gap_holdout_minus_train_slice": 0.020490790185291985,
+        "gap_val_minus_train_slice": 0.020361442345747438,
+        "holdout": {
+          "bpb": 0.5521393837515035,
+          "loss": 1.5148389789454468,
+          "ppl": 4.548688633233224
+        },
+        "path": "runs/ts_s_bpe4096_m3_2-20261113-190046/checkpoints/step_00007200.pt",
+        "step": 7200,
+        "train_slice": {
+          "bpb": 0.5449103927790222,
+          "loss": 1.4943481887601548,
+          "ppl": 4.456430854246807
+        },
+        "val": {
+          "bpb": 0.5521065857472879,
+          "loss": 1.5147096311059023,
+          "ppl": 4.548100308235858
+        },
+        "val_recomputed_matches_log": true
+      }
+    },
+    "m3_2_best_step": 7200
+  },
+  "extraction_probe": {
+    "M3.1@4800/train": {
+      "full_64": 0,
+      "max": 18,
+      "mean": 2.15625,
+      "median": 1.0
+    },
+    "M3.1@4800/val": {
+      "full_64": 0,
+      "max": 9,
+      "mean": 1.59375,
+      "median": 1.0
+    },
+    "M3.2@7200/train": {
+      "full_64": 0,
+      "max": 18,
+      "mean": 2.0,
+      "median": 1.0
+    },
+    "M3.2@7200/val": {
+      "full_64": 0,
+      "max": 7,
+      "mean": 1.53125,
+      "median": 1.0
+    }
+  },
+  "plots": [
+    "combined_loss.svg",
+    "combined_lr.svg",
+    "combined_val_bpb.svg",
+    "generalization.svg",
+    "combined_throughput.svg"
+  ],
+  "stories": [
+    {
+      "capitalized_names": [
+        "Can",
+        "Lily"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.8787878787878788,
+      "frac_16gram_in_train": 0.072,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.5864661654135338,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 16,
+      "model": "M3.1@4800",
+      "new_tokens": 127,
+      "prompt": "Once upon a time, there was a little girl named Lily.",
+      "seed": 1,
+      "sentences": 13,
+      "text": " She had a big, round heart. Lily liked to help her mom in the kitchen.\nOne day, Lily's mom was making cookies. Lily wanted to help. She asked her mom, \"Can you help me make cookies, please?\" Her mom said, \"Yes, Lily. You can help me.\"\nLily and her mom made cookies together. They mixed the cookies and put them in the oven. They waited for the cookies to come. When the cookies were done, they took them out of the oven. Lily's mom was very happy.\nThe moral of the story is that helping others can make things better.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.01020408163265306,
+      "words": 100
+    },
+    {
+      "capitalized_names": [
+        "Thank"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.8902439024390244,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.40384615384615385,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "new_tokens": 101,
+      "prompt": "One day, a boy found a strange box.",
+      "seed": 1,
+      "sentences": 12,
+      "text": " He opened it and found a note. The note said, \"I will give you a gift.\" The boy was very happy. He wanted to share the gift with his friends.\nThe boy went to his friends. They wanted to keep the gift. They gave the box to everyone. The kids were happy. They said, \"Thank you, big boy!\" The big boy was happy. They all played together with the gift. The moral of the story is to always be kind and help others.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0,
+      "words": 83
+    },
+    {
+      "capitalized_names": [],
+      "completed_with_eot": true,
+      "distinct_2": 0.8230088495575221,
+      "frac_16gram_in_train": 0.061068702290076333,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.35251798561151076,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 16,
+      "model": "M3.1@4800",
+      "new_tokens": 138,
+      "prompt": "A small dragon lived in a forest.",
+      "seed": 1,
+      "sentences": 8,
+      "text": " He was also very kind and liked to help others. One day, he decided to supply food to his friend, the bird, and asked him to be a kind and helper.\nThe dragon was very happy to help, so he went to the forest to find food. He found a big, green leaf, and a small green leaf. He put the leaf in the leaf and the small, green leaf in the ground. He gave the leaf to the bird, and they became good friends.\nThe moral of the story is that when we help others, we can make things better. You and others, we can make things better and make a big difference.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0625,
+      "words": 114
+    },
+    {
+      "capitalized_names": [
+        "Frog",
+        "Mr",
+        "Thank",
+        "Tom",
+        "Why"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.9354838709677419,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.40764331210191085,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "new_tokens": 157,
+      "prompt": "Tom wanted to help his friend.",
+      "seed": 1,
+      "sentences": 12,
+      "text": " He picked up a big stick and tried to cut it with the stick. But the stick was too high for him, and it fell down. Tom felt sad because his friend was not happy.\nTom saw his friend, the wise old owl, and asked, \"Why are you sad, Tom?\" The owl said, \"I can't cut my nest to be strong. I am too small.\" Tom thought for a moment and said, \"I will help you.\"\nThe owl took Tom's long stick and cut it into small pieces. Tom was happy and said, \"Thank you, Mr. Frog!\" They all worked together and made their nest strong. From that day on, Tom and his friend were the best of friends, and they always helped each other.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0,
+      "words": 125
+    },
+    {
+      "capitalized_names": [],
+      "completed_with_eot": true,
+      "distinct_2": 0.8805970149253731,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.4878048780487805,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "new_tokens": 79,
+      "prompt": "There was a dog who was afraid of water.",
+      "seed": 1,
+      "sentences": 6,
+      "text": " He was also scared, but he wanted to be friends with the other animals in the forest. So, he decided to be brave and try to be brave.\nThe next day, the little animals were out of the forest. They were very happy to be together. They played in the forest every day, and they even looked out for each other. And they all lived happily ever after.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.030303030303030304,
+      "words": 68
+    },
+    {
+      "capitalized_names": [
+        "Don",
+        "Lily",
+        "Look",
+        "Thank",
+        "Tom",
+        "While"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [],
+      "distinct_2": 0.8947368421052632,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.026143790849673203,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.453416149068323,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 16,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Tom",
+        "Lily"
+      ],
+      "names_kept_fraction": 1.0,
+      "new_capitalized_names": [
+        "While"
+      ],
+      "new_tokens": 148,
+      "prompt": "Tom and Lily went into the forest. Tom carried a basket. Lily carried a lantern.",
+      "seed": 1,
+      "sentences": 14,
+      "text": " Tom said, \"Look, Lily! The forest is full of animals!\"\nWhile they were doing the same, the forest became dark and scary. Tom and Lily were scared. They did not want the dark to go back.\nBut then, they heard a loud noise. They looked up and saw a big, friendly bear! The bear said, \"Don't be scared, I am the forest too. I am the dark and I am here to protect you from me.\"\nTom and Lily were happy. They said, \"Thank you, bear.\" They all became friends. From that day on, Tom, Lily, and the bear were the best of friends. They played together in the forest and had lots of fun.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.02654867256637168,
+      "words": 115
+    },
+    {
+      "capitalized_names": [
+        "Ben",
+        "Help",
+        "Leave",
+        "Let",
+        "Mia"
+      ],
+      "completed_with_eot": false,
+      "conflict_examples": [],
+      "distinct_2": 0.695067264573991,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.4180064308681672,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Mia",
+        "Ben"
+      ],
+      "names_kept_fraction": 1.0,
+      "new_capitalized_names": [
+        "Help",
+        "Leave"
+      ],
+      "new_tokens": 300,
+      "prompt": "Mia had a red ball and Ben had a blue kite. They went to the park.",
+      "seed": 1,
+      "sentences": 53,
+      "text": " There were many other kids there. Mia saw a big slide. She wanted to try it.\n\"Let's try it!\" Mia said. She ran to the slide. She felt the wind in her hair. She tried to climb up, but she fell. She was scared.\n\"Ben, stop!\" Mia said. She ran to the slide. She climbed up the ladder. She was scared too. She did not want to fall.\n\"Help, help!\" Mia cried. She called for help. She heard a small voice behind her.\n\"Help, help!\" It was Mia. She saw a man with a big hat. He was wearing a hat. He was the other kids.\n\"I am sorry, little ones. I was bad. I was mean to you. I was bad. You are not nice. You are mean. You are not my friend. You are mean. You are not nice.\" Mia said.\n\"Leave me alone. You are not nice. You are mean. You are bad. You are mean. You do not want to be your friend. You are not nice. You are my friends. You are silly. We are different. They are nice. They are nice.\" The man said.\nMia was sad. She did not know what to do. She did not want to be rude. She wanted to play with Ben. She did not like Ben. She wanted to be his friend.\n\"",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.18018018018018017,
+      "words": 224
+    },
+    {
+      "capitalized_names": [
+        "Give",
+        "Max"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [],
+      "distinct_2": 0.717948717948718,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.22330097087378642,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Max"
+      ],
+      "names_kept_fraction": 0.5,
+      "new_capitalized_names": [
+        "Give"
+      ],
+      "new_tokens": 187,
+      "prompt": "Sam was a cat and Max was a dog. Sam liked to sleep in the sun. Max liked to dig in the garden.",
+      "seed": 1,
+      "sentences": 17,
+      "text": " He saw a big bug on a leaf. He thought it was a good place to hide. So, Max ran to the bug and said, \"Give me your bug!\"\nThe bug was scared of Max's big brain. It ran away very fast. Max was happy. He knew he would find a safe place to hide. But, when Max looked for the bug, he saw the big bug on the leaf. Max thought the bug was not a toy.\nThe next day, Max went back to the garden. He saw the bug on the leaf. Max thought it was a toy. He hid the bug under the leaf. When Max went to catch the bug, he thought it was a fun game. Max saw his brain and ran to the leaf. He played with the bug and had a great time. In the end, Max was happy he found the bug and put it back in the sun.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.12258064516129032,
+      "words": 157
+    },
+    {
+      "capitalized_names": [
+        "Anna",
+        "Lee",
+        "Leo",
+        "Mr",
+        "Now",
+        "Thank",
+        "Wow"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [],
+      "distinct_2": 0.7792207792207793,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.15021459227467812,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Anna",
+        "Leo"
+      ],
+      "names_kept_fraction": 0.6666666666666666,
+      "new_capitalized_names": [
+        "Lee",
+        "Mr"
+      ],
+      "new_tokens": 209,
+      "prompt": "Anna, Leo and Zoe built a sandcastle. Anna found a shell. Leo found a stick. Zoe found a flag.",
+      "seed": 1,
+      "sentences": 32,
+      "text": " He showed it to Anna. Anna thought it was cool. She wanted to make a bigger one.\nShe took the shell to the garden. She made a bigger shape with it. She made a small circle. She made a bigger circle. She threw the big circle.\n\"Wow!\" she said. \"Now, we have a bigger circle!\"\nAnna was happy. She had made the small circle. She smiled. She said, \"Thank you, Leo!\"\nThey played together in the garden. They made shapes with the small circle. They made shapes and shapes. They made animals and stars.\nAnna saw their new shapes. She wanted to join them. She wanted to share her shape. She said, \"Mr. Lee, can I have two more shapes?\"\nAnna said, \"Yes, you can share. You are my best friend.\"\nThey played with the small circle. They made shapes and circles. They made shapes and animals. They had fun. They laughed. They were happy.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.1111111111111111,
+      "words": 155
+    },
+    {
+      "capitalized_names": [
+        "Lucy"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [],
+      "distinct_2": 1.0,
+      "fact_conflicts": 0,
+      "fact_supports": 1,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": null,
+      "frac_8gram_in_train": 0.07692307692307693,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Lucy"
+      ],
+      "names_kept_fraction": 0.5,
+      "new_capitalized_names": [],
+      "new_tokens": 32,
+      "prompt": "Grandma gave Lucy a green hat and gave Jack a yellow scarf.",
+      "seed": 1,
+      "sentences": 3,
+      "text": " He put them on and said, \"This is my favorite.\" Lucy was so happy and wore the green hat every morning. She knew it was her own.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0,
+      "words": 27
+    },
+    {
+      "capitalized_names": [
+        "Amy",
+        "Thank",
+        "Tim"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [
+        "Amy and Tim looked for the doll together."
+      ],
+      "distinct_2": 0.9107142857142857,
+      "fact_conflicts": 1,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.3132530120481928,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Tim"
+      ],
+      "names_kept_fraction": 0.5,
+      "new_capitalized_names": [
+        "Amy"
+      ],
+      "new_tokens": 74,
+      "prompt": "Ella lost her doll. Her brother Tim wanted to help her find it.",
+      "seed": 1,
+      "sentences": 7,
+      "text": " He said, \"Amy, let me see your doll on the shelf.\" Amy smiled and said, \"Thank you, Tim.\"\nAmy and Tim looked for the doll together. They found it under a big chair. Amy was happy to have her doll back. She said, \"Thank you, Tim!\" They played with the doll together and had a great day.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.05454545454545454,
+      "words": 57
+    },
+    {
+      "capitalized_names": [
+        "Lily",
+        "While"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.8773584905660378,
+      "frac_16gram_in_train": 0.09166666666666666,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.5546875,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 16,
+      "model": "M3.1@4800",
+      "new_tokens": 122,
+      "prompt": "Once upon a time, there was a little girl named Lily.",
+      "seed": 2,
+      "sentences": 10,
+      "text": " She had a pretty veil that she loved very much. One day, she went outside to play in the dirt.\nWhile playing, Lily saw a small bug on the ground. The bug was very tiny and had a funny face. Lily was very surprised to see a bug on the veil. She wanted to show her veil to its friends.\nLily ran to her friends and showed them the bug. Her friends were amazed and picked up the bug for her veil. They all played together and had a fun day. The bug was happy to have a new friend, and they all lived happily ever after.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.02857142857142857,
+      "words": 107
+    },
+    {
+      "capitalized_names": [
+        "Inside"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.5319148936170213,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.20512820512820512,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "new_tokens": 114,
+      "prompt": "One day, a boy found a strange box.",
+      "seed": 2,
+      "sentences": 17,
+      "text": " Inside the box was a pretty book. The boy was very happy. He wanted to read the book.\nThe boy started to read the book. He read and read. The book was about a cat. The cat was very smart. The cat read new words. The boy read the words to the cat.\nThe boy read the book. The cat read the book. The cat read the book again. The boy read and read. The cat read the book. They both read and read. The cat read the book. They had fun and were happy.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.3010752688172043,
+      "words": 95
+    },
+    {
+      "capitalized_names": [
+        "Frog",
+        "Hi",
+        "Mr"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.7978723404255319,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.43548387096774194,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "new_tokens": 123,
+      "prompt": "A small dragon lived in a forest.",
+      "seed": 2,
+      "sentences": 14,
+      "text": " The dragon was very sad. He had no friends. One day, the dragon met a small bird.\nThe small bird said, \"Hi, Mr. Frog, why are you so sad?\" The dragon replied, \"I am sad because I can't find my home.\" The big dragon wanted to help the small bird. They looked for the bird's home together.\nThey looked under rocks and behind trees. But they could not find the bird's home. The big dragon's home was very small and weak. The small bird was very sad. The big dragon was sad too. The end.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.06451612903225806,
+      "words": 95
+    },
+    {
+      "capitalized_names": [
+        "Tom"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.8846153846153846,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.25396825396825395,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "new_tokens": 63,
+      "prompt": "Tom wanted to help his friend.",
+      "seed": 2,
+      "sentences": 8,
+      "text": " He had an idea. He would bring some tasty treats for the party. He put on a big balloon.\nTom went to the party. He gave the tasty treats to his friends. They were very happy. They all ate the tasty treats and had a great time. The party was full of surprises.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0392156862745098,
+      "words": 53
+    },
+    {
+      "capitalized_names": [],
+      "completed_with_eot": true,
+      "distinct_2": 0.7560975609756098,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.27722772277227725,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "new_tokens": 98,
+      "prompt": "There was a dog who was afraid of water.",
+      "seed": 2,
+      "sentences": 13,
+      "text": " He had no way to the other side of the pond. The dog was brave. He had a friend who liked him. They played together in the pond.\nOne day, the dog and the cat found a big rock. They tried to move the rock. The dog jumped on the rock. They were scared. The dog jumped on the rock. They did not see the fish. They were happy again. They did not mind the rock. They played in the pond every day.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.09876543209876543,
+      "words": 83
+    },
+    {
+      "capitalized_names": [
+        "Let",
+        "Lily",
+        "Look",
+        "Tom"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [],
+      "distinct_2": 0.8852459016393442,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.3010752688172043,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Tom",
+        "Lily"
+      ],
+      "names_kept_fraction": 1.0,
+      "new_capitalized_names": [],
+      "new_tokens": 80,
+      "prompt": "Tom and Lily went into the forest. Tom carried a basket. Lily carried a lantern.",
+      "seed": 2,
+      "sentences": 10,
+      "text": " They saw many pretty things. They saw big animals and small plants. They were very happy.\nTom said, \"Look, Lily! A pretty flower! We can pick it and touch it.\" Lily smiled and said, \"Yes, Tom! Let's go pick it and see if we can.\" So they picked the flower and took it home. They were very happy with their new home.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.05,
+      "words": 62
+    },
+    {
+      "capitalized_names": [
+        "Ben",
+        "Can",
+        "Don",
+        "Hey",
+        "Look",
+        "Mia",
+        "Sure"
+      ],
+      "completed_with_eot": false,
+      "conflict_examples": [],
+      "distinct_2": 0.7467811158798283,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.006600660066006601,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.2797427652733119,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 16,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Mia",
+        "Ben"
+      ],
+      "names_kept_fraction": 1.0,
+      "new_capitalized_names": [
+        "Hey"
+      ],
+      "new_tokens": 300,
+      "prompt": "Mia had a red ball and Ben had a blue kite. They went to the park.",
+      "seed": 2,
+      "sentences": 37,
+      "text": " They saw a big pond with ducks and fish. They wanted to play with the ducks.\n\"Look, Ben, a big duck!\" Mia said. \"Can we feed the ducks?\"\nBen looked at the duck. He saw a bird with big eyes. He reached out his hand and smiled.\n\"Sure, Mia, but be careful. Don't touch the duck. It's mean,\" he said.\nBen and Mia ran to the duck. They wanted to feed the duck some bread. They decided to give it some bread.\nThey took the bread and ran to the pond. They threw the bread at the duck. The duck ate the bread. He was happy.\nBut then, a big dog came. The dog saw the bread and thought it was a toy. He ran to the duck and bit it. He threw the bread in the pond. The duck caught the bread with his mouth.\n\"Hey, dog, that's my bread!\" the dog said. He jumped in front of the duck. He bit the bread and made a loud noise.\n\"Hey, that's our bread!\" Ben said. He dropped the bread and ran away.\nThe dog chased Ben and Mia. He was fast and careful. He did not see the dog that was a dog. The dog was angry and tired.\nBen and Mia were scared. They dropped the bread and ran away. They ran to the water and the duck.\nThe dog saw the",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.09482758620689655,
+      "words": 234
+    },
+    {
+      "capitalized_names": [
+        "Sam"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [],
+      "distinct_2": 0.9125,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.3140495867768595,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Sam"
+      ],
+      "names_kept_fraction": 0.5,
+      "new_capitalized_names": [],
+      "new_tokens": 102,
+      "prompt": "Sam was a cat and Max was a dog. Sam liked to sleep in the sun. Max liked to dig in the garden.",
+      "seed": 2,
+      "sentences": 12,
+      "text": " One day, Sam found a big, round bone.\nSam called Sam to come and see the bone. Sam came running and smelled the bone. \"What is that?\" Sam asked. Sam said, \"I don't know,\" They both looked at it and saw that it was not a bone. It was a bone!\nSam and Sam were happy. They gave the bone to Sam. Sam was happy too. They played with the bone for a long time. They had fun and were friends.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0,
+      "words": 81
+    },
+    {
+      "capitalized_names": [
+        "Anna",
+        "Leo",
+        "Look",
+        "Ok",
+        "Wow"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [
+        "\"Look, Anna, I made a flag!"
+      ],
+      "distinct_2": 0.7622377622377622,
+      "fact_conflicts": 1,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.034482758620689655,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.25118483412322273,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 16,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Anna",
+        "Leo"
+      ],
+      "names_kept_fraction": 0.6666666666666666,
+      "new_capitalized_names": [],
+      "new_tokens": 187,
+      "prompt": "Anna, Leo and Zoe built a sandcastle. Anna found a shell. Leo found a stick. Zoe found a flag.",
+      "seed": 2,
+      "sentences": 24,
+      "text": " He put the flag on the sandcastle.\n\"Look, Anna, I made a flag!\" Leo said. \"He is so pretty!\"\nAnna smiled. \"Ok is so pretty!\"\nThey played with the flag all day. They used it to make the flag come to life. They had so much fun. They would pretend to be animals.\nBut then, something unexpected happened. The flag started to move! It was not a flag. It was a toy boat! The boat was a toy boat. Anna and Leo were surprised. They laughed and said, \"Wow, Leo! The toy boat is not a toy. It is a toy boat!\"\nAnna and Leo laughed. They played with the toy boat all day. They had so much fun. When it was time to go home, they said goodbye to the flag. They knew they could play with the toy boat again another day.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.11267605633802817,
+      "words": 144
+    },
+    {
+      "capitalized_names": [
+        "Lucy"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [
+        "Lucy was so happy to have her new red scarf in her pocket."
+      ],
+      "distinct_2": 1.0,
+      "fact_conflicts": 1,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": null,
+      "frac_8gram_in_train": 0.3055555555555556,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Lucy"
+      ],
+      "names_kept_fraction": 0.5,
+      "new_capitalized_names": [],
+      "new_tokens": 29,
+      "prompt": "Grandma gave Lucy a green hat and gave Jack a yellow scarf.",
+      "seed": 2,
+      "sentences": 3,
+      "text": "\nLucy was so happy to have her new red scarf in her pocket. She thanked her grandma and gave her a big hug. The end.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0,
+      "words": 25
+    },
+    {
+      "capitalized_names": [
+        "Ella",
+        "Lucy",
+        "Thank",
+        "Tim"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [],
+      "distinct_2": 0.9830508474576272,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.4642857142857143,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.1@4800",
+      "names_kept": [
+        "Ella",
+        "Tim"
+      ],
+      "names_kept_fraction": 1.0,
+      "new_capitalized_names": [
+        "Lucy"
+      ],
+      "new_tokens": 75,
+      "prompt": "Ella lost her doll. Her brother Tim wanted to help her find it.",
+      "seed": 2,
+      "sentences": 7,
+      "text": " He looked and looked, but could not find it.\nElla and Tim asked Tim's mom for help. They looked everywhere in the kitchen. Finally, they found the doll under a big chair. Lucy was so happy to get her doll back. She hugged Tim and said, \"Thank you, Tim!\" They played together with the doll and had a fun day.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0,
+      "words": 60
+    },
+    {
+      "capitalized_names": [
+        "Do",
+        "Lily",
+        "Tom"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.9565217391304348,
+      "frac_16gram_in_train": 0.11304347826086956,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.5853658536585366,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 16,
+      "model": "M3.2@7200",
+      "new_tokens": 117,
+      "prompt": "Once upon a time, there was a little girl named Lily.",
+      "seed": 1,
+      "sentences": 12,
+      "text": " She had a big, round basketball. Lily loved to play with her basketball every day.\nOne day, Lily met a boy named Tom. Tom saw the basketball and said, \"What are you doing?\" Lily smiled and said, \"I am playing with my basketball. Do you want to play with me?\" Tom said, \"Yes, I would love to!\"\nLily and Tom played the basketball together. They had lots of fun. Tom would throw the ball back and catch it. They laughed and played all day. Lily's basketball was happy to have a new friend.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.01098901098901099,
+      "words": 93
+    },
+    {
+      "capitalized_names": [],
+      "completed_with_eot": true,
+      "distinct_2": 0.8431372549019608,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.27419354838709675,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "new_tokens": 121,
+      "prompt": "One day, a boy found a strange box.",
+      "seed": 1,
+      "sentences": 10,
+      "text": " He opened it and found a magic wand inside. The boy was very happy and played with the wand. He waved the wand again and said, \"I can shrink more than ever!\" The boy played with the wand, and the prince had lots of fun.\nBut then, something unexpected happened. The magic wand grew, and the boy became very big. He could grow bigger than ever before. The boy was very surprised and happy. He played with his wand and became big, just like in the sky. The boy and the small wand had many fun adventures together, and they became best friends.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.039603960396039604,
+      "words": 103
+    },
+    {
+      "capitalized_names": [
+        "Now"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.7751937984496124,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.08227848101265822,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "new_tokens": 157,
+      "prompt": "A small dragon lived in a forest.",
+      "seed": 1,
+      "sentences": 11,
+      "text": " The dragon was very patient and always tried to be patient. One day, the dragon was walking in the forest when the dragon saw a big, yummy cake.\nThe dragon wanted to eat the cake. But the dragon said, \"No, I can only eat it!\" The dragon was sad and went away. The dragon went back to the forest and found a big pile of socks. The dragon ate the socks and then said, \"Now you can eat socks!\"\nThe dragon ate all the socks, but he did not eat too much. The dragon became very tired and very hungry. In the end, the dragon went back to the forest and found a safe place to rest. The dragon was happy that he could share his socks with the dragon.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.1015625,
+      "words": 130
+    },
+    {
+      "capitalized_names": [],
+      "completed_with_eot": true,
+      "distinct_2": 0.8837209302325582,
+      "frac_16gram_in_train": 0.021505376344086023,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.4752475247524752,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 16,
+      "model": "M3.2@7200",
+      "new_tokens": 101,
+      "prompt": "Tom wanted to help his friend.",
+      "seed": 1,
+      "sentences": 9,
+      "text": " He picked up a big stick and tried to cut it with the stick. But the stick was too high for him to reach. He tried and tried, but he could not cut the stick either.\nThen, something unexpected happened. The stick started to move! It was not just a stick, but a big, friendly giant! The giant was very happy to be home. He had helped the small giant cut with the stick. The giant and the giant became best friends and played together every day.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.011764705882352941,
+      "words": 87
+    },
+    {
+      "capitalized_names": [
+        "Can",
+        "Let",
+        "Please"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.8425925925925926,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.39473684210526316,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "new_tokens": 149,
+      "prompt": "There was a dog who was afraid of water.",
+      "seed": 1,
+      "sentences": 13,
+      "text": " He was also scared, but he wanted to be brave. He grabbed his hand and pulled out the water. He said, \"There, there's a bird! Can I come with you?\"\nThe bird flew away, but then he saw a tiny mouse. The mouse was scared and said, \"Please, don't hurt me, little mouse!\" \nThe little mouse was surprised. He said, \"I'm sorry, I just wanted to play.\"\nThe mouse smiled and said, \"It's okay, little mouse. I know you're not scared anymore. Let's be friends!\"\nSo, the little mouse and the mouse played together all day. They had lots of fun and the little mouse was not scared anymore.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.037383177570093455,
+      "words": 109
+    },
+    {
+      "capitalized_names": [
+        "Lily",
+        "Look",
+        "Tom",
+        "While",
+        "Wow"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [],
+      "distinct_2": 0.9850746268656716,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.1553398058252427,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Tom",
+        "Lily"
+      ],
+      "names_kept_fraction": 1.0,
+      "new_capitalized_names": [
+        "While"
+      ],
+      "new_tokens": 90,
+      "prompt": "Tom and Lily went into the forest. Tom carried a basket. Lily carried a lantern.",
+      "seed": 1,
+      "sentences": 11,
+      "text": " Tom said, \"Look, Lily! The forest is full of trees!\"\nWhile Tom was carrying a basket, Lily found a big, yummy apple. Lily had never seen a apple before. She was surprised. \"Wow, Tom! You can eat the apple!\" she said.\nTom and Lily ate the apple and laughed. They thought it was very yummy. From that day on, they played on the farm and shared the apples.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0,
+      "words": 68
+    },
+    {
+      "capitalized_names": [
+        "Mia",
+        "Tim",
+        "While"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [
+        "Mia picked up a big blue kite.",
+        "The blue kite flew high in the sky with Mia's blue kite.",
+        "Mia and Tim looked up and saw the blue kite fly back down."
+      ],
+      "distinct_2": 0.7614678899082569,
+      "fact_conflicts": 3,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.014492753623188406,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.4315068493150685,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 16,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Mia"
+      ],
+      "names_kept_fraction": 0.5,
+      "new_capitalized_names": [
+        "Tim",
+        "While"
+      ],
+      "new_tokens": 135,
+      "prompt": "Mia had a red ball and Ben had a blue kite. They went to the park.",
+      "seed": 1,
+      "sentences": 14,
+      "text": " Mia picked up a big blue kite. She wanted to play with it.\nWhile playing, Mia met a boy named Tim. Tim said, \"I want to play with the blue kite too!\" Mia smiled and said, \"Yes, let's play together!\" They played with the blue kite in the park. They were very happy.\nThen, something unexpected happened. The blue kite flew high in the sky with Mia's blue kite. The blue kite flew high in the sky. Mia and Tim looked up and saw the blue kite fly back down. They were very surprised. They laughed and played with the blue kite. They had a fun day at the park.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.1388888888888889,
+      "words": 110
+    },
+    {
+      "capitalized_names": [
+        "Let",
+        "Lily",
+        "Look",
+        "Max",
+        "Thank"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [],
+      "distinct_2": 0.8869565217391304,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.01910828025477707,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.3151515151515151,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 16,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Max"
+      ],
+      "names_kept_fraction": 0.5,
+      "new_capitalized_names": [
+        "Lily"
+      ],
+      "new_tokens": 146,
+      "prompt": "Sam was a cat and Max was a dog. Sam liked to sleep in the sun. Max liked to dig in the garden.",
+      "seed": 1,
+      "sentences": 17,
+      "text": " He would dig and dig in the dirt.\nOne day, Max found a big jar of honey. He was very happy. He wanted to share it with Lily. Max ran to the jar and said, \"Look, Lily! I found honey! Let's share it.\" Lily was happy too. They both took the jar and ate the honey together.\nAs they were eating, something unexpected happened. The jar of honey started to move! Max and Lily were surprised. They stopped eating the honey. They laughed and said, \"That was unexpected! Thank you, big jar!\" They had a new friend, the jar of honey.\nThe moral of the story is to always take the time to share with others.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.03508771929824561,
+      "words": 116
+    },
+    {
+      "capitalized_names": [
+        "Anna",
+        "Let",
+        "Okay",
+        "Zoe"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [
+        "Anna put the flag on her head."
+      ],
+      "distinct_2": 0.8181818181818182,
+      "fact_conflicts": 1,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.005,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.2932692307692308,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 16,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Anna",
+        "Zoe"
+      ],
+      "names_kept_fraction": 0.6666666666666666,
+      "new_capitalized_names": [],
+      "new_tokens": 184,
+      "prompt": "Anna, Leo and Zoe built a sandcastle. Anna found a shell. Leo found a stick. Zoe found a flag.",
+      "seed": 1,
+      "sentences": 19,
+      "text": " Anna put the flag on her head. She said, \"The flag is perfect. Let's share it.\"\nAnna and Zoe became friends. They played together in the sand. They built a big sandcastle. The flag was red and blue. Anna was happy. She made a new friend.\nOne day, Anna and Zoe went to the park. They saw a big tree with a swing. The swing was blue and the flag was blue. Anna said, \"I want to swing on the swing, Zoe.\" Zoe said, \"No, I want to swing too!\" Anna was sad, but she did not want to lose her friend. So, Anna said, \"Okay, let's swing together.\" They played on the swing and had lots of fun. The sun was shining, and the sun was warm. Anna and Zoe were happy.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.05343511450381679,
+      "words": 133
+    },
+    {
+      "capitalized_names": [
+        "Grandma",
+        "Lucy"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [
+        "Lucy put the scarf on her head and looked out the window."
+      ],
+      "distinct_2": 1.0,
+      "fact_conflicts": 1,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": null,
+      "frac_8gram_in_train": 0.07692307692307693,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Lucy"
+      ],
+      "names_kept_fraction": 0.5,
+      "new_capitalized_names": [],
+      "new_tokens": 32,
+      "prompt": "Grandma gave Lucy a green hat and gave Jack a yellow scarf.",
+      "seed": 1,
+      "sentences": 2,
+      "text": " Lucy put the scarf on her head and looked out the window. She was so happy to have her new hat back, and she thanked Grandma for her help.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0,
+      "words": 29
+    },
+    {
+      "capitalized_names": [
+        "Ella",
+        "Tim"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [
+        "From that day on, Tim was not just about finding her doll."
+      ],
+      "distinct_2": 0.9629629629629629,
+      "fact_conflicts": 1,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.014285714285714285,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.5769230769230769,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 16,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Ella",
+        "Tim"
+      ],
+      "names_kept_fraction": 1.0,
+      "new_capitalized_names": [],
+      "new_tokens": 69,
+      "prompt": "Ella lost her doll. Her brother Tim wanted to help her find it.",
+      "seed": 1,
+      "sentences": 7,
+      "text": " He looked and looked, but he could not find her doll.\nThen, something unexpected happened. A big wind came and took the doll up in the sky. Tim was very happy. He said \"thank you\" to Ella. They both smiled and played together. From that day on, Tim was not just about finding her doll.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0,
+      "words": 55
+    },
+    {
+      "capitalized_names": [
+        "Lily",
+        "Suddenly",
+        "Thank",
+        "While"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.9051094890510949,
+      "frac_16gram_in_train": 0.12048192771084337,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.7298850574712644,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 16,
+      "model": "M3.2@7200",
+      "new_tokens": 168,
+      "prompt": "Once upon a time, there was a little girl named Lily.",
+      "seed": 2,
+      "sentences": 14,
+      "text": " She had a pretty veil that she loved very much. One day, she went outside to play in the park.\nWhile playing, Lily saw a big, shiny rock. It was so pretty that she wanted to touch it. She tried to step on it, but it was too hard for her. She pushed and pulled, but the rock would not move.\nLily was sad, but then she had an idea. She picked up the rock and pushed it to the ground. Suddenly, the rock moved! It was not a rock at all, but a big, friendly turtle! The turtle said, \"Thank you for fixing me!\" Lily was surprised and happy, but she was not scared anymore. She thanked the turtle and they became good friends. From that day on, Lily and the turtle played together in the park.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.007352941176470588,
+      "words": 138
+    },
+    {
+      "capitalized_names": [
+        "Inside",
+        "Tim"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.8910891089108911,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.2857142857142857,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "new_tokens": 123,
+      "prompt": "One day, a boy found a strange box.",
+      "seed": 2,
+      "sentences": 11,
+      "text": " Inside the box was a file. The boy thought it was a stupid file. He did not know what it was for. He took the file to his mom and asked, \"Mom, is this?\"\nMom said, \"That is a file, Tim. It helps us clean you.\" Tim was happy to help his mom. They put the file in a box and made sure the boy was safe.\nThe next day, Tim and his mom went to the park to play. Tim was excited to play and forget about the stupid file. He knew he could still play with it anytime he wanted.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.01,
+      "words": 102
+    },
+    {
+      "capitalized_names": [
+        "Goodbye",
+        "Why"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.8118811881188119,
+      "frac_16gram_in_train": 0.015625,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.39705882352941174,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 16,
+      "model": "M3.2@7200",
+      "new_tokens": 135,
+      "prompt": "A small dragon lived in a forest.",
+      "seed": 2,
+      "sentences": 15,
+      "text": " The dragon was very sad. He had no friends.\nOne day, the dragon met a bird. The bird said, \"Why are you sad, dragon?\" The dragon said, \"I lost my home. I can't find my home.\" The bird wanted to help the dragon.\nThe bird and the dragon looked for the dragon's home. They looked in the trees and the river. The dragon found the dragon's home. The dragon was so happy to be home.\nThe dragon said, \"Goodbye, dragon. I will miss you!\" The dragon smiled and said, \"You are my friend.\" They became good friends and played together every day.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.04,
+      "words": 102
+    },
+    {
+      "capitalized_names": [
+        "Tom"
+      ],
+      "completed_with_eot": true,
+      "distinct_2": 0.8787878787878788,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.5975609756097561,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "new_tokens": 82,
+      "prompt": "Tom wanted to help his friend.",
+      "seed": 2,
+      "sentences": 10,
+      "text": " He had an idea. He would bring some food for his friend, the dog. Tom gave the food to the dog. The dog was very happy.\nBut, when the food was ready, the food was gone! The dog tried to escape, but it was too late. The food was all gone. Tom was sad. He did not know what to do. The day had a bad ending.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.03076923076923077,
+      "words": 67
+    },
+    {
+      "capitalized_names": [],
+      "completed_with_eot": true,
+      "distinct_2": 0.801980198019802,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.12195121951219512,
+      "greedy": false,
+      "kind": "story",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "new_tokens": 120,
+      "prompt": "There was a dog who was afraid of water.",
+      "seed": 2,
+      "sentences": 11,
+      "text": " He had no way out to help the bird. He was a hero and he wanted to protect them from a storm.\nOne day, the storm was very strong. It blew hard and the rain fell down. The bird was scared and quickly ran away. The storm was strong, but the bird was safe.\nThe bird flew back to the storm and the storm was gone. The bird was gone, and the sky was clear again. The bird was sad to save the bird. But then, something amazing happened. The storm went away, and the bird could see the beautiful bird again.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.05,
+      "words": 102
+    },
+    {
+      "capitalized_names": [
+        "Lily",
+        "Tom"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [],
+      "distinct_2": 0.6626506024096386,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.1036036036036036,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Tom",
+        "Lily"
+      ],
+      "names_kept_fraction": 1.0,
+      "new_capitalized_names": [],
+      "new_tokens": 209,
+      "prompt": "Tom and Lily went into the forest. Tom carried a basket. Lily carried a lantern.",
+      "seed": 2,
+      "sentences": 35,
+      "text": " They saw many pretty flowers. They also saw some ducks in the basket. They wanted to feed them.\nThey walked to the basket. They used the lantern to cut out of the basket. They put the basket on the grass. They wrapped it around the basket. They felt happy.\nBut then, a big wind came. It blew the basket away. It flew down into the air. Tom and Lily had to chase it. They ran after it. They saw the basket of flowers. They saw the flowers. They smiled.\nThey saw the basket. They climbed up. They reached for the basket. They opened it. They took the basket. They opened it. They took out the flowers. They put the basket on a bench.\nThey walked back to the park. They put the basket. They covered the basket with flowers. They smiled. They had a picnic. They had sweet milk. They were happy. They had a picnic. They had a picnic. They loved the park. They were friends.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.18181818181818182,
+      "words": 167
+    },
+    {
+      "capitalized_names": [
+        "Ben",
+        "Let",
+        "Maybe",
+        "Mia",
+        "Wait"
+      ],
+      "completed_with_eot": false,
+      "conflict_examples": [
+        "He liked Mia's blue kite."
+      ],
+      "distinct_2": 0.7241379310344828,
+      "fact_conflicts": 1,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.1832797427652733,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Mia",
+        "Ben"
+      ],
+      "names_kept_fraction": 1.0,
+      "new_capitalized_names": [
+        "Maybe",
+        "Wait"
+      ],
+      "new_tokens": 300,
+      "prompt": "Mia had a red ball and Ben had a blue kite. They went to the park.",
+      "seed": 2,
+      "sentences": 39,
+      "text": " They saw a big tree with lots of apples. Mia threw the ball and Ben threw it high in the air.\n\"Oh no!\" Mia cried. \"The ball is too high. Let's go home!\"\nMia looked at Ben and the blue kite. She felt sad. She wanted to make him happy.\n\"Let's go home, Ben!\" Mia said. \"Maybe we can play with the blue kite again.\"\nBen smiled. He liked Mia. He liked Mia's blue kite. He was a good friend.\n\"Let's play with the blue kite!\" Mia said. \"We can fly the kite.\"\nThey ran to the blue kite and held it in their hands. They swung the kite to the blue kite. They laughed and had fun.\nBut then, a big dog came. It saw the blue kite in the park. It wanted the blue kite. It ran to the blue kite and grabbed the blue kite. It ran to the blue kite and grabbed it in its mouth.\n\"Wait! The dog is here!\" Ben shouted.\nThe dog did not like the blue kite. It saw the blue kite flying and ran to it. It ran after it and dropped the blue kite. The blue kite rolled it and hit the blue kite with it. The blue kite flew up and caught it.\n\"What a nice kite!\" Ben said. \"It is your best friend!\"\nThe dog did not want to share. It",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.1471861471861472,
+      "words": 233
+    },
+    {
+      "capitalized_names": [
+        "Max",
+        "Sam",
+        "Thank"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [
+        "Sam wanted to show the bone to his friend, Sam the dog."
+      ],
+      "distinct_2": 0.9183673469387755,
+      "fact_conflicts": 1,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.3055555555555556,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Sam",
+        "Max"
+      ],
+      "names_kept_fraction": 1.0,
+      "new_capitalized_names": [],
+      "new_tokens": 125,
+      "prompt": "Sam was a cat and Max was a dog. Sam liked to sleep in the sun. Max liked to dig in the garden.",
+      "seed": 2,
+      "sentences": 14,
+      "text": " One day, Sam found a big, round bone. He was very happy. Sam wanted to show the bone to his friend, Sam the dog.\nSam and Max went to Sam's house. They started to dig. They dug and dug. Sam put the bone in the hole. He was very hungry. Sam said, \"Sam, I have an empty bone for you!\" Sam's face lit up. Sam said, \"Thank you, Sam! This is the best bone I have ever seen!\" Sam and Max smiled and went back to their homes. They were both very happy and played together all day long.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.020618556701030927,
+      "words": 99
+    },
+    {
+      "capitalized_names": [
+        "Anna",
+        "Good",
+        "Leo"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [
+        "Anna put the flag on the sand.",
+        "Anna's mom saw the flag."
+      ],
+      "distinct_2": 0.8985507246376812,
+      "fact_conflicts": 2,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.1981981981981982,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Anna",
+        "Leo"
+      ],
+      "names_kept_fraction": 0.6666666666666666,
+      "new_capitalized_names": [],
+      "new_tokens": 87,
+      "prompt": "Anna, Leo and Zoe built a sandcastle. Anna found a shell. Leo found a stick. Zoe found a flag.",
+      "seed": 2,
+      "sentences": 10,
+      "text": " He put the flag on the sand. Anna put the flag on the sand. She carried it to Leo's home.\nAnna's mom saw the flag. She smiled and said, \"Good job, Anna! You are very good at playing with your new flag. I'm proud of you.\" Anna felt happy. She knew she could do anything if she played with Leo. And she knew that her mom was a good thing.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.058823529411764705,
+      "words": 70
+    },
+    {
+      "capitalized_names": [
+        "Grandma",
+        "Lucy",
+        "Thank"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [],
+      "distinct_2": 0.972972972972973,
+      "fact_conflicts": 0,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.37142857142857144,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Lucy"
+      ],
+      "names_kept_fraction": 0.5,
+      "new_capitalized_names": [],
+      "new_tokens": 63,
+      "prompt": "Grandma gave Lucy a green hat and gave Jack a yellow scarf.",
+      "seed": 2,
+      "sentences": 8,
+      "text": " Then she gave him a big, blue scarf. \nGrandma smiled. She said, \"Thank you, little girl. It's very pretty.\" \nGrandma said, \"You're welcome. I'm glad you like it.\" \nLucy smiled. She was happy to have a new friend.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.0,
+      "words": 38
+    },
+    {
+      "capitalized_names": [
+        "Mia",
+        "Tim"
+      ],
+      "completed_with_eot": true,
+      "conflict_examples": [
+        "Tim and Mia saw the doll and laughed."
+      ],
+      "distinct_2": 0.8793103448275862,
+      "fact_conflicts": 1,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.0,
+      "frac_32gram_in_train": 0.0,
+      "frac_48gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.4430379746835443,
+      "greedy": false,
+      "kind": "entity",
+      "longest_match_at_least": 8,
+      "model": "M3.2@7200",
+      "names_kept": [
+        "Tim"
+      ],
+      "names_kept_fraction": 0.5,
+      "new_capitalized_names": [
+        "Mia"
+      ],
+      "new_tokens": 70,
+      "prompt": "Ella lost her doll. Her brother Tim wanted to help her find it.",
+      "seed": 2,
+      "sentences": 8,
+      "text": " They looked and looked, but could not find the doll. They were sad.\nThen, a big wind came and blew the doll up into a tree. The doll was happy to see her doll. Tim and Mia saw the doll and laughed. They were not sad anymore. They played with the doll and had fun. They were happy again.",
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.017543859649122806,
+      "words": 59
+    }
+  ],
+  "story_summary": {
+    "M3.1@4800/all": {
+      "completed_with_eot": 0.9090909090909091,
+      "distinct_2": 0.8428856228933966,
+      "frac_16gram_in_train": 0.013271026295141475,
+      "frac_32gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.34162645476120274,
+      "max_longest_match_at_least": 16,
+      "n": 22,
+      "new_tokens": 129.3181818181818,
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.06307367103814464
+    },
+    "M3.1@4800/entity": {
+      "completed_with_eot": 0.8333333333333334,
+      "distinct_2": 0.8572919597314667,
+      "fact_conflicts": 3,
+      "fact_supports": 1,
+      "frac_16gram_in_train": 0.005602267461364122,
+      "frac_32gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.29591732974067436,
+      "max_longest_match_at_least": 16,
+      "n": 12,
+      "names_kept_fraction": 0.7361111111111112,
+      "new_tokens": 143.58333333333334,
+      "stories_introducing_new_names": 7,
+      "stories_with_any_conflict": 3,
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.06270580884244438
+    },
+    "M3.1@4800/story": {
+      "completed_with_eot": 1.0,
+      "distinct_2": 0.8255980186877127,
+      "frac_16gram_in_train": 0.022473536895674297,
+      "frac_32gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.3964774047858368,
+      "max_longest_match_at_least": 16,
+      "n": 10,
+      "new_tokens": 112.2,
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.06351510567298495
+    },
+    "M3.2@7200/all": {
+      "completed_with_eot": 0.9545454545454546,
+      "distinct_2": 0.8663930873033916,
+      "frac_16gram_in_train": 0.014706478658158124,
+      "frac_32gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.33628226422249546,
+      "max_longest_match_at_least": 16,
+      "n": 22,
+      "new_tokens": 126.5,
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.04512852382910896
+    },
+    "M3.2@7200/entity": {
+      "completed_with_eot": 0.9166666666666666,
+      "distinct_2": 0.8725528118732481,
+      "fact_conflicts": 11,
+      "fact_supports": 0,
+      "frac_16gram_in_train": 0.00440722901363998,
+      "frac_32gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.28785143342849645,
+      "max_longest_match_at_least": 16,
+      "n": 12,
+      "names_kept_fraction": 0.7361111111111112,
+      "new_tokens": 125.83333333333333,
+      "stories_introducing_new_names": 5,
+      "stories_with_any_conflict": 8,
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.05445016645476656
+    },
+    "M3.2@7200/story": {
+      "completed_with_eot": 1.0,
+      "distinct_2": 0.8590014178195637,
+      "frac_16gram_in_train": 0.027065578231579894,
+      "frac_32gram_in_train": 0.0,
+      "frac_8gram_in_train": 0.39439926117529434,
+      "max_longest_match_at_least": 16,
+      "n": 10,
+      "new_tokens": 127.3,
+      "valid_word_fraction": 1.0,
+      "word_trigram_repetition": 0.03394255267831984
+    }
+  },
+  "switch_step": 4800,
+  "wall_s": 718.3190177500073
+}

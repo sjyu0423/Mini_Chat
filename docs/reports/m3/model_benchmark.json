@@ -1,0 +1,709 @@
+{
+  "attention": "sdpa",
+  "device": "mps",
+  "dtype": "float32",
+  "iters": 10,
+  "memory_fraction_cap": 0.85,
+  "recommended_max_memory_bytes": 12713115648,
+  "results": [
+    {
+      "case": {
+        "batch_size": 32,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "model",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v4096_t512_b32",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.4268774703557312,
+        "activations_bytes_est": 6366953472,
+        "activations_logits_share": 0.12648221343873517,
+        "adam_state_bytes": 99336192,
+        "grads_bytes": 49668096,
+        "param_grad_opt_bytes": 198672384,
+        "params_embedding": 1769472,
+        "params_non_embedding": 10647552,
+        "params_total": 12417024,
+        "total_bytes_est": 6565625856,
+        "train_flops_per_token": 88657920,
+        "weights_bytes": 49668096
+      },
+      "measured": {
+        "forward_ms_median": 122.67308300943114,
+        "forward_tokens_per_s": 133558.2313419187,
+        "mps_allocated_after_forward_bytes": 4413559296,
+        "mps_driver_after_bytes": 6657884160,
+        "ok": true,
+        "params_measured": 12417024,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 843.8978749909438,
+        "train_step_ms_median": 625.9549790047458,
+        "train_step_ms_min": 609.0950829966459,
+        "train_tokens_per_s": 26174.40638630303
+      },
+      "wall_s": 20.106919041994843
+    },
+    {
+      "case": {
+        "batch_size": 16,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "model",
+        "n_embd": 512,
+        "n_head": 8,
+        "n_layer": 8,
+        "name": "M_v4096_t512_b16",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.4528301886792453,
+        "activations_bytes_est": 5335154688,
+        "activations_logits_share": 0.07547169811320754,
+        "adam_state_bytes": 220635136,
+        "grads_bytes": 110317568,
+        "param_grad_opt_bytes": 441270272,
+        "params_embedding": 2359296,
+        "params_non_embedding": 25220096,
+        "params_total": 27579392,
+        "total_bytes_est": 5776424960,
+        "train_flops_per_token": 190642176,
+        "weights_bytes": 110317568
+      },
+      "measured": {
+        "forward_ms_median": 134.51483300013933,
+        "forward_tokens_per_s": 60900.34695275215,
+        "mps_allocated_after_forward_bytes": 3967832576,
+        "mps_driver_after_bytes": 4547854336,
+        "ok": true,
+        "params_measured": 27579392,
+        "tokens_per_batch": 8192,
+        "train_step_ms_max": 602.2688329976518,
+        "train_step_ms_median": 597.4802915006876,
+        "train_step_ms_min": 594.3854159995681,
+        "train_tokens_per_s": 13710.912504618695
+      },
+      "wall_s": 14.34808100000373
+    },
+    {
+      "case": {
+        "batch_size": 32,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "model",
+        "n_embd": 512,
+        "n_head": 8,
+        "n_layer": 8,
+        "name": "M_v4096_t512_b32",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.4528301886792453,
+        "activations_bytes_est": 10670309376,
+        "activations_logits_share": 0.07547169811320754,
+        "adam_state_bytes": 220635136,
+        "grads_bytes": 110317568,
+        "param_grad_opt_bytes": 441270272,
+        "params_embedding": 2359296,
+        "params_non_embedding": 25220096,
+        "params_total": 27579392,
+        "total_bytes_est": 11111579648,
+        "train_flops_per_token": 190642176,
+        "weights_bytes": 110317568
+      },
+      "measured": {
+        "forward_ms_median": 257.71283349604346,
+        "forward_tokens_per_s": 63574.63762180682,
+        "mps_allocated_after_forward_bytes": 7492293120,
+        "mps_driver_after_bytes": 8927133696,
+        "ok": true,
+        "params_measured": 27579392,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 1297.4254160071723,
+        "train_step_ms_median": 1241.515416499169,
+        "train_step_ms_min": 1216.811708000023,
+        "train_tokens_per_s": 13196.775313672446
+      },
+      "wall_s": 24.75580195800285
+    },
+    {
+      "case": {
+        "batch_size": 8,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "model",
+        "n_embd": 768,
+        "n_head": 12,
+        "n_layer": 12,
+        "name": "L_v4096_t512_b8",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.47368421052631576,
+        "activations_bytes_est": 5737807872,
+        "activations_logits_share": 0.03508771929824561,
+        "adam_state_bytes": 708759552,
+        "grads_bytes": 354379776,
+        "param_grad_opt_bytes": 1417519104,
+        "params_embedding": 3538944,
+        "params_non_embedding": 85056000,
+        "params_total": 88594944,
+        "total_bytes_est": 7155326976,
+        "train_flops_per_token": 588192768,
+        "weights_bytes": 354379776
+      },
+      "measured": {
+        "forward_ms_median": 190.65400050021708,
+        "forward_tokens_per_s": 21483.94468122024,
+        "mps_allocated_after_forward_bytes": 5209010688,
+        "mps_driver_after_bytes": 5797609472,
+        "ok": true,
+        "params_measured": 88594944,
+        "tokens_per_batch": 4096,
+        "train_step_ms_max": 879.8099999985425,
+        "train_step_ms_median": 844.2397710023215,
+        "train_step_ms_min": 829.9596249999013,
+        "train_tokens_per_s": 4851.702254132181
+      },
+      "wall_s": 19.43893945799209
+    },
+    {
+      "case": {
+        "batch_size": 4,
+        "context_length": 1024,
+        "dropout": 0.0,
+        "group": "model",
+        "n_embd": 768,
+        "n_head": 12,
+        "n_layer": 12,
+        "name": "L_v8192_t1024_b4",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "activations_attention_share": 0.627906976744186,
+        "activations_bytes_est": 8657043456,
+        "activations_logits_share": 0.046511627906976744,
+        "adam_state_bytes": 737071104,
+        "grads_bytes": 368535552,
+        "param_grad_opt_bytes": 1474142208,
+        "params_embedding": 7077888,
+        "params_non_embedding": 85056000,
+        "params_total": 92133888,
+        "total_bytes_est": 10131185664,
+        "train_flops_per_token": 666049536,
+        "weights_bytes": 368535552
+      },
+      "measured": {
+        "forward_ms_median": 206.13093749125255,
+        "forward_tokens_per_s": 19870.864848581106,
+        "mps_allocated_after_forward_bytes": 6616465920,
+        "mps_driver_after_bytes": 7829749760,
+        "ok": true,
+        "params_measured": 92133888,
+        "tokens_per_batch": 4096,
+        "train_step_ms_max": 1048.6304169899086,
+        "train_step_ms_median": 1038.571604003664,
+        "train_step_ms_min": 1030.4239589895587,
+        "train_tokens_per_s": 3943.8782884203997
+      },
+      "wall_s": 21.666953499996453
+    },
+    {
+      "case": {
+        "batch_size": 8,
+        "context_length": 1024,
+        "dropout": 0.0,
+        "group": "model",
+        "n_embd": 512,
+        "n_head": 8,
+        "n_layer": 8,
+        "name": "M_v4096_t1024_b8",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.6233766233766234,
+        "activations_bytes_est": 7751073792,
+        "activations_logits_share": 0.05194805194805195,
+        "adam_state_bytes": 222732288,
+        "grads_bytes": 111366144,
+        "param_grad_opt_bytes": 445464576,
+        "params_embedding": 2621440,
+        "params_non_embedding": 25220096,
+        "params_total": 27841536,
+        "total_bytes_est": 8196538368,
+        "train_flops_per_token": 217380864,
+        "weights_bytes": 111366144
+      },
+      "measured": {
+        "forward_ms_median": 136.0774585045874,
+        "forward_tokens_per_s": 60201.00676500975,
+        "mps_allocated_after_forward_bytes": 5052064256,
+        "mps_driver_after_bytes": 6695337984,
+        "ok": true,
+        "params_measured": 27841536,
+        "tokens_per_batch": 8192,
+        "train_step_ms_max": 788.3253750042059,
+        "train_step_ms_median": 761.3641249990906,
+        "train_step_ms_min": 749.698209008784,
+        "train_tokens_per_s": 10759.634885620313
+      },
+      "wall_s": 16.16629712500435
+    },
+    {
+      "case": {
+        "batch_size": 32,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "vocab",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v65_t512_b32",
+        "vocab_size": 65
+      },
+      "estimate": {
+        "activations_attention_share": 0.48756745317955774,
+        "activations_bytes_est": 5574426624,
+        "activations_logits_share": 0.0022925263640531865,
+        "adam_state_bytes": 86952960,
+        "grads_bytes": 43476480,
+        "param_grad_opt_bytes": 173905920,
+        "params_embedding": 221568,
+        "params_non_embedding": 10647552,
+        "params_total": 10869120,
+        "total_bytes_est": 5748332544,
+        "train_flops_per_token": 79370496,
+        "weights_bytes": 43476480
+      },
+      "measured": {
+        "forward_ms_median": 112.1737915018457,
+        "forward_tokens_per_s": 146059.07298524736,
+        "mps_allocated_after_forward_bytes": 3860310528,
+        "mps_driver_after_bytes": 5573656576,
+        "ok": true,
+        "params_measured": 10869120,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 566.7634589917725,
+        "train_step_ms_median": 556.099520996213,
+        "train_step_ms_min": 547.492957994109,
+        "train_tokens_per_s": 29462.352297389545
+      },
+      "wall_s": 12.360143542013247
+    },
+    {
+      "case": {
+        "batch_size": 32,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "vocab",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v2048_t512_b32",
+        "vocab_size": 2048
+      },
+      "estimate": {
+        "activations_attention_share": 0.45569620253164556,
+        "activations_bytes_est": 5964300288,
+        "activations_logits_share": 0.06751054852320675,
+        "adam_state_bytes": 93044736,
+        "grads_bytes": 46522368,
+        "param_grad_opt_bytes": 186089472,
+        "params_embedding": 983040,
+        "params_non_embedding": 10647552,
+        "params_total": 11630592,
+        "total_bytes_est": 6150389760,
+        "train_flops_per_token": 83939328,
+        "weights_bytes": 46522368
+      },
+      "measured": {
+        "forward_ms_median": 117.78064550162526,
+        "forward_tokens_per_s": 139106.04692495015,
+        "mps_allocated_after_forward_bytes": 4132934144,
+        "mps_driver_after_bytes": 5577850880,
+        "ok": true,
+        "params_measured": 11630592,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 610.2157499990426,
+        "train_step_ms_median": 590.644957999757,
+        "train_step_ms_min": 572.8854589979164,
+        "train_tokens_per_s": 27739.168476922376
+      },
+      "wall_s": 12.976866665994748
+    },
+    {
+      "case": {
+        "batch_size": 32,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "vocab",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v8192_t512_b32",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "activations_attention_share": 0.37894736842105264,
+        "activations_bytes_est": 7172259840,
+        "activations_logits_share": 0.22456140350877193,
+        "adam_state_bytes": 111919104,
+        "grads_bytes": 55959552,
+        "param_grad_opt_bytes": 223838208,
+        "params_embedding": 3342336,
+        "params_non_embedding": 10647552,
+        "params_total": 13989888,
+        "total_bytes_est": 7396098048,
+        "train_flops_per_token": 98095104,
+        "weights_bytes": 55959552
+      },
+      "measured": {
+        "forward_ms_median": 135.04750000720378,
+        "forward_tokens_per_s": 121320.27619264359,
+        "mps_allocated_after_forward_bytes": 4975989248,
+        "mps_driver_after_bytes": 7654031360,
+        "ok": true,
+        "params_measured": 13989888,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 672.4841659888625,
+        "train_step_ms_median": 667.5111664953874,
+        "train_step_ms_min": 662.284375008312,
+        "train_tokens_per_s": 24544.907744420805
+      },
+      "wall_s": 14.80084712500684
+    },
+    {
+      "case": {
+        "batch_size": 32,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "vocab",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v16384_t512_b32",
+        "vocab_size": 16384
+      },
+      "estimate": {
+        "activations_attention_share": 0.30945558739255014,
+        "activations_bytes_est": 8782872576,
+        "activations_logits_share": 0.3667621776504298,
+        "adam_state_bytes": 137084928,
+        "grads_bytes": 68542464,
+        "param_grad_opt_bytes": 274169856,
+        "params_embedding": 6488064,
+        "params_non_embedding": 10647552,
+        "params_total": 17135616,
+        "total_bytes_est": 9057042432,
+        "train_flops_per_token": 116969472,
+        "weights_bytes": 68542464
+      },
+      "measured": {
+        "forward_ms_median": 173.98189549567178,
+        "forward_tokens_per_s": 94170.7178975274,
+        "mps_allocated_after_forward_bytes": 6100193792,
+        "mps_driver_after_bytes": 9826680832,
+        "ok": true,
+        "params_measured": 17135616,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 832.5470419949852,
+        "train_step_ms_median": 819.5589170063613,
+        "train_step_ms_min": 797.3191659984877,
+        "train_tokens_per_s": 19991.24121527047
+      },
+      "wall_s": 18.58436520799296
+    },
+    {
+      "case": {
+        "batch_size": 128,
+        "context_length": 128,
+        "dropout": 0.0,
+        "group": "context",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v4096_t128_b128",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.1569767441860465,
+        "activations_bytes_est": 4328521728,
+        "activations_logits_share": 0.18604651162790697,
+        "adam_state_bytes": 98156544,
+        "grads_bytes": 49078272,
+        "param_grad_opt_bytes": 196313088,
+        "params_embedding": 1622016,
+        "params_non_embedding": 10647552,
+        "params_total": 12269568,
+        "total_bytes_est": 4524834816,
+        "train_flops_per_token": 77156352,
+        "weights_bytes": 49078272
+      },
+      "measured": {
+        "forward_ms_median": 116.86904200178105,
+        "forward_tokens_per_s": 140191.1038147323,
+        "mps_allocated_after_forward_bytes": 3503490560,
+        "mps_driver_after_bytes": 4535566336,
+        "ok": true,
+        "params_measured": 12269568,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 481.02941700199153,
+        "train_step_ms_median": 466.61000049789436,
+        "train_step_ms_min": 457.16387500579003,
+        "train_tokens_per_s": 35112.83509251306
+      },
+      "wall_s": 12.64298454199161
+    },
+    {
+      "case": {
+        "batch_size": 64,
+        "context_length": 256,
+        "dropout": 0.0,
+        "group": "context",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v4096_t256_b64",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.271356783919598,
+        "activations_bytes_est": 5007998976,
+        "activations_logits_share": 0.16080402010050251,
+        "adam_state_bytes": 98549760,
+        "grads_bytes": 49274880,
+        "param_grad_opt_bytes": 197099520,
+        "params_embedding": 1671168,
+        "params_non_embedding": 10647552,
+        "params_total": 12318720,
+        "total_bytes_est": 5205098496,
+        "train_flops_per_token": 80990208,
+        "weights_bytes": 49274880
+      },
+      "measured": {
+        "forward_ms_median": 117.3973959957948,
+        "forward_tokens_per_s": 139560.16537698059,
+        "mps_allocated_after_forward_bytes": 3806824960,
+        "mps_driver_after_bytes": 5575753728,
+        "ok": true,
+        "params_measured": 12318720,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 526.7879169987282,
+        "train_step_ms_median": 511.7961455034674,
+        "train_step_ms_min": 508.12483401387,
+        "train_tokens_per_s": 32012.745980887812
+      },
+      "wall_s": 11.847729874993092
+    },
+    {
+      "case": {
+        "batch_size": 16,
+        "context_length": 1024,
+        "dropout": 0.0,
+        "group": "context",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v4096_t1024_b16",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.5983379501385041,
+        "activations_bytes_est": 9084862464,
+        "activations_logits_share": 0.0886426592797784,
+        "adam_state_bytes": 100909056,
+        "grads_bytes": 50454528,
+        "param_grad_opt_bytes": 201818112,
+        "params_embedding": 1966080,
+        "params_non_embedding": 10647552,
+        "params_total": 12613632,
+        "total_bytes_est": 9286680576,
+        "train_flops_per_token": 103993344,
+        "weights_bytes": 50454528
+      },
+      "measured": {
+        "forward_ms_median": 133.54912499926286,
+        "forward_tokens_per_s": 122681.4477450933,
+        "mps_allocated_after_forward_bytes": 5631025664,
+        "mps_driver_after_bytes": 7731625984,
+        "ok": true,
+        "params_measured": 12613632,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 879.9106670048786,
+        "train_step_ms_median": 814.6052709998912,
+        "train_step_ms_min": 790.4238750052173,
+        "train_tokens_per_s": 20112.80872254777
+      },
+      "wall_s": 16.76177166699199
+    },
+    {
+      "case": {
+        "batch_size": 4,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "batch",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v4096_t512_b4",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.4268774703557312,
+        "activations_bytes_est": 795869184,
+        "activations_logits_share": 0.12648221343873517,
+        "adam_state_bytes": 99336192,
+        "grads_bytes": 49668096,
+        "param_grad_opt_bytes": 198672384,
+        "params_embedding": 1769472,
+        "params_non_embedding": 10647552,
+        "params_total": 12417024,
+        "total_bytes_est": 994541568,
+        "train_flops_per_token": 88657920,
+        "weights_bytes": 49668096
+      },
+      "measured": {
+        "forward_ms_median": 16.041375500208233,
+        "forward_tokens_per_s": 127669.8497565508,
+        "mps_allocated_after_forward_bytes": 754405888,
+        "mps_driver_after_bytes": 1214103552,
+        "ok": true,
+        "params_measured": 12417024,
+        "tokens_per_batch": 2048,
+        "train_step_ms_max": 82.5659169931896,
+        "train_step_ms_median": 81.46931250666967,
+        "train_step_ms_min": 80.82454100076575,
+        "train_tokens_per_s": 25138.299771859936
+      },
+      "wall_s": 5.556893790999311
+    },
+    {
+      "case": {
+        "batch_size": 8,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "batch",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v4096_t512_b8",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.4268774703557312,
+        "activations_bytes_est": 1591738368,
+        "activations_logits_share": 0.12648221343873517,
+        "adam_state_bytes": 99336192,
+        "grads_bytes": 49668096,
+        "param_grad_opt_bytes": 198672384,
+        "params_embedding": 1769472,
+        "params_non_embedding": 10647552,
+        "params_total": 12417024,
+        "total_bytes_est": 1790410752,
+        "train_flops_per_token": 88657920,
+        "weights_bytes": 49668096
+      },
+      "measured": {
+        "forward_ms_median": 31.102542001463007,
+        "forward_tokens_per_s": 131693.4159210309,
+        "mps_allocated_after_forward_bytes": 1253511680,
+        "mps_driver_after_bytes": 2265907200,
+        "ok": true,
+        "params_measured": 12417024,
+        "tokens_per_batch": 4096,
+        "train_step_ms_max": 157.61037499760278,
+        "train_step_ms_median": 156.4396250032587,
+        "train_step_ms_min": 153.60233400133438,
+        "train_tokens_per_s": 26182.62476603788
+      },
+      "wall_s": 5.703409665991785
+    },
+    {
+      "case": {
+        "batch_size": 16,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "batch",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v4096_t512_b16",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.4268774703557312,
+        "activations_bytes_est": 3183476736,
+        "activations_logits_share": 0.12648221343873517,
+        "adam_state_bytes": 99336192,
+        "grads_bytes": 49668096,
+        "param_grad_opt_bytes": 198672384,
+        "params_embedding": 1769472,
+        "params_non_embedding": 10647552,
+        "params_total": 12417024,
+        "total_bytes_est": 3382149120,
+        "train_flops_per_token": 88657920,
+        "weights_bytes": 49668096
+      },
+      "measured": {
+        "forward_ms_median": 62.1294374941499,
+        "forward_tokens_per_s": 131853.76096107997,
+        "mps_allocated_after_forward_bytes": 2306773504,
+        "mps_driver_after_bytes": 3364995072,
+        "ok": true,
+        "params_measured": 12417024,
+        "tokens_per_batch": 8192,
+        "train_step_ms_max": 310.53858299856074,
+        "train_step_ms_median": 307.49493750045076,
+        "train_step_ms_min": 306.25137500464916,
+        "train_tokens_per_s": 26641.089009759686
+      },
+      "wall_s": 8.192679999992833
+    },
+    {
+      "case": {
+        "batch_size": 32,
+        "context_length": 512,
+        "dropout": 0.2,
+        "group": "dropout",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v4096_t512_b32_d0.2",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "activations_attention_share": 0.4268774703557312,
+        "activations_bytes_est": 6366953472,
+        "activations_logits_share": 0.12648221343873517,
+        "adam_state_bytes": 99336192,
+        "grads_bytes": 49668096,
+        "param_grad_opt_bytes": 198672384,
+        "params_embedding": 1769472,
+        "params_non_embedding": 10647552,
+        "params_total": 12417024,
+        "total_bytes_est": 6565625856,
+        "train_flops_per_token": 88657920,
+        "weights_bytes": 49668096
+      },
+      "measured": {
+        "forward_ms_median": 123.67833299504127,
+        "forward_tokens_per_s": 132472.67814207115,
+        "mps_allocated_after_forward_bytes": 6005953024,
+        "mps_driver_after_bytes": 7765180416,
+        "ok": true,
+        "params_measured": 12417024,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 685.5355829902692,
+        "train_step_ms_median": 670.3532500032452,
+        "train_step_ms_min": 663.3402910083532,
+        "train_tokens_per_s": 24440.845181135
+      },
+      "wall_s": 14.314792999997735
+    }
+  ],
+  "torch": "2.15.0",
+  "warmup": 3
+}

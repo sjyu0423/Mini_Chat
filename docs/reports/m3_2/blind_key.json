@@ -1,0 +1,266 @@
+{
+  "S01": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Ella lost her doll. Her brother Tim wanted to help her find it.",
+    "seed": 2
+  },
+  "S02": {
+    "kind": "story",
+    "model": "M3.2@7200",
+    "prompt": "Once upon a time, there was a little girl named Lily.",
+    "seed": 1
+  },
+  "S03": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Mia had a red ball and Ben had a blue kite. They went to the park.",
+    "seed": 1
+  },
+  "S04": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Tom and Lily went into the forest. Tom carried a basket. Lily carried a lantern.",
+    "seed": 2
+  },
+  "S05": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Sam was a cat and Max was a dog. Sam liked to sleep in the sun. Max liked to dig in the garden.",
+    "seed": 1
+  },
+  "S06": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Sam was a cat and Max was a dog. Sam liked to sleep in the sun. Max liked to dig in the garden.",
+    "seed": 2
+  },
+  "S07": {
+    "kind": "story",
+    "model": "M3.1@4800",
+    "prompt": "Tom wanted to help his friend.",
+    "seed": 2
+  },
+  "S08": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Anna, Leo and Zoe built a sandcastle. Anna found a shell. Leo found a stick. Zoe found a flag.",
+    "seed": 1
+  },
+  "S09": {
+    "kind": "story",
+    "model": "M3.1@4800",
+    "prompt": "A small dragon lived in a forest.",
+    "seed": 1
+  },
+  "S10": {
+    "kind": "story",
+    "model": "M3.2@7200",
+    "prompt": "There was a dog who was afraid of water.",
+    "seed": 2
+  },
+  "S11": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Ella lost her doll. Her brother Tim wanted to help her find it.",
+    "seed": 1
+  },
+  "S12": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Tom and Lily went into the forest. Tom carried a basket. Lily carried a lantern.",
+    "seed": 1
+  },
+  "S13": {
+    "kind": "story",
+    "model": "M3.2@7200",
+    "prompt": "One day, a boy found a strange box.",
+    "seed": 2
+  },
+  "S14": {
+    "kind": "story",
+    "model": "M3.1@4800",
+    "prompt": "One day, a boy found a strange box.",
+    "seed": 2
+  },
+  "S15": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Sam was a cat and Max was a dog. Sam liked to sleep in the sun. Max liked to dig in the garden.",
+    "seed": 2
+  },
+  "S16": {
+    "kind": "story",
+    "model": "M3.2@7200",
+    "prompt": "A small dragon lived in a forest.",
+    "seed": 1
+  },
+  "S17": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Grandma gave Lucy a green hat and gave Jack a yellow scarf.",
+    "seed": 2
+  },
+  "S18": {
+    "kind": "story",
+    "model": "M3.2@7200",
+    "prompt": "A small dragon lived in a forest.",
+    "seed": 2
+  },
+  "S19": {
+    "kind": "story",
+    "model": "M3.1@4800",
+    "prompt": "A small dragon lived in a forest.",
+    "seed": 2
+  },
+  "S20": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Tom and Lily went into the forest. Tom carried a basket. Lily carried a lantern.",
+    "seed": 2
+  },
+  "S21": {
+    "kind": "story",
+    "model": "M3.2@7200",
+    "prompt": "Tom wanted to help his friend.",
+    "seed": 2
+  },
+  "S22": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Ella lost her doll. Her brother Tim wanted to help her find it.",
+    "seed": 2
+  },
+  "S23": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Grandma gave Lucy a green hat and gave Jack a yellow scarf.",
+    "seed": 2
+  },
+  "S24": {
+    "kind": "story",
+    "model": "M3.2@7200",
+    "prompt": "There was a dog who was afraid of water.",
+    "seed": 1
+  },
+  "S25": {
+    "kind": "story",
+    "model": "M3.1@4800",
+    "prompt": "There was a dog who was afraid of water.",
+    "seed": 2
+  },
+  "S26": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Tom and Lily went into the forest. Tom carried a basket. Lily carried a lantern.",
+    "seed": 1
+  },
+  "S27": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Mia had a red ball and Ben had a blue kite. They went to the park.",
+    "seed": 2
+  },
+  "S28": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Grandma gave Lucy a green hat and gave Jack a yellow scarf.",
+    "seed": 1
+  },
+  "S29": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Anna, Leo and Zoe built a sandcastle. Anna found a shell. Leo found a stick. Zoe found a flag.",
+    "seed": 2
+  },
+  "S30": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Grandma gave Lucy a green hat and gave Jack a yellow scarf.",
+    "seed": 1
+  },
+  "S31": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Mia had a red ball and Ben had a blue kite. They went to the park.",
+    "seed": 2
+  },
+  "S32": {
+    "kind": "story",
+    "model": "M3.2@7200",
+    "prompt": "Once upon a time, there was a little girl named Lily.",
+    "seed": 2
+  },
+  "S33": {
+    "kind": "story",
+    "model": "M3.2@7200",
+    "prompt": "Tom wanted to help his friend.",
+    "seed": 1
+  },
+  "S34": {
+    "kind": "story",
+    "model": "M3.1@4800",
+    "prompt": "Tom wanted to help his friend.",
+    "seed": 1
+  },
+  "S35": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Mia had a red ball and Ben had a blue kite. They went to the park.",
+    "seed": 1
+  },
+  "S36": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Anna, Leo and Zoe built a sandcastle. Anna found a shell. Leo found a stick. Zoe found a flag.",
+    "seed": 2
+  },
+  "S37": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Ella lost her doll. Her brother Tim wanted to help her find it.",
+    "seed": 1
+  },
+  "S38": {
+    "kind": "story",
+    "model": "M3.1@4800",
+    "prompt": "There was a dog who was afraid of water.",
+    "seed": 1
+  },
+  "S39": {
+    "kind": "entity",
+    "model": "M3.2@7200",
+    "prompt": "Sam was a cat and Max was a dog. Sam liked to sleep in the sun. Max liked to dig in the garden.",
+    "seed": 1
+  },
+  "S40": {
+    "kind": "story",
+    "model": "M3.1@4800",
+    "prompt": "Once upon a time, there was a little girl named Lily.",
+    "seed": 1
+  },
+  "S41": {
+    "kind": "story",
+    "model": "M3.2@7200",
+    "prompt": "One day, a boy found a strange box.",
+    "seed": 1
+  },
+  "S42": {
+    "kind": "entity",
+    "model": "M3.1@4800",
+    "prompt": "Anna, Leo and Zoe built a sandcastle. Anna found a shell. Leo found a stick. Zoe found a flag.",
+    "seed": 1
+  },
+  "S43": {
+    "kind": "story",
+    "model": "M3.1@4800",
+    "prompt": "One day, a boy found a strange box.",
+    "seed": 1
+  },
+  "S44": {
+    "kind": "story",
+    "model": "M3.1@4800",
+    "prompt": "Once upon a time, there was a little girl named Lily.",
+    "seed": 2
+  }
+}

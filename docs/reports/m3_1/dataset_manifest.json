@@ -1,0 +1,368 @@
+{
+  "deduplication": {
+    "exact_duplicates_removed": 0,
+    "examples": [],
+    "input_stories": 487541,
+    "kept": 487541,
+    "minhash": {
+      "bands": 16,
+      "num_perm": 128,
+      "seed": 0,
+      "shingle": 5,
+      "threshold": 0.8
+    },
+    "near_duplicate_pairs": 0,
+    "near_duplicates_removed": 0,
+    "removed_for_matching_validation_exact": 0,
+    "removed_for_matching_validation_near": 0,
+    "seconds": 36.40674879201106,
+    "train_plus_holdout_tokens_after_dedup": 99201472,
+    "train_tokens_before_dedup": 99201472,
+    "validation_internal_exact_duplicates": 0,
+    "validation_internal_near_pairs": 0
+  },
+  "holdout": {
+    "percent": 1.0,
+    "rule": "int(sha256(story)[:8], 16) % 10000 < percent * 100"
+  },
+  "parsing": {
+    "decisions": [
+      "split raw bytes on b'<|endoftext|>' before decoding",
+      "drop the bytes before the first and after the last delimiter of each range (partial stories)",
+      "strict UTF-8 decode; undecodable stories dropped",
+      "strip surrounding whitespace; empty stories dropped",
+      "no Unicode normalization; text kept as published"
+    ],
+    "train": {
+      "empty_dropped": 43,
+      "head_bytes_dropped": 3531,
+      "invalid_utf8_dropped": 0,
+      "stories": 487541,
+      "tail_bytes_dropped": 2863
+    },
+    "validation": {
+      "empty_dropped": 1,
+      "head_bytes_dropped": 0,
+      "invalid_utf8_dropped": 0,
+      "stories": 27630,
+      "tail_bytes_dropped": 0
+    }
+  },
+  "ranges": {
+    "fetched_bytes": 400000000,
+    "fraction_of_file": 0.1795531061623065,
+    "items": [
+      {
+        "bytes": 50000000,
+        "complete_stories": 60864,
+        "content_range": "bytes 31976001-81976000/2227753162",
+        "end": 81976000,
+        "etag": "\"02e40cc51c59a4bc6c51bd7bc9acda4316e208745be060558eaf500cd14e9f96\"",
+        "seconds": 8.78244833300414,
+        "sha256": "59a3d36b98f453bafce33d1ffe60d5b3a2bddcba9c9ebb986b856e00fc5b9a62",
+        "start": 31976001,
+        "status": 206
+      },
+      {
+        "bytes": 50000000,
+        "complete_stories": 61009,
+        "content_range": "bytes 364230112-414230111/2227753162",
+        "end": 414230111,
+        "etag": "\"02e40cc51c59a4bc6c51bd7bc9acda4316e208745be060558eaf500cd14e9f96\"",
+        "seconds": 8.6557846670039,
+        "sha256": "6b77428d7857c9dbc3879bc99e1f86fd542d5ee97e8118a866e0e57956040177",
+        "start": 364230112,
+        "status": 206
+      },
+      {
+        "bytes": 50000000,
+        "complete_stories": 61057,
+        "content_range": "bytes 691831335-741831334/2227753162",
+        "end": 741831334,
+        "etag": "\"02e40cc51c59a4bc6c51bd7bc9acda4316e208745be060558eaf500cd14e9f96\"",
+        "seconds": 7.694650749996072,
+        "sha256": "ccd014fa21c651fedc35fd4e008d57de9aa8a24f40c32dc460e3b3f58563dc94",
+        "start": 691831335,
+        "status": 206
+      },
+      {
+        "bytes": 50000000,
+        "complete_stories": 60808,
+        "content_range": "bytes 972798798-1022798797/2227753162",
+        "end": 1022798797,
+        "etag": "\"02e40cc51c59a4bc6c51bd7bc9acda4316e208745be060558eaf500cd14e9f96\"",
+        "seconds": 3.275557334010955,
+        "sha256": "af0f4ee35dff2012c25d6ccbc0b8401cb918ee9ec1f4431204a39d75a714f92b",
+        "start": 972798798,
+        "status": 206
+      },
+      {
+        "bytes": 50000000,
+        "complete_stories": 60953,
+        "content_range": "bytes 1287607517-1337607516/2227753162",
+        "end": 1337607516,
+        "etag": "\"02e40cc51c59a4bc6c51bd7bc9acda4316e208745be060558eaf500cd14e9f96\"",
+        "seconds": 6.260423624989926,
+        "sha256": "a290681d006285564728414d74eb12a60f9a40161cd3224dc7715802c47fb7c4",
+        "start": 1287607517,
+        "status": 206
+      },
+      {
+        "bytes": 50000000,
+        "complete_stories": 61020,
+        "content_range": "bytes 1419897093-1469897092/2227753162",
+        "end": 1469897092,
+        "etag": "\"02e40cc51c59a4bc6c51bd7bc9acda4316e208745be060558eaf500cd14e9f96\"",
+        "seconds": 2.3404772079957183,
+        "sha256": "570ea18ea1ae13861324129ad94694e4feeb7229ad637f2834f4364536acf96e",
+        "start": 1419897093,
+        "status": 206
+      },
+      {
+        "bytes": 50000000,
+        "complete_stories": 60905,
+        "content_range": "bytes 1730752360-1780752359/2227753162",
+        "end": 1780752359,
+        "etag": "\"02e40cc51c59a4bc6c51bd7bc9acda4316e208745be060558eaf500cd14e9f96\"",
+        "seconds": 2.171872708000592,
+        "sha256": "6ccb145471c6909b5340712548b8c104ae5121d0c71cf61c6b75ccafeaf543e2",
+        "start": 1730752360,
+        "status": 206
+      },
+      {
+        "bytes": 50000000,
+        "complete_stories": 60925,
+        "content_range": "bytes 2110621952-2160621951/2227753162",
+        "end": 2160621951,
+        "etag": "\"02e40cc51c59a4bc6c51bd7bc9acda4316e208745be060558eaf500cd14e9f96\"",
+        "seconds": 2.145103458009544,
+        "sha256": "09818837e6545926bbc0d9ed8685a6617f3169813590b78158bb2afbeb80a464",
+        "start": 2110621952,
+        "status": 206
+      }
+    ],
+    "method": "one range per equal stratum, seeded offset; verified HTTP 206",
+    "n_ranges": 8,
+    "range_bytes": 50000000,
+    "seed": 2026
+  },
+  "source": {
+    "license": "CDLA-Sharing-1.0",
+    "repo": "roneneldan/TinyStories",
+    "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+    "train_file": "TinyStoriesV2-GPT4-train.txt",
+    "train_size": 2227753162,
+    "train_upstream_sha256": "6418d412de72888f52b5142c761ac21a582f7d1166f0bfbdb5f03ccfdec90443",
+    "train_url": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/f54c09fd23315a6f9c86f9dc80f725de7d8f9c64/TinyStoriesV2-GPT4-train.txt",
+    "validation": {
+      "bytes": 22502601,
+      "file": "TinyStoriesV2-GPT4-valid.txt",
+      "sha256": "6874bae9a4c1a4e7edcf0e53b86c17817e9cf881fc75ff2368da457b80c0585d",
+      "sha256_matches_upstream_lfs_oid": true,
+      "url": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/f54c09fd23315a6f9c86f9dc80f725de7d8f9c64/TinyStoriesV2-GPT4-valid.txt"
+    }
+  },
+  "streams": {
+    "holdout": {
+      "bytes_per_token": 3.9581503275873606,
+      "encode_mb_per_s": 30.879108615944727,
+      "encode_seconds": 0.12832404099754058,
+      "sha256": "0ced756b2bfdd2af487ae98f1fbd121b12ad66b6bf4b20b6046428bf3547a8b9",
+      "stories": 4979,
+      "stories_digest": "5f5d10ecb4295dd8e2c4037138a3e6d98d0362ffa07202fa558dd18f8278b449",
+      "stories_longer_than_512_tokens": 62,
+      "text_bytes": 3962532,
+      "tokens": 1001107,
+      "tokens_per_story_max": 1104,
+      "tokens_per_story_mean": 201.06587668206467,
+      "tokens_per_story_median": 180.0,
+      "tokens_per_story_p95": 366.0
+    },
+    "train": {
+      "bytes_per_token": 3.956409622306394,
+      "encode_mb_per_s": 30.05892482295116,
+      "encode_seconds": 12.925308249992668,
+      "sha256": "8f0473adbb0e731473d34b7e839459eb0915e57bab9ef5f0624dcd2452fd095e",
+      "stories": 482562,
+      "stories_digest": "b27f5e4f6d20db626cf90c66279a1c7dbb4bdd7f1665c5ea7e3f12276126f439",
+      "stories_longer_than_512_tokens": 9239,
+      "text_bytes": 388520869,
+      "tokens": 98200365,
+      "tokens_per_story_max": 1876,
+      "tokens_per_story_mean": 203.4979235828764,
+      "tokens_per_story_median": 180.0,
+      "tokens_per_story_p95": 384.0
+    },
+    "val": {
+      "bytes_per_token": 3.9580474669133596,
+      "encode_mb_per_s": 30.994816003155048,
+      "encode_seconds": 0.7122842090029735,
+      "sha256": "0a286be5c7d739539a0cdfede42443a1f3d15acc314f1a0257fa4fd676bfad7a",
+      "stories": 27630,
+      "stories_digest": "6a8ef39bc5acc49e243592c77cc3f095439b60181cb82c0c13caf0b046d29962",
+      "stories_longer_than_512_tokens": 479,
+      "text_bytes": 22077118,
+      "tokens": 5577780,
+      "tokens_per_story_max": 1176,
+      "tokens_per_story_mean": 201.8740499457112,
+      "tokens_per_story_median": 180.0,
+      "tokens_per_story_p95": 376.0
+    }
+  },
+  "tokenizer": {
+    "fingerprint": "906bf77c4f604b6df2c176af3e6646365741790bf04fda854bce5beef3721b15",
+    "longest_tokens": [
+      " uncomfortable",
+      " compassionate",
+      " disappointed",
+      " enthusiastic",
+      " interesting",
+      " embarrassed",
+      " comfortable",
+      " adventurous",
+      " independent",
+      " caterpillar",
+      " intelligent",
+      " competitive"
+    ],
+    "m3_sample_tokenizer_on_this_corpus": {
+      "bytes_per_token_excluding_eot": 3.9318271853890017,
+      "file": "runs/m3_tokenizers-20261113-165404/bpe_tinystories_4096.json",
+      "fingerprint": "b92687b9cfe37e7a5aff549466c8b1d602f9f708dc13b84d4420e207b99403fd",
+      "shared_merges_with_new": 409,
+      "trained_on_bytes": 4777462,
+      "usage": {
+        "byte_tokens_used": 161,
+        "median_count_merged": 3601.0,
+        "merged_tokens_lt10": 115,
+        "merged_tokens_lt100": 299,
+        "merged_tokens_lt_1e-6_share": 298,
+        "merged_tokens_unused": 57,
+        "tokens": 98814330,
+        "top1000_share": 0.9127159997947666,
+        "top100_share": 0.6188133036979555,
+        "top10_share": 0.2979928417264986,
+        "vocab_used": 3943,
+        "vocab_used_fraction": 0.962646484375
+      }
+    },
+    "merges": 3839,
+    "most_frequent_tokens": [
+      [
+        ".",
+        7433656
+      ],
+      [
+        ",",
+        4138231
+      ],
+      [
+        " the",
+        3704546
+      ],
+      [
+        " and",
+        3462897
+      ],
+      [
+        " a",
+        2688273
+      ],
+      [
+        " to",
+        2655537
+      ],
+      [
+        " was",
+        1887742
+      ],
+      [
+        "\n",
+        1620929
+      ],
+      [
+        " They",
+        929152
+      ],
+      [
+        " it",
+        914780
+      ],
+      [
+        " He",
+        866561
+      ],
+      [
+        " \"",
+        847545
+      ],
+      [
+        " The",
+        821840
+      ],
+      [
+        " said",
+        775814
+      ],
+      [
+        " day",
+        748081
+      ],
+      [
+        " with",
+        747120
+      ],
+      [
+        " in",
+        692249
+      ],
+      [
+        " She",
+        686897
+      ],
+      [
+        " her",
+        683648
+      ],
+      [
+        " his",
+        673673
+      ]
+    ],
+    "special_tokens": {
+      "<|endoftext|>": 4095
+    },
+    "train_seconds": 10.696308000013232,
+    "train_usage": {
+      "byte_tokens_used": 160,
+      "median_count_merged": 3477.0,
+      "merged_tokens_lt10": 60,
+      "merged_tokens_lt100": 271,
+      "merged_tokens_lt_1e-6_share": 270,
+      "merged_tokens_unused": 19,
+      "tokens": 98200365,
+      "top1000_share": 0.908594647280588,
+      "top100_share": 0.6226944777649248,
+      "top10_share": 0.299751869557715,
+      "vocab_used": 3981,
+      "vocab_used_fraction": 0.971923828125
+    },
+    "unique_pretokens": 33630,
+    "val_usage": {
+      "byte_tokens_used": 84,
+      "median_count_merged": 197.0,
+      "merged_tokens_lt10": 343,
+      "merged_tokens_lt100": 868,
+      "merged_tokens_lt_1e-6_share": 265,
+      "merged_tokens_unused": 108,
+      "tokens": 5577780,
+      "top1000_share": 0.9089589406538086,
+      "top100_share": 0.6235448511773501,
+      "top10_share": 0.2999770518019714,
+      "vocab_used": 3816,
+      "vocab_used_fraction": 0.931640625
+    },
+    "vocab_size": 4096
+  },
+  "total_seconds": 137.17429191699193
+}

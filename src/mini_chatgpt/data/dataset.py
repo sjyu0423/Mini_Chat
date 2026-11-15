@@ -57,9 +57,40 @@ def get_batch(
         )
     starts = torch.randint(0, max_start + 1, (batch_size,), generator=generator)
     offsets = torch.arange(context_length + 1)
-    windows = tokens[starts.unsqueeze(1) + offsets]  # (B, T + 1)
+    windows = tokens[starts.unsqueeze(1) + offsets].long()  # (B, T + 1); uint16 storage ok
     x = windows[:, :-1].contiguous()
     y = windows[:, 1:].contiguous()
+    dev = torch.device(device)
+    if dev.type != "cpu":
+        x, y = x.to(dev), y.to(dev)
+    return x, y
+
+
+def single_pass_order(num_tokens: int, context_length: int, seed: int) -> torch.Tensor:
+    """Seeded permutation of the non-overlapping training windows of a stream.
+
+    Window ``w`` covers tokens ``[w * T, w * T + T]`` (T inputs plus one target), so
+    every token is an input at most once; the final partial window is never used.
+    """
+    n_windows = (num_tokens - 1) // context_length
+    if n_windows <= 0:
+        raise ValueError("token stream too short for one window")
+    gen = torch.Generator().manual_seed(seed)
+    return torch.randperm(n_windows, generator=gen)
+
+
+def get_windows(
+    tokens: torch.Tensor,
+    window_ids: torch.Tensor,
+    context_length: int,
+    *,
+    device: torch.device | str = "cpu",
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """(x, y) for the given non-overlapping window indices."""
+    starts = window_ids.long() * context_length
+    offsets = torch.arange(context_length + 1)
+    windows = tokens[starts.unsqueeze(1) + offsets].long()
+    x, y = windows[:, :-1].contiguous(), windows[:, 1:].contiguous()
     dev = torch.device(device)
     if dev.type != "cpu":
         x, y = x.to(dev), y.to(dev)
@@ -85,7 +116,7 @@ def iter_sequential_batches(
     for first in range(0, n_windows, batch_size):
         idx = torch.arange(first, min(first + batch_size, n_windows)) * context_length
         offsets = torch.arange(context_length + 1)
-        windows = tokens[idx.unsqueeze(1) + offsets]
+        windows = tokens[idx.unsqueeze(1) + offsets].long()
         yield windows[:, :-1].to(dev), windows[:, 1:].to(dev)
 
 

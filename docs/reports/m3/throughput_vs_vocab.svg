@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Training throughput vs. vocabulary size (S: 6L/6H/384, ctx 512, batch 32)">
+<title>Training throughput vs. vocabulary size (S: 6L/6H/384, ctx 512, batch 32)</title>
+<rect width="760" height="380" fill="#fcfcfb"/>
+<text x="80" y="24" font-size="15" font-weight="600" fill="#0b0b0b">Training throughput vs. vocabulary size (S: 6L/6H/384, ctx 512, batch 32)</text>
+<text x="80" y="42" font-size="12" fill="#52514e">65 = the Shakespeare character vocabulary; MPS, float32, dropout 0</text>
+<line x1="80" x2="736" y1="328.0" y2="328.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="332.0" font-size="11" text-anchor="end" fill="#52514e">0</text>
+<line x1="80" x2="736" y1="242.7" y2="242.7" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="246.7" font-size="11" text-anchor="end" fill="#52514e">10,000</text>
+<line x1="80" x2="736" y1="157.3" y2="157.3" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="161.3" font-size="11" text-anchor="end" fill="#52514e">20,000</text>
+<line x1="80" x2="736" y1="72.0" y2="72.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="76.0" font-size="11" text-anchor="end" fill="#52514e">30,000</text>
+<line x1="278.4" x2="278.4" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="278.4" y="346" font-size="11" text-anchor="middle" fill="#52514e">5,000</text>
+<line x1="479.4" x2="479.4" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="479.4" y="346" font-size="11" text-anchor="middle" fill="#52514e">10,000</text>
+<line x1="680.4" x2="680.4" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="680.4" y="346" font-size="11" text-anchor="middle" fill="#52514e">15,000</text>
+<line x1="80" x2="736" y1="328" y2="328" stroke="#b9b8b2"/>
+<text x="408.0" y="368" font-size="12" text-anchor="middle" fill="#52514e">vocabulary size</text>
+<text transform="translate(16 196.0) rotate(-90)" font-size="12" text-anchor="middle" fill="#52514e">training tokens / s</text>
+<path d="M80.0,76.6 L159.7,91.3 L242.0,104.6 L406.7,118.5 L736.0,157.4" fill="none" stroke="#2a78d6" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="76.6" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>measured — step 65: 29,462</title></circle>
+<circle cx="159.7" cy="91.3" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>measured — step 2,048: 27,739</title></circle>
+<circle cx="242.0" cy="104.6" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>measured — step 4,096: 26,174</title></circle>
+<circle cx="406.7" cy="118.5" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>measured — step 8,192: 24,545</title></circle>
+<circle cx="736.0" cy="157.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>measured — step 16,384: 19,991</title></circle>
+</svg>

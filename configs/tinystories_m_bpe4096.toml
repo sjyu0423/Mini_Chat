@@ -1,0 +1,43 @@
+# M3.3: model-capacity scaling. Same data, tokenizer, schedule, seed and token budget as
+# M3.1 (tinystories_s_bpe4096.toml); only width and depth change:
+# 8 layers / 8 heads / 512 wide, context 512 -> 27,579,392 parameters.
+# Effective batch 32 x 512 via 2 x 16 micro-batches (same windows, same order as M3.1;
+# M3 benchmark: ~13.7k tok/s at micro-batch 16, ~4.6 GB pool) -> ~100 min + evals.
+name = "ts_m_bpe4096"
+description = "M3.3 TinyStories V2, BPE 4096, 8L/8H/512, ctx 512, 4,800 steps (equal tokens to M3.1)"
+
+[model]
+vocab_size = 4096
+context_length = 512
+n_layer = 8
+n_head = 8
+n_embd = 512
+dropout = 0.0            # < 1 epoch over ~100M unique tokens: no repetition to regularize
+bias = true
+
+[training]
+seed = 1337
+batch_size = 16          # micro-batch; x2 accumulation = 32 x 512 = 16,384 tokens per optimizer step
+gradient_accumulation_steps = 2  # halves activation memory; identical sampled windows (verified)
+learning_rate = 6e-4     # conservative: below M2's stable 1e-3; GPT-2-small / llama2.c range
+min_learning_rate = 6e-5 # 10% of peak
+warmup_steps = 200       # ~3.3M tokens
+max_steps = 4800         # ~78.6M token presentations
+weight_decay = 0.1
+beta1 = 0.9
+beta2 = 0.95             # standard for LM pretraining stability (GPT-3, llama2.c)
+grad_clip = 1.0
+eval_interval = 600      # every eval runs the FULL official validation set (~5.6M tokens)
+eval_steps = 10          # random-batch train/val estimates alongside (cheap)
+log_interval = 50
+checkpoint_interval = 600
+keep_last_checkpoints = 0
+save_best = true
+exact_val_eval = true    # best.pt selected on the exact full-validation loss
+device = "mps"
+dtype = "float32"
+
+[data]
+dataset = "tinystories_v2"
+tokenizer = "bpe"
+val_fraction = 0.1       # unused: the official V2 validation file is the held-out set

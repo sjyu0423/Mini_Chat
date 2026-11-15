@@ -1,0 +1,32 @@
+{
+ "dataset_train_sha256": "8f0473adbb0e731473d34b7e839459eb0915e57bab9ef5f0624dcd2452fd095e",
+ "dataset_val_sha256": "0a286be5c7d739539a0cdfede42443a1f3d15acc314f1a0257fa4fd676bfad7a",
+ "parent_checkpoint": "/Volumes/Projects/Mini_GPT/runs/ts_s_bpe4096-20261113-172905/checkpoints/best.pt",
+ "parent_checkpoint_sha256": "039f527f93f1b20b5939abdbe56a24c7924498b617c905f7036e57ee8403d9e9",
+ "parent_step": 4800,
+ "phases": [
+  {
+   "end_step": 4800,
+   "learning_rate": 0.0006,
+   "lr_schedule": "cosine",
+   "min_learning_rate": 6e-05,
+   "name": "ts_s_bpe4096",
+   "parent_checkpoint": "",
+   "schedule_horizon": 4800,
+   "start_step": 0,
+   "warmup_steps": 200
+  },
+  {
+   "end_step": 7200,
+   "learning_rate": 6e-05,
+   "lr_schedule": "constant",
+   "min_learning_rate": 6e-05,
+   "name": "ts_s_bpe4096_m3_2",
+   "parent_checkpoint": "/Volumes/Projects/Mini_GPT/runs/ts_s_bpe4096-20261113-172905/checkpoints/best.pt",
+   "schedule_horizon": 7200,
+   "start_step": 4800,
+   "warmup_steps": 0
+  }
+ ],
+ "tokenizer_fingerprint": "906bf77c4f604b6df2c176af3e6646365741790bf04fda854bce5beef3721b15"
+}

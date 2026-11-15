@@ -1,0 +1,177 @@
+{
+  "fineweb_edu": {
+    "manifest": {
+      "config": "sample-10BT",
+      "dataset": "HuggingFaceFW/fineweb-edu",
+      "fetched_at": "2026-11-13T16:53:35.414386+00:00",
+      "file": "sample.jsonl",
+      "file_bytes": 20229065,
+      "file_sha256": "e6cacd6868700afd971fe2cdbd435cf587a09e6cd203945a59837e853f03961f",
+      "note": "Bounded sample for tokenizer research; not a full download.",
+      "rows_dropped_truncated": 0,
+      "rows_kept": 4000,
+      "rows_per_request": 100,
+      "seed": 2026,
+      "source_api": "https://datasets-server.huggingface.co/rows",
+      "split": "train",
+      "split_num_bytes_parquet": 28518193415,
+      "split_num_rows": 9672101,
+      "text_bytes_utf8": 18969091
+    },
+    "stats": {
+      "chars_max": 226009,
+      "chars_mean": 4718.45425,
+      "chars_median": 2870.0,
+      "chars_p95": 13224,
+      "distinct_chars": 1038,
+      "distinct_words": 83351,
+      "documents": 4000,
+      "domains_distinct": 3620,
+      "dump_years": {
+        "2013": 100,
+        "2014": 100,
+        "2015": 300,
+        "2016": 200,
+        "2017": 993,
+        "2018": 500,
+        "2019": 596,
+        "2020": 307,
+        "2021": 500,
+        "2022": 304,
+        "2023": 100
+      },
+      "dumps_distinct": 35,
+      "exact_duplicate_documents": 0,
+      "int_score_counts": {
+        "3": 3486,
+        "4": 513,
+        "5": 1
+      },
+      "language_score_min": 0.6573652625083923,
+      "near_duplicate_docs": 0,
+      "near_duplicate_examples": [],
+      "near_duplicate_pairs_crossing_train_val": 0,
+      "near_duplicate_pairs_jaccard_ge_0.8": 0,
+      "non_ascii_char_fraction": 0.0026747636686315227,
+      "score_mean": 3.0045,
+      "token_count_gpt2_mean": 1032.0185,
+      "top_domains": [
+        [
+          "en.wikipedia.org",
+          24
+        ],
+        [
+          "reference.com",
+          16
+        ],
+        [
+          "britannica.com",
+          12
+        ],
+        [
+          "teacherspayteachers.com",
+          10
+        ],
+        [
+          "medindia.net",
+          8
+        ],
+        [
+          "enotes.com",
+          7
+        ],
+        [
+          "everything2.com",
+          6
+        ],
+        [
+          "lessonplanet.com",
+          6
+        ],
+        [
+          "slideplayer.com",
+          6
+        ],
+        [
+          "theguardian.com",
+          6
+        ]
+      ],
+      "top_words": [
+        "the",
+        "of",
+        "and",
+        "to",
+        "in",
+        "a",
+        "is",
+        "that",
+        "for",
+        "as",
+        "are",
+        "it",
+        "with",
+        "on",
+        "be"
+      ],
+      "utf8_bytes_total": 18969091,
+      "words_mean": 768.799,
+      "words_seen_once_fraction": 0.42895706110304616
+    }
+  },
+  "tinystories": {
+    "manifest": {
+      "config": "default",
+      "dataset": "roneneldan/TinyStories",
+      "fetched_at": "2026-11-13T16:48:37.095537+00:00",
+      "file": "sample.jsonl",
+      "file_bytes": 5571792,
+      "file_sha256": "49bccd6788e61c175fdd9b4a7668d165d47f1b519e05d1a4ad08572719c59303",
+      "note": "Bounded sample for tokenizer research; not a full download.",
+      "rows_dropped_truncated": 0,
+      "rows_kept": 6000,
+      "rows_per_request": 100,
+      "seed": 2026,
+      "source_api": "https://datasets-server.huggingface.co/rows",
+      "split": "train",
+      "split_num_bytes_parquet": 990786315,
+      "split_num_rows": 2119719,
+      "text_bytes_utf8": 5299232
+    },
+    "stats": {
+      "chars_max": 3960,
+      "chars_mean": 881.4491666666667,
+      "chars_median": 790.0,
+      "chars_p95": 1649,
+      "distinct_chars": 84,
+      "distinct_words": 8511,
+      "documents": 6000,
+      "exact_duplicate_documents": 0,
+      "near_duplicate_docs": 0,
+      "near_duplicate_examples": [],
+      "near_duplicate_pairs_crossing_train_val": 0,
+      "near_duplicate_pairs_jaccard_ge_0.8": 0,
+      "non_ascii_char_fraction": 0.0013343556397183048,
+      "top_words": [
+        "the",
+        "and",
+        "to",
+        "a",
+        "was",
+        "he",
+        "she",
+        "it",
+        "they",
+        "her",
+        "said",
+        "in",
+        "his",
+        "with",
+        "so"
+      ],
+      "utf8_bytes_total": 5299232,
+      "words_mean": 171.97766666666666,
+      "words_seen_once_fraction": 0.24979438373869112
+    }
+  }
+}

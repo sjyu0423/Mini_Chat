@@ -1,0 +1,39 @@
+{
+  "M3.1@4800": {
+    "cause_effect": 0.7727272727272727,
+    "character_consistency": 0.9545454545454546,
+    "ending_quality": 1.2272727272727273,
+    "entity_tracking": 0.9090909090909091,
+    "grammar": 1.7727272727272727,
+    "n": 22,
+    "repetition": 1.2727272727272727,
+    "story_progression": 0.8636363636363636,
+    "total_percent": 55.51948051948051,
+    "total_percent_entity": 49.404761904761905,
+    "total_percent_story": 62.857142857142854
+  },
+  "M3.2@7200": {
+    "cause_effect": 0.45454545454545453,
+    "character_consistency": 1.0,
+    "ending_quality": 1.0454545454545454,
+    "entity_tracking": 0.6363636363636364,
+    "grammar": 1.6818181818181819,
+    "n": 22,
+    "repetition": 1.2727272727272727,
+    "story_progression": 0.8181818181818182,
+    "total_percent": 49.35064935064935,
+    "total_percent_entity": 45.23809523809524,
+    "total_percent_story": 54.28571428571429
+  },
+  "paired": {
+    "a_better": 13,
+    "b_better": 6,
+    "mean_total_diff_b_minus_a": -0.8636363636363636,
+    "models": [
+      "M3.1@4800",
+      "M3.2@7200"
+    ],
+    "n_pairs": 22,
+    "ties": 3
+  }
+}

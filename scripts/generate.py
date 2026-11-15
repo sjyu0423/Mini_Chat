@@ -13,7 +13,7 @@ from pathlib import Path
 from mini_chatgpt.data.prepare import processed_dir
 from mini_chatgpt.device import select_device
 from mini_chatgpt.inference.generate import generate_text
-from mini_chatgpt.tokenizer.char import CharTokenizer
+from mini_chatgpt.tokenizer import load_tokenizer
 from mini_chatgpt.training.trainer import load_model
 
 
@@ -34,7 +34,7 @@ def main() -> None:
     tok_path = (
         run_tokenizer if run_tokenizer.exists() else processed_dir(cfg.data) / "tokenizer.json"
     )
-    tokenizer = CharTokenizer.load(tok_path)
+    tokenizer = load_tokenizer(tok_path)  # char (M0-M2) or byte-level BPE (M3.1+)
     if tokenizer.vocab_size != cfg.model.vocab_size:
         raise SystemExit("tokenizer does not match the checkpoint's vocab_size")
     print(

@@ -1,0 +1,44 @@
+# M3.2: extended TinyStories pretraining = a second training phase of the M3.1 model.
+# Model, data, batch and optimizer identical to tinystories_s_bpe4096.toml; only the
+# LR schedule (constant 6e-5), max_steps and eval/checkpoint intervals differ.
+# Run with: train.py --config <this> --continue-from <M3.1 run>/checkpoints/best.pt
+# Budget: 2,400 x ~0.63 s ~ 25 min + 6 full-validation passes (~46 s) ~ 30 min.
+name = "ts_s_bpe4096_m3_2"
+description = "M3.2 continuation of M3.1 from step 4800: constant lr 6e-5 for 2,400 steps"
+
+[model]
+vocab_size = 4096
+context_length = 512
+n_layer = 6
+n_head = 6
+n_embd = 384
+dropout = 0.0            # < 1 epoch over ~100M unique tokens: no repetition to regularize
+bias = true
+
+[training]
+seed = 1337
+batch_size = 32          # 32 x 512 = 16,384 tokens per optimizer step (M2 used 16,384 too)
+gradient_accumulation_steps = 1
+learning_rate = 6e-5     # constant: equals the M3.1 schedule's final (minimum) LR
+min_learning_rate = 6e-5 # unused by the constant schedule (kept equal for clarity)
+warmup_steps = 0         # no re-warmup: optimizer moments are restored
+max_steps = 7200         # continue 4,800 -> 7,200 (2,400 steps, ~39.3M presentations)
+lr_schedule = "constant" # explicit new phase; the M3.1 cosine is neither stretched nor restarted
+weight_decay = 0.1
+beta1 = 0.9
+beta2 = 0.95             # standard for LM pretraining stability (GPT-3, llama2.c)
+grad_clip = 1.0
+eval_interval = 400      # full official validation set every 400 steps
+eval_steps = 10          # random-batch train/val estimates alongside (cheap)
+log_interval = 50
+checkpoint_interval = 400
+keep_last_checkpoints = 0
+save_best = true
+exact_val_eval = true    # best.pt selected on the exact full-validation loss
+device = "mps"
+dtype = "float32"
+
+[data]
+dataset = "tinystories_v2"
+tokenizer = "bpe"
+val_fraction = 0.1       # unused: the official V2 validation file is the held-out set

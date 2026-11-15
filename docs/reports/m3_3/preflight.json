@@ -1,0 +1,132 @@
+{
+  "1_historical_checkpoints": {
+    "gpt_10m_m2-20261112-174425": {
+      "step": 1750,
+      "tokenizer": "char",
+      "val_exact_logged": 1.4735867097459991,
+      "val_exact_recomputed": 1.4735866957697374
+    },
+    "gpt_10m_m2_1_a-20261112-185842": {
+      "step": 1800,
+      "tokenizer": "char",
+      "val_exact_logged": 1.4703085208761282,
+      "val_exact_recomputed": 1.470308510462443
+    },
+    "gpt_10m_m2_1_b-20261112-191929": {
+      "step": 1800,
+      "tokenizer": "char",
+      "val_exact_logged": 1.4638129226092635,
+      "val_exact_recomputed": 1.4638129576869394
+    },
+    "ts_s_bpe4096-20261113-172905": {
+      "batch_loss_finite": true,
+      "step": 4800,
+      "tokenizer": "bpe",
+      "val_exact_logged": 1.5454597872770313
+    },
+    "ts_s_bpe4096_m3_2-20261113-190046": {
+      "batch_loss_finite": true,
+      "step": 7200,
+      "tokenizer": "bpe",
+      "val_exact_logged": 1.5147096311059023
+    }
+  },
+  "2_finite": {
+    "all_grads_finite_nonzero": true,
+    "grad_norm": 12.34150218963623,
+    "initial_loss": 8.397435188293457,
+    "ln_vocab": 8.317766166719343,
+    "logits_finite": true
+  },
+  "3_causal": {
+    "prefix_max_abs_diff_when_future_changes": 0.0,
+    "sdpa_vs_explicit_max_abs_diff": 3.6954879760742188e-06,
+    "suffix_changed": true
+  },
+  "4_optimizer": {
+    "covers_every_parameter_once": true,
+    "groups": [
+      {
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "n_params": 27525120,
+        "n_tensors": 34,
+        "weight_decay": 0.1
+      },
+      {
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "n_params": 54272,
+        "n_tensors": 66,
+        "weight_decay": 0.0
+      }
+    ],
+    "lr_final_step": 6.0000062967700506e-05,
+    "lr_peak_step": 0.0006,
+    "lr_step0": 2.9999999999999997e-06,
+    "optimizer_state_empty_at_init": true
+  },
+  "5_stability": {
+    "all_finite": true,
+    "grad_norm_max_after_step10": 4.918453216552734,
+    "grad_norm_step1": 12.454389572143555,
+    "loss_first": 8.394712448120117,
+    "loss_last10_mean": 4.208144235610962,
+    "lr_last": 0.0003,
+    "steps": 100
+  },
+  "6_throughput_memory": {
+    "median_step_s": 1.2157097079907544,
+    "memory_max_bytes": {
+      "mps_current_allocated@after_forward": 4423496704,
+      "mps_current_allocated@after_step": 1033380864,
+      "mps_driver_allocated@after_forward": 5638373376,
+      "mps_driver_allocated@after_step": 5638373376,
+      "process_rss_peak@after_forward": 1227980800,
+      "process_rss_peak@after_step": 1227980800
+    },
+    "projected_train_minutes": 97.25677663926035,
+    "tokens_per_s": 13476.901510541036
+  },
+  "7_free_memory": {
+    "free_bytes_est": 3435973836,
+    "free_percent": 20,
+    "mps_recommended_max_bytes": 12713115648,
+    "physical_bytes": 17179869184
+  },
+  "8_checkpoint": {
+    "checkpoint_bytes": 331086041,
+    "logit_max_abs_diff": 0.0,
+    "optimizer_identical": true,
+    "sampler_identical": true,
+    "step": 100
+  },
+  "config": "configs/tinystories_m_bpe4096.toml",
+  "dataset": {
+    "num_train_tokens": 98200365,
+    "num_val_tokens": 5577780,
+    "tokenizer_fingerprint": "906bf77c4f604b6df2c176af3e6646365741790bf04fda854bce5beef3721b15",
+    "train_sha256": "8f0473adbb0e731473d34b7e839459eb0915e57bab9ef5f0624dcd2452fd095e",
+    "val_sha256": "0a286be5c7d739539a0cdfede42443a1f3d15acc314f1a0257fa4fd676bfad7a"
+  },
+  "parameters": {
+    "analytic": {
+      "blocks": 25219072,
+      "final_layernorm": 1024,
+      "lm_head_untied": 0,
+      "non_embedding": 25220096,
+      "per_layer": 3152384,
+      "position_embedding": 262144,
+      "token_embedding": 2097152,
+      "total": 27579392
+    },
+    "model": 27579392
+  },
+  "passed": true
+}

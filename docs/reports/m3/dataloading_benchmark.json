@@ -1,0 +1,11 @@
+{
+  "batch": 32,
+  "batch_ms_median": 0.36091649963054806,
+  "batch_ms_p95": 0.44191599590703845,
+  "context": 512,
+  "device": "mps",
+  "file_bytes": 200000000,
+  "tokens_in_file": 100000000,
+  "tokens_per_s": 45395541.674518816,
+  "write_s": 0.14456858299672604
+}

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Validation loss vs. training tokens (equal-token comparison)">
+<title>Validation loss vs. training tokens (equal-token comparison)</title>
+<rect width="760" height="380" fill="#fcfcfb"/>
+<text x="80" y="24" font-size="15" font-weight="600" fill="#0b0b0b">Validation loss vs. training tokens (equal-token comparison)</text>
+<text x="80" y="42" font-size="12" fill="#52514e">from step 600; identical data order, tokenizer and schedule shape</text>
+<line x1="80" x2="736" y1="305.3" y2="305.3" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="309.3" font-size="11" text-anchor="end" fill="#52514e">1.50</text>
+<line x1="80" x2="736" y1="200.5" y2="200.5" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="204.5" font-size="11" text-anchor="end" fill="#52514e">2.00</text>
+<line x1="80" x2="736" y1="95.7" y2="95.7" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="99.7" font-size="11" text-anchor="end" fill="#52514e">2.50</text>
+<line x1="141.7" x2="141.7" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="141.7" y="346" font-size="11" text-anchor="middle" fill="#52514e">20</text>
+<line x1="263.0" x2="263.0" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="263.0" y="346" font-size="11" text-anchor="middle" fill="#52514e">40</text>
+<line x1="384.4" x2="384.4" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="384.4" y="346" font-size="11" text-anchor="middle" fill="#52514e">60</text>
+<line x1="505.7" x2="505.7" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="505.7" y="346" font-size="11" text-anchor="middle" fill="#52514e">80</text>
+<line x1="627.0" x2="627.0" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="627.0" y="346" font-size="11" text-anchor="middle" fill="#52514e">100</text>
+<line x1="80" x2="736" y1="328" y2="328" stroke="#b9b8b2"/>
+<text x="408.0" y="368" font-size="12" text-anchor="middle" fill="#52514e">training tokens (millions)</text>
+<text transform="translate(16 208.0) rotate(-90)" font-size="12" text-anchor="middle" fill="#52514e">exact validation loss (nats / token)</text>
+<line x1="497.5" x2="497.5" y1="88" y2="328" stroke="#52514e" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="503.5" y="102" font-size="11" fill="#52514e">M3.1 end / M3.2 start</text>
+<path d="M80.0,98.9 L139.6,197.1 L199.3,234.4 L258.9,256.4 L318.5,272.2 L378.2,283.9 L437.8,291.8 L497.5,295.8 L537.2,297.0 L577.0,298.3 L616.7,299.6 L656.5,300.4 L696.2,301.4 L736.0,302.2" fill="none" stroke="#2a78d6" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="98.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 10: 2.48</title></circle>
+<circle cx="139.6" cy="197.1" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 20: 2.02</title></circle>
+<circle cx="199.3" cy="234.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 29: 1.84</title></circle>
+<circle cx="258.9" cy="256.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 39: 1.73</title></circle>
+<circle cx="318.5" cy="272.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 49: 1.66</title></circle>
+<circle cx="378.2" cy="283.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 59: 1.60</title></circle>
+<circle cx="437.8" cy="291.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 69: 1.56</title></circle>
+<circle cx="497.5" cy="295.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 79: 1.55</title></circle>
+<circle cx="537.2" cy="297.0" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 85: 1.54</title></circle>
+<circle cx="577.0" cy="298.3" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 92: 1.53</title></circle>
+<circle cx="616.7" cy="299.6" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 98: 1.53</title></circle>
+<circle cx="656.5" cy="300.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 105: 1.52</title></circle>
+<circle cx="696.2" cy="301.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 111: 1.52</title></circle>
+<circle cx="736.0" cy="302.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 (cosine) → M3.2 (constant 6e-5) — step 118: 1.51</title></circle>
+<path d="M80.0,127.9 L139.6,218.5 L199.3,254.2 L258.9,276.4 L318.5,292.6 L378.2,304.5 L437.8,313.0 L497.5,317.1" fill="none" stroke="#eb6834" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="127.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 (cosine) — step 10: 2.35</title></circle>
+<circle cx="139.6" cy="218.5" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 (cosine) — step 20: 1.91</title></circle>
+<circle cx="199.3" cy="254.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 (cosine) — step 29: 1.74</title></circle>
+<circle cx="258.9" cy="276.4" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 (cosine) — step 39: 1.64</title></circle>
+<circle cx="318.5" cy="292.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 (cosine) — step 49: 1.56</title></circle>
+<circle cx="378.2" cy="304.5" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 (cosine) — step 59: 1.50</title></circle>
+<circle cx="437.8" cy="313.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 (cosine) — step 69: 1.46</title></circle>
+<circle cx="497.5" cy="317.1" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 (cosine) — step 79: 1.44</title></circle>
+<line x1="80.0" x2="98.0" y1="70" y2="70" stroke="#2a78d6" stroke-width="2.0" opacity="1.0"/>
+<text x="104.0" y="74" font-size="12" fill="#0b0b0b">12.4M: M3.1 (cosine) → M3.2 (constant 6e-5)</text>
+<line x1="407.8" x2="425.8" y1="70" y2="70" stroke="#eb6834" stroke-width="2.0" opacity="1.0"/>
+<text x="431.8" y="74" font-size="12" fill="#0b0b0b">27.6M: M3.3 (cosine)</text>
+</svg>

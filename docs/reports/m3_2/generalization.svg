@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Exact losses per checkpoint: unseen vs. seen text">
+<title>Exact losses per checkpoint: unseen vs. seen text</title>
+<rect width="760" height="380" fill="#fcfcfb"/>
+<text x="80" y="24" font-size="15" font-weight="600" fill="#0b0b0b">Exact losses per checkpoint: unseen vs. seen text</text>
+<line x1="80" x2="736" y1="305.8" y2="305.8" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="309.8" font-size="11" text-anchor="end" fill="#52514e">1.500</text>
+<line x1="80" x2="736" y1="205.5" y2="205.5" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="209.5" font-size="11" text-anchor="end" fill="#52514e">1.550</text>
+<line x1="80" x2="736" y1="105.2" y2="105.2" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="109.2" font-size="11" text-anchor="end" fill="#52514e">1.600</text>
+<line x1="152.9" x2="152.9" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="152.9" y="346" font-size="11" text-anchor="middle" fill="#52514e">4,000</text>
+<line x1="335.1" x2="335.1" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="335.1" y="346" font-size="11" text-anchor="middle" fill="#52514e">5,000</text>
+<line x1="517.3" x2="517.3" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="517.3" y="346" font-size="11" text-anchor="middle" fill="#52514e">6,000</text>
+<line x1="699.6" x2="699.6" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="699.6" y="346" font-size="11" text-anchor="middle" fill="#52514e">7,000</text>
+<line x1="80" x2="736" y1="328" y2="328" stroke="#b9b8b2"/>
+<text x="408.0" y="368" font-size="12" text-anchor="middle" fill="#52514e">optimizer step</text>
+<text transform="translate(16 209.0) rotate(-90)" font-size="12" text-anchor="middle" fill="#52514e">cross-entropy (nats / BPE token)</text>
+<line x1="298.7" x2="298.7" y1="90" y2="328" stroke="#52514e" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="304.7" y="104" font-size="11" fill="#52514e">constant LR 6e-5 →</text>
+<path d="M80.0,101.3 L189.3,177.2 L298.7,214.6 L371.6,226.3 L444.4,239.4 L517.3,251.0 L590.2,259.1 L663.1,268.3 L736.0,276.3" fill="none" stroke="#eb6834" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="101.3" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation (official V2) — step 3,600: 1.602</title></circle>
+<circle cx="189.3" cy="177.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation (official V2) — step 4,200: 1.564</title></circle>
+<circle cx="298.7" cy="214.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation (official V2) — step 4,800: 1.545</title></circle>
+<circle cx="371.6" cy="226.3" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation (official V2) — step 5,200: 1.540</title></circle>
+<circle cx="444.4" cy="239.4" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation (official V2) — step 5,600: 1.533</title></circle>
+<circle cx="517.3" cy="251.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation (official V2) — step 6,000: 1.527</title></circle>
+<circle cx="590.2" cy="259.1" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation (official V2) — step 6,400: 1.523</title></circle>
+<circle cx="663.1" cy="268.3" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation (official V2) — step 6,800: 1.519</title></circle>
+<circle cx="736.0" cy="276.3" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation (official V2) — step 7,200: 1.515</title></circle>
+<path d="M80.0,100.8 L189.3,178.1 L298.7,214.9 L371.6,226.4 L444.4,239.8 L517.3,250.7 L590.2,259.2 L663.1,268.3 L736.0,276.1" fill="none" stroke="#1baf7a" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0" stroke-dasharray="5 4"/>
+<circle cx="80.0" cy="100.8" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>holdout (1% of train distribution, never trained on) — step 3,600: 1.602</title></circle>
+<circle cx="189.3" cy="178.1" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>holdout (1% of train distribution, never trained on) — step 4,200: 1.564</title></circle>
+<circle cx="298.7" cy="214.9" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>holdout (1% of train distribution, never trained on) — step 4,800: 1.545</title></circle>
+<circle cx="371.6" cy="226.4" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>holdout (1% of train distribution, never trained on) — step 5,200: 1.540</title></circle>
+<circle cx="444.4" cy="239.8" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>holdout (1% of train distribution, never trained on) — step 5,600: 1.533</title></circle>
+<circle cx="517.3" cy="250.7" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>holdout (1% of train distribution, never trained on) — step 6,000: 1.527</title></circle>
+<circle cx="590.2" cy="259.2" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>holdout (1% of train distribution, never trained on) — step 6,400: 1.523</title></circle>
+<circle cx="663.1" cy="268.3" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>holdout (1% of train distribution, never trained on) — step 6,800: 1.519</title></circle>
+<circle cx="736.0" cy="276.1" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>holdout (1% of train distribution, never trained on) — step 7,200: 1.515</title></circle>
+<path d="M80.0,127.6 L189.3,207.1 L298.7,248.5 L371.6,260.8 L444.4,274.6 L517.3,288.2 L590.2,297.3 L663.1,308.0 L736.0,317.2" fill="none" stroke="#2a78d6" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="127.6" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>train slice (first 5M training tokens, seen) — step 3,600: 1.589</title></circle>
+<circle cx="189.3" cy="207.1" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>train slice (first 5M training tokens, seen) — step 4,200: 1.549</title></circle>
+<circle cx="298.7" cy="248.5" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>train slice (first 5M training tokens, seen) — step 4,800: 1.529</title></circle>
+<circle cx="371.6" cy="260.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>train slice (first 5M training tokens, seen) — step 5,200: 1.522</title></circle>
+<circle cx="444.4" cy="274.6" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>train slice (first 5M training tokens, seen) — step 5,600: 1.516</title></circle>
+<circle cx="517.3" cy="288.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>train slice (first 5M training tokens, seen) — step 6,000: 1.509</title></circle>
+<circle cx="590.2" cy="297.3" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>train slice (first 5M training tokens, seen) — step 6,400: 1.504</title></circle>
+<circle cx="663.1" cy="308.0" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>train slice (first 5M training tokens, seen) — step 6,800: 1.499</title></circle>
+<circle cx="736.0" cy="317.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>train slice (first 5M training tokens, seen) — step 7,200: 1.494</title></circle>
+<line x1="80.0" x2="98.0" y1="54" y2="54" stroke="#eb6834" stroke-width="2.0" opacity="1.0"/>
+<text x="104.0" y="58" font-size="12" fill="#0b0b0b">validation (official V2)</text>
+<line x1="282.4" x2="300.4" y1="54" y2="54" stroke="#1baf7a" stroke-width="2.0" opacity="1.0" stroke-dasharray="5 4"/>
+<text x="306.4" y="58" font-size="12" fill="#0b0b0b">holdout (1% of train distribution, never trained on)</text>
+<line x1="80.0" x2="98.0" y1="72" y2="72" stroke="#2a78d6" stroke-width="2.0" opacity="1.0"/>
+<text x="104.0" y="76" font-size="12" fill="#0b0b0b">train slice (first 5M training tokens, seen)</text>
+</svg>

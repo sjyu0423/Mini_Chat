@@ -10,6 +10,7 @@ Output (``<data_dir>/processed/<dataset>_<tokenizer>/``)::
 
 from __future__ import annotations
 
+import hashlib
 import json
 from collections import Counter
 from dataclasses import dataclass
@@ -22,6 +23,7 @@ import torch
 from mini_chatgpt.config import DataConfig
 from mini_chatgpt.data.dataset import TokenSplits, split_tokens
 from mini_chatgpt.data.sources import get_source, load_text, sha256_bytes
+from mini_chatgpt.tokenizer.bpe import ByteBPETokenizer
 from mini_chatgpt.tokenizer.char import CharTokenizer
 from mini_chatgpt.training.checkpoint import atomic_write_bytes, atomic_write_json
 
@@ -51,7 +53,7 @@ def text_statistics(text: str, top_k: int = 10) -> dict[str, Any]:
 
 @dataclass(frozen=True)
 class PreparedData:
-    tokenizer: CharTokenizer
+    tokenizer: CharTokenizer | ByteBPETokenizer
     splits: TokenSplits
     meta: dict[str, Any]
 
@@ -98,10 +100,43 @@ def save(prepared: PreparedData, out_dir: str | Path) -> Path:
     return out
 
 
-def load_prepared(out_dir: str | Path) -> PreparedData:
-    """Load saved splits and verify them against the recorded hashes."""
+def file_sha256(path: str | Path, chunk: int = 1 << 24) -> str:
+    h = hashlib.sha256()
+    with Path(path).open("rb") as f:
+        while block := f.read(chunk):
+            h.update(block)
+    return h.hexdigest()
+
+
+def load_prepared(out_dir: str | Path, *, verify: bool = True) -> PreparedData:
+    """Load saved splits and verify them against the recorded hashes.
+
+    Character-level datasets (M0-M2) are read into int64 tensors as before.
+    BPE datasets (M3.1+) are memory-mapped as uint16 (zero copy; batches are
+    converted to int64 per step), and additionally checked for the tokenizer
+    fingerprint and for token ids within the vocabulary.
+    """
     out = Path(out_dir)
     meta = json.loads((out / "meta.json").read_text(encoding="utf-8"))
+    if meta.get("tokenizer") == "bpe":
+        bpe = ByteBPETokenizer.load(out / "tokenizer.json")
+        if bpe.fingerprint() != meta["tokenizer_fingerprint"]:
+            raise RuntimeError("tokenizer.json fingerprint does not match meta.json")
+        if bpe.vocab_size != meta["vocab_size"]:
+            raise RuntimeError("tokenizer.json vocab_size does not match meta.json")
+        tensors = []
+        for name in ("train", "val"):
+            path = out / f"{name}.bin"
+            if verify and file_sha256(path) != meta[f"{name}_sha256"]:
+                raise RuntimeError(f"{name}.bin does not match meta.json hash; re-run prepare")
+            mm = np.memmap(path, dtype=_TOKEN_DTYPE, mode="c")  # copy-on-write: never mutates
+            if mm.size != meta[f"num_{name}_tokens"]:
+                raise RuntimeError(f"{name}.bin has {mm.size} tokens, meta says otherwise")
+            if verify and int(mm.max()) >= bpe.vocab_size:
+                raise RuntimeError(f"{name}.bin contains ids outside the vocabulary")
+            tensors.append(torch.from_numpy(mm))
+        return PreparedData(bpe, TokenSplits(tensors[0], tensors[1]), meta)
+
     tok = CharTokenizer.load(out / "tokenizer.json")
     splits = []
     for name in ("train", "val"):

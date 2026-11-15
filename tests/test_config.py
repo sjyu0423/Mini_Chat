@@ -69,7 +69,8 @@ def test_invalid_data_config():
     with pytest.raises(ConfigError):
         DataConfig(val_fraction=0.0)
     with pytest.raises(ConfigError):
-        DataConfig(tokenizer="bpe")
+        DataConfig(tokenizer="wordpiece")
+    assert DataConfig(tokenizer="bpe").tokenizer == "bpe"  # implemented in M3/M3.1
 
 
 def test_effective_batch_size():

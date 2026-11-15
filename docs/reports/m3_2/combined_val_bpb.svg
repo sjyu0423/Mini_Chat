@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Validation bits per byte (exact)">
+<title>Validation bits per byte (exact)</title>
+<rect width="760" height="380" fill="#fcfcfb"/>
+<text x="80" y="24" font-size="15" font-weight="600" fill="#0b0b0b">Validation bits per byte (exact)</text>
+<line x1="80" x2="736" y1="318.2" y2="318.2" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="322.2" font-size="11" text-anchor="end" fill="#52514e">0.550</text>
+<line x1="80" x2="736" y1="248.6" y2="248.6" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="252.6" font-size="11" text-anchor="end" fill="#52514e">0.600</text>
+<line x1="80" x2="736" y1="178.9" y2="178.9" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="182.9" font-size="11" text-anchor="end" fill="#52514e">0.650</text>
+<line x1="80" x2="736" y1="109.2" y2="109.2" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="113.2" font-size="11" text-anchor="end" fill="#52514e">0.700</text>
+<line x1="167.5" x2="167.5" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="167.5" y="346" font-size="11" text-anchor="middle" fill="#52514e">2,000</text>
+<line x1="276.8" x2="276.8" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="276.8" y="346" font-size="11" text-anchor="middle" fill="#52514e">3,000</text>
+<line x1="386.1" x2="386.1" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="386.1" y="346" font-size="11" text-anchor="middle" fill="#52514e">4,000</text>
+<line x1="495.5" x2="495.5" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="495.5" y="346" font-size="11" text-anchor="middle" fill="#52514e">5,000</text>
+<line x1="604.8" x2="604.8" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="604.8" y="346" font-size="11" text-anchor="middle" fill="#52514e">6,000</text>
+<line x1="714.1" x2="714.1" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="714.1" y="346" font-size="11" text-anchor="middle" fill="#52514e">7,000</text>
+<line x1="80" x2="736" y1="328" y2="328" stroke="#b9b8b2"/>
+<text x="408.0" y="368" font-size="12" text-anchor="middle" fill="#52514e">optimizer step</text>
+<text transform="translate(16 188.0) rotate(-90)" font-size="12" text-anchor="middle" fill="#52514e">bits / UTF-8 byte</text>
+<line x1="473.6" x2="473.6" y1="48" y2="328" stroke="#52514e" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="479.6" y="62" font-size="11" fill="#52514e">constant LR 6e-5 →</text>
+<path d="M80.0,60.7 L145.6,151.0 L211.2,204.2 L276.8,242.7 L342.4,271.0 L408.0,290.2 L473.6,299.7 L517.3,302.6 L561.1,305.9 L604.8,308.9 L648.5,310.9 L692.3,313.2 L736.0,315.3" fill="none" stroke="#eb6834" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="60.7" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 1,200: 0.735</title></circle>
+<circle cx="145.6" cy="151.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 1,800: 0.670</title></circle>
+<circle cx="211.2" cy="204.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 2,400: 0.632</title></circle>
+<circle cx="276.8" cy="242.7" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 3,000: 0.604</title></circle>
+<circle cx="342.4" cy="271.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 3,600: 0.584</title></circle>
+<circle cx="408.0" cy="290.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 4,200: 0.570</title></circle>
+<circle cx="473.6" cy="299.7" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 4,800: 0.563</title></circle>
+<circle cx="517.3" cy="302.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 5,200: 0.561</title></circle>
+<circle cx="561.1" cy="305.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 5,600: 0.559</title></circle>
+<circle cx="604.8" cy="308.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 6,000: 0.557</title></circle>
+<circle cx="648.5" cy="310.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 6,400: 0.555</title></circle>
+<circle cx="692.3" cy="313.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 6,800: 0.554</title></circle>
+<circle cx="736.0" cy="315.3" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>validation bpb — step 7,200: 0.552</title></circle>
+</svg>

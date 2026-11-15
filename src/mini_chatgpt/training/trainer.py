@@ -25,7 +25,12 @@ from typing import Any
 import torch
 
 from mini_chatgpt.config import ExperimentConfig
-from mini_chatgpt.data.dataset import get_batch, iter_sequential_batches
+from mini_chatgpt.data.dataset import (
+    get_batch,
+    get_windows,
+    iter_sequential_batches,
+    single_pass_order,
+)
 from mini_chatgpt.model.gpt import GPT
 from mini_chatgpt.training.checkpoint import (
     CheckpointMetadata,
@@ -158,6 +163,19 @@ class Trainer:
         self.model = GPT(config.model).to(device)  # init happens on CPU RNG -> device-independent
         self.optimizer = build_optimizer(self.model, tcfg)
         self.data_generator = make_generator(tcfg.seed)
+        # single_pass: a fixed window permutation; the position follows from self.step,
+        # so resuming needs no extra state and never repeats or skips a window.
+        self.window_order: torch.Tensor | None = None
+        if tcfg.data_order == "single_pass":
+            self.window_order = single_pass_order(
+                train_data.numel(), config.model.context_length, tcfg.seed
+            )
+            needed = tcfg.max_steps * tcfg.batch_size * tcfg.gradient_accumulation_steps
+            if needed > self.window_order.numel():
+                raise ValueError(
+                    f"single_pass needs {needed} windows for {tcfg.max_steps} steps but the "
+                    f"training stream has only {self.window_order.numel()}; refusing to repeat"
+                )
         self.step = 0
         self.tokens_seen = 0
         self.best_val_loss = math.inf  # on the selection metric (see best_metric)
@@ -167,6 +185,12 @@ class Trainer:
         self.loss_history: list[float] = []  # per-step mean train loss
         self.eval_history: list[dict[str, float]] = []  # one record per evaluation
         self._stop_requested = False
+        # Training phases (e.g. a cosine pretraining phase, then a constant-LR
+        # continuation). Checkpointed; each entry records its schedule and origin.
+        self.phases: list[dict[str, Any]] = [self._phase_record(config, 0, None)]
+        # UTF-8 text bytes per validation token. When set (BPE datasets), evaluations
+        # also report bits per byte, which is comparable across tokenizers.
+        self.val_bytes_per_token: float | None = None
         self.metrics: MetricsLogger | None = (
             MetricsLogger(self.run_dir / "metrics.jsonl") if self.run_dir else None
         )
@@ -208,7 +232,16 @@ class Trainer:
         self.optimizer.zero_grad(set_to_none=True)
         loss_sum = torch.zeros((), device=self.device)
         for micro in range(tcfg.gradient_accumulation_steps):
-            x, y = self._batch(self.train_data, self.data_generator)
+            if self.window_order is not None:
+                b = tcfg.batch_size
+                first = (self.step * tcfg.gradient_accumulation_steps + micro) * b
+                ids = self.window_order[first : first + b]
+                if ids.numel() < b:
+                    raise RuntimeError("single_pass data exhausted; refusing to repeat windows")
+                x, y = get_windows(self.train_data, ids, self.config.model.context_length,
+                                   device=self.device)  # fmt: skip
+            else:
+                x, y = self._batch(self.train_data, self.data_generator)
             _, loss = self.model(x, y)
             assert loss is not None
             if micro == tcfg.gradient_accumulation_steps - 1:
@@ -325,12 +358,20 @@ class Trainer:
             derived["val_loss_exact"] = rec["val_exact"]
             derived["val_ppl_exact"] = perplexity(rec["val_exact"])
             derived["val_bpc_exact"] = bits_per_token(rec["val_exact"])
+            if self.val_bytes_per_token:
+                derived["val_bpb_exact"] = (
+                    bits_per_token(rec["val_exact"]) / self.val_bytes_per_token
+                )
+        if self.val_bytes_per_token:
+            derived["val_bpb"] = bits_per_token(rec["val"]) / self.val_bytes_per_token
         self._log("eval", **derived)
         logger.info(
-            "step %d | eval train %.4f | val %.4f%s | ppl %.2f | %.3f bpc | gap %+.4f%s",
+            "step %d | eval train %.4f | val %.4f%s | ppl %.2f | %.3f bits/%s | gap %+.4f%s",
             self.step, rec["train"], rec["val"],
             f" | val(exact) {rec['val_exact']:.4f}" if "val_exact" in rec else "",
-            perplexity(metric), bits_per_token(metric), derived["gap"],
+            perplexity(metric),
+            bits_per_token(metric) / (self.val_bytes_per_token or 1.0),
+            "byte" if self.val_bytes_per_token else "token", derived["gap"],
             " | new best" if is_best else "",
         )  # fmt: skip
         if is_best and tcfg.save_best and self.run_dir is not None and self.step > 0:
@@ -418,6 +459,7 @@ class Trainer:
             "best_step": -1 if self.best_step is None else self.best_step,
             "loss_history": list(self.loss_history),
             "eval_history": [dict(r) for r in self.eval_history],
+            "phases": [dict(p) for p in self.phases],
             "data_generator": self.data_generator.get_state(),
             "rng": _rng_state(self.device),
         }
@@ -448,13 +490,44 @@ class Trainer:
         logger.info("saved %s checkpoint %s", kind, path)
         return path
 
-    def load_state(self, path: str | Path) -> CheckpointMetadata:
-        """Restore a checkpoint into this trainer (config must match exactly)."""
+    @staticmethod
+    def _phase_record(
+        config: ExperimentConfig, start_step: int, parent: str | None
+    ) -> dict[str, Any]:
+        t = config.training
+        return {
+            "name": config.name,
+            "start_step": start_step,
+            "end_step": t.max_steps,
+            "lr_schedule": t.lr_schedule,
+            "learning_rate": t.learning_rate,
+            "min_learning_rate": t.min_learning_rate,
+            "warmup_steps": t.warmup_steps,
+            "schedule_horizon": t.schedule_horizon,
+            "parent_checkpoint": parent or "",
+        }
+
+    def load_state(self, path: str | Path, *, continuation: bool = False) -> CheckpointMetadata:
+        """Restore a checkpoint into this trainer.
+
+        Default (resume): the model config must match, and a differing training
+        config only logs a warning. ``continuation=True`` starts an explicit new
+        training phase from the checkpoint: model **and data** configs must match,
+        the new training config (e.g. a constant LR and a later ``max_steps``) is
+        intentional, and the phase is appended to ``self.phases``. Weights,
+        optimizer moments, step, token count, RNG and data-sampler state are
+        restored identically in both modes.
+        """
         state, meta = load_checkpoint(path, map_location="cpu")
         saved = ExperimentConfig.from_dict(meta.config)
         if saved.model != self.config.model:
             raise ValueError("checkpoint model config differs from the current config")
-        if saved.training != self.config.training:
+        if continuation:
+            if saved.data != self.config.data:
+                raise ValueError("checkpoint data config differs; continuation needs the same data")
+            if int(state["step"]) >= self.config.training.max_steps:
+                raise ValueError("continuation max_steps must exceed the checkpoint step")
+        elif saved.training != self.config.training:
             logger.warning("checkpoint training config differs; resume may not be exact")
         self.model.load_state_dict(state["model"], strict=True)
         self.optimizer.load_state_dict(state["optimizer"])  # moves state to param device
@@ -470,6 +543,13 @@ class Trainer:
         ]
         self.data_generator.set_state(state["data_generator"])
         _set_rng_state(state["rng"], self.device)
+        phases = [dict(p) for p in state.get("phases", [])] or [
+            self._phase_record(saved, 0, None)  # checkpoints before M3.2 have one phase
+        ]
+        if continuation:
+            phases[-1]["end_step"] = int(state["step"])  # where the parent phase stopped
+            phases.append(self._phase_record(self.config, int(state["step"]), str(path)))
+        self.phases = phases
         if self.run_dir is not None:
             best = read_metadata(best_checkpoint_path(self.run_dir))
             if best is not None and best.step > self.step:

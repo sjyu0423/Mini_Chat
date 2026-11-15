@@ -56,3 +56,16 @@ def test_svg_render_and_helpers():
         )
     )
     assert svg.startswith("<svg") and svg.count("<path") == 2 and "val — step 2" in svg
+
+
+def test_entity_check_supports_and_conflicts():
+    from mini_chatgpt.analysis.story_eval import entity_check
+
+    facts = [("Tom", "basket"), ("Lily", "lantern")]
+    text = ("Tom held his basket tight. Lily lifted the lantern high. Then Lily dropped the "
+            "basket. Tom and Lily laughed. Max the fox came.")  # fmt: skip
+    r = entity_check(text, ["Tom", "Lily"], facts)
+    assert r["fact_supports"] == 2 and r["fact_conflicts"] == 1
+    assert r["conflict_examples"] == ["Then Lily dropped the basket."]
+    assert r["names_kept_fraction"] == 1.0 and r["new_capitalized_names"] == ["Max"]
+    assert entity_check("They went home.", ["Tom"], [("Tom", "hat")])["names_kept_fraction"] == 0.0

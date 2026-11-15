@@ -1,0 +1,18 @@
+{
+  "bytes_per_token_note": "UTF-8 story-text bytes / tokens (incl. one EOT per story)",
+  "dataset": "tinystories_v2",
+  "eot_id": 4095,
+  "holdout_sha256": "0ced756b2bfdd2af487ae98f1fbd121b12ad66b6bf4b20b6046428bf3547a8b9",
+  "license": "CDLA-Sharing-1.0",
+  "num_holdout_tokens": 1001107,
+  "num_train_tokens": 98200365,
+  "num_val_tokens": 5577780,
+  "source": "https://huggingface.co/datasets/roneneldan/TinyStories@f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+  "token_dtype": "uint16 little-endian",
+  "tokenizer": "bpe",
+  "tokenizer_fingerprint": "906bf77c4f604b6df2c176af3e6646365741790bf04fda854bce5beef3721b15",
+  "train_sha256": "8f0473adbb0e731473d34b7e839459eb0915e57bab9ef5f0624dcd2452fd095e",
+  "val_bytes_per_token": 3.9580474669133596,
+  "val_sha256": "0a286be5c7d739539a0cdfede42443a1f3d15acc314f1a0257fa4fd676bfad7a",
+  "vocab_size": 4096
+}

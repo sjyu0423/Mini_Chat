@@ -1,0 +1,218 @@
+{
+ "version": 1,
+ "registered_before_generation": true,
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "decoding": {
+  "temperature": 0.7,
+  "top_k": 40,
+  "max_new_tokens": 300,
+  "stop": "<|endoftext|>"
+ },
+ "models": [
+  "M3.1 (12.4M, step 4800)",
+  "M3.2 (12.4M, step 7200)",
+  "M3.3 (27.6M, step 4800 final; best if different)"
+ ],
+ "prompts": [
+  {
+   "id": "own1",
+   "category": "ownership",
+   "prompt": "Lily had a red ball. Ben had a blue boat. One day, Ben lost his boat.",
+   "facts": [
+    "the red ball is Lily's",
+    "the blue boat is Ben's",
+    "Ben (not Lily) lost the boat"
+   ]
+  },
+  {
+   "id": "own2",
+   "category": "ownership",
+   "prompt": "Grandpa gave Mia a puppy and gave Leo a kitten.",
+   "facts": [
+    "Mia has the puppy",
+    "Leo has the kitten",
+    "Grandpa is the giver"
+   ]
+  },
+  {
+   "id": "own3",
+   "category": "ownership",
+   "prompt": "Anna had a big yellow umbrella. When it started to rain, she shared it with her friend Max.",
+   "facts": [
+    "the umbrella is Anna's",
+    "Anna shares with Max"
+   ]
+  },
+  {
+   "id": "own4",
+   "category": "ownership",
+   "prompt": "Sam found a shiny coin in the park. His sister Kim found a long feather.",
+   "facts": [
+    "Sam has the coin",
+    "Kim has the feather",
+    "Kim is Sam's sister"
+   ]
+  },
+  {
+   "id": "name1",
+   "category": "names",
+   "prompt": "There were three friends: Ben the bear, Sally the snake and Pip the bird.",
+   "facts": [
+    "Ben is a bear",
+    "Sally is a snake",
+    "Pip is a bird"
+   ]
+  },
+  {
+   "id": "name2",
+   "category": "names",
+   "prompt": "A girl named Rosa and a boy named Ali were best friends.",
+   "facts": [
+    "Rosa is a girl",
+    "Ali is a boy",
+    "they are best friends"
+   ]
+  },
+  {
+   "id": "name3",
+   "category": "names",
+   "prompt": "Mr. Brown was a farmer. His dog was called Rex.",
+   "facts": [
+    "Mr. Brown is the farmer",
+    "Rex is the dog",
+    "Rex belongs to Mr. Brown"
+   ]
+  },
+  {
+   "id": "pron1",
+   "category": "pronouns",
+   "prompt": "Lucy was a girl and Jack was a boy. She liked to paint and he liked to sing.",
+   "facts": [
+    "Lucy = she, paints",
+    "Jack = he, sings"
+   ]
+  },
+  {
+   "id": "pron2",
+   "category": "pronouns",
+   "prompt": "The cat chased the mouse, but the mouse was very fast. It hid under the bed.",
+   "facts": [
+    "the mouse hid under the bed",
+    "the cat is the chaser"
+   ]
+  },
+  {
+   "id": "pron3",
+   "category": "pronouns",
+   "prompt": "Mom and Tim baked a cake. She put it in the oven while he washed the bowls.",
+   "facts": [
+    "Mom = she, oven",
+    "Tim = he, washed bowls"
+   ]
+  },
+  {
+   "id": "rel1",
+   "category": "relationships",
+   "prompt": "Emma and her little brother Noah lived with their grandma.",
+   "facts": [
+    "Noah is Emma's younger brother",
+    "they live with grandma"
+   ]
+  },
+  {
+   "id": "rel2",
+   "category": "relationships",
+   "prompt": "Ben's best friend was a turtle named Shelly.",
+   "facts": [
+    "Shelly is a turtle",
+    "Shelly is Ben's best friend"
+   ]
+  },
+  {
+   "id": "rel3",
+   "category": "relationships",
+   "prompt": "Zoe was Kate's older sister. Kate always wanted to be like Zoe.",
+   "facts": [
+    "Zoe is older",
+    "Kate admires Zoe"
+   ]
+  },
+  {
+   "id": "cause1",
+   "category": "cause_effect",
+   "prompt": "It rained all night, so the garden was full of puddles in the morning.",
+   "facts": [
+    "rain caused puddles",
+    "it is morning"
+   ]
+  },
+  {
+   "id": "cause2",
+   "category": "cause_effect",
+   "prompt": "Tim forgot to close the gate, and his dog ran away.",
+   "facts": [
+    "the open gate let the dog out",
+    "the dog is Tim's"
+   ]
+  },
+  {
+   "id": "cause3",
+   "category": "cause_effect",
+   "prompt": "Lily ate too much candy, and her tummy started to hurt.",
+   "facts": [
+    "candy caused the tummy ache",
+    "it is Lily's tummy"
+   ]
+  },
+  {
+   "id": "order1",
+   "category": "event_ordering",
+   "prompt": "First, Max woke up. Then he brushed his teeth. After that, he went to school.",
+   "facts": [
+    "order: wake, brush, school",
+    "Max = he"
+   ]
+  },
+  {
+   "id": "order2",
+   "category": "event_ordering",
+   "prompt": "Before the party, Mia made a card for her friend Sam. At the party, she gave it to him.",
+   "facts": [
+    "card made before party",
+    "Mia gives the card to Sam"
+   ]
+  },
+  {
+   "id": "multi1",
+   "category": "multi_character",
+   "prompt": "Tom, Lily and their dog Spot went to the beach. Tom built a sandcastle, Lily swam, and Spot chased the waves.",
+   "facts": [
+    "Tom built the sandcastle",
+    "Lily swam",
+    "Spot (dog) chased waves"
+   ]
+  },
+  {
+   "id": "multi2",
+   "category": "multi_character",
+   "prompt": "Three ducks named Quack, Splash and Wing lived on a pond. Splash was the smallest.",
+   "facts": [
+    "three ducks",
+    "Splash is the smallest"
+   ]
+  },
+  {
+   "id": "multi3",
+   "category": "multi_character",
+   "prompt": "Ana and Ben both wanted the same swing. Their teacher, Ms. Lee, had an idea.",
+   "facts": [
+    "Ana and Ben want one swing",
+    "Ms. Lee is their teacher with an idea"
+   ]
+  }
+ ]
+}

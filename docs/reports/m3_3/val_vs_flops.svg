@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Validation loss vs. estimated training compute (equal-compute view)">
+<title>Validation loss vs. estimated training compute (equal-compute view)</title>
+<rect width="760" height="380" fill="#fcfcfb"/>
+<text x="80" y="24" font-size="15" font-weight="600" fill="#0b0b0b">Validation loss vs. estimated training compute (equal-compute view)</text>
+<text x="80" y="42" font-size="12" fill="#52514e">FLOPs ≈ (6·N + 6·L·T·C) per token; evaluation excluded</text>
+<line x1="80" x2="736" y1="305.3" y2="305.3" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="309.3" font-size="11" text-anchor="end" fill="#52514e">1.50</text>
+<line x1="80" x2="736" y1="200.5" y2="200.5" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="204.5" font-size="11" text-anchor="end" fill="#52514e">2.00</text>
+<line x1="80" x2="736" y1="95.7" y2="95.7" stroke="#e4e3df" stroke-width="1"/>
+<text x="72" y="99.7" font-size="11" text-anchor="end" fill="#52514e">2.50</text>
+<line x1="288.6" x2="288.6" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="288.6" y="346" font-size="11" text-anchor="middle" fill="#52514e">5</text>
+<line x1="537.1" x2="537.1" y1="328" y2="332" stroke="#b9b8b2"/>
+<text x="537.1" y="346" font-size="11" text-anchor="middle" fill="#52514e">10</text>
+<line x1="80" x2="736" y1="328" y2="328" stroke="#b9b8b2"/>
+<text x="408.0" y="368" font-size="12" text-anchor="middle" fill="#52514e">estimated training FLOPs (×10^15)</text>
+<text transform="translate(16 208.0) rotate(-90)" font-size="12" text-anchor="middle" fill="#52514e">exact validation loss (nats / token)</text>
+<path d="M80.0,98.9 L119.9,197.1 L159.7,234.4 L199.6,256.4 L239.4,272.2 L279.3,283.9 L319.1,291.8 L359.0,295.8 L385.5,297.0 L412.1,298.3 L438.7,299.6 L465.2,300.4 L491.8,301.4 L518.4,302.2" fill="none" stroke="#2a78d6" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="80.0" cy="98.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 1: 2.48</title></circle>
+<circle cx="119.9" cy="197.1" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 2: 2.02</title></circle>
+<circle cx="159.7" cy="234.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 2: 1.84</title></circle>
+<circle cx="199.6" cy="256.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 3: 1.73</title></circle>
+<circle cx="239.4" cy="272.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 4: 1.66</title></circle>
+<circle cx="279.3" cy="283.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 5: 1.60</title></circle>
+<circle cx="319.1" cy="291.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 6: 1.56</title></circle>
+<circle cx="359.0" cy="295.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 6: 1.55</title></circle>
+<circle cx="385.5" cy="297.0" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 7: 1.54</title></circle>
+<circle cx="412.1" cy="298.3" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 7: 1.53</title></circle>
+<circle cx="438.7" cy="299.6" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 8: 1.53</title></circle>
+<circle cx="465.2" cy="300.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 9: 1.52</title></circle>
+<circle cx="491.8" cy="301.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 9: 1.52</title></circle>
+<circle cx="518.4" cy="302.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>12.4M: M3.1 → M3.2 — step 10: 1.51</title></circle>
+<path d="M127.1,127.9 L214.1,218.5 L301.1,254.2 L388.1,276.4 L475.1,292.6 L562.0,304.5 L649.0,313.0 L736.0,317.1" fill="none" stroke="#eb6834" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" opacity="1.0"/>
+<circle cx="127.1" cy="127.9" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 — step 2: 2.35</title></circle>
+<circle cx="214.1" cy="218.5" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 — step 4: 1.91</title></circle>
+<circle cx="301.1" cy="254.2" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 — step 5: 1.74</title></circle>
+<circle cx="388.1" cy="276.4" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 — step 7: 1.64</title></circle>
+<circle cx="475.1" cy="292.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 — step 9: 1.56</title></circle>
+<circle cx="562.0" cy="304.5" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 — step 11: 1.50</title></circle>
+<circle cx="649.0" cy="313.0" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 — step 12: 1.46</title></circle>
+<circle cx="736.0" cy="317.1" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>27.6M: M3.3 — step 14: 1.44</title></circle>
+<line x1="80.0" x2="98.0" y1="70" y2="70" stroke="#2a78d6" stroke-width="2.0" opacity="1.0"/>
+<text x="104.0" y="74" font-size="12" fill="#0b0b0b">12.4M: M3.1 → M3.2</text>
+<line x1="242.8" x2="260.8" y1="70" y2="70" stroke="#eb6834" stroke-width="2.0" opacity="1.0"/>
+<text x="266.8" y="74" font-size="12" fill="#0b0b0b">27.6M: M3.3</text>
+</svg>

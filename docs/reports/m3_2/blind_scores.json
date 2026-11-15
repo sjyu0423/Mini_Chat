@@ -1,0 +1,398 @@
+{
+ "S01": {
+  "grammar": 2,
+  "character_consistency": 0,
+  "entity_tracking": 0,
+  "cause_effect": 0,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 1
+ },
+ "S02": {
+  "grammar": 2,
+  "character_consistency": 2,
+  "entity_tracking": 2,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 2
+ },
+ "S03": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 0,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 0
+ },
+ "S04": {
+  "grammar": 1,
+  "character_consistency": 2,
+  "entity_tracking": 1,
+  "cause_effect": 0,
+  "story_progression": 0,
+  "ending_quality": 1,
+  "repetition": 0
+ },
+ "S05": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 1,
+  "cause_effect": 0,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 1
+ },
+ "S06": {
+  "grammar": 2,
+  "character_consistency": 0,
+  "entity_tracking": 0,
+  "cause_effect": 0,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 1
+ },
+ "S07": {
+  "grammar": 2,
+  "character_consistency": 2,
+  "entity_tracking": 2,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 2
+ },
+ "S08": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 2,
+  "repetition": 1
+ },
+ "S09": {
+  "grammar": 1,
+  "character_consistency": 2,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 1
+ },
+ "S10": {
+  "grammar": 1,
+  "character_consistency": 1,
+  "entity_tracking": 0,
+  "cause_effect": 0,
+  "story_progression": 0,
+  "ending_quality": 1,
+  "repetition": 0
+ },
+ "S11": {
+  "grammar": 2,
+  "character_consistency": 0,
+  "entity_tracking": 1,
+  "cause_effect": 2,
+  "story_progression": 2,
+  "ending_quality": 2,
+  "repetition": 2
+ },
+ "S12": {
+  "grammar": 2,
+  "character_consistency": 2,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 2,
+  "ending_quality": 2,
+  "repetition": 2
+ },
+ "S13": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 1,
+  "cause_effect": 0,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 2
+ },
+ "S14": {
+  "grammar": 2,
+  "character_consistency": 2,
+  "entity_tracking": 2,
+  "cause_effect": 1,
+  "story_progression": 0,
+  "ending_quality": 1,
+  "repetition": 0
+ },
+ "S15": {
+  "grammar": 2,
+  "character_consistency": 0,
+  "entity_tracking": 0,
+  "cause_effect": 0,
+  "story_progression": 0,
+  "ending_quality": 1,
+  "repetition": 1
+ },
+ "S16": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 1,
+  "cause_effect": 0,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 1
+ },
+ "S17": {
+  "grammar": 1,
+  "character_consistency": 0,
+  "entity_tracking": 0,
+  "cause_effect": 0,
+  "story_progression": 0,
+  "ending_quality": 0,
+  "repetition": 2
+ },
+ "S18": {
+  "grammar": 2,
+  "character_consistency": 0,
+  "entity_tracking": 0,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 1
+ },
+ "S19": {
+  "grammar": 2,
+  "character_consistency": 0,
+  "entity_tracking": 0,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 1
+ },
+ "S20": {
+  "grammar": 2,
+  "character_consistency": 2,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 2
+ },
+ "S21": {
+  "grammar": 2,
+  "character_consistency": 2,
+  "entity_tracking": 2,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 2,
+  "repetition": 1
+ },
+ "S22": {
+  "grammar": 2,
+  "character_consistency": 0,
+  "entity_tracking": 1,
+  "cause_effect": 2,
+  "story_progression": 2,
+  "ending_quality": 2,
+  "repetition": 2
+ },
+ "S23": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 0,
+  "cause_effect": 1,
+  "story_progression": 0,
+  "ending_quality": 1,
+  "repetition": 2
+ },
+ "S24": {
+  "grammar": 1,
+  "character_consistency": 0,
+  "entity_tracking": 0,
+  "cause_effect": 0,
+  "story_progression": 0,
+  "ending_quality": 1,
+  "repetition": 1
+ },
+ "S25": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 1,
+  "cause_effect": 0,
+  "story_progression": 0,
+  "ending_quality": 1,
+  "repetition": 0
+ },
+ "S26": {
+  "grammar": 1,
+  "character_consistency": 2,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 2
+ },
+ "S27": {
+  "grammar": 1,
+  "character_consistency": 1,
+  "entity_tracking": 0,
+  "cause_effect": 0,
+  "story_progression": 0,
+  "ending_quality": 0,
+  "repetition": 0
+ },
+ "S28": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 0,
+  "ending_quality": 1,
+  "repetition": 2
+ },
+ "S29": {
+  "grammar": 1,
+  "character_consistency": 1,
+  "entity_tracking": 0,
+  "cause_effect": 0,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 0
+ },
+ "S30": {
+  "grammar": 2,
+  "character_consistency": 2,
+  "entity_tracking": 0,
+  "cause_effect": 0,
+  "story_progression": 0,
+  "ending_quality": 1,
+  "repetition": 2
+ },
+ "S31": {
+  "grammar": 1,
+  "character_consistency": 0,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 0,
+  "repetition": 1
+ },
+ "S32": {
+  "grammar": 2,
+  "character_consistency": 2,
+  "entity_tracking": 2,
+  "cause_effect": 1,
+  "story_progression": 2,
+  "ending_quality": 2,
+  "repetition": 2
+ },
+ "S33": {
+  "grammar": 2,
+  "character_consistency": 0,
+  "entity_tracking": 0,
+  "cause_effect": 0,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 1
+ },
+ "S34": {
+  "grammar": 2,
+  "character_consistency": 0,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 2,
+  "ending_quality": 2,
+  "repetition": 2
+ },
+ "S35": {
+  "grammar": 1,
+  "character_consistency": 0,
+  "entity_tracking": 0,
+  "cause_effect": 0,
+  "story_progression": 0,
+  "ending_quality": 0,
+  "repetition": 0
+ },
+ "S36": {
+  "grammar": 1,
+  "character_consistency": 1,
+  "entity_tracking": 0,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 2
+ },
+ "S37": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 1,
+  "cause_effect": 0,
+  "story_progression": 1,
+  "ending_quality": 0,
+  "repetition": 2
+ },
+ "S38": {
+  "grammar": 2,
+  "character_consistency": 2,
+  "entity_tracking": 1,
+  "cause_effect": 0,
+  "story_progression": 0,
+  "ending_quality": 1,
+  "repetition": 1
+ },
+ "S39": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 2,
+  "ending_quality": 2,
+  "repetition": 2
+ },
+ "S40": {
+  "grammar": 2,
+  "character_consistency": 2,
+  "entity_tracking": 2,
+  "cause_effect": 1,
+  "story_progression": 2,
+  "ending_quality": 2,
+  "repetition": 2
+ },
+ "S41": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 1,
+  "repetition": 2
+ },
+ "S42": {
+  "grammar": 1,
+  "character_consistency": 0,
+  "entity_tracking": 1,
+  "cause_effect": 0,
+  "story_progression": 0,
+  "ending_quality": 1,
+  "repetition": 0
+ },
+ "S43": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 2,
+  "repetition": 2
+ },
+ "S44": {
+  "grammar": 2,
+  "character_consistency": 1,
+  "entity_tracking": 1,
+  "cause_effect": 1,
+  "story_progression": 1,
+  "ending_quality": 2,
+  "repetition": 2
+ }
+}
