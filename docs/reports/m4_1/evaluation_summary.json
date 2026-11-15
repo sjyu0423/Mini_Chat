@@ -1,0 +1,1115 @@
+{
+  "checkpoints": {
+    "m3_1_s12m_tinystories": "runs/ts_s_bpe4096-20261113-172905/checkpoints/step_00004800.pt",
+    "m3_3_m28m_tinystories": "runs/ts_m_bpe4096-20261114-042121/checkpoints/step_00004800.pt",
+    "m4_1_best": "runs/m4_1_general_s_bpe8192-20261114-190514/checkpoints/best.pt",
+    "m4_1_final": "runs/m4_1_general_s_bpe8192-20261114-190514/checkpoints/step_00009600.pt"
+  },
+  "memorization": {
+    "continuation": {
+      "mean_frac_16gram_in_train": 0.00036036036036036037,
+      "rows": [
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.015544041450777202,
+          "id": "cont01",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.02072538860103627,
+          "id": "cont01",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.031088082901554404,
+          "id": "cont01",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.02072538860103627,
+          "id": "cont02",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont02",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.08290155440414508,
+          "id": "cont02",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont03",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont03",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont03",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.015544041450777202,
+          "id": "cont04",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "cont04",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont04",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.010362694300518135,
+          "id": "cont05",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont05",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont05",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "cont06",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.025906735751295335,
+          "id": "cont06",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont06",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.03626943005181347,
+          "id": "cont07",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont07",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.046632124352331605,
+          "id": "cont07",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont08",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "cont08",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.05181347150259067,
+          "id": "cont08",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont09",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont09",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont09",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.03626943005181347,
+          "id": "cont10",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont10",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.03626943005181347,
+          "id": "cont10",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont11",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont11",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "cont11",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.08290155440414508,
+          "id": "cont12",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.06217616580310881,
+          "id": "cont12",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont12",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont13",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.031088082901554404,
+          "id": "cont13",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont13",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.015544041450777202,
+          "id": "cont14",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont14",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.07772020725388601,
+          "id": "cont14",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.010362694300518135,
+          "id": "cont15",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "cont15",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont15",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.031088082901554404,
+          "id": "cont16",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "cont16",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont16",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "cont17",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.031088082901554404,
+          "id": "cont17",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.02072538860103627,
+          "id": "cont17",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont18",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.021621621621621623,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.13471502590673576,
+          "id": "cont18",
+          "longest_match_at_least": 16,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.015544041450777202,
+          "id": "cont18",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont19",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont19",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.05699481865284974,
+          "id": "cont19",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont20",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "cont20",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.005208333333333333,
+          "id": "cont20",
+          "longest_match_at_least": 8,
+          "seed": 33
+        }
+      ],
+      "samples": 60,
+      "samples_with_32gram_match": 0,
+      "samples_with_48gram_match": 0
+    },
+    "explanations": {
+      "mean_frac_16gram_in_train": 0.0,
+      "rows": [
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "expl01",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.031088082901554404,
+          "id": "expl01",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.015544041450777202,
+          "id": "expl01",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.025906735751295335,
+          "id": "expl02",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.025906735751295335,
+          "id": "expl02",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "expl02",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.07772020725388601,
+          "id": "expl03",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.015544041450777202,
+          "id": "expl03",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.08808290155440414,
+          "id": "expl03",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "expl04",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "expl04",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "expl04",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.015544041450777202,
+          "id": "expl05",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "expl05",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "expl05",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.015544041450777202,
+          "id": "expl06",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.02072538860103627,
+          "id": "expl06",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "expl06",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "expl07",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.02072538860103627,
+          "id": "expl07",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.05699481865284974,
+          "id": "expl07",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.010362694300518135,
+          "id": "expl08",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "expl08",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "expl08",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.046632124352331605,
+          "id": "expl09",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.015544041450777202,
+          "id": "expl09",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.07772020725388601,
+          "id": "expl09",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.05699481865284974,
+          "id": "expl10",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "expl10",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.05181347150259067,
+          "id": "expl10",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "expl11",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "expl11",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "expl11",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "expl12",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "expl12",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "expl12",
+          "longest_match_at_least": 0,
+          "seed": 33
+        }
+      ],
+      "samples": 36,
+      "samples_with_32gram_match": 0,
+      "samples_with_48gram_match": 0
+    },
+    "repetition_stress": {
+      "mean_frac_16gram_in_train": 0.0,
+      "rows": [
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "rep01",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "rep01",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "rep01",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "rep02",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.015544041450777202,
+          "id": "rep02",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.005208333333333333,
+          "id": "rep02",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "rep03",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "rep03",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "rep03",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.010362694300518135,
+          "id": "rep04",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.07772020725388601,
+          "id": "rep04",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.07253886010362694,
+          "id": "rep04",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.03626943005181347,
+          "id": "rep05",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "rep05",
+          "longest_match_at_least": 0,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "rep05",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "rep06",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.04712041884816754,
+          "id": "rep06",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.10362694300518134,
+          "id": "rep06",
+          "longest_match_at_least": 8,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0051813471502590676,
+          "id": "rep07",
+          "longest_match_at_least": 8,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.010362694300518135,
+          "id": "rep07",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "rep07",
+          "longest_match_at_least": 0,
+          "seed": 33
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.0,
+          "id": "rep08",
+          "longest_match_at_least": 0,
+          "seed": 11
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.036458333333333336,
+          "id": "rep08",
+          "longest_match_at_least": 8,
+          "seed": 22
+        },
+        {
+          "frac_16gram_in_train": 0.0,
+          "frac_32gram_in_train": 0.0,
+          "frac_48gram_in_train": 0.0,
+          "frac_8gram_in_train": 0.12435233160621761,
+          "id": "rep08",
+          "longest_match_at_least": 8,
+          "seed": 33
+        }
+      ],
+      "samples": 24,
+      "samples_with_32gram_match": 0,
+      "samples_with_48gram_match": 0
+    }
+  },
+  "reproducible_deterministic_sections": true
+}
