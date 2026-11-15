@@ -1,0 +1,150 @@
+{
+ "startup": {
+  "process_start_to_ready_s": 1.24,
+  "model_load_s_reported_by_server": 0.446,
+  "device": "mps",
+  "memory_after_load": {
+   "mps_current_allocated": 57532416,
+   "mps_driver_allocated": 1082605568
+  },
+  "rss_mb_after_load": 473.8
+ },
+ "single_turn": {
+  "requests": 40,
+  "latency_ms_mean": 150.9,
+  "latency_ms_median": 73.6,
+  "latency_ms_p95": 502.8,
+  "latency_ms_max": 544.5,
+  "new_tokens_mean": 59.7,
+  "tokens_per_s_median": 422.6,
+  "server_ms_mean": 149.9,
+  "stop_reasons": {
+   "end_of_turn": 39,
+   "max_tokens": 1
+  },
+  "history_messages_dropped_total": 0
+ },
+ "conversations": {
+  "requests": 60,
+  "latency_ms_mean": 205.8,
+  "latency_ms_median": 125.2,
+  "latency_ms_p95": 597.0,
+  "latency_ms_max": 922.4,
+  "new_tokens_mean": 56.9,
+  "tokens_per_s_median": 302.8,
+  "server_ms_mean": 204.9,
+  "stop_reasons": {
+   "end_of_turn": 57,
+   "max_tokens": 3
+  },
+  "history_messages_dropped_total": 42,
+  "by_turn_latency_ms_mean": {
+   "1": 135.9,
+   "2": 109.9,
+   "3": 212.0,
+   "4": 287.0,
+   "5": 253.0,
+   "6": 236.9
+  },
+  "by_turn_prompt_tokens_mean": {
+   "1": 17,
+   "2": 82.2,
+   "3": 109.7,
+   "4": 161.2,
+   "5": 205.8,
+   "6": 258.7
+  }
+ },
+ "example_conversation": [
+  {
+   "turn": 1,
+   "user": "What is the largest planet in our solar system?",
+   "reply": "The largest planet, orbits around the Earth orbits all of these planet's objects.",
+   "stop": "end_of_turn"
+  },
+  {
+   "turn": 2,
+   "user": "Tell me more.",
+   "reply": "California is the largest planet in our solar system.",
+   "stop": "end_of_turn"
+  },
+  {
+   "turn": 3,
+   "user": "Why is that?",
+   "reply": "The largest planet in our solar system is the largest Earth's mass.",
+   "stop": "end_of_turn"
+  },
+  {
+   "turn": 4,
+   "user": "Can you give an example?",
+   "reply": "The largest planet in our solar system is our solar panel, which is the top of the Earth's mass.",
+   "stop": "end_of_turn"
+  },
+  {
+   "turn": 5,
+   "user": "What else should I know?",
+   "reply": "That's the mostomaly at that, as of my understanding of the solar system I would consider, it is very difficult for us to understand.\n\nThere are several reasons why this is the first time you're in a solar solar system and then go to an online solar system. The term \"record,\" which means that if we were a military car or a military, will be difficult to make sense by what they have had in common. If we were a human or a nation's system, the entire world was unified.",
+   "stop": "end_of_turn"
+  },
+  {
+   "turn": 6,
+   "user": "Thanks! Can you summarize?",
+   "reply": "The answer is \"their\" because it is one of the largest planet's mass-thrudest people, which means that they can't fully understand the human body and body.",
+   "stop": "end_of_turn"
+  }
+ ],
+ "soak": {
+  "requests": 60,
+  "latency_ms_mean": 120.2,
+  "latency_ms_median": 56.4,
+  "latency_ms_p95": 453.8,
+  "latency_ms_max": 547.8,
+  "new_tokens_mean": 48.4,
+  "tokens_per_s_median": 433.2,
+  "server_ms_mean": 119.3,
+  "stop_reasons": {
+   "end_of_turn": 57,
+   "max_tokens": 3
+  },
+  "history_messages_dropped_total": 0,
+  "memory_every_10_requests": [
+   {
+    "after_requests": 10,
+    "mps_driver_gb": 1.083,
+    "mps_allocated_gb": 0.058,
+    "rss_mb": 434.2
+   },
+   {
+    "after_requests": 20,
+    "mps_driver_gb": 1.083,
+    "mps_allocated_gb": 0.058,
+    "rss_mb": 435.3
+   },
+   {
+    "after_requests": 30,
+    "mps_driver_gb": 1.083,
+    "mps_allocated_gb": 0.058,
+    "rss_mb": 435.8
+   },
+   {
+    "after_requests": 40,
+    "mps_driver_gb": 1.083,
+    "mps_allocated_gb": 0.058,
+    "rss_mb": 437.5
+   },
+   {
+    "after_requests": 50,
+    "mps_driver_gb": 1.083,
+    "mps_allocated_gb": 0.058,
+    "rss_mb": 438.1
+   },
+   {
+    "after_requests": 60,
+    "mps_driver_gb": 1.083,
+    "mps_allocated_gb": 0.058,
+    "rss_mb": 439.0
+   }
+  ]
+ },
+ "requests_served_total": 161
+}
