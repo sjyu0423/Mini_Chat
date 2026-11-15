@@ -1,0 +1,31 @@
+{
+ "blind_review": {
+  "tally": {
+   "m5": {
+    "correct": 1,
+    "fluent_wrong": 11,
+    "malformed": 8,
+    "preferred": 0
+   },
+   "m6_3": {
+    "correct": 1,
+    "fluent_wrong": 14,
+    "malformed": 5,
+    "preferred": 2
+   }
+  },
+  "ties": 18,
+  "items": 20
+ },
+ "rules": {
+  "1_credible": false,
+  "2_meaningful_5pp": false,
+  "3_blind_review": false,
+  "4a_end_of_turn": true,
+  "4b_repetition": true,
+  "4c_latency": true,
+  "4d_retention": true
+ },
+ "stability_note": "4 (no crashes/NaN/guard aborts) is checked from the training log",
+ "promote": false
+}

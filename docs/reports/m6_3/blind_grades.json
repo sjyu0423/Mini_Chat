@@ -1,0 +1,22 @@
+{
+ "01": {"A": "fluent_wrong", "B": "fluent_wrong", "preference": "tie", "note": "Moon orbit vs Mercury: both wrong"},
+ "02": {"A": "fluent_wrong", "B": "fluent_wrong", "preference": "tie", "note": "6 vs 3 days: both wrong"},
+ "03": {"A": "fluent_wrong", "B": "malformed", "preference": "tie", "note": "neither gives H2O"},
+ "04": {"A": "fluent_wrong", "B": "malformed", "preference": "tie", "note": "neither gives Shakespeare"},
+ "05": {"A": "correct", "B": "correct", "preference": "tie", "note": "identical correct reply"},
+ "06": {"A": "malformed", "B": "malformed", "preference": "tie", "note": "neither says 24"},
+ "07": {"A": "fluent_wrong", "B": "malformed", "preference": "tie", "note": "Vienna vs 'Sir Arthur and': both wrong"},
+ "08": {"A": "fluent_wrong", "B": "malformed", "preference": "tie", "note": "neither says honey"},
+ "09": {"A": "fluent_wrong", "B": "malformed", "preference": "A", "note": "A says yes (right content) but ignores 'answer only yes or no'; B is nonsense"},
+ "10": {"A": "fluent_wrong", "B": "malformed", "preference": "tie", "note": "A wrong (says ice is hot); B truncated ramble"},
+ "11": {"A": "fluent_wrong", "B": "fluent_wrong", "preference": "tie", "note": "neither gives three colors one per line"},
+ "12": {"A": "malformed", "B": "malformed", "preference": "tie", "note": "neither is one sentence about cats"},
+ "13": {"A": "malformed", "B": "fluent_wrong", "preference": "tie", "note": "both mention Priya but neither says it is the user's name"},
+ "14": {"A": "fluent_wrong", "B": "fluent_wrong", "preference": "B", "note": "B calls Luna a cat before contradicting itself; A says Luna is a dog"},
+ "15": {"A": "fluent_wrong", "B": "fluent_wrong", "preference": "tie", "note": "both answer Ana, not Leo"},
+ "16": {"A": "fluent_wrong", "B": "malformed", "preference": "tie", "note": "neither says Toronto as the user's city"},
+ "17": {"A": "fluent_wrong", "B": "fluent_wrong", "preference": "tie", "note": "both repeat the Tokyo answer"},
+ "18": {"A": "fluent_wrong", "B": "malformed", "preference": "tie", "note": "neither says 8"},
+ "19": {"A": "fluent_wrong", "B": "fluent_wrong", "preference": "tie", "note": "neither names a red fruit"},
+ "20": {"A": "fluent_wrong", "B": "fluent_wrong", "preference": "tie", "note": "both talk about dogs, not cats"}
+}

@@ -1,0 +1,46 @@
+# M6.2: capacity-scaling experiment. IDENTICAL to configs/m4_1_general_s_bpe8192.toml
+# (same prepared data general_m4_1_bpe, tokenizer e6be77cc..., 70/30 mix, splits, single-pass
+# order with the same seed, 157,286,400 token presentations, AdamW recipe, schedule,
+# batch 2 x 16 x 512, float32 MPS) except the model capacity: 8 layers, 8 heads, width 512
+# (M4.1: 6/6/384). Equal tokens, NOT equal compute.
+# 29,676,544 parameters (25,220,096 non-embedding) = 2.12x M4.1.
+# Compute 6N + 6LTC = 190.6 MFLOP/token x 157.3M = 3.00e16 FLOPs (M4.1: 1.43e16, 2.09x).
+name = "m6_2_general_m_bpe8192"
+description = "M6.2 capacity scaling: M4.1 recipe and data, 8L/8H/512 (29,676,544 params), ctx 512"
+
+[model]
+vocab_size = 8192
+context_length = 512
+n_layer = 8
+n_head = 8
+n_embd = 512
+dropout = 0.0            # single pass over unique data: nothing is repeated
+bias = true
+
+[training]
+seed = 1337
+batch_size = 16          # x 2 accumulation = 32 x 512 = 16,384 tokens/step (M3 recipe)
+gradient_accumulation_steps = 2
+learning_rate = 6e-4     # unchanged from M4.1 (M3.3 used 6e-4 for its 8L/8H/512 model too)
+min_learning_rate = 6e-5
+warmup_steps = 200
+max_steps = 9600         # 157,286,400 token presentations, same as M4.1
+weight_decay = 0.1
+beta1 = 0.9
+beta2 = 0.95
+grad_clip = 1.0
+data_order = "single_pass" # each 512-token window of train.bin is used at most once
+eval_interval = 800
+eval_steps = 10
+log_interval = 50
+checkpoint_interval = 800
+keep_last_checkpoints = 3  # ~360 MB each with optimizer state; best.pt and final always kept
+save_best = true
+exact_val_eval = true
+device = "mps"
+dtype = "float32"
+
+[data]
+dataset = "general_m4_1"
+tokenizer = "bpe"
+val_fraction = 0.005     # unused: validation is a fixed document-hash split (see the report)

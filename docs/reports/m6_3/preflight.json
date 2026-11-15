@@ -1,0 +1,116 @@
+{
+  "1_base": {
+    "chat_token_ids": {
+      "assistant": 8189,
+      "end": 8191,
+      "eot": 8187,
+      "system": 8190,
+      "user": 8188
+    },
+    "context_ok": true,
+    "fingerprint_ok": true,
+    "model": {
+      "attention": "sdpa",
+      "bias": true,
+      "context_length": 512,
+      "dropout": 0.0,
+      "mlp_ratio": 4,
+      "n_embd": 512,
+      "n_head": 8,
+      "n_layer": 8,
+      "tie_embeddings": true,
+      "vocab_size": 8192
+    },
+    "parameters": 29676544,
+    "parameters_ok": true,
+    "sha256_ok": true,
+    "step": 9600,
+    "steps": 3153,
+    "steps_per_epoch": 1051
+  },
+  "2_data": {
+    "all_start_with_endoftext": true,
+    "hashes_verified": true,
+    "ids_in_vocab": true,
+    "leakage": {
+      "shared_first_user_messages": 0,
+      "shared_groups": 0
+    },
+    "max_len_ok": true,
+    "reserialization_mismatches_of_300": 0,
+    "train_conversations": 16813,
+    "val_conversations": 860
+  },
+  "3_masked_loss": {
+    "input_tokens": 3072,
+    "manual_equal": true,
+    "masked_mean_loss": 3.209609848938378,
+    "target_tokens": 783,
+    "user_or_system_tokens_marked_as_targets": 0
+  },
+  "4_chat_token_gradients": {
+    "assistant": 0.3650600016117096,
+    "end": 0.3704702854156494,
+    "endoftext": 0.08887985348701477,
+    "finite": true,
+    "median_row": 0.0005936219822615385,
+    "system": 0.0009822044521570206,
+    "user": 0.10876087099313736
+  },
+  "5_overfit": {
+    "end_loss": 1.0647560769542196e-05,
+    "end_recall": 1.0,
+    "passed": true,
+    "start_loss": 3.3198684166217673
+  },
+  "6_stability_speed": {
+    "base_val_end_recall": 0.0,
+    "base_val_loss": 3.264273403911115,
+    "eval_s": 3.389986038208008,
+    "first_losses": [
+      3.0504822731018066,
+      5.026087284088135,
+      3.4576609134674072,
+      3.8609519004821777,
+      3.842996120452881
+    ],
+    "grad_norms_finite": true,
+    "last_losses": [
+      3.1995441913604736,
+      2.908684492111206,
+      3.4753007888793945,
+      3.2269818782806396,
+      2.8934926986694336
+    ],
+    "losses_finite": true,
+    "max_grad_norm": 15.274794578552246,
+    "mean_padded_tokens_per_step": 3174.4,
+    "median_step_s": 0.20729804039001465,
+    "mps_current_allocated": 695147776,
+    "mps_driver_allocated": 6630883328,
+    "projected_minutes": 11.684508764743805
+  },
+  "6b_memory_soak": {
+    "driver_pool_gb_every_50_steps": [
+      6.67,
+      8.67,
+      7.69,
+      8.81,
+      7.67,
+      9.87,
+      10.92,
+      8.72
+    ],
+    "passed": false
+  },
+  "7_checkpoint": {
+    "load_model_ok": true,
+    "max_param_diff_after_next_step": 1.862645149230957e-09,
+    "next_loss": 2.9985179901123047,
+    "next_loss_after_restore": 2.9985179901123047,
+    "restore_ok": true,
+    "resumed_step": 430,
+    "size_mb": 356.235935
+  },
+  "passed": false
+}

@@ -1,0 +1,10 @@
+{
+  "context": "SFT preflight check 6b (400-step memory soak) FAILED its own threshold: MPS pool reached 10.92 GB > 10 GB guard. That soak runs in a process that has also built and trained a second (overfit) trainer, so it overstates a real training process.",
+  "fresh_process_measurement": {
+    "what": "600 real training steps with configs/sft/m6_3_sft_30m.toml (pad to 64, torch.mps.empty_cache every 25 steps) in a fresh process, i.e. exactly what scripts/train_sft.py runs",
+    "peak_pool_gb": 8.93,
+    "pool_every_50_steps_gb": [7.58, 7.62, 6.52, 5.44, 5.44, 7.59, 6.55, 5.46, 5.44, 5.44, 5.47, 5.44],
+    "seconds_per_step": 0.300
+  },
+  "decision": "Proceed with every M5 memory safeguard unchanged (padding to 64, cache release every 25 steps, abort if pool > 10 GB). MPS recommended maximum is 12.7 GB. If the guard trips, the run stops safely and is reported; no threshold was raised."
+}

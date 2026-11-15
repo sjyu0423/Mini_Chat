@@ -1,0 +1,10 @@
+{
+ "batch": "first 4 single-pass windows (4x512 tokens)",
+ "lr": 0.0003,
+ "steps": 150,
+ "loss_start": 9.098387718200684,
+ "loss_50": 0.2119390368461609,
+ "loss_100": 0.019503768533468246,
+ "loss_end": 0.011901882477104664,
+ "passed": true
+}

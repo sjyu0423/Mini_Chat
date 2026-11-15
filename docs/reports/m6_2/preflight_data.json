@@ -1,0 +1,52 @@
+{
+  "1_raw_files": {
+    "cosmopedia_v2": true,
+    "fineweb_edu": true
+  },
+  "2_streams": {
+    "holdout_ids_in_vocab": true,
+    "holdout_sha256_ok": true,
+    "holdout_tokens": 1627118,
+    "holdout_tokens_ok": true,
+    "train_tokens": 157290975,
+    "train_val_verified_by_load_prepared": true,
+    "val_tokens": 1675956
+  },
+  "3_tokenizer": {
+    "fingerprint": "e6be77ccff4929187ed84ee1b71d15b7654824abd9e23f3ad889c57232ce91c8",
+    "matches_manifest": true,
+    "matches_meta": true,
+    "round_trip": true,
+    "special_tokens": {
+      "<|assistant|>": 8189,
+      "<|endoftext|>": 8187,
+      "<|end|>": 8191,
+      "<|system|>": 8190,
+      "<|user|>": 8188
+    },
+    "vocab_size_matches_model": true
+  },
+  "4_split_overlap": {
+    "train_holdout": 0,
+    "train_val": 0,
+    "val_holdout": 0
+  },
+  "5_single_pass": {
+    "repeated_presentations": 0,
+    "unique_train_tokens_presented": 157286400,
+    "unused_windows": 8,
+    "windows_available": 307208,
+    "windows_needed": 307200
+  },
+  "6_alignment": {
+    "decoded_window_0_head": "ums\n- Loss of gums from certain places\n- Bone loss\nWhen gums pull away from the teeth and form spaces which is known as pockets. These pockets",
+    "window_matches_stream": true,
+    "y_shift_of_x": true
+  },
+  "7_budget": {
+    "matches_plan": true,
+    "presentations": 157286400,
+    "tokens_per_step": 16384
+  },
+  "passed": true
+}

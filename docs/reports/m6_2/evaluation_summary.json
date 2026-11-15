@@ -1,0 +1,49 @@
+{
+  "checkpoints": {
+    "m4_1_final": "runs/m4_1_general_s_bpe8192-20261114-190514/checkpoints/step_00009600.pt",
+    "m6_2_best": "runs/m6_2_general_m_bpe8192-20261115-001655/checkpoints/best.pt",
+    "m6_2_final": "runs/m6_2_general_m_bpe8192-20261115-001655/checkpoints/step_00009600.pt"
+  },
+  "memorization": {
+    "m4_1_final": {
+      "mean_frac_16gram_in_train": 0.00018018018018018018,
+      "samples": 120,
+      "samples_with_32gram_match": 0,
+      "samples_with_48gram_match": 0
+    },
+    "m6_2_final": {
+      "mean_frac_16gram_in_train": 0.00022522522522522523,
+      "samples": 120,
+      "samples_with_32gram_match": 0,
+      "samples_with_48gram_match": 0
+    }
+  },
+  "paired_mcnemar_m4_1_vs_m6_2_final": {
+    "code_generation": {
+      "only_m4_1": 1,
+      "only_m6_2": 3,
+      "p_two_sided": 0.625
+    },
+    "code_mc": {
+      "only_m4_1": 1,
+      "only_m6_2": 3,
+      "p_two_sided": 0.625
+    },
+    "facts_mc": {
+      "only_m4_1": 1,
+      "only_m6_2": 2,
+      "p_two_sided": 1.0
+    },
+    "grammar_pairs": {
+      "only_m4_1": 1,
+      "only_m6_2": 0,
+      "p_two_sided": 1.0
+    },
+    "qa_mc": {
+      "only_m4_1": 0,
+      "only_m6_2": 1,
+      "p_two_sided": 1.0
+    }
+  },
+  "reproducible_deterministic_sections": true
+}

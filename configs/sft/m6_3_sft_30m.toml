@@ -1,0 +1,33 @@
+# M6.3: the M5 SFT recipe, unchanged, on the M6.2 29.7M base model (only base and name differ).
+# Architecture, tokenizer, context (512) and float32/MPS are inherited unchanged from the
+# base checkpoint; only the weights are updated. The optimizer is created fresh.
+name = "m6_3_sft_30m"
+description = "M6.3 SFT: the unchanged M5 recipe applied to the M6.2 29.7M base model"
+base_checkpoint = "runs/m6_2_general_m_bpe8192-20261115-001655/checkpoints/step_00009600.pt"
+expected_fingerprint = "e6be77ccff4929187ed84ee1b71d15b7654824abd9e23f3ad889c57232ce91c8"
+data_dir = "data/processed/chat_m5"
+run_dir = "runs"
+
+[optimization]
+seed = 1337
+batch_size = 16          # conversations per step (right-padded, length-bucketed)
+epochs = 3               # each conversation presented 3 times; best validation selects
+learning_rate = 1e-4     # 6x below the pretraining peak (6e-4)
+min_learning_rate = 1e-5
+warmup_steps = 100
+weight_decay = 0.1
+beta1 = 0.9
+beta2 = 0.95
+grad_clip = 1.0
+
+[evaluation]
+eval_interval = 250      # exact assistant-token loss over the full validation split
+log_interval = 25
+
+[runtime]
+device = "mps"
+bucket_factor = 50
+pad_multiple = 64          # pad batches to 64/128/.../512 positions (bounded MPS shapes)
+empty_cache_interval = 1   # M6.3 attempt 2 (user-approved): every step; attempt 1 used 25 and the
+                           # pool reached 11.0 GB at step 2224 (guard abort). Memory only; maths unchanged.
+max_driver_gb = 10.0       # abort rather than swap

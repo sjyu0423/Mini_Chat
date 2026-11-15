@@ -1,0 +1,18 @@
+{
+ "checkpoint": "runs/m6_2_general_m_bpe8192-20261115-001655/checkpoints/step_00009600.pt",
+ "sha256": "5312a61336bfef44c7a6ebea81871dc49be2c5c5215c26a8f56d1cd88acd7a00",
+ "sha_matches_prereg": true,
+ "parameters": 29676544,
+ "val_exact_recomputed": 3.3121985027704843,
+ "val_exact_logged": 3.3121985027704843,
+ "note": "exact_loss builds a Trainer whose single-pass guard rejects the val stream as training data; the config copy uses data_order=random for that dummy trainer only",
+ "tokenizer_fingerprint_chat_data": "e6be77ccff4929187ed84ee1b71d15b7654824abd9e23f3ad889c57232ce91c8",
+ "tokenizer_matches_base": true,
+ "special_ids": {
+  "<|endoftext|>": 8187,
+  "<|user|>": 8188,
+  "<|assistant|>": 8189,
+  "<|system|>": 8190,
+  "<|end|>": 8191
+ }
+}

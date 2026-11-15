@@ -1,0 +1,144 @@
+{
+ "evals": [
+  {
+   "step": 0,
+   "epoch": 0.0,
+   "target_tokens_seen": 0,
+   "loss": 3.264273403911115,
+   "ppl": 26.16109553368543,
+   "end_recall": 0.0,
+   "end_precision": 0.0,
+   "is_best": true
+  },
+  {
+   "step": 250,
+   "epoch": 0.23786869647954328,
+   "target_tokens_seen": 447464,
+   "loss": 2.9893563311502502,
+   "ppl": 19.87288681571965,
+   "end_recall": 0.5250544662309368,
+   "end_precision": 0.29426129426129427,
+   "is_best": true
+  },
+  {
+   "step": 500,
+   "epoch": 0.47573739295908657,
+   "target_tokens_seen": 919020,
+   "loss": 2.9796257228959147,
+   "ppl": 19.680449324558474,
+   "end_recall": 0.47167755991285404,
+   "end_precision": 0.368824531516184,
+   "is_best": true
+  },
+  {
+   "step": 750,
+   "epoch": 0.7136060894386299,
+   "target_tokens_seen": 1439689,
+   "loss": 2.9570627315419227,
+   "ppl": 19.241371597383402,
+   "end_recall": 0.6339869281045751,
+   "end_precision": 0.3107314468766684,
+   "is_best": true
+  },
+  {
+   "step": 1000,
+   "epoch": 0.9514747859181731,
+   "target_tokens_seen": 1903169,
+   "loss": 2.9531301746311533,
+   "ppl": 19.165852397636232,
+   "end_recall": 0.5784313725490197,
+   "end_precision": 0.2959866220735786,
+   "is_best": true
+  },
+  {
+   "step": 1250,
+   "epoch": 1.1893434823977165,
+   "target_tokens_seen": 2386205,
+   "loss": 2.965363881096137,
+   "ppl": 19.401761891522877,
+   "end_recall": 0.6176470588235294,
+   "end_precision": 0.31871838111298484,
+   "is_best": null
+  },
+  {
+   "step": 1500,
+   "epoch": 1.4272121788772598,
+   "target_tokens_seen": 2833712,
+   "loss": 2.954986029425976,
+   "ppl": 19.201454462618376,
+   "end_recall": 0.5675381263616558,
+   "end_precision": 0.3411918795022921,
+   "is_best": null
+  },
+  {
+   "step": 1750,
+   "epoch": 1.665080875356803,
+   "target_tokens_seen": 3335595,
+   "loss": 2.9386780323689927,
+   "ppl": 18.890856697087628,
+   "end_recall": 0.4934640522875817,
+   "end_precision": 0.3994708994708995,
+   "is_best": true
+  },
+  {
+   "step": 2000,
+   "epoch": 1.9029495718363463,
+   "target_tokens_seen": 3827887,
+   "loss": 2.9322506019428585,
+   "ppl": 18.769826403537927,
+   "end_recall": 0.6111111111111112,
+   "end_precision": 0.3414485696895922,
+   "is_best": true
+  },
+  {
+   "step": 2250,
+   "epoch": 2.14081826831589,
+   "target_tokens_seen": 4286690,
+   "loss": 2.947540653803858,
+   "ppl": 19.059023306338172,
+   "end_recall": 0.5577342047930284,
+   "end_precision": 0.3849624060150376,
+   "is_best": null
+  },
+  {
+   "step": 2500,
+   "epoch": 2.378686964795433,
+   "target_tokens_seen": 4777744,
+   "loss": 2.945090833682833,
+   "ppl": 19.012389273374662,
+   "end_recall": 0.4596949891067538,
+   "end_precision": 0.4405010438413361,
+   "is_best": null
+  },
+  {
+   "step": 2750,
+   "epoch": 2.616555661274976,
+   "target_tokens_seen": 5275342,
+   "loss": 2.9410546279857135,
+   "ppl": 18.935806016330652,
+   "end_recall": 0.5740740740740741,
+   "end_precision": 0.37995674116798844,
+   "is_best": null
+  },
+  {
+   "step": 3000,
+   "epoch": 2.8544243577545196,
+   "target_tokens_seen": 5727388,
+   "loss": 2.9450010544351586,
+   "ppl": 19.01068243198982,
+   "end_recall": 0.5980392156862745,
+   "end_precision": 0.3804573804573805,
+   "is_best": null
+  },
+  {
+   "step": 3153,
+   "epoch": 3.0,
+   "target_tokens_seen": 6022098,
+   "loss": 2.944187676825064,
+   "ppl": 18.995225855415825,
+   "end_recall": 0.6111111111111112,
+   "end_precision": 0.3557387444514902,
+   "is_best": null
+  }
+ ]
+}

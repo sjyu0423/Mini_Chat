@@ -1,0 +1,126 @@
+{
+  "1_historical_checkpoints": {
+    "gpt_10m_m2-20261112-174425": {
+      "step": 1750,
+      "tokenizer": "char",
+      "val_exact_logged": 1.4735867097459991,
+      "val_exact_recomputed": 1.4735866957697374
+    },
+    "m4_1_general_s_bpe8192-20261114-190514": {
+      "batch_loss_finite": true,
+      "step": 9600,
+      "tokenizer": "bpe",
+      "val_exact_logged": 3.4769072809461203
+    },
+    "ts_m_bpe4096-20261114-042121": {
+      "batch_loss_finite": true,
+      "step": 4800,
+      "tokenizer": "bpe",
+      "val_exact_logged": 1.4436381291266382
+    },
+    "ts_s_bpe4096-20261113-172905": {
+      "batch_loss_finite": true,
+      "step": 4800,
+      "tokenizer": "bpe",
+      "val_exact_logged": 1.5454597872770313
+    }
+  },
+  "2_finite": {
+    "all_grads_finite_nonzero": true,
+    "grad_norm": 7.883935928344727,
+    "initial_loss": 9.111907958984375,
+    "ln_vocab": 9.010913347279288,
+    "logits_finite": true
+  },
+  "3_causal": {
+    "prefix_max_abs_diff_when_future_changes": 0.0,
+    "sdpa_vs_explicit_max_abs_diff": 3.4570693969726562e-06,
+    "suffix_changed": true
+  },
+  "4_optimizer": {
+    "covers_every_parameter_once": true,
+    "groups": [
+      {
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "n_params": 29622272,
+        "n_tensors": 34,
+        "weight_decay": 0.1
+      },
+      {
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "n_params": 54272,
+        "n_tensors": 66,
+        "weight_decay": 0.0
+      }
+    ],
+    "lr_final_step": 6.0000015079182696e-05,
+    "lr_peak_step": 0.0006,
+    "lr_step0": 2.9999999999999997e-06,
+    "optimizer_state_empty_at_init": true
+  },
+  "5_stability": {
+    "all_finite": true,
+    "grad_norm_max_after_step10": 1.7824233770370483,
+    "grad_norm_step1": 7.360826015472412,
+    "loss_first": 9.123004913330078,
+    "loss_last10_mean": 6.693217611312866,
+    "lr_last": 0.0003,
+    "steps": 100
+  },
+  "6_throughput_memory": {
+    "median_step_s": 1.294262457988225,
+    "memory_max_bytes": {
+      "mps_current_allocated@after_forward": 4977144832,
+      "mps_current_allocated@after_step": 1452811264,
+      "mps_driver_allocated@after_forward": 6579994624,
+      "mps_driver_allocated@after_step": 6579994624,
+      "process_rss_peak@after_forward": 1389445120,
+      "process_rss_peak@after_step": 1389445120
+    },
+    "projected_train_minutes": 207.081993278116,
+    "tokens_per_s": 12658.947108353088
+  },
+  "7_free_memory": {
+    "free_bytes_est": 3435973836,
+    "free_percent": 20,
+    "mps_recommended_max_bytes": 12713115648,
+    "physical_bytes": 17179869184
+  },
+  "8_checkpoint": {
+    "checkpoint_bytes": 356251865,
+    "logit_max_abs_diff": 0.0,
+    "optimizer_identical": true,
+    "sampler_identical": true,
+    "step": 100
+  },
+  "config": "configs/m6_2_general_m_bpe8192.toml",
+  "dataset": {
+    "num_train_tokens": 157290975,
+    "num_val_tokens": 1675956,
+    "tokenizer_fingerprint": "e6be77ccff4929187ed84ee1b71d15b7654824abd9e23f3ad889c57232ce91c8",
+    "train_sha256": "78082023543c88c13cc6ddf4b50a39c110b9d3bbc9a8bdfd4fba81e69585dbad",
+    "val_sha256": "ab385ad64003cec65ac9cc315dfb00185d907d2eff9a8c6c86cd0493fe484221"
+  },
+  "parameters": {
+    "analytic": {
+      "blocks": 25219072,
+      "final_layernorm": 1024,
+      "lm_head_untied": 0,
+      "non_embedding": 25220096,
+      "per_layer": 3152384,
+      "position_embedding": 262144,
+      "token_embedding": 4194304,
+      "total": 29676544
+    },
+    "model": 29676544
+  },
+  "passed": true
+}
