@@ -1,0 +1,47 @@
+# M4.1: first general-purpose pretraining run (approved after the M4 research report).
+# Data: data/processed/general_m4_1_bpe/ from scripts/prepare_general.py
+# (FineWeb-Edu + Cosmopedia v2, 70/30 by training tokens, single pass).
+# Byte-level BPE 8,192 with chat special tokens reserved, 6L/6H/384, ctx 512.
+# 13,989,888 parameters (10,647,552 non-embedding).
+# Budget from the M4 MPS benchmarks: 2 x 16 x 512 = 16,384 tokens/step at ~0.67 s/step,
+# 9,600 steps = 157,286,400 tokens ~ 108 min + 12 validation passes ~ 2 h.
+# Compute ~1.43e16 FLOPs (6N + 6LTC per token), about equal to M3.3 (1.40e16).
+name = "m4_1_general_s_bpe8192"
+description = "M4.1 general pretraining, FineWeb-Edu + Cosmopedia v2, BPE 8192, 6L/6H/384, ctx 512, ~2 h"
+
+[model]
+vocab_size = 8192
+context_length = 512
+n_layer = 6
+n_head = 6
+n_embd = 384
+dropout = 0.0            # single pass over unique data: nothing is repeated
+bias = true
+
+[training]
+seed = 1337
+batch_size = 16          # x 2 accumulation = 32 x 512 = 16,384 tokens/step (M3 recipe)
+gradient_accumulation_steps = 2
+learning_rate = 6e-4     # unchanged from M3.1 (same architecture family)
+min_learning_rate = 6e-5
+warmup_steps = 200
+max_steps = 9600         # 157,286,400 token presentations, ~11 tokens per parameter
+weight_decay = 0.1
+beta1 = 0.9
+beta2 = 0.95
+grad_clip = 1.0
+data_order = "single_pass" # each 512-token window of train.bin is used at most once
+eval_interval = 800
+eval_steps = 10
+log_interval = 50
+checkpoint_interval = 800
+keep_last_checkpoints = 3  # ~170 MB each with optimizer state; best.pt and final always kept
+save_best = true
+exact_val_eval = true
+device = "mps"
+dtype = "float32"
+
+[data]
+dataset = "general_m4_1"
+tokenizer = "bpe"
+val_fraction = 0.005     # unused: validation is a fixed document-hash split (see the report)

@@ -1,0 +1,553 @@
+{
+  "attention": "sdpa",
+  "device": "mps",
+  "dtype": "float32",
+  "iters": 8,
+  "memory_fraction_cap": 0.85,
+  "recommended_max_memory_bytes": 12713115648,
+  "results": [
+    {
+      "case": {
+        "batch_size": 32,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "size",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v8192_t512_b32",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 223838208,
+        "params_embedding": 3342336,
+        "params_non_embedding": 10647552,
+        "params_total": 13989888,
+        "train_flops_per_token": 91017216
+      },
+      "measured": {
+        "achieved_tflops": 2.1967158120003965,
+        "forward_ms_median": 143.2279379951069,
+        "forward_tokens_per_s": 114391.09037902734,
+        "mps_allocated_after_forward_bytes": 4975989248,
+        "mps_driver_after_bytes": 7654031360,
+        "ok": true,
+        "params_measured": 13989888,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 760.1092499971855,
+        "train_step_ms_median": 678.8434165209765,
+        "train_step_ms_min": 668.858375021955,
+        "train_tokens_per_s": 24135.16814225999
+      },
+      "wall_s": 22.659973667003214
+    },
+    {
+      "case": {
+        "batch_size": 16,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "size",
+        "n_embd": 512,
+        "n_head": 8,
+        "n_layer": 8,
+        "name": "M_v8192_t512_b16",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 474824704,
+        "params_embedding": 4456448,
+        "params_non_embedding": 25220096,
+        "params_total": 29676544,
+        "train_flops_per_token": 190642176
+      },
+      "measured": {
+        "achieved_tflops": 2.4586324648939444,
+        "forward_ms_median": 134.77450000937097,
+        "forward_tokens_per_s": 60783.01161889233,
+        "mps_allocated_after_forward_bytes": 4269822464,
+        "mps_driver_after_bytes": 5489475584,
+        "ok": true,
+        "params_measured": 29676544,
+        "tokens_per_batch": 8192,
+        "train_step_ms_max": 649.6413749991916,
+        "train_step_ms_median": 635.2070624998305,
+        "train_step_ms_min": 622.8032080107369,
+        "train_tokens_per_s": 12896.582049577237
+      },
+      "wall_s": 13.730139416002203
+    },
+    {
+      "case": {
+        "batch_size": 8,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "size",
+        "n_embd": 640,
+        "n_head": 10,
+        "n_layer": 10,
+        "name": "X_v8192_t512_b8",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 876912640,
+        "params_embedding": 5570560,
+        "params_non_embedding": 49236480,
+        "params_total": 54807040,
+        "train_flops_per_token": 348503040
+      },
+      "measured": {
+        "achieved_tflops": 2.6338229670585207,
+        "forward_ms_median": 119.45122899487615,
+        "forward_tokens_per_s": 34290.14531257521,
+        "mps_allocated_after_forward_bytes": 3689165312,
+        "mps_driver_after_bytes": 4348444672,
+        "ok": true,
+        "params_measured": 54807040,
+        "tokens_per_batch": 4096,
+        "train_step_ms_max": 547.3828340182081,
+        "train_step_ms_median": 541.9758539937902,
+        "train_step_ms_min": 539.5630409766454,
+        "train_tokens_per_s": 7557.5322587100545
+      },
+      "wall_s": 11.501652834005654
+    },
+    {
+      "case": {
+        "batch_size": 16,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "size",
+        "n_embd": 640,
+        "n_head": 10,
+        "n_layer": 10,
+        "name": "X_v8192_t512_b16",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 876912640,
+        "params_embedding": 5570560,
+        "params_non_embedding": 49236480,
+        "params_total": 54807040,
+        "train_flops_per_token": 348503040
+      },
+      "measured": {
+        "achieved_tflops": 2.6181876158272557,
+        "forward_ms_median": 240.42264549643733,
+        "forward_tokens_per_s": 34073.32941988359,
+        "mps_allocated_after_forward_bytes": 6498136576,
+        "mps_driver_after_bytes": 8752709632,
+        "ok": true,
+        "params_measured": 54807040,
+        "tokens_per_batch": 8192,
+        "train_step_ms_max": 1108.6850840074476,
+        "train_step_ms_median": 1090.4248749866383,
+        "train_step_ms_min": 1076.6856660193298,
+        "train_tokens_per_s": 7512.667940650548
+      },
+      "wall_s": 19.947864749992732
+    },
+    {
+      "case": {
+        "batch_size": 4,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "size",
+        "n_embd": 768,
+        "n_head": 12,
+        "n_layer": 12,
+        "name": "L_v8192_t512_b4",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 1467850752,
+        "params_embedding": 6684672,
+        "params_non_embedding": 85056000,
+        "params_total": 91740672,
+        "train_flops_per_token": 578755584
+      },
+      "measured": {
+        "achieved_tflops": 2.6248679349691644,
+        "forward_ms_median": 98.06785399268847,
+        "forward_tokens_per_s": 20883.499705751594,
+        "mps_allocated_after_forward_bytes": 3437261312,
+        "mps_driver_after_bytes": 4901994496,
+        "ok": true,
+        "params_measured": 91740672,
+        "tokens_per_batch": 2048,
+        "train_step_ms_max": 455.28779199230485,
+        "train_step_ms_median": 451.56231299915817,
+        "train_step_ms_min": 450.69200001307763,
+        "train_tokens_per_s": 4535.365199982528
+      },
+      "wall_s": 11.250420958007453
+    },
+    {
+      "case": {
+        "batch_size": 8,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "size",
+        "n_embd": 768,
+        "n_head": 12,
+        "n_layer": 12,
+        "name": "L_v8192_t512_b8",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 1467850752,
+        "params_embedding": 6684672,
+        "params_non_embedding": 85056000,
+        "params_total": 91740672,
+        "train_flops_per_token": 578755584
+      },
+      "measured": {
+        "achieved_tflops": 2.772094278329464,
+        "forward_ms_median": 195.41962501534726,
+        "forward_tokens_per_s": 20960.023844474785,
+        "mps_allocated_after_forward_bytes": 5398802944,
+        "mps_driver_after_bytes": 7108329472,
+        "ok": true,
+        "params_measured": 91740672,
+        "tokens_per_batch": 4096,
+        "train_step_ms_max": 862.3672079993412,
+        "train_step_ms_median": 855.1595415046904,
+        "train_step_ms_min": 851.4989579853136,
+        "train_tokens_per_s": 4789.749515970914
+      },
+      "wall_s": 16.186102667008527
+    },
+    {
+      "case": {
+        "batch_size": 32,
+        "context_length": 256,
+        "dropout": 0.0,
+        "group": "context",
+        "n_embd": 512,
+        "n_head": 8,
+        "n_layer": 8,
+        "name": "M_v8192_t256_b32",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 472727552,
+        "params_embedding": 4325376,
+        "params_non_embedding": 25220096,
+        "params_total": 29545472,
+        "train_flops_per_token": 183564288
+      },
+      "measured": {
+        "achieved_tflops": 2.767952398545109,
+        "forward_ms_median": 130.0816040020436,
+        "forward_tokens_per_s": 62975.85321804075,
+        "mps_allocated_after_forward_bytes": 3729279488,
+        "mps_driver_after_bytes": 5556584448,
+        "ok": true,
+        "params_measured": 29545472,
+        "tokens_per_batch": 8192,
+        "train_step_ms_max": 547.1803749969695,
+        "train_step_ms_median": 543.2747499871766,
+        "train_step_ms_min": 542.5483750004787,
+        "train_tokens_per_s": 15078.926455156185
+      },
+      "wall_s": 11.709459249977954
+    },
+    {
+      "case": {
+        "batch_size": 8,
+        "context_length": 1024,
+        "dropout": 0.0,
+        "group": "context",
+        "n_embd": 512,
+        "n_head": 8,
+        "n_layer": 8,
+        "name": "M_v8192_t1024_b8",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 479019008,
+        "params_embedding": 4718592,
+        "params_non_embedding": 25220096,
+        "params_total": 29938688,
+        "train_flops_per_token": 204797952
+      },
+      "measured": {
+        "achieved_tflops": 2.1101727745953007,
+        "forward_ms_median": 145.98204198409803,
+        "forward_tokens_per_s": 56116.491375647165,
+        "mps_allocated_after_forward_bytes": 5354054144,
+        "mps_driver_after_bytes": 6563217408,
+        "ok": true,
+        "params_measured": 29938688,
+        "tokens_per_batch": 8192,
+        "train_step_ms_max": 827.0588339946698,
+        "train_step_ms_median": 795.0556669966318,
+        "train_step_ms_min": 785.6533750018571,
+        "train_tokens_per_s": 10303.681037763994
+      },
+      "wall_s": 14.629304415982915
+    },
+    {
+      "case": {
+        "batch_size": 8,
+        "context_length": 1024,
+        "dropout": 0.0,
+        "group": "context",
+        "n_embd": 640,
+        "n_head": 10,
+        "n_layer": 10,
+        "name": "X_v8192_t1024_b8",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 882155520,
+        "params_embedding": 5898240,
+        "params_non_embedding": 49236480,
+        "params_total": 55134720,
+        "train_flops_per_token": 370129920
+      },
+      "measured": {
+        "error": "MPS backend out of memory (MPS allocated: 10.02 GiB, other allocations: 83.23 MiB, max allowed: 10.06 GiB). Tried to allocate 20.00 MiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).",
+        "ok": false
+      },
+      "wall_s": 8.182326542009832
+    },
+    {
+      "case": {
+        "batch_size": 4,
+        "context_length": 1024,
+        "dropout": 0.0,
+        "group": "context",
+        "n_embd": 640,
+        "n_head": 10,
+        "n_layer": 10,
+        "name": "X_v8192_t1024_b4",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 882155520,
+        "params_embedding": 5898240,
+        "params_non_embedding": 49236480,
+        "params_total": 55134720,
+        "train_flops_per_token": 370129920
+      },
+      "measured": {
+        "achieved_tflops": 2.2592894152991847,
+        "forward_ms_median": 126.94674999511335,
+        "forward_tokens_per_s": 32265.497148668004,
+        "mps_allocated_after_forward_bytes": 4543693312,
+        "mps_driver_after_bytes": 5430575104,
+        "ok": true,
+        "params_measured": 55134720,
+        "tokens_per_batch": 4096,
+        "train_step_ms_max": 679.6484999940731,
+        "train_step_ms_median": 671.0305205051554,
+        "train_step_ms_min": 666.5947499859612,
+        "train_tokens_per_s": 6104.044264509025
+      },
+      "wall_s": 13.575060125003802
+    },
+    {
+      "case": {
+        "batch_size": 4,
+        "context_length": 1024,
+        "dropout": 0.0,
+        "group": "context",
+        "n_embd": 768,
+        "n_head": 12,
+        "n_layer": 12,
+        "name": "L_v8192_t1024_b4",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 1474142208,
+        "params_embedding": 7077888,
+        "params_non_embedding": 85056000,
+        "params_total": 92133888,
+        "train_flops_per_token": 609426432
+      },
+      "measured": {
+        "achieved_tflops": 2.347310169251181,
+        "forward_ms_median": 207.5365829950897,
+        "forward_tokens_per_s": 19736.27945920701,
+        "mps_allocated_after_forward_bytes": 6616465920,
+        "mps_driver_after_bytes": 7829749760,
+        "ok": true,
+        "params_measured": 92133888,
+        "tokens_per_batch": 4096,
+        "train_step_ms_max": 1072.789957979694,
+        "train_step_ms_median": 1063.4345209982712,
+        "train_step_ms_min": 1045.2328750106972,
+        "train_tokens_per_s": 3851.6710894009607
+      },
+      "wall_s": 20.31056779201026
+    },
+    {
+      "case": {
+        "batch_size": 32,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "vocab",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v4096_t512_b32",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 198672384,
+        "params_embedding": 1769472,
+        "params_non_embedding": 10647552,
+        "params_total": 12417024,
+        "train_flops_per_token": 81580032
+      },
+      "measured": {
+        "achieved_tflops": 2.20666432480634,
+        "forward_ms_median": 126.03322899667546,
+        "forward_tokens_per_s": 129997.46281539912,
+        "mps_allocated_after_forward_bytes": 4413559296,
+        "mps_driver_after_bytes": 6657884160,
+        "ok": true,
+        "params_measured": 12417024,
+        "tokens_per_batch": 16384,
+        "train_step_ms_max": 622.0144580001943,
+        "train_step_ms_median": 605.713895522058,
+        "train_step_ms_min": 600.6587499869056,
+        "train_tokens_per_s": 27049.074028388954
+      },
+      "wall_s": 12.411873208009638
+    },
+    {
+      "case": {
+        "batch_size": 16,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "vocab",
+        "n_embd": 512,
+        "n_head": 8,
+        "n_layer": 8,
+        "name": "M_v4096_t512_b16",
+        "vocab_size": 4096
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 441270272,
+        "params_embedding": 2359296,
+        "params_non_embedding": 25220096,
+        "params_total": 27579392,
+        "train_flops_per_token": 178059264
+      },
+      "measured": {
+        "achieved_tflops": 2.428807597296959,
+        "forward_ms_median": 133.593958496931,
+        "forward_tokens_per_s": 61320.13821709004,
+        "mps_allocated_after_forward_bytes": 3967832576,
+        "mps_driver_after_bytes": 4547854336,
+        "ok": true,
+        "params_measured": 27579392,
+        "tokens_per_batch": 8192,
+        "train_step_ms_max": 617.1010000107344,
+        "train_step_ms_median": 600.5669169971952,
+        "train_step_ms_min": 595.2965409960598,
+        "train_tokens_per_s": 13640.444999800511
+      },
+      "wall_s": 12.082146707980428
+    },
+    {
+      "case": {
+        "batch_size": 16,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "batch",
+        "n_embd": 384,
+        "n_head": 6,
+        "n_layer": 6,
+        "name": "S_v8192_t512_b16",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 223838208,
+        "params_embedding": 3342336,
+        "params_non_embedding": 10647552,
+        "params_total": 13989888,
+        "train_flops_per_token": 91017216
+      },
+      "measured": {
+        "achieved_tflops": 2.2276475503698476,
+        "forward_ms_median": 70.83820849948097,
+        "forward_tokens_per_s": 115643.80541978306,
+        "mps_allocated_after_forward_bytes": 2600374784,
+        "mps_driver_after_bytes": 4373725184,
+        "ok": true,
+        "params_measured": 13989888,
+        "tokens_per_batch": 8192,
+        "train_step_ms_max": 338.5536249843426,
+        "train_step_ms_median": 334.7087080037454,
+        "train_step_ms_min": 332.77670899406075,
+        "train_tokens_per_s": 24475.01306093396
+      },
+      "wall_s": 8.07837208401179
+    },
+    {
+      "case": {
+        "batch_size": 8,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "batch",
+        "n_embd": 512,
+        "n_head": 8,
+        "n_layer": 8,
+        "name": "M_v8192_t512_b8",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 474824704,
+        "params_embedding": 4456448,
+        "params_non_embedding": 25220096,
+        "params_total": 29676544,
+        "train_flops_per_token": 190642176
+      },
+      "measured": {
+        "achieved_tflops": 2.4747691458756207,
+        "forward_ms_median": 67.40827100293245,
+        "forward_tokens_per_s": 60764.05668114247,
+        "mps_allocated_after_forward_bytes": 2373374464,
+        "mps_driver_after_bytes": 3308224512,
+        "ok": true,
+        "params_measured": 29676544,
+        "tokens_per_batch": 4096,
+        "train_step_ms_max": 319.68074999167584,
+        "train_step_ms_median": 315.5326039995998,
+        "train_step_ms_min": 312.3862500069663,
+        "train_tokens_per_s": 12981.225864079628
+      },
+      "wall_s": 7.84130416600965
+    },
+    {
+      "case": {
+        "batch_size": 32,
+        "context_length": 512,
+        "dropout": 0.0,
+        "group": "batch",
+        "n_embd": 512,
+        "n_head": 8,
+        "n_layer": 8,
+        "name": "M_v8192_t512_b32",
+        "vocab_size": 8192
+      },
+      "estimate": {
+        "param_grad_adam_bytes": 474824704,
+        "params_embedding": 4456448,
+        "params_non_embedding": 25220096,
+        "params_total": 29676544,
+        "train_flops_per_token": 190642176
+      },
+      "measured": {
+        "error": "MPS backend out of memory (MPS allocated: 9.58 GiB, other allocations: 131.58 MiB, max allowed: 10.06 GiB). Tried to allocate 512.00 MiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).",
+        "ok": false
+      },
+      "wall_s": 13.987023916997714
+    }
+  ],
+  "torch": "2.15.0",
+  "warmup": 3,
+  "note": "X_v8192_t1024_b4 was added after the first pass (X_v8192_t1024_b8 ran out of memory) and run separately with the same settings."
+}

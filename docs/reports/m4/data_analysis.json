@@ -1,0 +1,231 @@
+{
+  "chat": {
+    "everyday_conversations": {
+      "assistant_chars_median": 136.0,
+      "assistant_chars_p95": 246,
+      "assistant_text_bytes": 196654,
+      "conversations": 405,
+      "messages_per_conversation_max": 10,
+      "messages_per_conversation_mean": 7.733333333333333,
+      "multi_turn_share_gt_2_messages": 1.0,
+      "roles": {
+        "assistant": 1542,
+        "user": 1590
+      },
+      "share_latin_letters_lt_0.95": 0.0,
+      "share_with_code_fence": 0.0,
+      "sources": {
+        "?": 405
+      },
+      "user_chars_median": 60.0
+    },
+    "smol_smoltalk": {
+      "assistant_chars_median": 1305,
+      "assistant_chars_p95": 2410,
+      "assistant_text_bytes": 2972314,
+      "conversations": 1000,
+      "messages_per_conversation_max": 25,
+      "messages_per_conversation_mean": 4.716,
+      "multi_turn_share_gt_2_messages": 0.778,
+      "roles": {
+        "assistant": 2271,
+        "system": 174,
+        "user": 2271
+      },
+      "share_latin_letters_lt_0.95": 0.001,
+      "share_with_code_fence": 0.421,
+      "sources": {
+        "everyday-conversations": 5,
+        "explore-instruct-rewrite": 5,
+        "longalign": 7,
+        "openhermes-50k": 109,
+        "self-oss-instruct": 84,
+        "smol-contraints": 73,
+        "smol-magpie-ultra-short": 599,
+        "smol-summarize-20k": 47,
+        "smol-summarize-5k": 9,
+        "smollm-rewrite-30k": 62
+      },
+      "user_chars_median": 139
+    }
+  },
+  "cross_overlap_13gram": {
+    "cosmopedia_v2": {
+      "fineweb_edu": 0.0,
+      "tinystories": 0.0013333333333333333,
+      "wikipedia_en": 0.0,
+      "wikipedia_simple": 0.0
+    },
+    "fineweb_edu": {
+      "cosmopedia_v2": 0.0,
+      "tinystories": 0.0,
+      "wikipedia_en": 0.00075,
+      "wikipedia_simple": 0.00075
+    },
+    "tinystories": {
+      "cosmopedia_v2": 0.002,
+      "fineweb_edu": 0.0,
+      "wikipedia_en": 0.0,
+      "wikipedia_simple": 0.0
+    },
+    "wikipedia_en": {
+      "cosmopedia_v2": 0.0,
+      "fineweb_edu": 0.0008,
+      "tinystories": 0.0,
+      "wikipedia_simple": 0.0016
+    },
+    "wikipedia_simple": {
+      "cosmopedia_v2": 0.0,
+      "fineweb_edu": 0.0015,
+      "tinystories": 0.0,
+      "wikipedia_en": 0.002
+    }
+  },
+  "eval_contamination_8gram": {
+    "cosmopedia_v2": {
+      "hits_per_item": {
+        "cgen03": 1,
+        "cgen04": 3,
+        "cgen05": 3,
+        "code02": 1,
+        "code03": 1,
+        "code20": 1,
+        "rep02": 4,
+        "rep04": 90
+      },
+      "items_total": 182,
+      "items_with_any_hit": 8
+    },
+    "everyday_conversations": {
+      "hits_per_item": {
+        "chat11": 7,
+        "rep02": 1
+      },
+      "items_total": 182,
+      "items_with_any_hit": 2
+    },
+    "fineweb_edu": {
+      "hits_per_item": {
+        "cont02": 1,
+        "rep02": 3,
+        "rep04": 19
+      },
+      "items_total": 182,
+      "items_with_any_hit": 3
+    },
+    "smol_smoltalk": {
+      "hits_per_item": {
+        "cgen03": 6,
+        "cgen04": 20,
+        "cgen05": 6,
+        "chat02": 1,
+        "code01": 1,
+        "code03": 5,
+        "code07": 1,
+        "code09": 2,
+        "code13": 1,
+        "rep02": 22,
+        "rep04": 2
+      },
+      "items_total": 182,
+      "items_with_any_hit": 11
+    },
+    "tinystories": {
+      "hits_per_item": {},
+      "items_total": 182,
+      "items_with_any_hit": 0
+    },
+    "wikipedia_en": {
+      "hits_per_item": {
+        "rep04": 1
+      },
+      "items_total": 182,
+      "items_with_any_hit": 1
+    },
+    "wikipedia_simple": {
+      "hits_per_item": {
+        "cgen03": 1
+      },
+      "items_total": 182,
+      "items_with_any_hit": 1
+    }
+  },
+  "eval_suite_sha256": "f2265af3e47ea291be6eee533e7c0b241e8282c23763e57fe2df063faffd8365",
+  "text": {
+    "cosmopedia_v2": {
+      "any_quality_rule_flagged": 0.30833333333333335,
+      "documents": 3000,
+      "flag_rates": {
+        "alphabetic_word_share_lt_0.8": 0.0003333333333333333,
+        "boilerplate_terms": 0.021333333333333333,
+        "duplicate_line_share_gt_0.3": 0.011333333333333334,
+        "latin_letter_share_lt_0.95": 0.0,
+        "lines_ending_in_punct_lt_0.5": 0.09833333333333333,
+        "markup_char_share_gt_0.05": 0.0,
+        "mean_word_length_outside_3_10": 0.0003333333333333333,
+        "stopword_rate_lt_0.15_non_english_or_list": 0.21833333333333332,
+        "too_short_lt_50_words": 0.0006666666666666666
+      }
+    },
+    "fineweb_edu": {
+      "any_quality_rule_flagged": 0.144,
+      "documents": 4000,
+      "flag_rates": {
+        "alphabetic_word_share_lt_0.8": 0.00025,
+        "boilerplate_terms": 0.05025,
+        "duplicate_line_share_gt_0.3": 0.00025,
+        "latin_letter_share_lt_0.95": 0.00125,
+        "lines_ending_in_punct_lt_0.5": 0.138,
+        "markup_char_share_gt_0.05": 0.001,
+        "mean_word_length_outside_3_10": 0.0,
+        "stopword_rate_lt_0.15_non_english_or_list": 0.00925,
+        "too_short_lt_50_words": 0.0005
+      }
+    },
+    "tinystories": {
+      "any_quality_rule_flagged": 0.019,
+      "documents": 6000,
+      "flag_rates": {
+        "alphabetic_word_share_lt_0.8": 0.0,
+        "boilerplate_terms": 0.0195,
+        "duplicate_line_share_gt_0.3": 0.0,
+        "latin_letter_share_lt_0.95": 0.0006666666666666666,
+        "lines_ending_in_punct_lt_0.5": 0.004666666666666667,
+        "markup_char_share_gt_0.05": 0.0,
+        "mean_word_length_outside_3_10": 0.0,
+        "stopword_rate_lt_0.15_non_english_or_list": 0.014166666666666666,
+        "too_short_lt_50_words": 0.0
+      }
+    },
+    "wikipedia_en": {
+      "any_quality_rule_flagged": 0.8596,
+      "documents": 2500,
+      "flag_rates": {
+        "alphabetic_word_share_lt_0.8": 0.0068,
+        "boilerplate_terms": 0.004,
+        "duplicate_line_share_gt_0.3": 0.0092,
+        "latin_letter_share_lt_0.95": 0.0032,
+        "lines_ending_in_punct_lt_0.5": 0.8316,
+        "markup_char_share_gt_0.05": 0.0008,
+        "mean_word_length_outside_3_10": 0.0004,
+        "stopword_rate_lt_0.15_non_english_or_list": 0.13,
+        "too_short_lt_50_words": 0.1288
+      }
+    },
+    "wikipedia_simple": {
+      "any_quality_rule_flagged": 0.866,
+      "documents": 2000,
+      "flag_rates": {
+        "alphabetic_word_share_lt_0.8": 0.036,
+        "boilerplate_terms": 0.0015,
+        "duplicate_line_share_gt_0.3": 0.021,
+        "latin_letter_share_lt_0.95": 0.0025,
+        "lines_ending_in_punct_lt_0.5": 0.7675,
+        "markup_char_share_gt_0.05": 0.0265,
+        "mean_word_length_outside_3_10": 0.0045,
+        "stopword_rate_lt_0.15_non_english_or_list": 0.1975,
+        "too_short_lt_50_words": 0.349
+      }
+    }
+  }
+}

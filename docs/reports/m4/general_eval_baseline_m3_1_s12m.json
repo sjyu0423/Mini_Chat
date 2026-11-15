@@ -1,0 +1,3590 @@
+{
+  "checkpoint": "runs/ts_s_bpe4096-20261113-172905/checkpoints/step_00004800.pt",
+  "checkpoint_sha256": "5129c56f26760478469ab615146753b25871f2fbe0ec1acd04b6c20e72a04375",
+  "device": "mps",
+  "heldout": {
+    "cosmopedia_v2": {
+      "bits_per_byte": 2.970750220680017,
+      "bytes": 565787,
+      "docs": 150,
+      "nats_per_token": 5.859881894092897,
+      "tokens": 198818
+    },
+    "fineweb_edu": {
+      "bits_per_byte": 3.1182812882253317,
+      "bytes": 728898,
+      "docs": 150,
+      "nats_per_token": 5.938120111547258,
+      "tokens": 265313
+    },
+    "tinystories": {
+      "bits_per_byte": 0.7722164267336132,
+      "bytes": 127137,
+      "docs": 150,
+      "nats_per_token": 2.099895230044254,
+      "tokens": 32407
+    },
+    "wikipedia_en": {
+      "bits_per_byte": 3.869292830829521,
+      "bytes": 355354,
+      "docs": 150,
+      "nats_per_token": 6.36541681422669,
+      "tokens": 149724
+    }
+  },
+  "instruction": {
+    "chat": {
+      "applicable": false,
+      "reason": "tokenizer lacks chat special tokens ['<|user|>', '<|assistant|>', '<|end|>']"
+    }
+  },
+  "model_parameters": 12417024,
+  "next_token": {
+    "code_generation": {
+      "acc": {
+        "ci95": [
+          0.0,
+          0.2775401687666166
+        ],
+        "correct": 0,
+        "n": 10,
+        "rate": 0.0
+      },
+      "items": [
+        {
+          "completion": "cited, Velvroom. Velvroom, ",
+          "correct": false,
+          "id": "cgen01"
+        },
+        {
+          "completion": "ence was a bit scared. \n\"What do you want to do?\"",
+          "correct": false,
+          "id": "cgen02"
+        },
+        {
+          "completion": "!\" \nThe little girl was so excited. She ran to the print and",
+          "correct": false,
+          "id": "cgen03"
+        },
+        {
+          "completion": "morrect, 10, 10, 10",
+          "correct": false,
+          "id": "cgen04"
+        },
+        {
+          "completion": "\". \nThe little girl was so excited to find \u2014hello",
+          "correct": false,
+          "id": "cgen05"
+        },
+        {
+          "completion": " they went to the park. They saw a big tree with a hole in it",
+          "correct": false,
+          "id": "cgen06"
+        },
+        {
+          "completion": "mother was very angry. He said, \"I don't want to go",
+          "correct": false,
+          "id": "cgen07"
+        },
+        {
+          "completion": " was so excited that he ran to the kitchen. He saw a big bowl of",
+          "correct": false,
+          "id": "cgen08"
+        },
+        {
+          "completion": ". I'm so glad you're here,\" said the little girl. \n",
+          "correct": false,
+          "id": "cgen09"
+        },
+        {
+          "completion": "mates, 100000000000",
+          "correct": false,
+          "id": "cgen10"
+        }
+      ]
+    },
+    "code_mc": {
+      "acc": {
+        "ci95": [
+          0.0806563532712,
+          0.41602172202575993
+        ],
+        "correct": 4,
+        "n": 20,
+        "rate": 0.2
+      },
+      "acc_norm": {
+        "ci95": [
+          0.11186005278940309,
+          0.4687050099580636
+        ],
+        "correct": 5,
+        "n": 20,
+        "rate": 0.25
+      },
+      "chance": 0.25,
+      "items": [
+        {
+          "answer": 0,
+          "id": "code01",
+          "logprob": [
+            -24.782075881958008,
+            -16.186939239501953,
+            -24.733257293701172,
+            -24.328716278076172
+          ],
+          "logprob_per_byte": [
+            -6.195518970489502,
+            -4.046734809875488,
+            -6.183314323425293,
+            -6.082179069519043
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 1,
+          "id": "code02",
+          "logprob": [
+            -19.4083251953125,
+            -18.947065353393555,
+            -19.88457489013672,
+            -12.087602615356445
+          ],
+          "logprob_per_byte": [
+            -9.70416259765625,
+            -9.473532676696777,
+            -9.94228744506836,
+            -6.043801307678223
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "code03",
+          "logprob": [
+            -28.698177337646484,
+            -36.93470764160156,
+            -28.091032028198242,
+            -23.509292602539062
+          ],
+          "logprob_per_byte": [
+            -3.5872721672058105,
+            -6.155784606933594,
+            -3.5113790035247803,
+            -11.754646301269531
+          ],
+          "pred": 3,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "code04",
+          "logprob": [
+            -52.67355728149414,
+            -59.96932601928711,
+            -63.04213333129883,
+            -55.493995666503906
+          ],
+          "logprob_per_byte": [
+            -7.5247938973563055,
+            -8.567046574183873,
+            -9.006019047328405,
+            -7.927713666643415
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "code05",
+          "logprob": [
+            -94.43119812011719,
+            -95.5671615600586,
+            -72.94775390625,
+            -91.7895736694336
+          ],
+          "logprob_per_byte": [
+            -10.492355346679688,
+            -6.371144104003906,
+            -8.105305989583334,
+            -11.4736967086792
+          ],
+          "pred": 2,
+          "pred_norm": 1
+        },
+        {
+          "answer": 1,
+          "id": "code06",
+          "logprob": [
+            -44.783172607421875,
+            -35.66700744628906,
+            -39.164127349853516,
+            -51.34344482421875
+          ],
+          "logprob_per_byte": [
+            -7.4638621012369795,
+            -5.944501241048177,
+            -6.527354558308919,
+            -7.33477783203125
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "code07",
+          "logprob": [
+            -8.854357719421387,
+            -9.83973503112793,
+            -11.130825996398926,
+            -47.54013442993164
+          ],
+          "logprob_per_byte": [
+            -1.7708715438842773,
+            -2.4599337577819824,
+            -2.226165199279785,
+            -5.282237158881293
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "code08",
+          "logprob": [
+            -48.45843505859375,
+            -41.5349235534668,
+            -46.35340118408203,
+            -45.9310302734375
+          ],
+          "logprob_per_byte": [
+            -4.845843505859375,
+            -4.15349235534668,
+            -4.6353401184082035,
+            -4.59310302734375
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 0,
+          "id": "code09",
+          "logprob": [
+            -10.306962966918945,
+            -12.37919807434082,
+            -8.76102066040039,
+            -15.09056568145752
+          ],
+          "logprob_per_byte": [
+            -5.153481483459473,
+            -6.18959903717041,
+            -4.380510330200195,
+            -5.03018856048584
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "code10",
+          "logprob": [
+            -38.89320373535156,
+            -23.197952270507812,
+            -37.60565185546875,
+            -15.495991706848145
+          ],
+          "logprob_per_byte": [
+            -4.861650466918945,
+            -4.639590454101563,
+            -3.4186956232244317,
+            -3.873997926712036
+          ],
+          "pred": 3,
+          "pred_norm": 2
+        },
+        {
+          "answer": 2,
+          "id": "code11",
+          "logprob": [
+            -74.27324676513672,
+            -63.43327331542969,
+            -74.26455688476562,
+            -42.7917594909668
+          ],
+          "logprob_per_byte": [
+            -7.427324676513672,
+            -7.0481414794921875,
+            -7.426455688476563,
+            -4.754639943440755
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 3,
+          "id": "code12",
+          "logprob": [
+            -17.292194366455078,
+            -17.388181686401367,
+            -34.245765686035156,
+            -15.623838424682617
+          ],
+          "logprob_per_byte": [
+            -2.470313480922154,
+            -2.173522710800171,
+            -3.4245765686035154,
+            -2.603973070780436
+          ],
+          "pred": 3,
+          "pred_norm": 1
+        },
+        {
+          "answer": 0,
+          "id": "code13",
+          "logprob": [
+            -5.703439235687256,
+            -6.643109321594238,
+            -13.377754211425781,
+            -14.60049057006836
+          ],
+          "logprob_per_byte": [
+            -2.851719617843628,
+            -3.321554660797119,
+            -6.688877105712891,
+            -2.9200981140136717
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "code14",
+          "logprob": [
+            -63.85902404785156,
+            -66.59918975830078,
+            -59.95115280151367,
+            -43.48710632324219
+          ],
+          "logprob_per_byte": [
+            -5.80536582253196,
+            -6.054471796209162,
+            -5.4501048001376065,
+            -4.348710632324218
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "code15",
+          "logprob": [
+            -10.91838264465332,
+            -13.085281372070312,
+            -36.995872497558594,
+            -39.03413391113281
+          ],
+          "logprob_per_byte": [
+            -1.8197304407755535,
+            -2.1808802286783853,
+            -6.165978749593099,
+            -6.505688985188802
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "code16",
+          "logprob": [
+            -74.29096984863281,
+            -30.094627380371094,
+            -20.515853881835938,
+            -66.77889251708984
+          ],
+          "logprob_per_byte": [
+            -8.254552205403646,
+            -5.015771230061849,
+            -6.8386179606119795,
+            -7.419876946343316
+          ],
+          "pred": 2,
+          "pred_norm": 1
+        },
+        {
+          "answer": 0,
+          "id": "code17",
+          "logprob": [
+            -57.39033889770508,
+            -54.32636642456055,
+            -27.63677215576172,
+            -14.706783294677734
+          ],
+          "logprob_per_byte": [
+            -4.782528241475423,
+            -5.432636642456055,
+            -4.606128692626953,
+            -2.4511305491129556
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 1,
+          "id": "code18",
+          "logprob": [
+            -7.8197736740112305,
+            -4.972250938415527,
+            -8.201573371887207,
+            -15.077628135681152
+          ],
+          "logprob_per_byte": [
+            -3.9098868370056152,
+            -2.4861254692077637,
+            -4.1007866859436035,
+            -5.025876045227051
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "code19",
+          "logprob": [
+            -30.929256439208984,
+            -31.908618927001953,
+            -38.43062210083008,
+            -47.19384002685547
+          ],
+          "logprob_per_byte": [
+            -5.154876073201497,
+            -6.381723785400391,
+            -5.490088871547154,
+            -5.899230003356934
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "code20",
+          "logprob": [
+            -48.03269958496094,
+            -44.1062126159668,
+            -58.71397399902344,
+            -68.37294006347656
+          ],
+          "logprob_per_byte": [
+            -8.005449930826822,
+            -5.51327657699585,
+            -5.337633999911222,
+            -4.558196004231771
+          ],
+          "pred": 1,
+          "pred_norm": 3
+        }
+      ]
+    },
+    "continuation": {
+      "items": [
+        {
+          "distinct_1": 0.44680851063829785,
+          "distinct_2": 0.8074866310160428,
+          "ended_with_eot": false,
+          "id": "cont01",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.021621621621621623,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": ". He was very excited when he saw his friends and he felt very proud. He looked around to see what he was doing. He found a big book with pictures of history. He was very proud of it and he wanted to join them. But when he took a deep breath, he realized that his friends were saying something was missing. He realized that it was bad and he couldn't help them. He felt very sad and sad. He wanted to help them feel better so that he decided to give him some of history of history. He told his friends that he didn't need to be taken away. They all agreed and the printer agreed.\nThe next day, the printer showed his friends history of the printer was kind and wise. They were so proud of him for being so useful and kind! The printer smiled and thanked the friends for helping him. Together, they had so much fun that they learned to make sure to",
+          "words": 188
+        },
+        {
+          "distinct_1": 0.4796747967479675,
+          "distinct_2": 0.7786885245901639,
+          "ended_with_eot": true,
+          "id": "cont01",
+          "max_line_repeats": 1,
+          "new_tokens": 129,
+          "repeated_4gram_fraction": 0.08333333333333333,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": ". He was so proud of his work. He had worked really hard and he was very happy.\nOne day, his mom was out for help. She was getting an idea. She needed to put the prints away and the prints and show them to him. She got three blocks and put them together. Then she added some new blocks, the prints, the prints, the stars and the stars.\nWhen he was finished, his mom was so proud of him. She gave him a big hug and said, \"You are so proud of your work!\"\nThe girl was very happy. She had done it!",
+          "words": 123
+        },
+        {
+          "distinct_1": 0.44144144144144143,
+          "distinct_2": 0.7363636363636363,
+          "ended_with_eot": true,
+          "id": "cont01",
+          "max_line_repeats": 1,
+          "new_tokens": 115,
+          "repeated_4gram_fraction": 0.1111111111111111,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": ". He was so excited that he could hardly wait to try it.\nSuddenly he heard a loud noise and he saw a big, brown bear. The bear was very angry! He tried to take the bear away but the bear was too big and strong.\nThe man was very angry. He shouted at the bear and yelled at the bear. He did not listen and quickly ran away.\nThe bear was so scared that he started to cry. The bear was so scared that he ran away, but it was too late. The bear was never seen again.",
+          "words": 111
+        },
+        {
+          "distinct_1": 0.3825136612021858,
+          "distinct_2": 0.6868131868131868,
+          "ended_with_eot": false,
+          "id": "cont02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.24444444444444444,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " of their mom's birthday. She is very happy and says, \"Thank you, Potisdom!\"\nPhiley is very excited. She says, \"Can I have a treat, please?\" She puts down her sunglasses and gives him a big cake. He says, \"A treat for you, Potty.\"\nPotty is very excited. She says, \"Thank you, Potty!\" She takes a bite of the cake and says, \"This is the best cookie I have ever eaten!\" \nPotty looks up and sees a big, red apple on the table. She thinks, \"Maybe I can eat it, Potty?\" She tries to reach for the apple, but she is too small. She sees a big, red apple on the table. She thinks, \"I will eat this apple first, then I will eat this apple.\"\nPotty runs to the table and grabs a big, blue apple",
+          "words": 183
+        },
+        {
+          "distinct_1": 0.33707865168539325,
+          "distinct_2": 0.6892655367231638,
+          "ended_with_eot": false,
+          "id": "cont02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.1657142857142857,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " of the park. They are the same one in the park. It is a bus and a nice lady. She likes to go to the park.\nPhots are happy. She says, \"Thank you. I love to go and play with my friends. Can we go to the park?\"\nPhoty says, \"Yes, I can. But can we go to the park? I have to go to the park tomorrow.\"\nPhoty says, \"Okay, let's go!\"\nThey go to the park and the bus. The park is clear, but Photy sees Poty and his friends. Poty is a nice man. He says, \"Hello, Photy. You are a bad man. You are kind and generous. You can play with others. Do you want to play with me?\"\nPhoty says, \"Yes, I want to play with you. You are my friends",
+          "words": 178
+        },
+        {
+          "distinct_1": 0.75,
+          "distinct_2": 0.9767441860465116,
+          "ended_with_eot": true,
+          "id": "cont02",
+          "max_line_repeats": 1,
+          "new_tokens": 48,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " of it is for sharing. Phots are too young to stay in life, so he is giving up.\nThey all sat down in the sunshine, enjoying the sunshine and the day, knowing that their friendship is the best.",
+          "words": 44
+        },
+        {
+          "distinct_1": 0.42105263157894735,
+          "distinct_2": 0.6893939393939394,
+          "ended_with_eot": true,
+          "id": "cont03",
+          "max_line_repeats": 1,
+          "new_tokens": 134,
+          "repeated_4gram_fraction": 0.15384615384615385,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": ". There were many people inside. One day, a man came to the market. He saw the sellers and was very angry. He shouted, \"Who are you?\"\nThe market man was very angry. He shouted, \"I will eat you!\" The man was scared. He shouted, \"Go away!\"\nThe man was so scared. He ran away. He ran very fast. The market was far from his home.\nA man shouted, \"Stop! Stop! That is not nice!\" He ran to the market. It was too late. He was hurt. He was all alone. The market was a bad ending for the market.",
+          "words": 133
+        },
+        {
+          "distinct_1": 0.40540540540540543,
+          "distinct_2": 0.6727272727272727,
+          "ended_with_eot": true,
+          "id": "cont03",
+          "max_line_repeats": 1,
+          "new_tokens": 115,
+          "repeated_4gram_fraction": 0.2222222222222222,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": ". All the foods were in the market. There were toys, food, and cookies. The market was filled with joy. Everyone was very happy.\nThe market was filled with delicious treats and games. Everyone was having so much fun. They ran around the market, looking for more things to eat.\nAt the end of the day, the market was very quiet. Everyone was amazed. The market was full of delicious fruits and delicious treats. Everyone was so happy.\nThe market was filled with joy. Everyone was happy that the market was filled with joy.",
+          "words": 111
+        },
+        {
+          "distinct_1": 0.4947916666666667,
+          "distinct_2": 0.8743455497382199,
+          "ended_with_eot": false,
+          "id": "cont03",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": ". The market was full of soldiers.\nA little girl was walking along the market, while she came to a big pile of corn. She saw a pretty, orange color. She was delighted and started to pick the corn.\nSuddenly, the little girl heard a voice. It was her little brother, Tom. He was very mad and shouted at her.\n\"What are you doing here?\"\n\"I'm trying to get to the market,\" said Tom. \n\"Well,\" said the little girl, \"we aren't good for you. You need to be careful to never give up.\"\nTom smiled. He knew his mom was right. He got to work and soon a beautiful market with all the other things to buy and the fruits.\nThe little girl was so happy! She thanked Tom for being so helpful and asked him to join her. \nTom was so proud of himself. He had been so kind to the whole market and to",
+          "words": 192
+        },
+        {
+          "distinct_1": 0.41566265060240964,
+          "distinct_2": 0.7515151515151515,
+          "ended_with_eot": true,
+          "id": "cont04",
+          "max_line_repeats": 1,
+          "new_tokens": 182,
+          "repeated_4gram_fraction": 0.09815950920245399,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " happening. They have to be careful and listen to each other.\nOne day, their mom brings a surprise! She says it is a special car that can go round and round. It is very old and heavy and has four wheels.\n\"Wow, what is it?\" she asks.\n\"I don't know, sweetie,\" Tom says. \"It is a very special car. It is very important to us. It can talk and tell us what we want to be careful with it.\"\n\"I want to see,\" Lily says. \"Maybe we can be careful.\"\n\"Let's try it,\" Tom says. \"Maybe we can be good superheroes.\"\nThey pretend to be superheroes and have fun. They are happy and excited.\nThey have been good superheroes. They are good superheroes.",
+          "words": 166
+        },
+        {
+          "distinct_1": 0.46938775510204084,
+          "distinct_2": 0.8247422680412371,
+          "ended_with_eot": true,
+          "id": "cont04",
+          "max_line_repeats": 1,
+          "new_tokens": 108,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a good idea.\nThe friends are very excited, so they get ready to unite. But when they get to the right place, something is wrong. An idea is not a good idea and they both feel frustrated.\nThe friends try to find the best place to unite and make the best place. In the end, they found it very important to unite and work together.\nWhen they unite, they can unite and feel better. They are happy to unite and they are both proud of themselves.",
+          "words": 98
+        },
+        {
+          "distinct_1": 0.28,
+          "distinct_2": 0.628140703517588,
+          "ended_with_eot": false,
+          "id": "cont04",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.19796954314720813,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a toy. It is a pink ball. It is a pink ball. It has a pink dress and a green shoes.\n\"Can I have your pink ball, please?\" asked Dad.\n\"Of course, you can,\" said Dad. \"But be careful. It is very soft and soft. You have a star. It is very special to me.\"\n\"Thank you, Dad,\" Anna said. She took her pink ball and looked at it. It sparkles on the ground. She liked it.\n\"Can I have your ball, Dad?\" Dad asked. \"It is very cute and soft. But be careful. It is not very soft.\"\nBen smiled. He took the pink ball and gave it to Dad. Dad hugged Anna and said, \"You can have your ball, but you have to be careful. And you have to be careful.\"\nMom and Dad said, \"Okay, but you have to be careful. The pink ball is very soft",
+          "words": 200
+        },
+        {
+          "distinct_1": 0.46060606060606063,
+          "distinct_2": 0.8353658536585366,
+          "ended_with_eot": true,
+          "id": "cont05",
+          "max_line_repeats": 1,
+          "new_tokens": 182,
+          "repeated_4gram_fraction": 0.012345679012345678,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": ". He was very excited to see Tuesday and he jumped out in the sky. He saw the clouds and the sky was bright. The sun was shining and the birds were singing. Every Sunched's eyes glowed and he would feel the air on his skin.\nOne day, Tuesday came across a small house. He was very curious and could see what was inside. He turned around and saw a small bird. Tuesday was so small and it was so quiet! He stopped and started to feel happy and safe. He thanked the bird for being so smart and kind.\nAs Tuesday walked away, Tuesday saw a new house. It was a little world. He was curious and wanted to see the world. He walked along, and the bird flew away. Tuesday ran and he enjoyed the town with the new world.\nThe end.",
+          "words": 165
+        },
+        {
+          "distinct_1": 0.4397163120567376,
+          "distinct_2": 0.7928571428571428,
+          "ended_with_eot": true,
+          "id": "cont05",
+          "max_line_repeats": 1,
+          "new_tokens": 153,
+          "repeated_4gram_fraction": 0.028985507246376812,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": ". She was so excited! She had never seen the city before, so she decided to take a closer look.\nTuesday went by the city and was filled with gas. She saw many people and people. They thought Tuesday was perfect for her, so she ran to the city.\nTuesday ran to the city, feeling so happy. She knew she had made the city a wonderful place. She decided to go and explore. The city was so much fun.\nAt the end of the day, Tuesday was very tired. She lay down on the grass, and had a wonderful time. She was so tired that she had gone home. She said goodbye to the city and went home, excited to go back.",
+          "words": 141
+        },
+        {
+          "distinct_1": 0.5118110236220472,
+          "distinct_2": 0.8650793650793651,
+          "ended_with_eot": true,
+          "id": "cont05",
+          "max_line_repeats": 1,
+          "new_tokens": 144,
+          "repeated_4gram_fraction": 0.016129032258064516,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a new place. It was a special place with lots of different animals. Tuesday had never been there before.\nSuddenly, Tuesday heard a strange noise coming from the sky. It was a little bird, and it was suffering its wing. Tuesday was scared.\nTuesday knew she had been brave and wanted to help the little bird. She asked the other animals to come and help. They all came together and helped the little bird take Tuesday's wing back to its home.\nThe little bird was so proud of the other animals, and she was happy that it was safe. Tuesday learned that helping others can make you feel brave and happy.",
+          "words": 127
+        },
+        {
+          "distinct_1": 0.37037037037037035,
+          "distinct_2": 0.6956521739130435,
+          "ended_with_eot": true,
+          "id": "cont06",
+          "max_line_repeats": 1,
+          "new_tokens": 160,
+          "repeated_4gram_fraction": 0.13836477987421383,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " they are at the playground. They like to play together and have fun.\nOne day, Jack says to his mom, \"I want to go to the playground. Can we go?\" His mom says, \"Yes, but be careful. The sky is dark and it might rain soon.\"\nJack says, \"Okay, I will be careful. I will be careful and will be careful.\"\nSo, Jack and his mom ventured into the dark. Jack's mom goes to the playground. She sees a big slide and a sandbox. Jack looks at the slide and says, \"I'm going to slide down the slide!\"\nJack's mom says, \"That looks great, Jack! That was a great slide!\"\nJack says, \"Yes, I want to go!\"",
+          "words": 162
+        },
+        {
+          "distinct_1": 0.455026455026455,
+          "distinct_2": 0.824468085106383,
+          "ended_with_eot": false,
+          "id": "cont06",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.05913978494623656,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " you run away. On Eventually, you can go to the bathroom. On Earthday, you can try to find something important. But only you have to be careful. No matter how hard you turn, you can still have fun and do great things.\nSo, Robo decided to try something new. He ran to the bathroom, turned on the handle, and took a deep breath. He started to explore.\nThe bathroom was so deep that nobody could see. He was determined to find out what was inside.\nHe slowly stepped out of the bathroom and stepped in. He felt a little scared, but he was also curious. Then, he heard a voice. It was the voice that said, \"Hey, go ahead and run away!\"\nThe Robby was scared. He started to run, but he was too fast. He didn't know the voice was for him. He tried to run back, but he was too fast.\nThe door",
+          "words": 189
+        },
+        {
+          "distinct_1": 0.4489795918367347,
+          "distinct_2": 0.8,
+          "ended_with_eot": false,
+          "id": "cont06",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.04145077720207254,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " you're scared. They are always running around together. One day, they were running around in the park.\nThey saw a big box that was full of dust. They opened the box and saw lots of dust. They were very curious and wanted to see what was inside.\nThey decided to look around and see what was inside the box. They opened it and saw a lot of dusty things inside. They were big, colorful, and some things that looked like a treasure map. They had never seen one before, like a map or a secret treasure.\nThey decided to try the dust and see what it would be like. They walked around the park, looking at the dust and wonder. They were a bit scared and decided to do it again. They ran and jumped, trying to reach out, but it was too far away.\nSuddenly, they heard a voice from inside the box. It was a little girl, who had been looking for something to share with her new",
+          "words": 196
+        },
+        {
+          "distinct_1": 0.46153846153846156,
+          "distinct_2": 0.7777777777777778,
+          "ended_with_eot": true,
+          "id": "cont07",
+          "max_line_repeats": 1,
+          "new_tokens": 103,
+          "repeated_4gram_fraction": 0.045454545454545456,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": ". Yay, I will make a delicious sandwich for you.\" \nThe little boy thought for a moment, and then he said, \"Okay, I will make you a simple sandwich.\" \nSo the little boy got to work. The little boy took the sandwich and his mom made a delicious sandwich. Yay, the sandwich was delicious. \nThe little boy was happy that he could eat his sandwich. He had a very good simple sandwich and enjoyed it up.",
+          "words": 91
+        },
+        {
+          "distinct_1": 0.4120603015075377,
+          "distinct_2": 0.7626262626262627,
+          "ended_with_eot": false,
+          "id": "cont07",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.08163265306122448,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " two. That's how it makes good for you. You can be the best scecting of our cheese and cheese and cheese for you. But remember, you have to eat your soup before you eat your food. And only eat your soup and cheese and cheese. And you can be a son.\"\nThe next day, Tim went to the store with his mom. He took out his food and bread and cheese from his mouth. He cut the bread for the pieces of bread. He gave it to the lady, who was proud of him.\n\"Thank you, mom. You are very smart and kind. You are the best helper. Now, let's go home and have some cheese and cheese. Then we can be the best boys ever.\"\n\"Yes, mom. I love you too. And I'm glad you like the soup. And I'm glad you like it.\"\n\"Good boy. And thank you for making me a good sandwich. And I",
+          "words": 199
+        },
+        {
+          "distinct_1": 0.37305699481865284,
+          "distinct_2": 0.703125,
+          "ended_with_eot": false,
+          "id": "cont07",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.08421052631578947,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a sirench. It is a delicious sandwich. Mom gave her a small piece of bread and said, \"This is a delicious sandwich. It is a special sandwich, sweet.\"\nAnna was happy and excited. She took out the sandwich and put it in the sandwich. She sat down to eat and eat and eat. She was very happy and full.\nWhen she was done, Mom gave her a big big plate. It was the best sandwich she ever had. But she was also very hungry. She ate all the sandwiches and drank her sandwich. She did not like that.\nMom said, \"Anna, you need to eat your sandwich. You need to eat your bread and drink a lot of juice. I will make you eat and drink and enjoy it. You are also very hungry.\"\nAnna thought for a moment. She liked the sandwich, but she also liked the sandwich. She said, \"Okay, Mom. I will eat my sandwich and drink",
+          "words": 193
+        },
+        {
+          "distinct_1": 0.4,
+          "distinct_2": 0.7039106145251397,
+          "ended_with_eot": false,
+          "id": "cont08",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.14124293785310735,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " the room and the old man looked at his face. He smiled and said \"What is it?\". The lighthouse replied \"I'm trying to balance!\" The old man said \"Well, why are you balancing?\"\nThe old man explained that he had been balancing a circle on his head. He said that if he kept balancing the circle on his head, he would have to give him a massage. \nThe old man was confused. He asked the old man over to come and explain why he was balancing. The old man told the old man that he could make a massage to make the olderhouse work. The old man understood. He said that if he was still writing something, he would be able to balance the circle on his head. \nSo the old man started balancing the circle on his head. He practiced and practiced until he was so good. Finally he was ready and he could",
+          "words": 180
+        },
+        {
+          "distinct_1": 0.4247787610619469,
+          "distinct_2": 0.7232142857142857,
+          "ended_with_eot": true,
+          "id": "cont08",
+          "max_line_repeats": 1,
+          "new_tokens": 133,
+          "repeated_4gram_fraction": 0.05454545454545454,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a big park. He was scared, but he was brave. He ran towards the lighthouse and peeked inside. Inside he was a beautiful sparkly light. He smiled and thanked the lighthouse. He felt so excited to see the lighthouse.\nThe lighthouse looked the perfectly bright light. He was so excited, he jumped up and down. He had never seen anything so bright before. He was so happy that he jumped up and down with joy. \nThe lighthouse was the most beautiful light of the world. He was the happiest in the world, he had ever seen the lighthouse.",
+          "words": 113
+        },
+        {
+          "distinct_1": 0.5,
+          "distinct_2": 0.8407079646017699,
+          "ended_with_eot": true,
+          "id": "cont08",
+          "max_line_repeats": 1,
+          "new_tokens": 140,
+          "repeated_4gram_fraction": 0.036036036036036036,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a field. It was an odd. It was a very tall. It was a tall and strong and strong.\nSuddenly, a big gust of wind came. It blew the odd's head and the rain fell down. The oddline was sad. It wanted to go back to the farm and be its friend. \nThe oddler quickly ran outside and tried to help the oddlt. But the oddl was too strong. \nHe could only come back in the field, but the oddler was still there. He felt sad and alone. \nThe oddler never came back in the field again.",
+          "words": 114
+        },
+        {
+          "distinct_1": 0.4,
+          "distinct_2": 0.7313432835820896,
+          "ended_with_eot": true,
+          "id": "cont09",
+          "max_line_repeats": 1,
+          "new_tokens": 138,
+          "repeated_4gram_fraction": 0.16666666666666666,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " little people, who lived in a small town. They had a big, dark room with a big door. The door was always closed. The sun was always shining, and the sky was full of light.\nOne day, the sun was shining brightly and the day was bright. The people in the town were thirsty. They wanted to drink some water. The people were happy and excited. They had a big pile of water.\nA little girl went to the castle. She saw that the water was hot. She was happy and drank the water. The people in the town were happy again. The sun was not hot anymore. The people in the town were happy too.",
+          "words": 135
+        },
+        {
+          "distinct_1": 0.38636363636363635,
+          "distinct_2": 0.7480916030534351,
+          "ended_with_eot": true,
+          "id": "cont09",
+          "max_line_repeats": 1,
+          "new_tokens": 153,
+          "repeated_4gram_fraction": 0.07751937984496124,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a big, scary forest. It was a big, scary forest, and it had big trees and funny animals. Rivers for the forest was so scary that it made them scared.\nOne day, Rivers wanted to make their forest a new place. So, Rivers decided to build a new place. Rivers passed, the trees and the trees grew taller and pretty. Rivers were so happy and thanked the scary forest for the fun.\nAfter many days, Rivers were the most scary forest. The forest became a big, scary forest, but Rivers were still happy. Rivers and the forest became their home. Rivers were not scary anymore, and they were happy and safe.",
+          "words": 132
+        },
+        {
+          "distinct_1": 0.265625,
+          "distinct_2": 0.518324607329843,
+          "ended_with_eot": false,
+          "id": "cont09",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.38095238095238093,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a big sea. It is a special place. It is a beautiful place for the sea. It is bigger and bigger than the other sea. It is a house for a little sea.\nRivers the sea animals have a lot of food and a big sea. They have a lot of food and a big sea. They want to visit the sea. They see the sea and the sea and the sea and the water. They see the sea and the fish and the sea. They see the sun and the sea and the sea and the waves. They hear the waves and the waves and the waves. They see the sea and the water. They are very happy. They say, \"Thank you, thank you, Mrs. Snows. See and the sea. You are the best fire in the world.\"\nRivers the sea and the sea. They wave to the sea. They hug the fish and say, \"You are welcome, little fish. We are",
+          "words": 192
+        },
+        {
+          "distinct_1": 0.4431818181818182,
+          "distinct_2": 0.7542857142857143,
+          "ended_with_eot": false,
+          "id": "cont10",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.10982658959537572,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " beg and enjoy the beauty of nature around him.\nOne day, Dincha had an idea. He wanted to go to the playground and play. He asked his mom if he could go. His mom said yes and they went to the playground.\nWhen they arrived, Dincha was so excited! He ran to the playground and started running around the playground. He had so much fun, he was about to slide down the slides and feel so tired. \nSuddenly, Dincha's mom called him to come to the playground. Dincha didn't want to stop playing and he began to cry. His mom told him that he didn't want to. \nDincha was worried about this and he didn't want to be too mad at her. He ran to the playground and sat down on the playground. His mom smiled and gave him a hug. \nDincha's mom was very proud of him",
+          "words": 176
+        },
+        {
+          "distinct_1": 0.5,
+          "distinct_2": 0.8434782608695652,
+          "ended_with_eot": true,
+          "id": "cont10",
+          "max_line_repeats": 1,
+          "new_tokens": 126,
+          "repeated_4gram_fraction": 0.035398230088495575,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " remain in the woods. He wanted to try and try, but his mom said no. \nDuring the narch, he was determined to try. He grabbed his hand and rushed out of the woods. He thought to himself and ran around the woods, trying to catch a butterfly with his paws. \nFinally, when he reached the end of the woods, he found a beautiful butterfly! Duckily, he jumped up and ran after it, and soon he was back in the same spot! He laughed and ran around the sky, enjoying the view from the trees, the sun and the trees.",
+          "words": 116
+        },
+        {
+          "distinct_1": 0.4764705882352941,
+          "distinct_2": 0.8461538461538461,
+          "ended_with_eot": true,
+          "id": "cont10",
+          "max_line_repeats": 1,
+          "new_tokens": 182,
+          "repeated_4gram_fraction": 0.041916167664670656,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " begin. He is always glad that his friends are always there.\nOne day, Dave and his friends decided to have a race. Dave was so excited, he ran all around the park and shouted out \"Whell!!\" His friends cheered him on, but Dave didn't want to give up.\nDave's friends went to the pond and shouted, \"Whell!\" Dave looked over the edge of the pond and noticed a beautiful pond. He was amazed at all the beautiful plants, and a beautiful pond.\nDave's friends cheered, \"We have never been to a pond, Dave. We will take some time to stay there until we can have a picnic!\" Dave's friends were so happy and they thanked Dave for being so kind.\nThe moral of this story is that being kind to others can bring happiness to everyone.",
+          "words": 170
+        },
+        {
+          "distinct_1": 0.423728813559322,
+          "distinct_2": 0.7215909090909091,
+          "ended_with_eot": false,
+          "id": "cont11",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.1781609195402299,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": ". He wants to help them. He looks at his dad's hand and says, \"Maybe he can help us get out of the house.\"\nThe scienticer has a big smile and says, \"I know how to make you feel better.\" The scienticer is a little bit of kindness. He takes a small piece of paper and wrinkles on it. He says, \"Now you are strong and strong. How can you do that?\"\nThe scientermales nods and says, \"I can do that. I am proud of you.\"\nThe scientist says, \"I can do that too.\"\nThe scientist says, \"That is a good idea. But if you don't give me a turn, you can try the center.\"\nThe scientist says, \"Okay, I will try.\"\nThe scientist says, \"You are a good guest!\"\nThe scientist says",
+          "words": 177
+        },
+        {
+          "distinct_1": 0.453125,
+          "distinct_2": 0.7801047120418848,
+          "ended_with_eot": false,
+          "id": "cont11",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.06349206349206349,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a good job. He loves to help his friends when they need him. On the way, he can help them. He can make them feel better. He is very smart and smart.\nHe feels like he has a lot of things. He is always able to help his friends. He thinks he is smart and useful. He likes to be good and help them. He can do things if he is happy or tough.\nHe walks around the park, feeling the wind in his hair. He likes to look at all the things he can see. He sees a big tree with many leaves. He sees a red kite hanging from the branches. He wants to try it. He climbs on a branch and grabs the kite.\nHe tries to hold the kite in his beak. He tries to make it fly. He puts it in his mouth. But he hits it with a loud noise. The kite flies away. The kite flew away.\nHe runs after the",
+          "words": 192
+        },
+        {
+          "distinct_1": 0.3905325443786982,
+          "distinct_2": 0.75,
+          "ended_with_eot": true,
+          "id": "cont11",
+          "max_line_repeats": 1,
+          "new_tokens": 171,
+          "repeated_4gram_fraction": 0.10240963855421686,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a help from his mom. He says, \"I want to help. Can we help you feel better?\"\nHis mom says, \"Yes, we can. What do you need help?\"\nAnne is a little boy. She has a big bag of tools. He walks to his mom and asks, \"Mom, can you help me with my help?\"\nHis mom says, \"Of course, my big help. Let's go to your mom. Then we can help you feel better.\"\nAnne hugs him and says, \"I'm sorry, mom. I didn't mean to make you sad.\"\nHis mom says, \"It's okay, dear. You can do it, but only if you do it again.\"\nAnne smiles and says, \"Okay, mom. That sounds fun.\"",
+          "words": 169
+        },
+        {
+          "distinct_1": 0.44970414201183434,
+          "distinct_2": 0.8154761904761905,
+          "ended_with_eot": true,
+          "id": "cont12",
+          "max_line_repeats": 1,
+          "new_tokens": 175,
+          "repeated_4gram_fraction": 0.024096385542168676,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": ". He was very excited to see what was inside. He opened his bag and started to look at the pictures. Suddenly, he heard something very strange. He looked around and saw a big, angry bear. \nThe bear was very angry and stopped running. He took the pictures and went to the store. He saw a small house and he thought it looked like it was a very special place. He quickly grabbed a can and started to rub it.\nBut then, the bear saw that the bed was leaving some of his own. It had been in a very long time. He was scared and ran away. \nThe museum was right, but it was too late. The bear had to go home. He was very disappointed and lonely. He had been looking forward to the next time. The museum was gone, and he was no longer lonely.",
+          "words": 169
+        },
+        {
+          "distinct_1": 0.43010752688172044,
+          "distinct_2": 0.7891891891891892,
+          "ended_with_eot": true,
+          "id": "cont12",
+          "max_line_repeats": 1,
+          "new_tokens": 189,
+          "repeated_4gram_fraction": 0.0546448087431694,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": ". She was so proud of her new adventure. She was excited to explore the museum and see what else she could find. She wanted to see new things, but she couldn't decide. She started to feel a bit scared, but she was determined. \nSuddenly, she heard a loud voice behind her. \"Come on, little girl!\" It was her mom. She looked at her and said, \"I'm just going to have a surprise for you!\" \nThe museum was a bright red door. She opened the door and ran to the door. She opened it and stepped inside. She was excited to see what was inside! She opened the door and saw a bright, beautiful garden. \nThe museum was full of beautiful flowers and a big, juicy strawberries. The little girl was so happy she started to laugh and play in the garden. She enjoyed the sight of the museum and it was a wonderful surprise.",
+          "words": 186
+        },
+        {
+          "distinct_1": 0.4251497005988024,
+          "distinct_2": 0.7590361445783133,
+          "ended_with_eot": true,
+          "id": "cont12",
+          "max_line_repeats": 1,
+          "new_tokens": 178,
+          "repeated_4gram_fraction": 0.04878048780487805,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": ". It was full of animals and people. \nBut the museum was very loud and scary. Little Joe wanted to learn more. He had never tried to be in a museum before.\nOne day, when the museums went on and the people were scared. They had to go there. The museum was very quiet and scary. Little Joe was worried. He decided to go and explore the museum. \nWhen the museums came, Little Joe was very scared. He had to hurry and see what was going on. Suddenly, Little Joe saw a big pile of toys and thought it was fun. He forgot about the museum and was not allowed to go in. \nWhen the museums were gone, Little Joe decided to go in the back of the museum. He was happy. He had learned something new. He could not wait to explore the next time!",
+          "words": 167
+        },
+        {
+          "distinct_1": 0.5871559633027523,
+          "distinct_2": 0.8888888888888888,
+          "ended_with_eot": true,
+          "id": "cont13",
+          "max_line_repeats": 1,
+          "new_tokens": 117,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " her side and enjoy the sunshine.\nOne day, Honey heard a loud noise coming from the sky. She was scared and looked around. She could see far away and feel safe.\nHoney's mom saw her and said, \u201cHoney, why did you come here?\u201d Honey was so disappointed.\nHoney\u2019s mom said, \u201cYou could come here and have some delicious snacks.\u201d Honey nodded her head and ran home.\nHoney was so happy to have found such a good friend. She knew she had been brave and enjoyed her snacks.",
+          "words": 109
+        },
+        {
+          "distinct_1": 1.0,
+          "distinct_2": 1.0,
+          "ended_with_eot": true,
+          "id": "cont13",
+          "max_line_repeats": 1,
+          "new_tokens": 6,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " their side in the park.",
+          "words": 6
+        },
+        {
+          "distinct_1": 0.5316455696202531,
+          "distinct_2": 0.8846153846153846,
+          "ended_with_eot": true,
+          "id": "cont13",
+          "max_line_repeats": 1,
+          "new_tokens": 89,
+          "repeated_4gram_fraction": 0.02631578947368421,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " her side. She was feeling very lonely. \nBut Hity was very kind. She looked up at the sky, and saw a big, friendly cloud. The cloud was very bright and it made a little sound. Honfied. She smiled, and it was the most wonderful thing in the world. \nHours' happy and the cloud was very happy. Honey was happy too, and she thanked her goodbye.",
+          "words": 79
+        },
+        {
+          "distinct_1": 0.3742690058479532,
+          "distinct_2": 0.6764705882352942,
+          "ended_with_eot": true,
+          "id": "cont14",
+          "max_line_repeats": 1,
+          "new_tokens": 168,
+          "repeated_4gram_fraction": 0.2261904761904762,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " they saw a big, red balloon. It was so pretty, it could hardly fly. Jack was excited and started to laugh. He ran to the balloon and said, \"Look at the balloon!\" But the balloon was too high.\nJack felt like he had to fly. Suddenly, he saw a big, red balloon. He was very excited and shouted, \"Look! It's so big!\" The balloon lifted its mouth and flew up into the sky.\nJack was so amazed that he had never seen a balloon before. He said, \"Wow! This balloon is so big and red!\" The balloon smiled and said, \"Wow! It's so big and red!\"\nJack felt so proud. He had found his plane! He hugged the balloon and said, \"Thank you!\" The balloon smiled and flew away.",
+          "words": 171
+        },
+        {
+          "distinct_1": 0.36,
+          "distinct_2": 0.6161616161616161,
+          "ended_with_eot": true,
+          "id": "cont14",
+          "max_line_repeats": 1,
+          "new_tokens": 102,
+          "repeated_4gram_fraction": 0.14432989690721648,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a big storm came. The storm was very strong and it filled the sky. The rain was very hot. The wind carried the rain out of the house. The wind was strong and the rain was strong.\nThe storm passed very fast. The wind was strong and strong. The wind took the lightning away. The storm was heavy, but it could not keep the rain. The storm was happy and safe. The storm was gone, and the rain was still hot. The rain was gone forever.",
+          "words": 100
+        },
+        {
+          "distinct_1": 0.46846846846846846,
+          "distinct_2": 0.8545454545454545,
+          "ended_with_eot": true,
+          "id": "cont14",
+          "max_line_repeats": 1,
+          "new_tokens": 114,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a little boy named Tim had to leave. He was sad because he wanted to go outside. But it was too late, and the storm was bad. Tim felt bad for what he had done, but he knew he had to make up.\nTim had an idea. He decided to try his best tour tour. He told his friends and they went to see the storm. They had a great time, and Tim felt better. He went outside and saw the storm again. This time, it was just a storm. Tim was a happy boy again.",
+          "words": 111
+        },
+        {
+          "distinct_1": 1.0,
+          "distinct_2": 1.0,
+          "ended_with_eot": true,
+          "id": "cont15",
+          "max_line_repeats": 1,
+          "new_tokens": 8,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " when we need help to do something.",
+          "words": 8
+        },
+        {
+          "distinct_1": 0.58,
+          "distinct_2": 0.912751677852349,
+          "ended_with_eot": true,
+          "id": "cont15",
+          "max_line_repeats": 1,
+          "new_tokens": 185,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a good weather. When the day comes, the maintains mentioned that you are safe and warm. Do not worry, it's not too dangerous.\"\nThe maintains said, \"Maybe we should try something new. How about we make a new friend with the weather?\"\nThe little girl thought it sounded like a wonderful word. She asked the maintains for help and made a special card for the maintaint. She was so proud of her work and ran off to play with them.\nThe maintains had solved the mystery and soon, the little girl could keep her promise. She went home and told her mom and dad about the maintains in the car. She smiled and gave them a big hug, feeling happy that she could help the maintains in their way.",
+          "words": 150
+        },
+        {
+          "distinct_1": 0.4,
+          "distinct_2": 0.7094972067039106,
+          "ended_with_eot": true,
+          "id": "cont15",
+          "max_line_repeats": 1,
+          "new_tokens": 180,
+          "repeated_4gram_fraction": 0.21468926553672316,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " awaterial. Inside is a big, silver box.\n\"What is in the box?\" Lila asked, pointing to the box.\n\"I don't know either. Maybe it's a surprise,\" Mom said.\n\"What's inside the box?\" Ben asked.\n\"Maybe it's a surprise for us,\" Lila guessed.\n\"Maybe it's a surprise,\" Mom agreed.\nThey took a key from the box and opened it. Inside, they found a lot of money.\n\"Wow, I think we can buy this!\" Lila said.\n\"What is it?\" Ben asked.\n\"It's the surprise,\" Mom said. \"We got it for you. Let's give it to our friends and share it.\"\nThey both laughed and enjoyed their new discovery. They were proud of themselves for being creative and making a special surprise.",
+          "words": 180
+        },
+        {
+          "distinct_1": 0.4644808743169399,
+          "distinct_2": 0.8186813186813187,
+          "ended_with_eot": false,
+          "id": "cont16",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.07222222222222222,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " be anything you want, but nobody else to use it.\nOne day, Leel was outside playing when a mean old man came up. He was very angry and shouted at Leel. \"You can't have my kite!\"\nLeel took a deep breath and his dad said, \"You can't have it!\" Leel was so scared he ran away and started walking towards the man. Leel was so scared that he ran away.\nLeel tried to find his way back, but the mean man saw him and quickly ran towards him. Leel's dad said, \"Leeling is the way you can't be able to get to the park. You have to leave, no matter what. You need to go home now, I'll have to leave.\"\nLeel's dad was relieved, but Leel was determined to keep going. He took his kite, and it flew high and fast. L",
+          "words": 183
+        },
+        {
+          "distinct_1": 0.39644970414201186,
+          "distinct_2": 0.7380952380952381,
+          "ended_with_eot": false,
+          "id": "cont16",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.060240963855421686,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " print. He loves to help his mom and dad with the printer. He is very happy when he sees the printer. He thinks he is very smart and clever.\n\"Wow, he is so smart!\" he says excitedly.\n\"What is it?\" Leve says.\n\"I am a smart customer, but I have to go to work and use the printer. Listen to me and you will be proud of the printers.\" he says.\nLevroom agrees. He is not proud of what Leve says. He is very angry and scared. He does not understand how to use the printers.\n\"But Leve, I hope that is not a good idea. I want to be a good customer,\" he says.\n\"But you have to learn a lot of things. You have to use the printers to make me proud. You have made",
+          "words": 169
+        },
+        {
+          "distinct_1": 0.45789473684210524,
+          "distinct_2": 0.7883597883597884,
+          "ended_with_eot": false,
+          "id": "cont16",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.053475935828877004,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " be a person. She is about to stay close to her. She stays close to her mom and dad.\nShe hears her mom calling her. She stops in front of the garden. She sees a bee in a cage. It is big and yellow, but it is quite right.\nShe opens the cage door. She sees a lady inside. She is holding a black flower. She has a red smile and a blue coat. She says, \"Hello, sir. What are you doing here?\"\nLearn a moment. She is curious. She wants to see the bee. She asks her mom and dad to come see. They say yes.\nLeipping is a little bit shy. She does not want to be scared. She says, \"I don't like bees. They are not real. They are friendly. They can be friends. Do you want to be my friend?\"\nThe lady nods. She says, \"Yes, I",
+          "words": 190
+        },
+        {
+          "distinct_1": 0.3853658536585366,
+          "distinct_2": 0.7549019607843137,
+          "ended_with_eot": false,
+          "id": "cont17",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.0594059405940594,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " eggs. They also have many cups of flour. They use their hats to measure the flour. They count the flour, the eggs, the eggs, and some sugar. They are proud of their eggs.\nMom sees them and smiles. She sees them and says, \"Wow, these are good. How did you do that?\"\n\"I thought it was a good idea,\" she says. \"But I made a mistake. I made a mess. Now I have no flour for me.\"\n\"That's okay,\" Tom says. \"I'm sorry. I just wanted to have some sugar. I didn't mean to make a mess.\"\nMom smiles and says, \"Maybe you can make another. But you have to ask me first. And you have to be kind and polite. And you have to share and be polite. That's why you are happy and polite. You can have more sugar and then you can have some. You can have more fun and make a new",
+          "words": 205
+        },
+        {
+          "distinct_1": 0.37566137566137564,
+          "distinct_2": 0.7127659574468085,
+          "ended_with_eot": false,
+          "id": "cont17",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.14516129032258066,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a spoon. The recipes are ready to bake them.\n\"Let's bake a cake!\" Tom says. He takes a spoon and puts it in a bowl. He takes a spoon and puts it on his spoon. He likes to make a cake.\n\"Yummy!\" Sam says. He pours some flour, some sugar, some sugar, and some milk. He cuts some eggs, some eggs, and eggs. He takes a spoon and puts the cake in his bowl. He stirs the batter and says, \"Mmm, this is the best cake ever!\"\nHe mixs the eggs and the eggs and eats. He smells funny and says, \"Mmm, this is great!\"\nTom comes to see what Sam has done. He sees the mess and says, \"I'm done, Tom! You are very naughty! You ruined my cake!\"\nHe feels sad and angry. He thinks Sam is not nice. He says",
+          "words": 189
+        },
+        {
+          "distinct_1": 0.4084507042253521,
+          "distinct_2": 0.6808510638297872,
+          "ended_with_eot": true,
+          "id": "cont17",
+          "max_line_repeats": 1,
+          "new_tokens": 145,
+          "repeated_4gram_fraction": 0.2014388489208633,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " eggs. They are all mixed up. But the eggs are too high. They need a short and sharp knife.\n\"Uh-oh!\" said Mom. \"These eggs are too high. They will make your eggs fall and hurt.\"\n\"Oh it is not good,\" said Mom. \"But we have to be careful. The eggs are tough and fragile. We can break the eggs and the eggs. Then we can make them strong and healthy.\"\n\"OK,\" said Mom. \"But you have to ask first. And you have to use your imagination and follow the rules. You have to be careful and follow the rules. And you have to be gentle with the eggs.\"",
+          "words": 142
+        },
+        {
+          "distinct_1": 0.4659090909090909,
+          "distinct_2": 0.7885714285714286,
+          "ended_with_eot": true,
+          "id": "cont18",
+          "max_line_repeats": 1,
+          "new_tokens": 198,
+          "repeated_4gram_fraction": 0.011560693641618497,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " very kind and gentle. The algor was always happy, but he was also very angry. He always wanted to learn from them.\nOne day, the algor was playing in the kitchen when he saw a small mouse. The mouse was running towards him. He tried to bite his finger but it was too fast. The algor smiled and said, \"Don't be scared, little mouse.\"\nThe algor was very surprised that the mouse was just trying to bite the algar. He quickly ran inside and the mouse saw that it was getting smaller. He said sorry and promised to be careful.\nThe algoral beam was very angry and he tried to bite the mouse. But the mouse was too fast and too strong. He quickly flew away, leaving the algor and never caught up again. The algor his story teaches us that it is important to be careful and not resist what you do.",
+          "words": 176
+        },
+        {
+          "distinct_1": 0.40404040404040403,
+          "distinct_2": 0.751269035532995,
+          "ended_with_eot": false,
+          "id": "cont18",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.08205128205128205,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a good person. He loves to make people laugh and tell the truth. He is very good at making people laugh.\nOne day, he sees a big man in the living room. He has a big red ball. He is angry. He says, \"That is my ball. Go away with it.\" He tries to take the ball from the bad man. But the bad man is stronger and stronger. He runs away.\nThe bad man is very angry. He shouts, \"Hey, that is my ball! Give it back!\" He runs to the other side of the room. He sees a big box. He opens it and sees something shiny inside. He wonders what is inside. He says, \"I found it here! Let me see!\"\nHe runs to the box and reaches inside. He puts it in his mouth. He feels something strange. He hears a voice. \"Who is there?\" It is a voice. It is a little mouse.",
+          "words": 198
+        },
+        {
+          "distinct_1": 0.3333333333333333,
+          "distinct_2": 0.6648648648648648,
+          "ended_with_eot": false,
+          "id": "cont18",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.14207650273224043,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a toy. She does not like it. She thinks it is scary. She wants to touch it and make it wet and quiet.\nShe goes to the bathroom and finds a soft towel. She puts it on the table. She sips the towel around it. It is soft and soft. She smiles and starts to rub it. She feels the towel on her hand. It is soft and clean. She smiles.\nShe puts the towel on the floor and smiles. She says, \"Goodbye, alright. You are not scary. I am here to help you.\" She starts to clap her hands. She feels the soft towel on her hand. She feels a happy ting. She puts the towel on her hand. She kisses it and says, \"Bye, alright. You are the best. I am not scary anymore.\" She runs to the kitchen. She shows her mom the tid and the towel. She tells her",
+          "words": 186
+        },
+        {
+          "distinct_1": 0.3707865168539326,
+          "distinct_2": 0.6818181818181818,
+          "ended_with_eot": true,
+          "id": "cont19",
+          "max_line_repeats": 1,
+          "new_tokens": 97,
+          "repeated_4gram_fraction": 0.1511627906976744,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " they saw the sunrise. The village was so happy, it was full of laughter and joy. The village was filled with happiness and laughter.\nThe village was full of joy and happiness. Everyone was so thankful for the village and the village was filled with happiness. They thanked the village for the kind and kindness of friendship.\nThe village people were so thankful for the village. They said, \"Thank you for the kindness of our kindness and kindness.",
+          "words": 89
+        },
+        {
+          "distinct_1": 0.5116279069767442,
+          "distinct_2": 0.8671875,
+          "ended_with_eot": true,
+          "id": "cont19",
+          "max_line_repeats": 1,
+          "new_tokens": 138,
+          "repeated_4gram_fraction": 0.015873015873015872,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a big storm came. The storm was very strong, and the village was very unsfair. Everyone was worried and didn't know what to do.\nA man noticed a group of people who worked together to build a very big, beautiful forest. He was so proud of his town. He asked them to come and help him build it.\nThe man and queen worked all day. They built a big, beautiful forest with lots of trees and a tall tree. Everyone was very happy.\nIn the end, the storm passed and the sky was full of light. The village was proud of their unfair and the town was filled with laughter and joy.",
+          "words": 129
+        },
+        {
+          "distinct_1": 0.43617021276595747,
+          "distinct_2": 0.8128342245989305,
+          "ended_with_eot": true,
+          "id": "cont19",
+          "max_line_repeats": 1,
+          "new_tokens": 199,
+          "repeated_4gram_fraction": 0.043243243243243246,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a storm came. The rain had made the village very sad.\nThe village was sad because the village had no place for them. The storm had no friends. Everyone had to leave their village, but the village was very sad.\nThe storm made the village very sad. It was not as good as the people wanted to be the village happy. \nOne day, a brave old man came to the village. He had a long ladder and was very tall. He saw the village and was amazed. He asked everyone to teach him a lesson.\nThe villagers said, \"You should not judge a problem by how you try. This is very important.\"\nThe villagers listened to the old man and decided to try it. They worked together to push the ladder and the village was happy again. The people learned that it was much better to make everyone happy. \nThe moral of the story is that working together can make us happy and learn from others.",
+          "words": 188
+        },
+        {
+          "distinct_1": 0.546875,
+          "distinct_2": 0.8661417322834646,
+          "ended_with_eot": true,
+          "id": "cont20",
+          "max_line_repeats": 1,
+          "new_tokens": 146,
+          "repeated_4gram_fraction": 0.048,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " anything. They enjoy many things together. They are always happy.\nOne day, Mamie went outside to play. She saw something new there. It was a big, black box! Mamie opened the box and found a note. The note said, \"This is a secret!\" Mostie was very surprised. She did not know what a note could open.\nMostie turned the box. Inside, there were many shiny things. Mostie was very happy. She showed Mostie the secret. She said, \"This is a gift from my grandma.\" Mostie smiled and thanked Mostie. Mores played with her all day long. They had lots of fun.",
+          "words": 128
+        },
+        {
+          "distinct_1": 0.5231788079470199,
+          "distinct_2": 0.88,
+          "ended_with_eot": true,
+          "id": "cont20",
+          "max_line_repeats": 1,
+          "new_tokens": 158,
+          "repeated_4gram_fraction": 0.013513513513513514,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a big, scary dog. He is very strong and brave. He always tells the truth. He is very brave and loves everyone.\nOne day, a man got an invitation from the market. He was very excited and invited all the children to come and read his news. The children were happy and excited. They wanted to be like the man and give him lots of joy.\nWhen the man arrived home, he told everyone that the people in the market could be very smart and kind. He told them about how much he was when the people were kind and kind.\nThe moral of this story is that being kind and gentle can make us feel better. Even when you are kind and care, you can feel great and hope that everyone will be hopeful.",
+          "words": 151
+        },
+        {
+          "distinct_1": 0.3591549295774648,
+          "distinct_2": 0.6382978723404256,
+          "ended_with_eot": true,
+          "id": "cont20",
+          "max_line_repeats": 1,
+          "new_tokens": 163,
+          "repeated_4gram_fraction": 0.2158273381294964,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a person. She was very competitive. She wanted to win the party. She wanted to win the best. She wanted to win.\nMostie the cake was a little bit longer than Mummy. She was very happy. She could hardly control it. She thanked Mummy for her help.\nMummy was very proud of Mummy. She gave Mummy a big hug and said, 'Now, go ahead of Mummy.'\nMummy kissed Mummy and said, 'I'm so proud of you, sweetie. I'm so proud of you.'\nMummy was so proud of her. She said, 'I'm glad you could win the party.'\nMummy smiled and hugged Mummy again. She was proud of Mummy.",
+          "words": 142
+        }
+      ],
+      "mean_distinct_2": 0.7747609426201207,
+      "mean_repeated_4gram_fraction": 0.08747671111119645,
+      "mean_words": 149.28333333333333,
+      "n": 60,
+      "replacement_chars": 0,
+      "share_empty": 0.0,
+      "share_ended_with_eot": 0.65,
+      "share_repeated_4gram_over_0.3": 0.016666666666666666
+    },
+    "explanations": {
+      "items": [
+        {
+          "distinct_1": 0.2571428571428571,
+          "distinct_2": 0.42028985507246375,
+          "ended_with_eot": true,
+          "id": "expl01",
+          "max_line_repeats": 1,
+          "new_tokens": 132,
+          "repeated_4gram_fraction": 0.44776119402985076,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " Mayer: Mayer: Mayer: Mayer: Maya is the captiest. Mayer is the captiest of the summas. \nMayer: Mayer: Mayer: Mayer: Mayer: Mayer: Mayer: Mayer: Mayer: Mayer: Mayer: Mayer: Mayeras is the best idea of all the summer. \nMayer: Mayer: Mayer! Mayer is the best day in the world.",
+          "words": 70
+        },
+        {
+          "distinct_1": 0.43209876543209874,
+          "distinct_2": 0.8012422360248447,
+          "ended_with_eot": true,
+          "id": "expl01",
+          "max_line_repeats": 1,
+          "new_tokens": 168,
+          "repeated_4gram_fraction": 0.03773584905660377,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " He explained why they are so proud of his work. He told them that he was very generous and he would help them.\nWhen he got to the store, he saw a lot of vegetables and he wanted to help. He thought about how he could help the vegetables, so he took a few bits and tried to eat them. But it was very hard and he couldn't take them.\nWhen he finally got home, he helped the vegetables and the vegetables and the vegetables were very pleased. It was the best taste ever!\nThe farmer was so pleased that he gave the vegetables to the vegetables he had done. He thanked the vegetables and gave them lots of hugs.\nThe vegetables were so happy and the farmer was happy too. They ate the vegetables and enjoyed the vegetables together and it was sweet and juicy.",
+          "words": 162
+        },
+        {
+          "distinct_1": 0.5419847328244275,
+          "distinct_2": 0.8153846153846154,
+          "ended_with_eot": true,
+          "id": "expl01",
+          "max_line_repeats": 1,
+          "new_tokens": 145,
+          "repeated_4gram_fraction": 0.078125,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " \u201cI\u2019m not feeling well. But I\u2019m feeling well. I need help. I need help.\u201d\nThe two of them went to the other side of the park. Queen and the other sides of the park were amazed by the new things they had ever seen.\nBut then suddenly a big gust of wind blew and the two heard the children\u2019s cry. Another said: \u201cWhat\u2019s wrong, Scueener?\u201d \nThe other side of the park was very worried. \u201cIt\u2019s not a happy idea and I think I\u2019m going to get you a victory. Just take some time and then you will be happy again!\u201d",
+          "words": 131
+        },
+        {
+          "distinct_1": 0.47878787878787876,
+          "distinct_2": 0.7804878048780488,
+          "ended_with_eot": true,
+          "id": "expl02",
+          "max_line_repeats": 1,
+          "new_tokens": 180,
+          "repeated_4gram_fraction": 0.09876543209876543,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " \"Oh no! You must be careful, I will be gentle when you swim. It will be a flat! It will help you learn to swim!\"\nSpite: \"But why does the spat go?\"\nThe other animals stopped and looked at the spatnies. They felt sad.\n\"We don't know how to swim,\" the newsheart said. \"We just want to swim. We don't want to get hurt.\"\nThe newsheart turned back to the spat and the two animals swam away.\nThe spats were happy and the animals thanked the news. They all swam happily ever after.\nThe moral of the story is that even if we don't have to be careful and stay safe, we should be careful. Even if we don't swim too fast, we should be careful and stay safe.",
+          "words": 165
+        },
+        {
+          "distinct_1": 0.44808743169398907,
+          "distinct_2": 0.7912087912087912,
+          "ended_with_eot": true,
+          "id": "expl02",
+          "max_line_repeats": 1,
+          "new_tokens": 187,
+          "repeated_4gram_fraction": 0.07777777777777778,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " \"Let's go fishing!\"\nThe waterfighter: \"The ice will make a funny splash!\"\nThe kids swam around, looking for something to do. Finally, they found a small crab with a big, red scoop of something in its mouth.\nThe crab said: \"This is a fish. It's called a fish. I'm going to catch it.\"\nThe kids were so excited! They had never seen a fish before. \"What can we do with it?\" they asked.\nThe crab said: \"I bet it's a little bit more, but it's not a real fish. We have to tell it's me.\"\nThe kids were so excited. They said: \"Yes, we can. We can make something amazing with the crab and the fish!\"\nThe crab was so happy that it could help the fish, it learnt a valuable lesson.",
+          "words": 183
+        },
+        {
+          "distinct_1": 0.5625,
+          "distinct_2": 0.9052631578947369,
+          "ended_with_eot": true,
+          "id": "expl02",
+          "max_line_repeats": 1,
+          "new_tokens": 110,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " \u201cI\u2019m not sure what it is,\u201d he said. \u201cBut I want to see.\u201d\nThe son, the sonnie smiled. \u201cThat\u2019s right. I want to go and look out.\u201d\nSo the sonst, the sonnie and his dad went off to look for the ice cream. They looked in the park and finally found it!\nThe sonnie was so happy that he was able to receive one. He was glad that he had done the right thing.",
+          "words": 96
+        },
+        {
+          "distinct_1": 0.3699421965317919,
+          "distinct_2": 0.6744186046511628,
+          "ended_with_eot": false,
+          "id": "expl03",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.20588235294117646,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " \"I need a healthy help. I am going to pick some of my vegetables. It will be a healthy place to put them in.\"\nAniversurre: \"Well, you can pick the vegetables and share them with your friends. But remember to look at them and say hello.\"\nAniversity: \"Really? You can help me pick the vegetables and put them in their piles. Then you can pick some carrots oranges. That way, you can pick them from some apples. Then you can pick them and put them in a basket.\"\nAniversity: \"Reve, I will pick some carrots, oranges?\"\nAniversity: \"How do you pick the carrots in your basket and put them in their baskets. Then you can pick one, and you'll get the carrots and put them in your baskets. Then you can pick some carrots, oranges and make a potato",
+          "words": 173
+        },
+        {
+          "distinct_1": 0.3870967741935484,
+          "distinct_2": 0.7243243243243244,
+          "ended_with_eot": true,
+          "id": "expl03",
+          "max_line_repeats": 1,
+          "new_tokens": 187,
+          "repeated_4gram_fraction": 0.15300546448087432,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " \"Let's go now. I'm going to the store. It's getting dark and we have to go to the store. It's too late for you to get to the store. I'm going to get to buy a very special cup and a present for you.\"\nThe three year old was very happy and excited. They went to the store and bought a cup. They went home and the three year old had lots of fun.\nWhen they arrived home, the three year old was so excited to have the cup. But as they were about to go, they noticed that the cup was gone. So they had to go back to the store and buy some fresh water. \nThe three year old was sad, but the three year old was sad. Suddenly, the 3 year old saw that the cup had been so busy, she had been making a mistake. She had taken it without paying!",
+          "words": 186
+        },
+        {
+          "distinct_1": 0.6875,
+          "distinct_2": 0.9841269841269841,
+          "ended_with_eot": true,
+          "id": "expl03",
+          "max_line_repeats": 1,
+          "new_tokens": 73,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " \u201cI\u2019m not permiting. I need to practice myself and I will help you.\u201d\nThe two of them worked together. They found the perfect spot for little bit of all the energy.\nWhen they finished, the other animals were so happy!\nThey all thanked the energy and continued for the rest of the day.",
+          "words": 64
+        },
+        {
+          "distinct_1": 0.4838709677419355,
+          "distinct_2": 0.8181818181818182,
+          "ended_with_eot": true,
+          "id": "expl04",
+          "max_line_repeats": 1,
+          "new_tokens": 169,
+          "repeated_4gram_fraction": 0.02631578947368421,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " \"It's cold, honey. You can drink hot juice, but not too much. This is a kind of ostriches.\"\nAn old man smiled and said, \"Good idea. But I have a secret. If you want to drink some hot juice, I'll be more careful.\"\nRhewh was so excited. He waited until the old man was full and eventually agreed. He took a small sip and then gave it to the old man.\nThe old man thanked Rhew for the wisdom and said, \"Now you can drink some hot juice when you feel warm and happy.\"\nRhew smiled and gave the old man one last drink. He was no longer cold and he felt warm and warm. He thanked the old man for the advice and he went home.",
+          "words": 155
+        },
+        {
+          "distinct_1": 0.44274809160305345,
+          "distinct_2": 0.7615384615384615,
+          "ended_with_eot": true,
+          "id": "expl04",
+          "max_line_repeats": 1,
+          "new_tokens": 139,
+          "repeated_4gram_fraction": 0.1171875,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " \"Let's go get some ice cream, let's go get some ice cream.\"\nThe two friends got to the ice cream shop. They were so excited!\n\"Can we have ice cream, please?\" asked the three-goes. \n\"Yes! We can have ice cream,\" said the seconds.\nSo the three friends put on their warm chocolate ice cream and went to get some ice cream.\nWhen they arrived, the two friends sat on a bench and enjoyed their ice cream. Everyone enjoyed the warm treat and the little girl was so happy. \nThe two friends laughed and enjoyed the ice cream together. They had so much fun!",
+          "words": 131
+        },
+        {
+          "distinct_1": 0.61,
+          "distinct_2": 0.8787878787878788,
+          "ended_with_eot": true,
+          "id": "expl04",
+          "max_line_repeats": 1,
+          "new_tokens": 101,
+          "repeated_4gram_fraction": 0.020618556701030927,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " \u201cI think it\u2019s too much. I know something important for you and I am so happy to find this spoon for you. It\u2019s only a small cup or a bit of sugar, but I\u2019m sorry for being so rude. I will never be able to make this again. It\u2019s a good way for you, but don\u2019t worry. Please forgive me!\u201d\nThe moral of the story is: Don\u2019t be greedy and selfish, but still be kind.",
+          "words": 100
+        },
+        {
+          "distinct_1": 0.3756906077348066,
+          "distinct_2": 0.7055555555555556,
+          "ended_with_eot": false,
+          "id": "expl05",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.12921348314606743,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " \"What do you want to do?\"\nAn older: \"I want to make the ocean more beautiful! I want to be the same.\"\nAnnn: \"How?\"\nAn older: \"No, I want to make the ocean look better.\"\nAn voice: \"Don't worry, I will help you.\"\nAn honestly: \"Well, I know.\"\nAnueston: \"Will you come to the ocean? I'm very happy to have a new friend.\"\nAnity: \"Yes, you can! Come in, let's go to the beach and build more ocean.\"\nAnigh: \"Yes, please!\"\nAn honestly replied: \"Yes, I can, and I'll come back.\"\nAngest: \"I will come back soon, and I'll remind you a valuable lesson. Now, let's go.\"\nThe older was pleased.",
+          "words": 181
+        },
+        {
+          "distinct_1": 0.36,
+          "distinct_2": 0.6633165829145728,
+          "ended_with_eot": false,
+          "id": "expl05",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.19289340101522842,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a boat in the distance. He is sailing in the water. He is about to come closer.\n\"Let's go, let's go,\" he says.\n\"No, we can't. It's only a boat. Mom and Dad will be mad,\" Anna says.\n\"But I am afraid. I want to be your friend,\" Sam says.\n\"What is going to be friends?\" Anna asks.\n\"Sometimes we don't want to be angry,\" Sam says.\n\"We want to be your friend,\" Anna says.\n\"Well, we have to be careful. We don't want to make a mess,\" Sam says.\nThey start to swim and play. Then they hear a voice.\n\"Who are you?\" a voice says.\n\"I'm Sam. We are sailing. Do you want to play with us?\" he says.\n\"Yes, please. I want to play,\" Lila says.\n\"",
+          "words": 200
+        },
+        {
+          "distinct_1": 0.5657894736842105,
+          "distinct_2": 0.8933333333333333,
+          "ended_with_eot": true,
+          "id": "expl05",
+          "max_line_repeats": 1,
+          "new_tokens": 88,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " \u201cI\u2019m not permiting. I need to go to the ocean.\u201d\nThe sonthes: \u201cBut why don\u2019t you go?\u201d\nThe sonse smiled. \u201cWe will be happy,\u201d said the sonse, \u201cOk, but remember to listen to me.\u201d\nThe son was happy. He went to the ocean with the son and they both enjoyed the big ocean.",
+          "words": 76
+        },
+        {
+          "distinct_1": 0.5158730158730159,
+          "distinct_2": 0.824,
+          "ended_with_eot": true,
+          "id": "expl06",
+          "max_line_repeats": 1,
+          "new_tokens": 126,
+          "repeated_4gram_fraction": 0.016260162601626018,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " \"Oh no! You are too small to hold that cloth. I need to take care of it.\"\nSo, the two friends carefully picked up the cloth and put it together in their pockets. But the cloth was very strong and it was too hard to hold.\nThe two friends soon realised that the cloth was weak and they should be careful when they get it.\nThe moral of this story is that we can't let the cloth we take care of it and it's not too hard to do it without trying to get it. It's important to be careful with things that are too weak or too weak.",
+          "words": 126
+        },
+        {
+          "distinct_1": 0.5591397849462365,
+          "distinct_2": 0.8695652173913043,
+          "ended_with_eot": true,
+          "id": "expl06",
+          "max_line_repeats": 1,
+          "new_tokens": 110,
+          "repeated_4gram_fraction": 0.022222222222222223,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " He explained why he was so scared?\nQueen: \"I'm sorry, Queen. I won't drop you. But I'm not scared of the big hole.\"\nThen Queen: \"It's ok, Queen! I'm just here with you.\"\nSo the two of them went, feeling much better. Queening and feeling happy. Queen and Queen came to the ground. From then on, they both enjoyed watching the big hole.",
+          "words": 93
+        },
+        {
+          "distinct_1": 0.5867768595041323,
+          "distinct_2": 0.9,
+          "ended_with_eot": true,
+          "id": "expl06",
+          "max_line_repeats": 1,
+          "new_tokens": 124,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " \u201cI think it\u2019s too much. I\u2019m sure it stays for a while and I won\u2019t let you get hurt.\u201d\nThe other kids cheered and they all hugged the boy. They asked him if he could go and the other kids said yes. Soon, the boy was able to climb down and play.\nThe boy was so happy and he thanked the other kids for their help. He was so happy to have made friends. The moral of the story is that it\u2019s better to think and be kind, when you are kind and use your imagination and make someone feel better.",
+          "words": 121
+        },
+        {
+          "distinct_1": 0.4180790960451977,
+          "distinct_2": 0.7897727272727273,
+          "ended_with_eot": false,
+          "id": "expl07",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.05747126436781609,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " \"Ahoy, what are you doing with that to do? It is very important to me. It is very important for you.\"\n\"Can I see it?\" asked the lawnie.\nThe lawner smiled and said \"Yes, you can look at the sky. But first, you have to do something different.\"\nThe lawn owner nodded and said \"No\".\nThe lawnighter was disappointed. He wanted to know what was right. He asked the lawn mother over to come and explain everything.\nThe lawn thought this was a good idea! He agreed and said, \"Yes, I want to see the world! What do I do?\"\nThe lawn took the lawner and said, \"That sounds like a great idea!\"\nThe lawner was so pleased that he said, \"I will do it!\" \nThe lawn took the lawner home, and it was full of joy. He",
+          "words": 177
+        },
+        {
+          "distinct_1": 0.4088397790055249,
+          "distinct_2": 0.7611111111111111,
+          "ended_with_eot": false,
+          "id": "expl07",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.08426966292134831,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a grostronautious? Anounce it is so big, and it is too hard for me to fit up.\nBut the bald man doesn't want to fit up. He grabbed his hand and made it fit and fit perfectly.\n\"No, no, no!\" he said. \"I want to be the nicer of the grocery and you will be free!\"\nThe bald man was so surprised that he could not believe his eyes. He was too small, and he could fit up the grocery.\n\"It's okay,\" he said. \"I think I'm not so bad.\"\nThe bald man smiled and put the grocery back on the ground.\n\"It looks like you have ever made it,\" he said. \"It was so much fun. Do you want to do it again?\"\nThe bald man thought for a moment and then he said, \"Yes, I will do",
+          "words": 181
+        },
+        {
+          "distinct_1": 0.3563218390804598,
+          "distinct_2": 0.6416184971098265,
+          "ended_with_eot": false,
+          "id": "expl07",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.21637426900584794,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " Ason. Anounce was a graceful ant. Anounced a graceful ant and said: \"Ahi\". Anounce Ball was a bit scared.\nAnouncy said: \"What do you want to do?\"\nAnounce thought for a moment. \"I want to go to the sea,\" she said.\nAnounce thought for a moment. Then, the ant came to the lake. The ant was so excited. He said: \"I want to fly a butterfly!\"\nTheounce smiled at the ant and said: \"I want to fly a butterfly. I want to fly in the sky.\"\nThe ant thought for a moment and said: \"That sounds like fun! Let's go to the sea. It's more fun!\"\nTheounce was excited and said: \"Yes!\" \nThe ant was so excited. He started to fly around the sea and found lots of fun things",
+          "words": 174
+        },
+        {
+          "distinct_1": 0.49640287769784175,
+          "distinct_2": 0.8768115942028986,
+          "ended_with_eot": true,
+          "id": "expl08",
+          "max_line_repeats": 1,
+          "new_tokens": 146,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " \"Ahoy, help people feel better. I will take you to a doctor.\"\nSo the two of them worked together to get ready to help people. They had failed their heads to make the town look better.\nWhen they were done, they took the people to the doctor. He said, \"We will take care of your family now.\"\nThe two people were so excited! They asked the doctor if they could take care of the people.\nThe doctor said that if they worked hard, some people would get better and have more. With a big smile, the person said goodbye and returned home.\nThe family was so happy! They thanked the doctor and drove off, feeling much better.",
+          "words": 139
+        },
+        {
+          "distinct_1": 0.49375,
+          "distinct_2": 0.8805031446540881,
+          "ended_with_eot": true,
+          "id": "expl08",
+          "max_line_repeats": 1,
+          "new_tokens": 175,
+          "repeated_4gram_fraction": 0.025477707006369428,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " \"Let's go fishing together, but we need to be careful. We don't need to rush to the sea. It's too dangerous.\"\nThe 3 year old was worried but he still wanted to help. They thought about their chances and how they could solve the problem. Together they went to the sea to find some fish, and the two of them were able to take the fish back to their home.\nThe nibird was so thankful that Tim was able to help. He told Right that he could solve the problem and not rush to the shore. Right was so happy and thanked the nude.\nThe moral of this story is that we can solve our problems and have a victory of our feelings. So even if we don't have to rush, it can still be dangerous.",
+          "words": 160
+        },
+        {
+          "distinct_1": 0.42011834319526625,
+          "distinct_2": 0.7976190476190477,
+          "ended_with_eot": false,
+          "id": "expl08",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.05421686746987952,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " \u201cI am the veterinicerst. You are very strong and kind. I have to find a place for you. There is a long, far away land. You can stay, but I\u2019ll be your friend.\u201d\nThe veterinarian smiled. \u201cThis is my home. I have a lot of money for you. Can I help you?\u201d\nThe veterinarian replied, \u201cYes, of course you can. Let\u2019s go for one of this game. It can be your friend.\u201d\nThe veterinarian took out the price and said, \u201cThis is it you can have to go home now.\u201d\nThe veterinarian put a long stick in the water and watched as the veterinarian put it in the water. When the veterinarian was out, the veterinarian was kind and gentle.\nThe veterinarian said, \u201cIt\u2019s not the best way to do this one",
+          "words": 169
+        },
+        {
+          "distinct_1": 0.3613861386138614,
+          "distinct_2": 0.6368159203980099,
+          "ended_with_eot": false,
+          "id": "expl09",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.24120603015075376,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " \"It's cold, honey. You can't touch it. It's too hot and dangerous to come out.\"\nThe little girl said: \"But I want to see you like it. Scissors are a warer. They will make you feel better when it's hoter.\"\nThe little girl said: \"But I want to see you now.\"\nThe bad man said: \"No, I want to see the poses. They are too dangerous and it's not safe. But I want to see you from here. It's too powerful and dangerous. You can hurt yourself or your feelings. Do you understand?\"\nThe little girl said: \"Yes, please. I understand. I'm sorry I was wrong. I won't touch the poses. I just wanted to see the poses up close. I wanted to see them better, too.\"\nThe bad man said: \"You are right. I'm glad I saw you. But I'm",
+          "words": 202
+        },
+        {
+          "distinct_1": 0.6055045871559633,
+          "distinct_2": 0.8703703703703703,
+          "ended_with_eot": true,
+          "id": "expl09",
+          "max_line_repeats": 1,
+          "new_tokens": 111,
+          "repeated_4gram_fraction": 0.05660377358490566,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " \"Let's go get some ice cream, let's go get some yummy ice cream!\"\nSo, the three of them quickly ran out of the house, holding their ice cream. They put their ice cream on the ground and made their way to the flat.\nWhen they arrived at the end of the poles, they saw that their ice cream was very hot. They all had a great time playing together. \nThe moral of the story is that no matter what we don't know, we should always be kind and help others.",
+          "words": 109
+        },
+        {
+          "distinct_1": 0.5384615384615384,
+          "distinct_2": 0.875968992248062,
+          "ended_with_eot": true,
+          "id": "expl09",
+          "max_line_repeats": 1,
+          "new_tokens": 149,
+          "repeated_4gram_fraction": 0.09448818897637795,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " \u201cI\u2019m not feeling well. But I'm not feeling well. I need help. I need help to get out of the poles. It's too high for myself.\u201d\nThe littlesie gasped. \u201cWe must go find help, but it's too high. I can't climb it,\u201d said the littlesir. \nSo, the two of them went up to the equipment. An stubberseened, they got out of the poles and carried out their cones. Questers had saved the day and they were happy to be together. \nThe moral of the story is that even when we are tired, we can still go on an adventure.",
+          "words": 130
+        },
+        {
+          "distinct_1": 0.45528455284552843,
+          "distinct_2": 0.7622950819672131,
+          "ended_with_eot": true,
+          "id": "expl10",
+          "max_line_repeats": 1,
+          "new_tokens": 135,
+          "repeated_4gram_fraction": 0.08333333333333333,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " \"What do you want to do?\"\nAn old man: \"I want to make the computer look nice! I want to be like the computer!\"\nSplease: \"Let's make the computer look nice.\"\nSo, the old man and Squirrel started to work together. Splease the computer was a bit messy, but the computer was strong.\nThe computer was getting smaller and smaller, until it was as small as a house.\nThe old man and Squirrel: \"This computer looks so much better now!\"\nThe old man and Squirrel smiled. They knew it was a good idea to clean the computer.",
+          "words": 123
+        },
+        {
+          "distinct_1": 0.3689839572192513,
+          "distinct_2": 0.6935483870967742,
+          "ended_with_eot": true,
+          "id": "expl10",
+          "max_line_repeats": 1,
+          "new_tokens": 182,
+          "repeated_4gram_fraction": 0.15760869565217392,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " \"Let's go get a new computer.\" He handed the computer and said: \"I have a special place to go. I am very excited.\"\nThe 3 year old was excited and he said: \"Yes, let's go!\"\nThe three year old was so excited. They put the computer in their seats and started to play.\nBut then the computer started to get angry and they started to fight. The clock said: \"Let's go get the computer!\"\nThe 3 year old was so upset and he said: \"I'm sorry, I won't let go.\"\nThe 3 year old was disappointed, but he agreed. He said: \"We can still have fun and go home now. We'll be more careful next time\".\nThe 3 year old was sad and he was disappointed. He was so disappointed that he wouldn't have to give up the computer.",
+          "words": 187
+        },
+        {
+          "distinct_1": 0.4093567251461988,
+          "distinct_2": 0.7294117647058823,
+          "ended_with_eot": false,
+          "id": "expl10",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.14285714285714285,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " \"I am going to do something special. I'm going to do something special for you. I'm going to make you a new dish that is going to be!\"\nThe other Queen: \"Oh, I'm going to make a new dish. I'm going to make it look so nice. What do you want?\" \nThe otherQueen: \"I want a dish, please!\"\nThe secondshee was so happy and thanked the seconds. They were so excited to try something new this time. \nThe second 3 times, the seconds added a small dish. Whenever it was done, the second one was able to make the new dish look like a picture of a picture of a cake. \nThe seconds said: \"We have to go to the store and get the dish!\"\nThe seconds said: \"Wow! That sounds wonderful!",
+          "words": 171
+        },
+        {
+          "distinct_1": 0.35467980295566504,
+          "distinct_2": 0.6336633663366337,
+          "ended_with_eot": false,
+          "id": "expl11",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.205,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " \"It's a comet, however we are scared to see it?\"\nThe 3 year old: \"We won't be scared of the comet. We are just curious about it.\"\nThe 3 year old: \"It's a comet and we like the lightning. We should be careful with it.\"\nThe 3 year old was very excited.\n\"Yes!\" said the 3 year old. \"But how can we do that?\"\nThe 3 year old was so excited. \"Yes, let's go!\"\nThe 3 year old said: \"Let's take a closer look at the comet and see it.\"\nSo the 3 year old picked up the comet and took a closer look at it. It was so big and white and bright. They could see it and the comet was amazed by its beauty. The 3 year old's eyes lit up, and the comet flew away.\nThe 3 year old was so happy. \"Can we come back now?\" he",
+          "words": 203
+        },
+        {
+          "distinct_1": 0.44025157232704404,
+          "distinct_2": 0.7658227848101266,
+          "ended_with_eot": true,
+          "id": "expl11",
+          "max_line_repeats": 1,
+          "new_tokens": 167,
+          "repeated_4gram_fraction": 0.07051282051282051,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " \"Let's go and see the thunder.\"\nThe kids looked up and saw the thunder. They were so scared. \nWhen they got closer, they saw something amazing.\nThe thunder was coming from a big, colorful lightning. Everyone was so excited!\nThe family had to go and look at the lightning. They smiled and said: \"Wow! We can't wait to go!\"\nWhen they arrived, the thunder was gone. Everyone was so surprised!\nThe lightning was too loud and thunder was so strong. But the children were brave.\nThe thunder was so loud that they could feel the wind in his face and the thunder. The thunder was so loud and scary.\nThe kids cheered and laughed. They had a wonderful time, and the thunder was gone and the sun was shining.",
+          "words": 159
+        },
+        {
+          "distinct_1": 0.5141242937853108,
+          "distinct_2": 0.8693181818181818,
+          "ended_with_eot": false,
+          "id": "expl11",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.022988505747126436,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " \u201cI think we\u2019ll see storm. I\u2019m feeling very tired and bored. I have to find a place for you. There\u2019s no other people who will hear us. I\u2019m going to find a place to light up.'ve been there to lightning.\u201d \nWhest down, All the thunder flames and thunder. Finally, Angest, a small lightning happened. An expensive lightning was gone and the lightning was gone.\nAnney's mom was very worried. She had never seen anything like the lightning before. But then, she asked her: \u201cWhere did the lightning go?\u201d\nUnknown: \u201cI wanted to see the lightning at night, but I\u2019m too tired to come out. Please, let me go.\u201d\nThe lightning smiled and said: \u201cIf you are very tired, then you can go out and explore the lightning.\u201d\nAnirit thanked the",
+          "words": 177
+        },
+        {
+          "distinct_1": 0.4594594594594595,
+          "distinct_2": 0.7717391304347826,
+          "ended_with_eot": true,
+          "id": "expl12",
+          "max_line_repeats": 1,
+          "new_tokens": 185,
+          "repeated_4gram_fraction": 0.11538461538461539,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " \"Anoy, what are you doing with that?\"\nThen, his eyes lit up. He had never seen a frog before. The frog was surprised and said: \"I am looking for a friend to play with.\"\nThe two friends stopped and looked around. Then, one day, the frog had an idea. He said: \"Let's try to find someone to play with!\"\nThe two friends took turns jumping around the frog and they went to a big tree. They found a good spot to play some more.\nThe frog said: \"Let's take a nap.\"\nSo, the two friends lay down and began to take a nap. When they woke up the sun, the frog said: \"This is my home! Let's go back to the park and play again!\"\nThe two friends ran back into the park, happy that the day had a new friend to play with.",
+          "words": 185
+        },
+        {
+          "distinct_1": 0.34054054054054056,
+          "distinct_2": 0.6195652173913043,
+          "ended_with_eot": false,
+          "id": "expl12",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.2692307692307692,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " \"Let's go fishing the ocean and see the waves!\"\n\"Yes, let's come!\" said An rich man. Together, they went to the ocean and the waves were very high and low.\nThey had lots of fun and the sun was shining in the sky. Angest: \"Let's go to the ocean!\"\nSo, Angest: \"Ok, let's go!\"\nAngest: \"Let's go and swim!\"\nAngest: \"Oh no, I want to swim. I\u2019ll look for a better one.\"\nSo, Angest: \"OK! Let's go.\" So Angest: \"Ok, let's go!\"\nThey swam and swam until they reached the ocean. Angest and Angest: \"It was so big, but it was too big, it was too far.\" \nThey swam and swam until they found a lake. Angest: \"",
+          "words": 185
+        },
+        {
+          "distinct_1": 0.46296296296296297,
+          "distinct_2": 0.84472049689441,
+          "ended_with_eot": true,
+          "id": "expl12",
+          "max_line_repeats": 1,
+          "new_tokens": 179,
+          "repeated_4gram_fraction": 0.025157232704402517,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " Ason: Adaming is a very powerful and he loves everyone. He is always very kind and kind, but he also likes to help people.\nOne day, Dad brought a big network of fish to the park. He brought it to the ducks who worked there. Everyone was so excited to see him.\nWhen Dad got to the ducks, he quickly took out his network. He showed it to his friends and they all said it was a wonderful surprise. Dad was so proud that he gave the fish a big hug.\nThe other ducks were so happy, and then they all said it was the best thing to do. Dad was proud of the powerful network.\nThe whale knew he was awesmering man and he knew he had been brave. He had been so powerful and had been able to help others in the network.",
+          "words": 162
+        }
+      ],
+      "mean_distinct_2": 0.7786583621586207,
+      "mean_repeated_4gram_fraction": 0.09849847401251641,
+      "mean_words": 150.16666666666666,
+      "n": 36,
+      "replacement_chars": 0,
+      "share_empty": 0.0,
+      "share_ended_with_eot": 0.6666666666666666,
+      "share_repeated_4gram_over_0.3": 0.027777777777777776
+    },
+    "facts_mc": {
+      "acc": {
+        "ci95": [
+          0.08745302996883066,
+          0.3195029205439244
+        ],
+        "correct": 7,
+        "n": 40,
+        "rate": 0.175
+      },
+      "acc_norm": {
+        "ci95": [
+          0.08745302996883066,
+          0.3195029205439244
+        ],
+        "correct": 7,
+        "n": 40,
+        "rate": 0.175
+      },
+      "chance": 0.25,
+      "items": [
+        {
+          "answer": 0,
+          "id": "fact01",
+          "logprob": [
+            -18.618215560913086,
+            -19.530258178710938,
+            -14.042427062988281,
+            -28.466821670532227
+          ],
+          "logprob_per_byte": [
+            -3.1030359268188477,
+            -2.790036882672991,
+            -2.808485412597656,
+            -4.066688810076032
+          ],
+          "pred": 2,
+          "pred_norm": 1
+        },
+        {
+          "answer": 1,
+          "id": "fact02",
+          "logprob": [
+            -41.31779098510742,
+            -34.42542266845703,
+            -28.417205810546875,
+            -37.529754638671875
+          ],
+          "logprob_per_byte": [
+            -5.164723873138428,
+            -5.737570444742839,
+            -4.7362009684244795,
+            -4.691219329833984
+          ],
+          "pred": 2,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "fact03",
+          "logprob": [
+            -29.202890396118164,
+            -19.563873291015625,
+            -10.972527503967285,
+            -22.681848526000977
+          ],
+          "logprob_per_byte": [
+            -3.244765599568685,
+            -2.7948390415736606,
+            -1.5675039291381836,
+            -3.2402640751429965
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "fact04",
+          "logprob": [
+            -12.924013137817383,
+            -28.665834426879883,
+            -18.745519638061523,
+            -29.89767074584961
+          ],
+          "logprob_per_byte": [
+            -2.5848026275634766,
+            -3.5832293033599854,
+            -3.124253273010254,
+            -3.737208843231201
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "fact05",
+          "logprob": [
+            -10.183425903320312,
+            -16.42053985595703,
+            -7.9057841300964355,
+            -30.81743621826172
+          ],
+          "logprob_per_byte": [
+            -2.545856475830078,
+            -3.284107971191406,
+            -1.317630688349406,
+            -3.4241595798068576
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "fact06",
+          "logprob": [
+            -34.0522346496582,
+            -61.617645263671875,
+            -42.73226547241211,
+            -21.25879669189453
+          ],
+          "logprob_per_byte": [
+            -3.4052234649658204,
+            -4.107843017578125,
+            -3.5610221227010093,
+            -2.6573495864868164
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "fact07",
+          "logprob": [
+            -13.215944290161133,
+            -10.921971321105957,
+            -10.606470108032227,
+            -16.902631759643555
+          ],
+          "logprob_per_byte": [
+            -4.405314763387044,
+            -3.640657107035319,
+            -3.535490036010742,
+            -5.634210586547852
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "fact08",
+          "logprob": [
+            -17.0056209564209,
+            -26.091533660888672,
+            -19.256797790527344,
+            -21.5345458984375
+          ],
+          "logprob_per_byte": [
+            -3.40112419128418,
+            -3.7273619515555247,
+            -2.750971112932478,
+            -3.0763636997767856
+          ],
+          "pred": 0,
+          "pred_norm": 2
+        },
+        {
+          "answer": 0,
+          "id": "fact09",
+          "logprob": [
+            -12.529867172241211,
+            -10.71165943145752,
+            -9.870362281799316,
+            -19.010860443115234
+          ],
+          "logprob_per_byte": [
+            -2.088311195373535,
+            -2.67791485786438,
+            -1.9740724563598633,
+            -3.802172088623047
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "fact10",
+          "logprob": [
+            -50.22734832763672,
+            -44.93229675292969,
+            -18.814638137817383,
+            -42.15949249267578
+          ],
+          "logprob_per_byte": [
+            -4.566122575239702,
+            -3.7443580627441406,
+            -3.135773022969564,
+            -4.684388054741754
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 2,
+          "id": "fact11",
+          "logprob": [
+            -10.781937599182129,
+            -7.018735885620117,
+            -7.8365936279296875,
+            -20.99395179748535
+          ],
+          "logprob_per_byte": [
+            -1.7969895998636882,
+            -1.4037471771240235,
+            -1.5673187255859375,
+            -2.999135971069336
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 3,
+          "id": "fact12",
+          "logprob": [
+            -35.5487060546875,
+            -34.259666442871094,
+            -40.96080017089844,
+            -37.93363952636719
+          ],
+          "logprob_per_byte": [
+            -4.4435882568359375,
+            -3.4259666442871093,
+            -4.096080017089844,
+            -3.4485126842151987
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 0,
+          "id": "fact13",
+          "logprob": [
+            -9.717693328857422,
+            -7.435713291168213,
+            -13.49706745147705,
+            -10.44905948638916
+          ],
+          "logprob_per_byte": [
+            -4.858846664428711,
+            -3.7178566455841064,
+            -6.748533725738525,
+            -3.4830198287963867
+          ],
+          "pred": 1,
+          "pred_norm": 3
+        },
+        {
+          "answer": 1,
+          "id": "fact14",
+          "logprob": [
+            -35.00126647949219,
+            -17.469715118408203,
+            -21.749052047729492,
+            -31.67072296142578
+          ],
+          "logprob_per_byte": [
+            -5.833544413248698,
+            -2.911619186401367,
+            -4.349810409545898,
+            -5.278453826904297
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "fact15",
+          "logprob": [
+            -13.033010482788086,
+            -16.196157455444336,
+            -27.711368560791016,
+            -8.10492992401123
+          ],
+          "logprob_per_byte": [
+            -1.861858640398298,
+            -2.699359575907389,
+            -3.9587669372558594,
+            -1.620985984802246
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 3,
+          "id": "fact16",
+          "logprob": [
+            -21.8367862701416,
+            -8.176946640014648,
+            -11.516951560974121,
+            -45.02391052246094
+          ],
+          "logprob_per_byte": [
+            -3.6394643783569336,
+            -1.3628244400024414,
+            -1.9194919268290203,
+            -5.627988815307617
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 0,
+          "id": "fact17",
+          "logprob": [
+            -27.360519409179688,
+            -43.721622467041016,
+            -10.492060661315918,
+            -32.070838928222656
+          ],
+          "logprob_per_byte": [
+            -2.1046553391676683,
+            -3.6434685389200845,
+            -1.3115075826644897,
+            -2.672569910685221
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "fact18",
+          "logprob": [
+            -11.048944473266602,
+            -9.582130432128906,
+            -8.206414222717285,
+            -9.746936798095703
+          ],
+          "logprob_per_byte": [
+            -1.578420639038086,
+            -1.5970217386881511,
+            -0.9118238025241427,
+            -1.3924195425851005
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 2,
+          "id": "fact19",
+          "logprob": [
+            -24.169754028320312,
+            -25.34201431274414,
+            -42.713741302490234,
+            -23.93733024597168
+          ],
+          "logprob_per_byte": [
+            -4.833950805664062,
+            -4.223669052124023,
+            -4.271374130249024,
+            -2.99216628074646
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 3,
+          "id": "fact20",
+          "logprob": [
+            -20.700685501098633,
+            -23.02864646911621,
+            -20.198938369750977,
+            -10.755351066589355
+          ],
+          "logprob_per_byte": [
+            -4.140137100219727,
+            -4.605729293823242,
+            -3.3664897282918296,
+            -2.688837766647339
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "fact21",
+          "logprob": [
+            -31.093448638916016,
+            -37.38975524902344,
+            -25.70980453491211,
+            -24.31415557861328
+          ],
+          "logprob_per_byte": [
+            -3.1093448638916015,
+            -3.7389755249023438,
+            -2.856644948323568,
+            -2.7015728420681424
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 1,
+          "id": "fact22",
+          "logprob": [
+            -34.23191452026367,
+            -33.16593933105469,
+            -32.14201354980469,
+            -44.692115783691406
+          ],
+          "logprob_per_byte": [
+            -4.278989315032959,
+            -4.145742416381836,
+            -3.2142013549804687,
+            -4.469211578369141
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 2,
+          "id": "fact23",
+          "logprob": [
+            -9.42642593383789,
+            -10.713067054748535,
+            -10.0518217086792,
+            -10.92797565460205
+          ],
+          "logprob_per_byte": [
+            -2.3566064834594727,
+            -2.142613410949707,
+            -1.6753036181132,
+            -2.1855951309204102
+          ],
+          "pred": 0,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "fact24",
+          "logprob": [
+            -20.913084030151367,
+            -9.729803085327148,
+            -8.201003074645996,
+            -10.516233444213867
+          ],
+          "logprob_per_byte": [
+            -2.614135503768921,
+            -1.0810892317030165,
+            -1.0251253843307495,
+            -1.502319063459124
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 0,
+          "id": "fact25",
+          "logprob": [
+            -8.479595184326172,
+            -8.991719245910645,
+            -7.444367408752441,
+            -6.529992580413818
+          ],
+          "logprob_per_byte": [
+            -1.2113707406180245,
+            -1.7983438491821289,
+            -1.063481058393206,
+            -1.3059985160827636
+          ],
+          "pred": 3,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "fact26",
+          "logprob": [
+            -8.518284797668457,
+            -6.178790092468262,
+            -16.09462547302246,
+            -9.572254180908203
+          ],
+          "logprob_per_byte": [
+            -1.7036569595336915,
+            -1.0297983487447102,
+            -3.2189250946044923,
+            -1.9144508361816406
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "fact27",
+          "logprob": [
+            -27.216081619262695,
+            -31.67586898803711,
+            -38.22697067260742,
+            -27.635494232177734
+          ],
+          "logprob_per_byte": [
+            -3.0240090688069663,
+            -3.9594836235046387,
+            -4.247441185845269,
+            -3.454436779022217
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "fact28",
+          "logprob": [
+            -36.35873031616211,
+            -25.97090721130371,
+            -26.361251831054688,
+            -30.06481170654297
+          ],
+          "logprob_per_byte": [
+            -4.544841289520264,
+            -3.710129601614816,
+            -3.765893118722098,
+            -3.758101463317871
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 0,
+          "id": "fact29",
+          "logprob": [
+            -29.205482482910156,
+            -19.02672576904297,
+            -7.34349250793457,
+            -30.638240814208984
+          ],
+          "logprob_per_byte": [
+            -3.6506853103637695,
+            -3.1711209615071616,
+            -1.223915417989095,
+            -3.829780101776123
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "fact30",
+          "logprob": [
+            -26.107410430908203,
+            -33.78949737548828,
+            -17.877418518066406,
+            -23.209327697753906
+          ],
+          "logprob_per_byte": [
+            -3.7296300615583147,
+            -4.223687171936035,
+            -2.979569753011068,
+            -3.315618242536272
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 2,
+          "id": "fact31",
+          "logprob": [
+            -8.563034057617188,
+            -21.06718635559082,
+            -10.049324035644531,
+            -11.701879501342773
+          ],
+          "logprob_per_byte": [
+            -1.2232905796595983,
+            -3.009598050798689,
+            -1.6748873392740886,
+            -1.3002088334825304
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "fact32",
+          "logprob": [
+            -8.714828491210938,
+            -5.95712947845459,
+            -11.246020317077637,
+            -13.846644401550293
+          ],
+          "logprob_per_byte": [
+            -1.452471415201823,
+            -1.191425895690918,
+            -1.606574331011091,
+            -2.307774066925049
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 0,
+          "id": "fact33",
+          "logprob": [
+            -24.2564754486084,
+            -31.0081787109375,
+            -15.010668754577637,
+            -20.1417179107666
+          ],
+          "logprob_per_byte": [
+            -3.4652107783726285,
+            -4.429739815848214,
+            -2.144381250653948,
+            -3.356952985127767
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "fact34",
+          "logprob": [
+            -24.545665740966797,
+            -20.763389587402344,
+            -27.053922653198242,
+            -31.66929817199707
+          ],
+          "logprob_per_byte": [
+            -4.090944290161133,
+            -4.152677917480469,
+            -3.3817403316497803,
+            -4.524185453142438
+          ],
+          "pred": 1,
+          "pred_norm": 2
+        },
+        {
+          "answer": 2,
+          "id": "fact35",
+          "logprob": [
+            -6.8882246017456055,
+            -0.6759209036827087,
+            -8.184188842773438,
+            -24.0467472076416
+          ],
+          "logprob_per_byte": [
+            -1.377644920349121,
+            -0.16898022592067719,
+            -1.364031473795573,
+            -3.0058434009552
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 3,
+          "id": "fact36",
+          "logprob": [
+            -36.03689956665039,
+            -22.438838958740234,
+            -32.815555572509766,
+            -41.11479568481445
+          ],
+          "logprob_per_byte": [
+            -3.276081778786399,
+            -2.2438838958740233,
+            -4.101944446563721,
+            -3.7377086986194956
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 0,
+          "id": "fact37",
+          "logprob": [
+            -42.92857360839844,
+            -29.70854377746582,
+            -6.9053754806518555,
+            -31.574264526367188
+          ],
+          "logprob_per_byte": [
+            -5.366071701049805,
+            -3.300949308607313,
+            -1.381075096130371,
+            -3.9467830657958984
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "fact38",
+          "logprob": [
+            -5.942364692687988,
+            -5.263788223266602,
+            -7.254585266113281,
+            -7.952725410461426
+          ],
+          "logprob_per_byte": [
+            -1.1884729385375976,
+            -1.0527576446533202,
+            -1.8136463165283203,
+            -1.590545082092285
+          ],
+          "pred": 1,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "fact39",
+          "logprob": [
+            -4.585336685180664,
+            -5.711456775665283,
+            -6.538287162780762,
+            -3.8917713165283203
+          ],
+          "logprob_per_byte": [
+            -0.655048097882952,
+            -0.8159223965236119,
+            -1.089714527130127,
+            -0.778354263305664
+          ],
+          "pred": 3,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "fact40",
+          "logprob": [
+            -28.220407485961914,
+            -30.134952545166016,
+            -18.798423767089844,
+            -20.098398208618164
+          ],
+          "logprob_per_byte": [
+            -3.135600831773546,
+            -3.0134952545166014,
+            -2.0887137518988714,
+            -2.5122997760772705
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        }
+      ]
+    },
+    "grammar_pairs": {
+      "acc": {
+        "ci95": [
+          0.7031831605558306,
+          0.9469043057578189
+        ],
+        "correct": 26,
+        "n": 30,
+        "rate": 0.8666666666666667
+      },
+      "chance": 0.5,
+      "items": [
+        {
+          "bad": -36.05231475830078,
+          "correct": true,
+          "good": -32.3309440612793,
+          "id": "gram01"
+        },
+        {
+          "bad": -44.487125396728516,
+          "correct": true,
+          "good": -40.06569290161133,
+          "id": "gram02"
+        },
+        {
+          "bad": -34.207767486572266,
+          "correct": true,
+          "good": -20.77501678466797,
+          "id": "gram03"
+        },
+        {
+          "bad": -33.319496154785156,
+          "correct": true,
+          "good": -27.387256622314453,
+          "id": "gram04"
+        },
+        {
+          "bad": -34.987369537353516,
+          "correct": true,
+          "good": -29.715181350708008,
+          "id": "gram05"
+        },
+        {
+          "bad": -39.927860260009766,
+          "correct": true,
+          "good": -37.55144119262695,
+          "id": "gram06"
+        },
+        {
+          "bad": -55.46870803833008,
+          "correct": true,
+          "good": -47.531959533691406,
+          "id": "gram07"
+        },
+        {
+          "bad": -40.555389404296875,
+          "correct": true,
+          "good": -37.324134826660156,
+          "id": "gram08"
+        },
+        {
+          "bad": -49.97877883911133,
+          "correct": true,
+          "good": -42.27228927612305,
+          "id": "gram09"
+        },
+        {
+          "bad": -32.79357147216797,
+          "correct": true,
+          "good": -32.772010803222656,
+          "id": "gram10"
+        },
+        {
+          "bad": -47.54456329345703,
+          "correct": true,
+          "good": -42.637691497802734,
+          "id": "gram11"
+        },
+        {
+          "bad": -27.836538314819336,
+          "correct": true,
+          "good": -22.72300910949707,
+          "id": "gram12"
+        },
+        {
+          "bad": -49.201263427734375,
+          "correct": true,
+          "good": -39.67493438720703,
+          "id": "gram13"
+        },
+        {
+          "bad": -31.247013092041016,
+          "correct": true,
+          "good": -15.526321411132812,
+          "id": "gram14"
+        },
+        {
+          "bad": -52.6033935546875,
+          "correct": true,
+          "good": -47.73174285888672,
+          "id": "gram15"
+        },
+        {
+          "bad": -40.80145263671875,
+          "correct": true,
+          "good": -33.42104721069336,
+          "id": "gram16"
+        },
+        {
+          "bad": -55.43330764770508,
+          "correct": true,
+          "good": -35.24336242675781,
+          "id": "gram17"
+        },
+        {
+          "bad": -28.82697868347168,
+          "correct": false,
+          "good": -34.219627380371094,
+          "id": "gram18"
+        },
+        {
+          "bad": -38.06273651123047,
+          "correct": true,
+          "good": -30.007774353027344,
+          "id": "gram19"
+        },
+        {
+          "bad": -30.78443145751953,
+          "correct": true,
+          "good": -27.43614387512207,
+          "id": "gram20"
+        },
+        {
+          "bad": -38.25796127319336,
+          "correct": true,
+          "good": -36.16350555419922,
+          "id": "gram21"
+        },
+        {
+          "bad": -33.033287048339844,
+          "correct": true,
+          "good": -31.364002227783203,
+          "id": "gram22"
+        },
+        {
+          "bad": -30.358306884765625,
+          "correct": true,
+          "good": -28.57802391052246,
+          "id": "gram23"
+        },
+        {
+          "bad": -52.625762939453125,
+          "correct": true,
+          "good": -44.493412017822266,
+          "id": "gram24"
+        },
+        {
+          "bad": -37.813385009765625,
+          "correct": false,
+          "good": -38.22147750854492,
+          "id": "gram25"
+        },
+        {
+          "bad": -29.737913131713867,
+          "correct": false,
+          "good": -32.65829086303711,
+          "id": "gram26"
+        },
+        {
+          "bad": -54.55949401855469,
+          "correct": false,
+          "good": -65.82368469238281,
+          "id": "gram27"
+        },
+        {
+          "bad": -57.87095260620117,
+          "correct": true,
+          "good": -55.278141021728516,
+          "id": "gram28"
+        },
+        {
+          "bad": -29.834352493286133,
+          "correct": true,
+          "good": -26.75522804260254,
+          "id": "gram29"
+        },
+        {
+          "bad": -89.8125991821289,
+          "correct": true,
+          "good": -78.4050521850586,
+          "id": "gram30"
+        }
+      ]
+    },
+    "qa_mc": {
+      "acc": {
+        "ci95": [
+          0.14182495553910618,
+          0.4444830204431169
+        ],
+        "correct": 8,
+        "n": 30,
+        "rate": 0.26666666666666666
+      },
+      "acc_norm": {
+        "ci95": [
+          0.24590394326083403,
+          0.5767994750172616
+        ],
+        "correct": 12,
+        "n": 30,
+        "rate": 0.4
+      },
+      "chance": 0.25,
+      "items": [
+        {
+          "answer": 0,
+          "id": "qa01",
+          "logprob": [
+            -11.616878509521484,
+            -11.471586227416992,
+            -7.532207012176514,
+            -9.770029067993164
+          ],
+          "logprob_per_byte": [
+            -1.9361464182535808,
+            -2.867896556854248,
+            -1.5064414024353028,
+            -2.442507266998291
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "qa02",
+          "logprob": [
+            -11.164979934692383,
+            -9.366372108459473,
+            -7.845791816711426,
+            -10.127826690673828
+          ],
+          "logprob_per_byte": [
+            -1.8608299891153972,
+            -1.8732744216918946,
+            -1.9614479541778564,
+            -1.6879711151123047
+          ],
+          "pred": 2,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "qa03",
+          "logprob": [
+            -14.438849449157715,
+            -12.009682655334473,
+            -15.00498104095459,
+            -11.118764877319336
+          ],
+          "logprob_per_byte": [
+            -2.887769889831543,
+            -1.7156689507620675,
+            -2.14356872013637,
+            -2.223752975463867
+          ],
+          "pred": 3,
+          "pred_norm": 1
+        },
+        {
+          "answer": 3,
+          "id": "qa04",
+          "logprob": [
+            -11.021873474121094,
+            -8.884861946105957,
+            -18.723060607910156,
+            -6.15114164352417
+          ],
+          "logprob_per_byte": [
+            -5.510936737060547,
+            -4.4424309730529785,
+            -6.241020202636719,
+            -3.075570821762085
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "qa05",
+          "logprob": [
+            -6.711118698120117,
+            -9.63282585144043,
+            -11.236038208007812,
+            -11.707864761352539
+          ],
+          "logprob_per_byte": [
+            -0.7456798553466797,
+            -0.963282585144043,
+            -1.4045047760009766,
+            -1.3008738623725042
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "qa06",
+          "logprob": [
+            -13.803269386291504,
+            -11.924999237060547,
+            -12.979830741882324,
+            -13.27938461303711
+          ],
+          "logprob_per_byte": [
+            -2.3005448977152505,
+            -2.9812498092651367,
+            -2.5959661483764647,
+            -2.213230768839518
+          ],
+          "pred": 1,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "qa07",
+          "logprob": [
+            -11.446035385131836,
+            -20.518295288085938,
+            -20.304645538330078,
+            -11.63068675994873
+          ],
+          "logprob_per_byte": [
+            -3.815345128377279,
+            -6.8394317626953125,
+            -6.768215179443359,
+            -5.815343379974365
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "qa08",
+          "logprob": [
+            -14.858869552612305,
+            -9.177695274353027,
+            -12.982566833496094,
+            -11.3743257522583
+          ],
+          "logprob_per_byte": [
+            -2.9717739105224608,
+            -3.059231758117676,
+            -2.596513366699219,
+            -2.27486515045166
+          ],
+          "pred": 1,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "qa09",
+          "logprob": [
+            -10.792585372924805,
+            -14.798110008239746,
+            -15.129748344421387,
+            -10.527078628540039
+          ],
+          "logprob_per_byte": [
+            -1.5417979104178292,
+            -2.1140157154628207,
+            -2.1613926206316267,
+            -1.5038683755057198
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 1,
+          "id": "qa10",
+          "logprob": [
+            -15.113958358764648,
+            -13.951425552368164,
+            -15.998059272766113,
+            -15.391717910766602
+          ],
+          "logprob_per_byte": [
+            -1.6793287065294054,
+            -1.3951425552368164,
+            -1.5998059272766114,
+            -1.28264315923055
+          ],
+          "pred": 1,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "qa11",
+          "logprob": [
+            -12.90893268585205,
+            -29.50324249267578,
+            -37.83543014526367,
+            -39.303260803222656
+          ],
+          "logprob_per_byte": [
+            -1.8441332408360072,
+            -4.214748927525112,
+            -4.2039366828070746,
+            -4.367028978135851
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "qa12",
+          "logprob": [
+            -15.650957107543945,
+            -27.14792251586914,
+            -19.896596908569336,
+            -11.599157333374023
+          ],
+          "logprob_per_byte": [
+            -2.608492851257324,
+            -3.3934903144836426,
+            -2.8423709869384766,
+            -2.3198314666748048
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 0,
+          "id": "qa13",
+          "logprob": [
+            -10.835101127624512,
+            -10.337505340576172,
+            -9.375560760498047,
+            -11.817646026611328
+          ],
+          "logprob_per_byte": [
+            -0.9029250939687093,
+            -1.2921881675720215,
+            -1.5625934600830078,
+            -1.969607671101888
+          ],
+          "pred": 2,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "qa14",
+          "logprob": [
+            -12.642366409301758,
+            -9.588638305664062,
+            -7.365842819213867,
+            -7.841055870056152
+          ],
+          "logprob_per_byte": [
+            -4.214122136433919,
+            -4.794319152832031,
+            -3.6829214096069336,
+            -3.920527935028076
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 2,
+          "id": "qa15",
+          "logprob": [
+            -40.810020446777344,
+            -31.79045867919922,
+            -51.95874786376953,
+            -37.84352111816406
+          ],
+          "logprob_per_byte": [
+            -2.550626277923584,
+            -2.89004169810902,
+            -2.5979373931884764,
+            -3.1536267598470054
+          ],
+          "pred": 1,
+          "pred_norm": 0
+        },
+        {
+          "answer": 3,
+          "id": "qa16",
+          "logprob": [
+            -10.428922653198242,
+            -11.708216667175293,
+            -13.332168579101562,
+            -20.883586883544922
+          ],
+          "logprob_per_byte": [
+            -0.8022248194767878,
+            -0.9756847222646078,
+            -1.3332168579101562,
+            -1.3922391255696616
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "qa17",
+          "logprob": [
+            -42.23494338989258,
+            -21.00383758544922,
+            -18.26211929321289,
+            -27.955686569213867
+          ],
+          "logprob_per_byte": [
+            -3.8395403081720527,
+            -2.6254796981811523,
+            -2.608874184744699,
+            -3.4944608211517334
+          ],
+          "pred": 2,
+          "pred_norm": 2
+        },
+        {
+          "answer": 1,
+          "id": "qa18",
+          "logprob": [
+            -8.949766159057617,
+            -13.122438430786133,
+            -12.715221405029297,
+            -7.745969295501709
+          ],
+          "logprob_per_byte": [
+            -1.7899532318115234,
+            -2.187073071797689,
+            -2.5430442810058596,
+            -1.2909948825836182
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 2,
+          "id": "qa19",
+          "logprob": [
+            -11.941542625427246,
+            -12.833837509155273,
+            -12.470137596130371,
+            -13.193811416625977
+          ],
+          "logprob_per_byte": [
+            -2.388308525085449,
+            -2.5667675018310545,
+            -1.5587671995162964,
+            -2.1989685694376626
+          ],
+          "pred": 0,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "qa20",
+          "logprob": [
+            -13.394911766052246,
+            -13.517607688903809,
+            -12.716642379760742,
+            -15.328840255737305
+          ],
+          "logprob_per_byte": [
+            -1.1162426471710205,
+            -1.2288734262639827,
+            -1.2716642379760743,
+            -1.5328840255737304
+          ],
+          "pred": 2,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "qa21",
+          "logprob": [
+            -11.674633026123047,
+            -19.930627822875977,
+            -17.795848846435547,
+            -23.851490020751953
+          ],
+          "logprob_per_byte": [
+            -2.3349266052246094,
+            -3.3217713038126626,
+            -2.965974807739258,
+            -3.407355717250279
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "qa22",
+          "logprob": [
+            -15.746312141418457,
+            -15.058125495910645,
+            -16.604883193969727,
+            -12.751668930053711
+          ],
+          "logprob_per_byte": [
+            -2.2494731630597795,
+            -1.254843791325887,
+            -1.8449870215521917,
+            -2.550333786010742
+          ],
+          "pred": 3,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "qa23",
+          "logprob": [
+            -9.883760452270508,
+            -20.608152389526367,
+            -10.441402435302734,
+            -11.394742965698242
+          ],
+          "logprob_per_byte": [
+            -4.941880226135254,
+            -6.869384129842122,
+            -3.4804674784342446,
+            -5.697371482849121
+          ],
+          "pred": 0,
+          "pred_norm": 2
+        },
+        {
+          "answer": 3,
+          "id": "qa24",
+          "logprob": [
+            -15.052879333496094,
+            -26.79585838317871,
+            -23.279830932617188,
+            -17.571487426757812
+          ],
+          "logprob_per_byte": [
+            -1.6725421481662326,
+            -2.679585838317871,
+            -2.327983093261719,
+            -1.9523874918619792
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "qa25",
+          "logprob": [
+            -8.405865669250488,
+            -10.691404342651367,
+            -25.683996200561523,
+            -22.922014236450195
+          ],
+          "logprob_per_byte": [
+            -1.050733208656311,
+            -1.187933815850152,
+            -3.669142314365932,
+            -3.2745734623500278
+          ],
+          "pred": 0,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "qa26",
+          "logprob": [
+            -36.70999526977539,
+            -35.689022064208984,
+            -33.615966796875,
+            -41.9117546081543
+          ],
+          "logprob_per_byte": [
+            -3.337272297252308,
+            -2.9740851720174155,
+            -3.3615966796875,
+            -3.4926462173461914
+          ],
+          "pred": 2,
+          "pred_norm": 1
+        },
+        {
+          "answer": 2,
+          "id": "qa27",
+          "logprob": [
+            -26.107139587402344,
+            -17.031965255737305,
+            -17.03653907775879,
+            -13.690592765808105
+          ],
+          "logprob_per_byte": [
+            -2.6107139587402344,
+            -1.7031965255737305,
+            -1.703653907775879,
+            -1.1408827304840088
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        },
+        {
+          "answer": 3,
+          "id": "qa28",
+          "logprob": [
+            -7.945580005645752,
+            -9.006366729736328,
+            -11.284090995788574,
+            -7.376923561096191
+          ],
+          "logprob_per_byte": [
+            -1.324263334274292,
+            -1.8012733459472656,
+            -2.8210227489471436,
+            -1.4753847122192383
+          ],
+          "pred": 3,
+          "pred_norm": 0
+        },
+        {
+          "answer": 0,
+          "id": "qa29",
+          "logprob": [
+            -12.36245346069336,
+            -16.81524658203125,
+            -11.805185317993164,
+            -27.526578903198242
+          ],
+          "logprob_per_byte": [
+            -1.54530668258667,
+            -1.8683607313368056,
+            -2.3610370635986326,
+            -3.4408223628997803
+          ],
+          "pred": 2,
+          "pred_norm": 0
+        },
+        {
+          "answer": 1,
+          "id": "qa30",
+          "logprob": [
+            -11.043903350830078,
+            -12.565385818481445,
+            -24.361862182617188,
+            -7.995691299438477
+          ],
+          "logprob_per_byte": [
+            -1.577700478690011,
+            -2.513077163696289,
+            -4.060310363769531,
+            -1.3326152165730794
+          ],
+          "pred": 3,
+          "pred_norm": 3
+        }
+      ]
+    },
+    "repetition_stress": {
+      "items": [
+        {
+          "distinct_1": 0.350253807106599,
+          "distinct_2": 0.6836734693877551,
+          "ended_with_eot": false,
+          "id": "rep01",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.17525773195876287,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " likes to play with animals. They have a lot of fun.\nOne day, they go to the zoo with their mom. They see many animals, like lions, monkeys, and more. But they also want to see a new animal. The lion is big and strong and has a long neck.\n\"Mom, can we go to the zoo?\" Ben asks.\n\"No, sweetie, we can't. The zoo is far away. That's not our home. The zoo is far away.\" Mom says.\n\"But we can't go to the zoo,\" Anna says.\n\"Please, mom, we have to stay home. We have to take the animals,\" Mom says.\n\"Why not? We have to stay home and look, not the zookeeper. The zoo is far away.\" Ben says.\n\"Maybe we will find the zoo. We can go to the zoo, but we have to stay home and ask our mom first.",
+          "words": 197
+        },
+        {
+          "distinct_1": 0.40425531914893614,
+          "distinct_2": 0.7214285714285714,
+          "ended_with_eot": true,
+          "id": "rep01",
+          "max_line_repeats": 1,
+          "new_tokens": 140,
+          "repeated_4gram_fraction": 0.07246376811594203,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a bird, a cat, a bird, a dog, a dog, and a cat. They were very happy. They wanted to take a new home.\nOn their way, they saw a big dog. The dog wanted to play. The cat was scared of the dog. The dog said, \"I am scared of the dog.\" The cat said, \"No, can we play with the dog? I am scared.\"\nThe dog and the cat played with the dog. They had fun. But then, something unexpected happened. The dog turned into a cat! The cat was not scared at all. It was Lily's new friend. They played together and had a great day.",
+          "words": 141
+        },
+        {
+          "distinct_1": 0.34946236559139787,
+          "distinct_2": 0.6324324324324324,
+          "ended_with_eot": true,
+          "id": "rep01",
+          "max_line_repeats": 1,
+          "new_tokens": 190,
+          "repeated_4gram_fraction": 0.16393442622950818,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a dog, and a bird. They love him very much. They have many friends. They like to play together.\nOne day, they go to the park. They see a big truck. The truck is very loud. It makes a loud noise. Sara and Max are scared. They want to go back home.\nThey want to play with the truck. They think it is a good idea. They think the truck is a good idea. They find some sticks and leaves. They have fun.\nThe truck driver comes to the park. He sees the truck. He sees an idea. He takes out a stick from the truck. He puts the stick in the truck. He gives it to Sara and Max. They say thank you.\nSara and Max are happy. They say thank you to the truck driver. They go back to the park. They play with the truck. They are not scared anymore. They are friends.",
+          "words": 186
+        },
+        {
+          "distinct_1": 0.3284671532846715,
+          "distinct_2": 0.5808823529411765,
+          "ended_with_eot": false,
+          "id": "rep02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.17164179104477612,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " 5, 5, 5, 5, 5, 12, 2, 5. \nOne day, V five, 5, 5 was very tired. So, 5 was so tired that he wanted to rest. \nSuddenly, his mom came in the kitchen. She was very busy crying. \n\"What's wrong, 5, 1, 5,\" she said. 10-cars, 5, 5, 5.  Yes 5, 4, 1,\" 10, 0 5,  five 1! 15, 1, 2.  five Q five, 5, 2, 5, 1, 1, 10, 1, 10 5, 10 5, 5 1, 5. 00, 1, ",
+          "words": 137
+        },
+        {
+          "distinct_1": 0.13934426229508196,
+          "distinct_2": 0.32231404958677684,
+          "ended_with_eot": false,
+          "id": "rep02",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.453781512605042,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " \u2013 5, 5, 5, 5. 10 5, 5, 10, 1, 5  five \nOne day, 5, 5, 5, 1, 5, 5, 5, 5, 5, 5. Q five,  five 5, 5 5. 15, 2, 5, 1, 1, 5 5 5, 5. 5, 2, 5, 5, 5, 10, 5, 5, Qix, 0. 1,  ten, 10, 0, 10, 1 and 5, 10, 5, 5. V5,  five, 10, 5, 10 1. 1, 1",
+          "words": 122
+        },
+        {
+          "distinct_1": 0.4251968503937008,
+          "distinct_2": 0.7698412698412699,
+          "ended_with_eot": true,
+          "id": "rep02",
+          "max_line_repeats": 1,
+          "new_tokens": 158,
+          "repeated_4gram_fraction": 0.11290322580645161,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " Quick and Quick, Quick. \nHe had a dream of how to get to the store. He found a big bag full of coins. He was delighted when he got to the store and said, Quick was so excited. \nHe grabbed his bag and pulled the heavy bag. He went inside and started to eat. Quick was so big, he couldn't open it. Quickly, Quick was so happy. \nHe grabbed his bag and pulled inside. Inside, he found lots of new toys and a big, green bowl. Quick was so excited about his adventure. He hugged his bag and ran back home, excited to show his family.",
+          "words": 127
+        },
+        {
+          "distinct_1": 0.9090909090909091,
+          "distinct_2": 1.0,
+          "ended_with_eot": true,
+          "id": "rep03",
+          "max_line_repeats": 1,
+          "new_tokens": 24,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": "ater was very important to the people. They learned that when they need help, they can make theater easier!",
+          "words": 22
+        },
+        {
+          "distinct_1": 0.44242424242424244,
+          "distinct_2": 0.7378048780487805,
+          "ended_with_eot": true,
+          "id": "rep03",
+          "max_line_repeats": 1,
+          "new_tokens": 196,
+          "repeated_4gram_fraction": 0.09876543209876543,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": "ater was in the park. It was a day, and the birds were singing. Mama and Papa were playing and having fun. \nMama and Papa were running into the park. Mama and Papa were running around and they saw theater sparkling in the sky. Mama and Papa wanted to join in.\nMama and Papa were getting hungry. Mama and Papa were surprised to see a pond with ducks in the pond. Mama and Papa looked at the pond and smiled.\nMama said, \"See, Papa, there is something even more amazing today. You can come and play somewhere else!\"\nPapa and Papa were so excited. They ran over to the pond, and they jumped into the pond. They splashed and laughed as they watched the ducks. \nMama and Papa were very happy. They had been so lucky to have such a fun adventure.",
+          "words": 165
+        },
+        {
+          "distinct_1": 0.3448275862068966,
+          "distinct_2": 0.6732673267326733,
+          "ended_with_eot": false,
+          "id": "rep03",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.15,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " farmer was happy. He had a special job. Every day he woke up and played outside. Every day, the farmer would take the farmer to the market. It was a little bit messy, but the farmer was very curious.\nOne day, the farmer got a big surprise. He brought out a surprise. He said, \"What is it? Is it very messy?\"\nThe farmer smiled and said, \"It's just a surprise. It's a surprise for you.\" \nThe farmer was so excited. He asked, \"What's this?\"\nThe farmer replied, \"It's a surprise for you!\"\nThe farmer was surprised. He said, \"Oh, I'm a surprise. Let's go and see what's inside!\" \nThe farmer and the farmer went to the kitchen. As they opened the door, the farmer and the farmer opened it. Inside, there was the surprise! The farmer was so happy! He thanked the farmer and gave him a",
+          "words": 203
+        },
+        {
+          "distinct_1": 0.43333333333333335,
+          "distinct_2": 0.7718120805369127,
+          "ended_with_eot": true,
+          "id": "rep04",
+          "max_line_repeats": 1,
+          "new_tokens": 162,
+          "repeated_4gram_fraction": 0.06802721088435375,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": "Joe was very excited when he saw his friends having a picnic. He saw birds eating a delicious meal and he was so excited. He ran to join them and they all said \"Hoptercome\". Joe was so excited. He couldn't wait to look at the menu and find out what the menu had come from.\nJoe ran to his friends and said \"Look! I have a menu!\" His friends were amazed! They looked around to see a delicious menu with lots of food. Joe and his friends were so excited.\nJoe and his friends sat down and ate their food. Joe thanked his friends for the food. They all knew the menu was very delicious. Joe was so happy he had been able to share his food with his friends.",
+          "words": 150
+        },
+        {
+          "distinct_1": 0.5346534653465347,
+          "distinct_2": 0.79,
+          "ended_with_eot": true,
+          "id": "rep04",
+          "max_line_repeats": 1,
+          "new_tokens": 110,
+          "repeated_4gram_fraction": 0.08163265306122448,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": "One day, she was feeling very tired. She decided to take a break. She took a nice, calm blanket and put it on her lap. She was ready to go.\nChapter slowly moved. She quickly fell asleep and dreamed of the world outside. She dreamed of the world and the trees and the trees.\nChapa was so tired, she had a great time playing. She had a wonderful time. When she woke up, she could not find her way back home. She had a great time.",
+          "words": 101
+        },
+        {
+          "distinct_1": 0.5833333333333334,
+          "distinct_2": 0.9014084507042254,
+          "ended_with_eot": true,
+          "id": "rep04",
+          "max_line_repeats": 1,
+          "new_tokens": 89,
+          "repeated_4gram_fraction": 0.028985507246376812,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": "On Shapae and Shapae went to the park. The sun was shining and the birds were singing. \nSuddenly, the sky got dark and the sky turned dark. Shapa and Shapa looked up, but it was too late. The sun was gone, and the stars were gone.\nThe two friends searched until they found a beautiful rainbow. They both smiled and waved goodbye.",
+          "words": 72
+        },
+        {
+          "distinct_1": 0.48936170212765956,
+          "distinct_2": 0.6521739130434783,
+          "ended_with_eot": true,
+          "id": "rep05",
+          "max_line_repeats": 1,
+          "new_tokens": 48,
+          "repeated_4gram_fraction": 0.3409090909090909,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " You are very kind.\"\nThey hug and smile. They are happy.\nThey hope their mom will be okay. They hope the dog will go away. They hope the dog will come back. They hope the dog will go away.",
+          "words": 47
+        },
+        {
+          "distinct_1": 0.34965034965034963,
+          "distinct_2": 0.647887323943662,
+          "ended_with_eot": true,
+          "id": "rep05",
+          "max_line_repeats": 1,
+          "new_tokens": 149,
+          "repeated_4gram_fraction": 0.24285714285714285,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " You are a good helper.\"\nThe man says. He gives them a stick and a stick. He says, \"You are welcome. But remember you are brave. You will be fine.\" He puts the stick. They wave to their friends. They wave to them. They say, \"Bye, welcome. Have a good day.\"\nThe man says, \"Bye, kids. Have a nice day.\" He gives them a sticker. The sticker gives Tim and says, \"You are very smart.\" He says, \"You are welcome. Have a good day.\"\nThe moral of the story is: Be gentle and kind. Listen to others. Love, good people will be nice.",
+          "words": 143
+        },
+        {
+          "distinct_1": 0.7741935483870968,
+          "distinct_2": 0.9333333333333333,
+          "ended_with_eot": true,
+          "id": "rep05",
+          "max_line_repeats": 1,
+          "new_tokens": 31,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " You are a good friend.\"\nThey hugged and smiled. They were happy. They did not need to find the magic wand. They had each other.",
+          "words": 31
+        },
+        {
+          "distinct_1": 0.7317073170731707,
+          "distinct_2": 0.95,
+          "ended_with_eot": true,
+          "id": "rep06",
+          "max_line_repeats": 1,
+          "new_tokens": 49,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": "bly and Pati were about to leave.\nThe next day, Patuli was feeling very sad. Once he had gone, he had left the park with nothing to do. But he had a very bad ending.",
+          "words": 41
+        },
+        {
+          "distinct_1": 0.6521739130434783,
+          "distinct_2": 0.9555555555555556,
+          "ended_with_eot": true,
+          "id": "rep06",
+          "max_line_repeats": 1,
+          "new_tokens": 56,
+          "repeated_4gram_fraction": 0.0,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " ahead and hesitched his feet in the air. Its hes and his feet were still there. \nWhen he got there, he was filled with happiness. He had brought his way to his family, and he was happy. \nThe end!",
+          "words": 46
+        },
+        {
+          "distinct_1": 0.4514285714285714,
+          "distinct_2": 0.7873563218390804,
+          "ended_with_eot": false,
+          "id": "rep06",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.08139534883720931,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a few more further and further. Queenge was a bit scared and sad. \nSuddenly, Veryian saw a 3 year old girl. He had a big smile on her face. \n\"Hi!\" the girl said. \n\"What are you doing?\" \n\"I'm trying to catch a fish,\" the old man said. \n\"What do you mean?\" Very asked. \n\"I just want this fish,\" the girl said.\n\"But why not?\" \n\"Well, why don't we help it?\" Veryian replied. \nThe old man nodded and smiled. \"I'm happy that you were able to catch a fish. It's a good idea to help me save your fish. I hope that you are able to keep it and it makes me very proud.\" \n Very smiled. She was glad that the old man was able to help her.",
+          "words": 175
+        },
+        {
+          "distinct_1": 0.4367816091954023,
+          "distinct_2": 0.7861271676300579,
+          "ended_with_eot": true,
+          "id": "rep07",
+          "max_line_repeats": 1,
+          "new_tokens": 174,
+          "repeated_4gram_fraction": 0.0935672514619883,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": " Mike: He is a very important child. He helps people when they need him. He is a kind person, but he is very kind and gentle.\nOne day, a curious little girl came along. She was holding a big red ball. She wanted to play with it. She asked the boy: \"Can I play with you?\" The boy said: \"Yes! But be gentle with the ball.\"\nThe girl smiled and said: \"Yes, you can play with me.\" She took the ball and they started playing together. It was so much fun!\nAfter a while, the boy said: \"I'm glad you have a friend to play with me.\" The girl smiled and waved.\nThe boy was so happy to have a new friend. He and the girl played together every day and the boy always remembered how useful he was.",
+          "words": 174
+        },
+        {
+          "distinct_1": 0.35537190082644626,
+          "distinct_2": 0.6333333333333333,
+          "ended_with_eot": true,
+          "id": "rep07",
+          "max_line_repeats": 1,
+          "new_tokens": 125,
+          "repeated_4gram_fraction": 0.13559322033898305,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": " a big, scary monster was in the way. He was bigger than the monster! He was very scared.\nThe boy ran away. He was so scared. He saw a big tree and ran after it. He was so excited to see the monster. He ran after it and tried to bite the monster.\nBut the monster was too strong. He kept barking and growling at him. The boy was too scared. He tried to run away, but the monster was too fast. The boy was too scared. He shouted at the monster.\nThe monster ran away. The boy never saw the monster again.",
+          "words": 121
+        },
+        {
+          "distinct_1": 0.36633663366336633,
+          "distinct_2": 0.7860696517412935,
+          "ended_with_eot": false,
+          "id": "rep07",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.07537688442211055,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": " a boy is running around in the park. He sees a girl with a red hat. She looks very sad and lonely.\n\"Can I help you?\" he asks.\n\"Sure, but only if you are careful. And don't forget to take the things that are not yours,\" the girl says.\nShe looks at the boy and smiles. \"Maybe I am sorry. But you have to be careful and not take things that are not yours. You can make a sign for this. And you can have your own things I do not understand this. That's what I need is.\"\nThe boy looks at her and sees that she is sorry. She smiles and says, \"Thank you, sir. You are very kind and generous. I'm sorry I was wrong. I don't need to take things that are not yours. I want to make a sign for you. But I can help you make a sign for me. Can I help you with that?\"\n",
+          "words": 202
+        },
+        {
+          "distinct_1": 0.43434343434343436,
+          "distinct_2": 0.8121827411167513,
+          "ended_with_eot": false,
+          "id": "rep08",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.041025641025641026,
+          "replacement_chars": 0,
+          "seed": 11,
+          "text": "Once upon a time, in a small town, there was a boy named Tim. Tim loved to play outside. He liked to run, jump, and laugh with his friends.\nOne day, Tim saw a big, old box in the park. He wanted to look at the box. So, he took the box and went to his friends. They all looked at the box and wondered what was inside.\nWhen Tim opened the box, he saw a big, shiny ball. He was so happy! He started to play with the ball and have lots of fun. But then, the ball started to roll down the hill. Tim's friends were worried. They did not know what to do. They all looked for the ball, but they could not find it.\nJust when the ball was about to drop the ball, it rolled into a big, green tree. Tim and his friends ran to get it, but they could not reach it. They were stuck in the tree.",
+          "words": 198
+        },
+        {
+          "distinct_1": 0.4383561643835616,
+          "distinct_2": 0.8,
+          "ended_with_eot": true,
+          "id": "rep08",
+          "max_line_repeats": 1,
+          "new_tokens": 146,
+          "repeated_4gram_fraction": 0.055944055944055944,
+          "replacement_chars": 0,
+          "seed": 22,
+          "text": "One day, a little boy named Tim went to the park with his mom. They saw a big tree with many green leaves. Tim wanted to climb the tree, but he was scared. His mom said, \"Don't worry, Tim. I will help you.\"\nTim started to climb the tree. It was hard, but Tim was brave. He kept climbing. He felt safe and happy. He started to feel safe with his mom.\nAs Tim climbed the tree, he saw a big, friendly dog. The dog barked and ran away. Tim was brave and climbed the tree. He climbed down to the ground and held his mom's hand. They went home together, and Tim felt safe and happy.",
+          "words": 146
+        },
+        {
+          "distinct_1": 0.3869346733668342,
+          "distinct_2": 0.7575757575757576,
+          "ended_with_eot": false,
+          "id": "rep08",
+          "max_line_repeats": 1,
+          "new_tokens": 200,
+          "repeated_4gram_fraction": 0.09183673469387756,
+          "replacement_chars": 0,
+          "seed": 33,
+          "text": "Lily liked to wander with her mom. She liked to see new things. She liked to see new things and make new friends. She liked to see new things, like birds, flowers, birds, and bugs. She also liked to ask questions.\nOne day, it was gloomy outside. Lily saw a little bird outside her window. It was white and shiny and had wings. It looked like a nest. Lily wanted to see the bird up close. She took a cloth and some cloth and put it on her wing.\n\"Are you ready, bird?\" Lily asked.\n\"Yes, I am ready, it is ready,\" the bird said.\nLily nodded and smiled. She put the cloth on a branch and held the cloth. She felt the nest was happy. She watched the bird fly away.\n\"Thank you, bird,\" Lily said. \"You are very kind and strong. You are my friend.\"\n\"You are welcome, Lily,\" the bird said.",
+          "words": 199
+        }
+      ],
+      "mean_distinct_2": 0.7536024991980366,
+      "mean_repeated_4gram_fraction": 0.11399577623088762,
+      "mean_words": 131.08333333333334,
+      "n": 24,
+      "replacement_chars": 0,
+      "share_empty": 0.0,
+      "share_ended_with_eot": 0.6666666666666666,
+      "share_repeated_4gram_over_0.3": 0.08333333333333333
+    }
+  },
+  "seconds": 61.282806250004796,
+  "suite": "evals/general_v1.json",
+  "suite_sha256": "f2265af3e47ea291be6eee533e7c0b241e8282c23763e57fe2df063faffd8365",
+  "tokenizer_fingerprint": "906bf77c4f604b6df2c176af3e6646365741790bf04fda854bce5beef3721b15"
+}

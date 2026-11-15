@@ -1,0 +1,462 @@
+{
+  "candidates": {
+    "4096": {
+      "domains": {
+        "chat": {
+          "bytes": 379147,
+          "bytes_per_token": 3.4817348662944463,
+          "documents": 97,
+          "encode_mb_per_s_cold": 10.846652362020743,
+          "non_ascii_byte_token_share": 0.0016437702027622687,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.4742268041237113,
+          "share_docs_over_512_tokens": 0.6804123711340206,
+          "tokens": 108896,
+          "tokens_per_doc_median": 940,
+          "tokens_per_doc_p95": 1914
+        },
+        "code": {
+          "bytes": 10579,
+          "bytes_per_token": 2.1696062346185396,
+          "documents": 51,
+          "encode_mb_per_s_cold": 9.34678520037709,
+          "non_ascii_byte_token_share": 0.0,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.0,
+          "share_docs_over_512_tokens": 0.0,
+          "tokens": 4876,
+          "tokens_per_doc_median": 65,
+          "tokens_per_doc_p95": 225
+        },
+        "cosmopedia_v2": {
+          "bytes": 1066513,
+          "bytes_per_token": 3.7462783558025334,
+          "documents": 287,
+          "encode_mb_per_s_cold": 12.538465666585497,
+          "non_ascii_byte_token_share": 0.0004531308178133101,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.36585365853658536,
+          "share_docs_over_512_tokens": 0.9477351916376306,
+          "tokens": 284686,
+          "tokens_per_doc_median": 905,
+          "tokens_per_doc_p95": 1755
+        },
+        "fineweb_edu": {
+          "bytes": 1905810,
+          "bytes_per_token": 3.353858553719881,
+          "documents": 401,
+          "encode_mb_per_s_cold": 12.743907840993852,
+          "non_ascii_byte_token_share": 0.004753239805435693,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.38154613466334164,
+          "share_docs_over_512_tokens": 0.6783042394014963,
+          "tokens": 568244,
+          "tokens_per_doc_median": 816,
+          "tokens_per_doc_p95": 4090
+        },
+        "tinystories": {
+          "bytes": 521770,
+          "bytes_per_token": 3.162932518610121,
+          "documents": 596,
+          "encode_mb_per_s_cold": 20.229818208982763,
+          "non_ascii_byte_token_share": 0.009014087922213332,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.0,
+          "share_docs_over_512_tokens": 0.05704697986577181,
+          "tokens": 164964,
+          "tokens_per_doc_median": 245.5,
+          "tokens_per_doc_p95": 544
+        },
+        "wikipedia_en": {
+          "bytes": 734726,
+          "bytes_per_token": 2.8603140122007717,
+          "documents": 257,
+          "encode_mb_per_s_cold": 9.381516879131345,
+          "non_ascii_byte_token_share": 0.0060770275899388404,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.2801556420233463,
+          "share_docs_over_512_tokens": 0.5408560311284046,
+          "tokens": 256869,
+          "tokens_per_doc_median": 578,
+          "tokens_per_doc_p95": 2728
+        },
+        "wikipedia_simple": {
+          "bytes": 191887,
+          "bytes_per_token": 2.6851989196904604,
+          "documents": 222,
+          "encode_mb_per_s_cold": 7.795043181115073,
+          "non_ascii_byte_token_share": 0.006493052154321938,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.02702702702702703,
+          "share_docs_over_512_tokens": 0.10810810810810811,
+          "tokens": 71461,
+          "tokens_per_doc_median": 171.0,
+          "tokens_per_doc_p95": 688
+        }
+      },
+      "fingerprint": "6d21ee2b7ac465decf2ab161b931864aa4dbadbfaef7a3e6d0176ade0a3861ac",
+      "frequency_on_mix_val": {
+        "types_covering_50pct": 202,
+        "types_covering_90pct": 2099,
+        "types_covering_99pct": 3535,
+        "zipf_slope_rank10_1000": -0.8619782819232331
+      },
+      "rare_tokens": {
+        "median_fit_count_of_last_500_merges": 433.0,
+        "merged_tokens": 3835,
+        "unused_in_fit_corpus": 6,
+        "unused_in_mix_val": 16,
+        "used_lt_100_in_fit_corpus": 83,
+        "used_lt_10_in_fit_corpus": 11
+      },
+      "special_tokens": {
+        "<|assistant|>": 4093,
+        "<|endoftext|>": 4091,
+        "<|end|>": 4095,
+        "<|system|>": 4094,
+        "<|user|>": 4092
+      },
+      "train_seconds": 2.691179874993395,
+      "vocab_overhead": {
+        "L": {
+          "embedding_share": 0.03550685691499506,
+          "token_embedding": 3145728,
+          "total": 88594944
+        },
+        "M": {
+          "embedding_share": 0.0760405450562507,
+          "token_embedding": 2097152,
+          "total": 27579392
+        },
+        "S": {
+          "embedding_share": 0.12666996536368136,
+          "token_embedding": 1572864,
+          "total": 12417024
+        },
+        "X": {
+          "embedding_share": 0.050233014471425065,
+          "token_embedding": 2621440,
+          "total": 52185600
+        }
+      },
+      "vocab_size": 4096
+    },
+    "8192": {
+      "domains": {
+        "chat": {
+          "bytes": 379147,
+          "bytes_per_token": 3.922399702054582,
+          "documents": 97,
+          "encode_mb_per_s_cold": 10.346592436887649,
+          "non_ascii_byte_token_share": 0.0016966336305890629,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.4536082474226804,
+          "share_docs_over_512_tokens": 0.6597938144329897,
+          "tokens": 96662,
+          "tokens_per_doc_median": 850,
+          "tokens_per_doc_p95": 1707
+        },
+        "code": {
+          "bytes": 10579,
+          "bytes_per_token": 2.3619111408796605,
+          "documents": 51,
+          "encode_mb_per_s_cold": 8.851179079430766,
+          "non_ascii_byte_token_share": 0.0,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.0,
+          "share_docs_over_512_tokens": 0.0,
+          "tokens": 4479,
+          "tokens_per_doc_median": 65,
+          "tokens_per_doc_p95": 211
+        },
+        "cosmopedia_v2": {
+          "bytes": 1066513,
+          "bytes_per_token": 4.3460718753693,
+          "documents": 287,
+          "encode_mb_per_s_cold": 12.088888711137683,
+          "non_ascii_byte_token_share": 0.0003300773848091052,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.2508710801393728,
+          "share_docs_over_512_tokens": 0.8885017421602788,
+          "tokens": 245397,
+          "tokens_per_doc_median": 781,
+          "tokens_per_doc_p95": 1521
+        },
+        "fineweb_edu": {
+          "bytes": 1905810,
+          "bytes_per_token": 3.7870420967918212,
+          "documents": 401,
+          "encode_mb_per_s_cold": 12.297958390203066,
+          "non_ascii_byte_token_share": 0.004147085415652416,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.33665835411471323,
+          "share_docs_over_512_tokens": 0.6359102244389028,
+          "tokens": 503245,
+          "tokens_per_doc_median": 710,
+          "tokens_per_doc_p95": 3606
+        },
+        "tinystories": {
+          "bytes": 521770,
+          "bytes_per_token": 3.525877972469811,
+          "documents": 596,
+          "encode_mb_per_s_cold": 19.724105942917248,
+          "non_ascii_byte_token_share": 0.009642999533730226,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.0,
+          "share_docs_over_512_tokens": 0.04530201342281879,
+          "tokens": 147983,
+          "tokens_per_doc_median": 220.0,
+          "tokens_per_doc_p95": 499
+        },
+        "wikipedia_en": {
+          "bytes": 734726,
+          "bytes_per_token": 3.2304310166682058,
+          "documents": 257,
+          "encode_mb_per_s_cold": 9.113379891934436,
+          "non_ascii_byte_token_share": 0.005944451039619414,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.22957198443579765,
+          "share_docs_over_512_tokens": 0.48638132295719844,
+          "tokens": 227439,
+          "tokens_per_doc_median": 501,
+          "tokens_per_doc_p95": 2426
+        },
+        "wikipedia_simple": {
+          "bytes": 191887,
+          "bytes_per_token": 3.0551849316159028,
+          "documents": 222,
+          "encode_mb_per_s_cold": 7.097276525708054,
+          "non_ascii_byte_token_share": 0.006177655356886971,
+          "round_trip_exact": true,
+          "share_docs_over_1024_tokens": 0.02252252252252252,
+          "share_docs_over_512_tokens": 0.08108108108108109,
+          "tokens": 62807,
+          "tokens_per_doc_median": 149.0,
+          "tokens_per_doc_p95": 612
+        }
+      },
+      "fingerprint": "1eb21d0c27556e1f198bc88a1ccef60f24a065594c5b827dcf177ab86f53e906",
+      "frequency_on_mix_val": {
+        "types_covering_50pct": 261,
+        "types_covering_90pct": 3737,
+        "types_covering_99pct": 6921,
+        "zipf_slope_rank10_1000": -0.8459879808066345
+      },
+      "rare_tokens": {
+        "median_fit_count_of_last_500_merges": 148.0,
+        "merged_tokens": 7931,
+        "unused_in_fit_corpus": 23,
+        "unused_in_mix_val": 100,
+        "used_lt_100_in_fit_corpus": 587,
+        "used_lt_10_in_fit_corpus": 72
+      },
+      "special_tokens": {
+        "<|assistant|>": 8189,
+        "<|endoftext|>": 8187,
+        "<|end|>": 8191,
+        "<|system|>": 8190,
+        "<|user|>": 8188
+      },
+      "train_seconds": 3.235226999997394,
+      "vocab_overhead": {
+        "L": {
+          "embedding_share": 0.06857869975053159,
+          "token_embedding": 6291456,
+          "total": 91740672
+        },
+        "M": {
+          "embedding_share": 0.1413339774334909,
+          "token_embedding": 4194304,
+          "total": 29676544
+        },
+        "S": {
+          "embedding_share": 0.22485726833552921,
+          "token_embedding": 3145728,
+          "total": 13989888
+        },
+        "X": {
+          "embedding_share": 0.09566070344247746,
+          "token_embedding": 5242880,
+          "total": 54807040
+        }
+      },
+      "vocab_size": 8192
+    }
+  },
+  "fit_size_sensitivity_8192": {
+    "0.25": {
+      "fit_bytes": 6892267,
+      "mix_val_bytes_per_token": 3.9491699273894065
+    },
+    "0.5": {
+      "fit_bytes": 13492569,
+      "mix_val_bytes_per_token": 3.964720225478963
+    },
+    "1.0": {
+      "fit_bytes": 27165660,
+      "mix_val_bytes_per_token": 3.9702861982095583
+    }
+  },
+  "historical_tinystories_4096": {
+    "domains": {
+      "chat": {
+        "bytes": 379147,
+        "bytes_per_token": 2.756310157317747,
+        "documents": 97,
+        "encode_mb_per_s_cold": 11.120922474773039,
+        "non_ascii_byte_token_share": 0.001715664892843642,
+        "round_trip_exact": true,
+        "share_docs_over_1024_tokens": 0.5773195876288659,
+        "share_docs_over_512_tokens": 0.7628865979381443,
+        "tokens": 137556,
+        "tokens_per_doc_median": 1233,
+        "tokens_per_doc_p95": 2593
+      },
+      "code": {
+        "bytes": 10579,
+        "bytes_per_token": 1.5630910165484633,
+        "documents": 51,
+        "encode_mb_per_s_cold": 9.29783309981822,
+        "non_ascii_byte_token_share": 0.0,
+        "round_trip_exact": true,
+        "share_docs_over_1024_tokens": 0.0,
+        "share_docs_over_512_tokens": 0.0,
+        "tokens": 6768,
+        "tokens_per_doc_median": 81,
+        "tokens_per_doc_p95": 324
+      },
+      "cosmopedia_v2": {
+        "bytes": 1066513,
+        "bytes_per_token": 2.836116230152082,
+        "documents": 287,
+        "encode_mb_per_s_cold": 12.963072155857574,
+        "non_ascii_byte_token_share": 0.001313665579036663,
+        "round_trip_exact": true,
+        "share_docs_over_1024_tokens": 0.6341463414634146,
+        "share_docs_over_512_tokens": 0.9651567944250871,
+        "tokens": 376047,
+        "tokens_per_doc_median": 1153,
+        "tokens_per_doc_p95": 2336
+      },
+      "fineweb_edu": {
+        "bytes": 1905810,
+        "bytes_per_token": 2.6787724770152184,
+        "documents": 401,
+        "encode_mb_per_s_cold": 13.170831548086303,
+        "non_ascii_byte_token_share": 0.005540804751992061,
+        "round_trip_exact": true,
+        "share_docs_over_1024_tokens": 0.4912718204488778,
+        "share_docs_over_512_tokens": 0.773067331670823,
+        "tokens": 711449,
+        "tokens_per_doc_median": 1012,
+        "tokens_per_doc_p95": 4867
+      },
+      "tinystories": {
+        "bytes": 521770,
+        "bytes_per_token": 3.86897523357556,
+        "documents": 596,
+        "encode_mb_per_s_cold": 20.09438587778969,
+        "non_ascii_byte_token_share": 0.011026249443867715,
+        "round_trip_exact": true,
+        "share_docs_over_1024_tokens": 0.0,
+        "share_docs_over_512_tokens": 0.028523489932885907,
+        "tokens": 134860,
+        "tokens_per_doc_median": 201.0,
+        "tokens_per_doc_p95": 440
+      },
+      "wikipedia_en": {
+        "bytes": 734726,
+        "bytes_per_token": 2.403146515773464,
+        "documents": 257,
+        "encode_mb_per_s_cold": 9.972398322510905,
+        "non_ascii_byte_token_share": 0.007244836214368652,
+        "round_trip_exact": true,
+        "share_docs_over_1024_tokens": 0.35019455252918286,
+        "share_docs_over_512_tokens": 0.6108949416342413,
+        "tokens": 305735,
+        "tokens_per_doc_median": 701,
+        "tokens_per_doc_p95": 3298
+      },
+      "wikipedia_simple": {
+        "bytes": 191887,
+        "bytes_per_token": 2.1840832261515875,
+        "documents": 222,
+        "encode_mb_per_s_cold": 8.028926848632864,
+        "non_ascii_byte_token_share": 0.009879690861285954,
+        "round_trip_exact": true,
+        "share_docs_over_1024_tokens": 0.03153153153153153,
+        "share_docs_over_512_tokens": 0.13513513513513514,
+        "tokens": 87857,
+        "tokens_per_doc_median": 214.5,
+        "tokens_per_doc_p95": 807
+      }
+    },
+    "fingerprint": "906bf77c4f604b6df2c176af3e6646365741790bf04fda854bce5beef3721b15",
+    "frequency_on_mix_val": {
+      "types_covering_50pct": 102,
+      "types_covering_90pct": 858,
+      "types_covering_99pct": 2269,
+      "zipf_slope_rank10_1000": -1.0832673313835564
+    },
+    "rare_tokens": {
+      "median_fit_count_of_last_500_merges": 81.5,
+      "merged_tokens": 3839,
+      "unused_in_fit_corpus": 29,
+      "unused_in_mix_val": 296,
+      "used_lt_100_in_fit_corpus": 1279,
+      "used_lt_10_in_fit_corpus": 265
+    },
+    "special_tokens": {
+      "<|endoftext|>": 4095
+    },
+    "train_seconds": null,
+    "vocab_overhead": {
+      "L": {
+        "embedding_share": 0.03550685691499506,
+        "token_embedding": 3145728,
+        "total": 88594944
+      },
+      "M": {
+        "embedding_share": 0.0760405450562507,
+        "token_embedding": 2097152,
+        "total": 27579392
+      },
+      "S": {
+        "embedding_share": 0.12666996536368136,
+        "token_embedding": 1572864,
+        "total": 12417024
+      },
+      "X": {
+        "embedding_share": 0.050233014471425065,
+        "token_embedding": 2621440,
+        "total": 52185600
+      }
+    },
+    "vocab_size": 4096
+  },
+  "protocol": {
+    "fit_bytes": 27165660,
+    "fit_corpus": [
+      "fineweb_edu_10bt",
+      "cosmopedia_v2"
+    ],
+    "fit_documents": 6312,
+    "fit_documents_sha256": "2c36ad8c14f75f65de70af5ee5833046938749bff68d8ace61d4c768ea3fe239",
+    "special_tokens": [
+      "<|endoftext|>",
+      "<|user|>",
+      "<|assistant|>",
+      "<|system|>",
+      "<|end|>"
+    ],
+    "val_documents": {
+      "chat": 97,
+      "code": 51,
+      "cosmopedia_v2": 287,
+      "fineweb_edu": 401,
+      "tinystories": 596,
+      "wikipedia_en": 257,
+      "wikipedia_simple": 222
+    }
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "cosmopedia_v2": {
+    "manifest": {
+      "config": "cosmopedia-v2",
+      "dataset": "HuggingFaceTB/smollm-corpus",
+      "dataset_revision_at_fetch": "3ba9d605774198c5868892d7a8deda78031a781f",
+      "fetched_at": "2026-11-14T18:33:35.935963+00:00",
+      "file": "sample.jsonl",
+      "file_bytes": 11608985,
+      "file_sha256": "50d51ba18c4e3a6b7f224752b83942460deb3d2f5b58145a6ca73440a5dfebae",
+      "note": "Bounded sample for tokenizer research; not a full download.",
+      "rows_dropped_truncated": 0,
+      "rows_kept": 3000,
+      "rows_per_request": 100,
+      "seed": 2026,
+      "source_api": "https://datasets-server.huggingface.co/rows",
+      "split": "train",
+      "split_num_bytes_parquet": 122361137711,
+      "split_num_rows": 39134000,
+      "text_bytes_utf8": 11168892
+    },
+    "stats": {
+      "chars_max": 9392,
+      "chars_mean": 3719.1886666666664,
+      "chars_median": 3420.0,
+      "chars_p95": 6230,
+      "distinct_chars": 369,
+      "distinct_words": 42787,
+      "documents": 3000,
+      "exact_duplicate_documents": 0,
+      "near_duplicate_docs": 0,
+      "near_duplicate_examples": [],
+      "near_duplicate_pairs_crossing_train_val": 0,
+      "near_duplicate_pairs_jaccard_ge_0.8": 0,
+      "non_ascii_char_fraction": 0.0005498511055188919,
+      "top_words": [
+        "and",
+        "the",
+        "to",
+        "of",
+        "a",
+        "in",
+        "for",
+        "with",
+        "or",
+        "that",
+        "you",
+        "as",
+        "this",
+        "by",
+        "your"
+      ],
+      "utf8_bytes_total": 11168892,
+      "words_mean": 543.1926666666667,
+      "words_seen_once_fraction": 0.353238133077804
+    }
+  },
+  "fineweb_edu": {
+    "manifest": {
+      "config": "sample-10BT",
+      "dataset": "HuggingFaceFW/fineweb-edu",
+      "fetched_at": "2026-11-13T16:53:35.414386+00:00",
+      "file": "sample.jsonl",
+      "file_bytes": 20229065,
+      "file_sha256": "e6cacd6868700afd971fe2cdbd435cf587a09e6cd203945a59837e853f03961f",
+      "note": "Bounded sample for tokenizer research; not a full download.",
+      "rows_dropped_truncated": 0,
+      "rows_kept": 4000,
+      "rows_per_request": 100,
+      "seed": 2026,
+      "source_api": "https://datasets-server.huggingface.co/rows",
+      "split": "train",
+      "split_num_bytes_parquet": 28518193415,
+      "split_num_rows": 9672101,
+      "text_bytes_utf8": 18969091
+    },
+    "stats": {
+      "chars_max": 226009,
+      "chars_mean": 4718.45425,
+      "chars_median": 2870.0,
+      "chars_p95": 13224,
+      "distinct_chars": 1038,
+      "distinct_words": 83351,
+      "documents": 4000,
+      "domains_distinct": 3620,
+      "dump_years": {
+        "2013": 100,
+        "2014": 100,
+        "2015": 300,
+        "2016": 200,
+        "2017": 993,
+        "2018": 500,
+        "2019": 596,
+        "2020": 307,
+        "2021": 500,
+        "2022": 304,
+        "2023": 100
+      },
+      "dumps_distinct": 35,
+      "exact_duplicate_documents": 0,
+      "int_score_counts": {
+        "3": 3486,
+        "4": 513,
+        "5": 1
+      },
+      "language_score_min": 0.6573652625083923,
+      "near_duplicate_docs": 0,
+      "near_duplicate_examples": [],
+      "near_duplicate_pairs_crossing_train_val": 0,
+      "near_duplicate_pairs_jaccard_ge_0.8": 0,
+      "non_ascii_char_fraction": 0.0026747636686315227,
+      "score_mean": 3.0045,
+      "token_count_gpt2_mean": 1032.0185,
+      "top_domains": [
+        [
+          "en.wikipedia.org",
+          24
+        ],
+        [
+          "reference.com",
+          16
+        ],
+        [
+          "britannica.com",
+          12
+        ],
+        [
+          "teacherspayteachers.com",
+          10
+        ],
+        [
+          "medindia.net",
+          8
+        ],
+        [
+          "enotes.com",
+          7
+        ],
+        [
+          "everything2.com",
+          6
+        ],
+        [
+          "lessonplanet.com",
+          6
+        ],
+        [
+          "slideplayer.com",
+          6
+        ],
+        [
+          "theguardian.com",
+          6
+        ]
+      ],
+      "top_words": [
+        "the",
+        "of",
+        "and",
+        "to",
+        "in",
+        "a",
+        "is",
+        "that",
+        "for",
+        "as",
+        "are",
+        "it",
+        "with",
+        "on",
+        "be"
+      ],
+      "utf8_bytes_total": 18969091,
+      "words_mean": 768.799,
+      "words_seen_once_fraction": 0.42895706110304616
+    }
+  },
+  "tinystories": {
+    "manifest": {
+      "config": "default",
+      "dataset": "roneneldan/TinyStories",
+      "fetched_at": "2026-11-13T16:48:37.095537+00:00",
+      "file": "sample.jsonl",
+      "file_bytes": 5571792,
+      "file_sha256": "49bccd6788e61c175fdd9b4a7668d165d47f1b519e05d1a4ad08572719c59303",
+      "note": "Bounded sample for tokenizer research; not a full download.",
+      "rows_dropped_truncated": 0,
+      "rows_kept": 6000,
+      "rows_per_request": 100,
+      "seed": 2026,
+      "source_api": "https://datasets-server.huggingface.co/rows",
+      "split": "train",
+      "split_num_bytes_parquet": 990786315,
+      "split_num_rows": 2119719,
+      "text_bytes_utf8": 5299232
+    },
+    "stats": {
+      "chars_max": 3960,
+      "chars_mean": 881.4491666666667,
+      "chars_median": 790.0,
+      "chars_p95": 1649,
+      "distinct_chars": 84,
+      "distinct_words": 8511,
+      "documents": 6000,
+      "exact_duplicate_documents": 0,
+      "near_duplicate_docs": 0,
+      "near_duplicate_examples": [],
+      "near_duplicate_pairs_crossing_train_val": 0,
+      "near_duplicate_pairs_jaccard_ge_0.8": 0,
+      "non_ascii_char_fraction": 0.0013343556397183048,
+      "top_words": [
+        "the",
+        "and",
+        "to",
+        "a",
+        "was",
+        "he",
+        "she",
+        "it",
+        "they",
+        "her",
+        "said",
+        "in",
+        "his",
+        "with",
+        "so"
+      ],
+      "utf8_bytes_total": 5299232,
+      "words_mean": 171.97766666666666,
+      "words_seen_once_fraction": 0.24979438373869112
+    }
+  },
+  "wikipedia_en": {
+    "manifest": {
+      "config": "20231101.en",
+      "dataset": "wikimedia/wikipedia",
+      "dataset_revision_at_fetch": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "fetched_at": "2026-11-14T18:35:10.706862+00:00",
+      "file": "sample.jsonl",
+      "file_bytes": 6798820,
+      "file_sha256": "0e366c32a63463c0c748b6cf8226f3aca36a8d6d02874ecca5d98d9010cb3e14",
+      "note": "Bounded sample for tokenizer research; not a full download.",
+      "rows_dropped_truncated": 0,
+      "rows_kept": 2500,
+      "rows_per_request": 100,
+      "seed": 2026,
+      "source_api": "https://datasets-server.huggingface.co/rows",
+      "split": "train",
+      "split_num_bytes_parquet": 11630929031,
+      "split_num_rows": 6407814,
+      "text_bytes_utf8": 6332187
+    },
+    "stats": {
+      "chars_max": 78116,
+      "chars_mean": 2523.8968,
+      "chars_median": 1278.0,
+      "chars_p95": 8482,
+      "distinct_chars": 764,
+      "distinct_words": 65855,
+      "documents": 2500,
+      "exact_duplicate_documents": 0,
+      "near_duplicate_docs": 16,
+      "near_duplicate_examples": [
+        [
+          "Diera-Zehren is a municipality in the district of Mei\u00dfen, in Saxony, Germany.\n\nReferences \n\nMeissen (district)",
+          "K\u00e4bsch\u00fctztal is a municipality in the district of Mei\u00dfen, in Saxony, Germany.\n\nReferences \n\nMeissen (district)"
+        ],
+        [
+          "Ketzerbachtal is a former municipality in the district of Mei\u00dfen, in Saxony, Germany. Since 1 January 2014, it is part o",
+          "Leuben-Schleinitz is a former municipality in the district of Mei\u00dfen, in Saxony, Germany. Since 1 January 2014, it is pa"
+        ],
+        [
+          "Little Cranberry Lake, Halifax  is a lake of Halifax Regional Municipality, Nova Scotia, Canada.\n\nSee also\nList of lakes",
+          "South Lake, Halifax  is a lake of Halifax Regional Municipality, Nova Scotia, Canada.\n\nSee also\nList of lakes in Nova Sc"
+        ]
+      ],
+      "near_duplicate_pairs_crossing_train_val": 0,
+      "near_duplicate_pairs_jaccard_ge_0.8": 10,
+      "non_ascii_char_fraction": 0.002496615551000342,
+      "top_words": [
+        "the",
+        "of",
+        "in",
+        "and",
+        "a",
+        "to",
+        "was",
+        "on",
+        "for",
+        "is",
+        "as",
+        "by",
+        "with",
+        "he",
+        "at"
+      ],
+      "utf8_bytes_total": 6332187,
+      "words_mean": 397.9716,
+      "words_seen_once_fraction": 0.49567990281679447
+    }
+  },
+  "wikipedia_simple": {
+    "manifest": {
+      "config": "20231101.simple",
+      "dataset": "wikimedia/wikipedia",
+      "dataset_revision_at_fetch": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "fetched_at": "2026-11-14T18:36:18.656133+00:00",
+      "file": "sample.jsonl",
+      "file_bytes": 4849736,
+      "file_sha256": "72862a38de8938b84e398d0a1ffa857a71ccc20aa870766fb2d74d793c41e97a",
+      "note": "Bounded sample for tokenizer research; not a full download.",
+      "rows_dropped_truncated": 0,
+      "rows_kept": 2000,
+      "rows_per_request": 100,
+      "seed": 2026,
+      "source_api": "https://datasets-server.huggingface.co/rows",
+      "split": "train",
+      "split_num_bytes_parquet": 156885218,
+      "split_num_rows": 241787,
+      "text_bytes_utf8": 4485237
+    },
+    "stats": {
+      "chars_max": 123009,
+      "chars_mean": 2203.0575,
+      "chars_median": 474.5,
+      "chars_p95": 2841,
+      "distinct_chars": 386,
+      "distinct_words": 29987,
+      "documents": 2000,
+      "exact_duplicate_documents": 2,
+      "near_duplicate_docs": 77,
+      "near_duplicate_examples": [
+        [
+          "Saint-Pierre-sur-Doux  is a commune in the Ard\u00e8che d\u00e9partement in southern France.\n\nCommunes in Ard\u00e8che",
+          "Saint-Prix is a commune in the Ard\u00e8che d\u00e9partement in southern France.\n\nCommunes in Ard\u00e8che"
+        ],
+        [
+          "Saint-Pierre-sur-Doux  is a commune in the Ard\u00e8che d\u00e9partement in southern France.\n\nCommunes in Ard\u00e8che",
+          "Saint-Romain-d'Ay is a commune in the Ard\u00e8che d\u00e9partement in southern France.\n\nCommunes in Ard\u00e8che"
+        ],
+        [
+          "Saint-Pierre-sur-Doux  is a commune in the Ard\u00e8che d\u00e9partement in southern France.\n\nCommunes in Ard\u00e8che",
+          "Toulaud  is a commune in the Ard\u00e8che d\u00e9partement in southern France.\n\nCommunes in Ard\u00e8che"
+        ]
+      ],
+      "near_duplicate_pairs_crossing_train_val": 83,
+      "near_duplicate_pairs_jaccard_ge_0.8": 496,
+      "non_ascii_char_fraction": 0.009346101951492415,
+      "top_words": [
+        "e",
+        "id",
+        "right",
+        "align",
+        "bgcolor",
+        "km",
+        "d",
+        "the",
+        "linear",
+        "socorro",
+        "of",
+        "fefefe",
+        "in",
+        "and",
+        "a"
+      ],
+      "utf8_bytes_total": 4485237,
+      "words_mean": 402.4845,
+      "words_seen_once_fraction": 0.5200253443158702
+    }
+  }
+}
