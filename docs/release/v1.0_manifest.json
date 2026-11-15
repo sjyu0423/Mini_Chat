@@ -1,0 +1,218 @@
+{
+ "release": "mini_chatgpt v1.0 (inference-only)",
+ "default_model": "m5",
+ "decoding_defaults": {
+  "temperature": 0.7,
+  "top_k": 40,
+  "repetition_penalty": 1.2,
+  "max_new_tokens": 200
+ },
+ "local_path": "runs/release/mini_chatgpt-v1.0",
+ "torch_version_at_export": "2.15.0",
+ "models": {
+  "m5": {
+   "role": "default chatbot",
+   "report": "docs/reports/m5_conversational_training.md",
+   "source_checkpoint": "runs/m5_sft_chat-20261114-175334/checkpoints/best.pt",
+   "source_sha256": "f31594e290e8e6a09457bda2a4b6cd659de502a84644cc0b46989457114c72f5",
+   "source_bytes": 167968479,
+   "step": 2750,
+   "val_loss": 3.085401123329347,
+   "git_commit_at_training": "8d8d7c0d1e3813d582dccdac7bfa19d3e58c810f",
+   "torch_version_at_training": "2.15.0",
+   "parameters": 13989888,
+   "architecture": {
+    "vocab_size": 8192,
+    "context_length": 512,
+    "n_layer": 6,
+    "n_head": 6,
+    "n_embd": 384,
+    "dropout": 0.0,
+    "bias": true,
+    "tie_embeddings": true,
+    "mlp_ratio": 4,
+    "attention": "sdpa"
+   },
+   "tokenizer_fingerprint": "e6be77ccff4929187ed84ee1b71d15b7654824abd9e23f3ad889c57232ce91c8",
+   "special_tokens": {
+    "<|endoftext|>": 8187,
+    "<|user|>": 8188,
+    "<|assistant|>": 8189,
+    "<|system|>": 8190,
+    "<|end|>": 8191
+   },
+   "files": {
+    "m5/checkpoints/model.pt": {
+     "bytes": 55987135,
+     "sha256": "e04a00e7f8084ec14a07551e39bacbc9640821c96cc72f1bf306732bb64d5318"
+    },
+    "m5/sft_config.json": {
+     "bytes": 93,
+     "sha256": "32a02fd0d4b24b89045af2fe7a4be130bd65e4de1575cff80162bb2a58106fa3"
+    },
+    "m5/tokenizer.json": {
+     "bytes": 98728,
+     "sha256": "6b90feda4a3d3437277e54c1696ba273a5e2e6f92e9d5d11c4969d13714bb192"
+    }
+   },
+   "verification": {
+    "tensors_equal": true,
+    "max_abs_logit_diff": 0.0,
+    "replies_identical": true,
+    "replies": [
+     {
+      "prompt": "What is the capital of France?",
+      "greedy": true,
+      "seed": null,
+      "identical": true,
+      "stop_reason": "end_of_turn",
+      "reply": "The capital of France is the capital"
+     },
+     {
+      "prompt": "What is the capital of France?",
+      "greedy": false,
+      "seed": 11,
+      "identical": true,
+      "stop_reason": "end_of_turn",
+      "reply": "The capital of France is Vienna."
+     },
+     {
+      "prompt": "List three fruits.",
+      "greedy": true,
+      "seed": null,
+      "identical": true,
+      "stop_reason": "end_of_turn",
+      "reply": "1. Banana\n2. Potato\n3. Cherry\n4. Squirtle\n5. Pulp\n6. Pomatoes"
+     },
+     {
+      "prompt": "List three fruits.",
+      "greedy": false,
+      "seed": 11,
+      "identical": true,
+      "stop_reason": "end_of_turn",
+      "reply": "Here is one big fruit:\n1. Blue Brownings\n2. Yellow Brownings\n3. Fish Brownings"
+     },
+     {
+      "prompt": "What is my name?",
+      "greedy": true,
+      "seed": null,
+      "identical": true,
+      "stop_reason": "end_of_turn",
+      "reply": "Priya is a country that has been used to refer to as the \"priya\" of the country. It was first introduced in the United States, and it was first introduced into the world by the British Empire. The name Priya was derived from the name Priya, which means \"their\".\n\nThe name Priya is derived from the name Priya, which means \"to be\" or \"produced.\" It is also known for its unique style and style, and its distinctive features are often associated with the country's culture, culture, and history."
+     },
+     {
+      "prompt": "What is my name?",
+      "greedy": false,
+      "seed": 11,
+      "identical": true,
+      "stop_reason": "end_of_turn",
+      "reply": "Priya is a French country, known for its distinctive style of language and culture. It is also used in various German cities like Los Angeles and Bologne.  Priya is also famous for its beautiful scenery, brass luxury, and vibrant colors."
+     }
+    ]
+   }
+  },
+  "m6_3": {
+   "role": "research comparison (not served by default)",
+   "report": "docs/reports/m6_3_conversational_scaling.md",
+   "source_checkpoint": "runs/m6_3_sft_30m-20261115-001347/checkpoints/best.pt",
+   "source_sha256": "088803adac6b941607447c5cffd815fc78b588fead645c94509b1a00cbad4517",
+   "source_bytes": 356235999,
+   "step": 2000,
+   "val_loss": 2.9322506019428585,
+   "git_commit_at_training": "8d8d7c0d1e3813d582dccdac7bfa19d3e58c810f",
+   "torch_version_at_training": "2.15.0",
+   "parameters": 29676544,
+   "architecture": {
+    "vocab_size": 8192,
+    "context_length": 512,
+    "n_layer": 8,
+    "n_head": 8,
+    "n_embd": 512,
+    "dropout": 0.0,
+    "bias": true,
+    "tie_embeddings": true,
+    "mlp_ratio": 4,
+    "attention": "sdpa"
+   },
+   "tokenizer_fingerprint": "e6be77ccff4929187ed84ee1b71d15b7654824abd9e23f3ad889c57232ce91c8",
+   "special_tokens": {
+    "<|endoftext|>": 8187,
+    "<|user|>": 8188,
+    "<|assistant|>": 8189,
+    "<|system|>": 8190,
+    "<|end|>": 8191
+   },
+   "files": {
+    "m6_3/checkpoints/model.pt": {
+     "bytes": 118741879,
+     "sha256": "3d0c3e654e385df43f53d48e9f4103c454eaa0b90ea273a33bc3677d7df4ffdd"
+    },
+    "m6_3/sft_config.json": {
+     "bytes": 93,
+     "sha256": "32a02fd0d4b24b89045af2fe7a4be130bd65e4de1575cff80162bb2a58106fa3"
+    },
+    "m6_3/tokenizer.json": {
+     "bytes": 98728,
+     "sha256": "6b90feda4a3d3437277e54c1696ba273a5e2e6f92e9d5d11c4969d13714bb192"
+    }
+   },
+   "verification": {
+    "tensors_equal": true,
+    "max_abs_logit_diff": 0.0,
+    "replies_identical": true,
+    "replies": [
+     {
+      "prompt": "What is the capital of France?",
+      "greedy": true,
+      "seed": null,
+      "identical": true,
+      "stop_reason": "end_of_turn",
+      "reply": "The capital of France is the capital"
+     },
+     {
+      "prompt": "What is the capital of France?",
+      "greedy": false,
+      "seed": 11,
+      "identical": true,
+      "stop_reason": "end_of_turn",
+      "reply": "The capital of France is Sir Arthur and"
+     },
+     {
+      "prompt": "List three fruits.",
+      "greedy": true,
+      "seed": null,
+      "identical": true,
+      "stop_reason": "end_of_turn",
+      "reply": "Fruit, Banana, Salt and Rose"
+     },
+     {
+      "prompt": "List three fruits.",
+      "greedy": false,
+      "seed": 11,
+      "identical": true,
+      "stop_reason": "end_of_turn",
+      "reply": "Here is a list of fruits.\n1) Lion, Olivia, Tulips, Yellowstone, Bird, Strawberries, Sweet Grove, Fred Nutrients\n2) Pineapple, Dragon, Russell, Knoxbone"
+     },
+     {
+      "prompt": "What is my name?",
+      "greedy": true,
+      "seed": null,
+      "identical": true,
+      "stop_reason": "max_tokens",
+      "reply": "Priya is a language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the language of the"
+     },
+     {
+      "prompt": "What is my name?",
+      "greedy": false,
+      "seed": 11,
+      "identical": true,
+      "stop_reason": "end_of_turn",
+      "reply": "Priya is a name of the Priya word “Jewish” I'm Duty."
+     }
+    ]
+   }
+  }
+ },
+ "all_verified": true,
+ "how_to_run": ".venv/bin/python scripts/serve_chat.py --checkpoint runs/release/mini_chatgpt-v1.0/m5/checkpoints/model.pt"
+}

@@ -1,0 +1,318 @@
+{
+ "source": {
+  "recorded": "docs/reports/m6_3/decoding_{m5,m6_3}.json (seed 11, T 0.7, top-k 40, repetition penalty 1.2), copied verbatim",
+  "facts": "docs/showcase/facts.json"
+ },
+ "recorded": [
+  {
+   "id": "diag_v1:df01",
+   "category": "fact",
+   "turns": [
+    {
+     "role": "user",
+     "content": "What color is the sky on a clear day?"
+    }
+   ],
+   "replies": {
+    "m5": {
+     "reply": "The sky on a clear day is blue.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 9,
+     "content_check": true
+    },
+    "m6_3": {
+     "reply": "The sky on a clear day is blue.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 9,
+     "content_check": true
+    }
+   }
+  },
+  {
+   "id": "chat_v1:qa01",
+   "category": "qa",
+   "turns": [
+    {
+     "role": "user",
+     "content": "What is the largest planet in our solar system?"
+    }
+   ],
+   "replies": {
+    "m5": {
+     "reply": "The largest planet in our solar system is Mercury",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 11,
+     "content_check": false
+    },
+    "m6_3": {
+     "reply": "The largest planet in our solar system is known as the Moon orbit.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 16,
+     "content_check": false
+    }
+   }
+  },
+  {
+   "id": "diag_v1:df03",
+   "category": "fact",
+   "turns": [
+    {
+     "role": "user",
+     "content": "What is the capital of France?"
+    }
+   ],
+   "replies": {
+    "m5": {
+     "reply": "The capital of France is Vienna.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 9,
+     "content_check": false
+    },
+    "m6_3": {
+     "reply": "The capital of France is Sir Arthur and",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 11,
+     "content_check": false
+    }
+   }
+  },
+  {
+   "id": "diag_v1:di01",
+   "category": "instruction",
+   "turns": [
+    {
+     "role": "user",
+     "content": "Is fire hot? Answer only yes or no."
+    }
+   ],
+   "replies": {
+    "m5": {
+     "reply": "The following are no, unseen.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 9,
+     "content_check": false
+    },
+    "m6_3": {
+     "reply": "The answer to this question is yes.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 9,
+     "content_check": false
+    }
+   }
+  },
+  {
+   "id": "diag_v1:de02",
+   "category": "entity",
+   "turns": [
+    {
+     "role": "user",
+     "content": "I have a cat named Luna."
+    },
+    {
+     "role": "assistant",
+     "content": "Luna is a lovely name for a cat."
+    },
+    {
+     "role": "user",
+     "content": "What is my cat's name?"
+    }
+   ],
+   "replies": {
+    "m5": {
+     "reply": "Luna is a dog.  Luna is typically considered as a pet and is a life-breadful dog.  Luna is known for its long and complex worlds of animals, which are often used for hunting and fishing.  Dogs are typically made of chicken, canvy, or berries.  They have a variety of pets that are designed to produce fish, such as animal wings, and paws.  Luna is a unique type of dog.  Luna is a unique species of bird species that is found in the wild.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 129,
+     "content_check": false
+    },
+    "m6_3": {
+     "reply": "Luna is a well-known cat. Luna is an old dog who specializes in the family of cats that are a bit different from other cats.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 34,
+     "content_check": false
+    }
+   }
+  },
+  {
+   "id": "diag_v1:dm01",
+   "category": "multiturn",
+   "turns": [
+    {
+     "role": "user",
+     "content": "What is the capital of Japan?"
+    },
+    {
+     "role": "assistant",
+     "content": "The capital of Japan is Tokyo."
+    },
+    {
+     "role": "user",
+     "content": "And what is the capital of Italy?"
+    }
+   ],
+   "replies": {
+    "m5": {
+     "reply": "The capital of Japan is Tokyo.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 10,
+     "content_check": false
+    },
+    "m6_3": {
+     "reply": "The capital of Japan is Tokyo.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 10,
+     "content_check": false
+    }
+   }
+  },
+  {
+   "id": "diag_v1:do04",
+   "category": "open",
+   "turns": [
+    {
+     "role": "user",
+     "content": "How do I make a cup of tea?"
+    }
+   ],
+   "replies": {
+    "m5": {
+     "reply": "The following are three steps that you make a cup of tea:\n1. Potato: Drained in a large container and shake a tonight pie\n2. Cook on the coffee or chill at 15-20 degrees F\n3. Serve the bubbles with a mix of sugar, water, and other ingredients\n4. Cut the fruit into the pan using a pist, pepper and a spoon.\n5. Cover the cherry and crunch for about 20-15 minutes\n6. Cut it in a small amount of fruit and let it taste\n7. Cold the coffee overnight to medium-cook the tea.\n8. Cook it in a spatula, then add a small amount of cherry and grill. The glass is used to add a large amount of cherry and grilling.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 189,
+     "content_check": null
+    },
+    "m6_3": {
+     "reply": "Here is a basic recipe of tea:\n- Bake a glass of water and add water.  You can use the chocolate shake to tie it up and make the cup with oil.  Alternatively, you can add more vanilla or coffee button to your dish.  Use a mashed pot, then use a spatula over medium heat and add some dressing.   If the ingredients are browned, then pour your coffee into the cherry bite using a lid and let it cool down until it reaches the desired temperature.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 124,
+     "content_check": null
+    }
+   }
+  },
+  {
+   "id": "chat_v1:op01",
+   "category": "open",
+   "turns": [
+    {
+     "role": "user",
+     "content": "Why is exercise good for you?"
+    }
+   ],
+   "replies": {
+    "m5": {
+     "reply": "People who are doing well, but some people might think they will do better at themselves than others.  They can also do better at your owning and their work.  The same is a stress-related exercise program that helps you get more attention to the stress you are struggling with.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 60,
+     "content_check": null
+    },
+    "m6_3": {
+     "reply": "Depending on the type of exercise you can get a greatie.  This is because exercise is done around your body if you are not at work.  Breathy eating and getting stress over time will help you stay awake in life faster, more likely to be able to eat better than you would get a feeling for a few minutes.  If that's the right way, some people might want to take longer hours and more easily to go outside, which can lead to many health issues, including heart disease.",
+     "stop_reason": "end_of_turn",
+     "new_tokens": 107,
+     "content_check": null
+    }
+   }
+  }
+ ],
+ "facts": {
+  "m5_parameters": {
+   "value": "13,989,888",
+   "label": "parameters (served model)"
+  },
+  "m63_parameters": {
+   "value": "29,676,544",
+   "label": "parameters (30M comparison model)"
+  },
+  "bpe_merges": {
+   "value": "7,931",
+   "label": "BPE merges (8,192 ids = 256 bytes + 7,931 merges + 5 special)"
+  },
+  "tokenizer_fingerprint": {
+   "value": "e6be77cc…32ce91c8",
+   "label": "tokenizer fingerprint"
+  },
+  "pretraining_tokens": {
+   "value": "157,286,400",
+   "label": "pretraining token presentations, each seen once"
+  },
+  "m41_minutes": {
+   "value": "109.9",
+   "label": "14M pretraining wall-clock (minutes)"
+  },
+  "m41_val_bpb": {
+   "value": "1.264",
+   "label": "14M base validation bits per byte"
+  },
+  "m62_val_bpb": {
+   "value": "1.204",
+   "label": "30M base validation bits per byte"
+  },
+  "heldout_fineweb": {
+   "value": "1.335 → 1.278",
+   "label": "base models, held-out FineWeb-Edu bits per byte (14M → 30M)"
+  },
+  "m62_minutes": {
+   "value": "205.4",
+   "label": "30M pretraining wall-clock (minutes)"
+  },
+  "sft_conversations": {
+   "value": "16,813",
+   "label": "training conversations (OASST2 + Dolly-15k)"
+  },
+  "sft_minutes": {
+   "value": "8.0",
+   "label": "14M chat fine-tuning (minutes)"
+  },
+  "eot_base_vs_sft": {
+   "value": "0% → 97.5%",
+   "label": "replies that end on their own (sampled, penalty 1.2), base → fine-tuned"
+  },
+  "repetition_penalty": {
+   "value": "28% → 2.5%",
+   "label": "repetitive sampled replies without → with penalty 1.2"
+  },
+  "sft_val_loss": {
+   "value": "3.085 → 2.932",
+   "label": "assistant-token validation loss after SFT (14M → 30M)"
+  },
+  "strict_success": {
+   "value": "18.2% → 21.3%",
+   "label": "strict content success on 75 prompts (14M → 30M)"
+  },
+  "strict_success_ci": {
+   "value": "+3.1 points [−2.2, +8.9], p = 0.72",
+   "label": "paired difference, 95% bootstrap CI, sign test"
+  },
+  "blind_review": {
+   "value": "1 vs 1",
+   "label": "correct replies in the 20-item blind review (14M vs 30M)"
+  },
+  "m63_eot": {
+   "value": "95.2% vs 97.8%",
+   "label": "natural end-of-turn (14M vs 30M, 270 replies each)"
+  },
+  "m63_latency": {
+   "value": "146 vs 160 ms",
+   "label": "mean latency per reply (14M vs 30M)"
+  },
+  "app_latency": {
+   "value": "74 ms",
+   "label": "median reply latency in the local app (14M)"
+  },
+  "app_startup": {
+   "value": "1.24 s",
+   "label": "server start to ready"
+  },
+  "mps_memory_blowup": {
+   "value": "2.2 → 13.6 GB",
+   "label": "MPS pool growth that stalled the first SFT attempt"
+  },
+  "mps_guard_abort": {
+   "value": "11.0 GB at step 2,224",
+   "label": "memory guard stopped the first 30M SFT attempt safely"
+  },
+  "tests": {
+   "value": "305 + 20",
+   "label": "Python + frontend automated tests at v1.0"
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+  "description": "Every number used in docs/showcase/*.md and the in-app project page, with the repository artifact that supports it. Paths are relative to the repository root. Run directories under runs/ are git-ignored and cited only as corroboration.",
+  "version": "v1.0",
+  "facts": [
+    {"id": "m5_parameters", "value": "13,989,888", "label": "parameters (served model)", "evidence": ["docs/reports/m4_1_general_pretraining.md", "docs/reports/m5/preflight.json"]},
+    {"id": "m63_parameters", "value": "29,676,544", "label": "parameters (30M comparison model)", "evidence": ["docs/reports/m6_2_model_scaling.md", "docs/reports/m6_2/preflight_model.json"]},
+    {"id": "bpe_merges", "value": "7,931", "label": "BPE merges (8,192 ids = 256 bytes + 7,931 merges + 5 special)", "evidence": ["docs/reports/m4_1_general_pretraining.md#3-tokenizer"]},
+    {"id": "tokenizer_fingerprint", "value": "e6be77cc…32ce91c8", "label": "tokenizer fingerprint", "evidence": ["docs/reports/m4_1_general_pretraining.md#3-tokenizer"]},
+    {"id": "pretraining_tokens", "value": "157,286,400", "label": "pretraining token presentations, each seen once", "evidence": ["docs/reports/m4_1_general_pretraining.md", "docs/reports/m4_1/preflight_data.json"]},
+    {"id": "m41_minutes", "value": "109.9", "label": "14M pretraining wall-clock (minutes)", "evidence": ["docs/reports/m4_1_general_pretraining.md#10-compute-and-memory"]},
+    {"id": "m41_val_bpb", "value": "1.264", "label": "14M base validation bits per byte", "evidence": ["docs/reports/m4_1_general_pretraining.md", "docs/reports/m4_1/curve_points.json"]},
+    {"id": "m62_val_bpb", "value": "1.204", "label": "30M base validation bits per byte", "evidence": ["docs/reports/m6_2_model_scaling.md", "docs/reports/m6_2/curve_points.json"]},
+    {"id": "heldout_fineweb", "value": "1.335 → 1.278", "label": "base models, held-out FineWeb-Edu bits per byte (14M → 30M)", "evidence": ["docs/reports/m6_2/general_eval_m4_1_final.json", "docs/reports/m6_2/general_eval_m6_2_final.json"]},
+    {"id": "m62_minutes", "value": "205.4", "label": "30M pretraining wall-clock (minutes)", "evidence": ["docs/reports/m6_2_model_scaling.md#7-compute-and-memory-analysis"]},
+    {"id": "sft_conversations", "value": "16,813", "label": "training conversations (OASST2 + Dolly-15k)", "evidence": ["docs/reports/m5_conversational_training.md#3-data"]},
+    {"id": "sft_minutes", "value": "8.0", "label": "14M chat fine-tuning (minutes)", "evidence": ["docs/reports/m5_conversational_training.md#5-training"]},
+    {"id": "eot_base_vs_sft", "value": "0% → 97.5%", "label": "replies that end on their own (sampled, penalty 1.2), base → fine-tuned", "evidence": ["docs/reports/m5_conversational_training.md#71-new-fixed-conversational-suite-evalschat_v1json", "docs/reports/m5/evaluation_summary.json"]},
+    {"id": "repetition_penalty", "value": "28% → 2.5%", "label": "repetitive sampled replies without → with penalty 1.2", "evidence": ["docs/reports/m5_conversational_training.md#71-new-fixed-conversational-suite-evalschat_v1json"]},
+    {"id": "sft_val_loss", "value": "3.085 → 2.932", "label": "assistant-token validation loss after SFT (14M → 30M)", "evidence": ["docs/reports/m6_3_conversational_scaling.md#2-training"]},
+    {"id": "strict_success", "value": "18.2% → 21.3%", "label": "strict content success on 75 prompts (14M → 30M)", "evidence": ["docs/reports/m6_3/comparison.json", "docs/reports/m6_3_conversational_scaling.md#4-matched-evaluation-pre-registered"]},
+    {"id": "strict_success_ci", "value": "+3.1 points [−2.2, +8.9], p = 0.72", "label": "paired difference, 95% bootstrap CI, sign test", "evidence": ["docs/reports/m6_3/comparison.json"]},
+    {"id": "blind_review", "value": "1 vs 1", "label": "correct replies in the 20-item blind review (14M vs 30M)", "evidence": ["docs/reports/m6_3/decision.json", "docs/reports/m6_3/blind_grades.json"]},
+    {"id": "m63_eot", "value": "95.2% vs 97.8%", "label": "natural end-of-turn (14M vs 30M, 270 replies each)", "evidence": ["docs/reports/m6_3/comparison.json"]},
+    {"id": "m63_latency", "value": "146 vs 160 ms", "label": "mean latency per reply (14M vs 30M)", "evidence": ["docs/reports/m6_3/comparison.json"]},
+    {"id": "app_latency", "value": "74 ms", "label": "median reply latency in the local app (14M)", "evidence": ["docs/reports/m6/performance.json", "docs/reports/m6_chat_demo.md"]},
+    {"id": "app_startup", "value": "1.24 s", "label": "server start to ready", "evidence": ["docs/reports/m6/performance.json"]},
+    {"id": "mps_memory_blowup", "value": "2.2 → 13.6 GB", "label": "MPS pool growth that stalled the first SFT attempt", "evidence": ["docs/reports/m5_conversational_training.md#a-failure-and-its-fix-documented-not-hidden"]},
+    {"id": "mps_guard_abort", "value": "11.0 GB at step 2,224", "label": "memory guard stopped the first 30M SFT attempt safely", "evidence": ["docs/reports/m6_3_conversational_scaling.md#3-engineering-challenge-mps-memory-at-2-model-size", "docs/reports/m6_3/preregistration_addendum.md"]},
+    {"id": "tests", "value": "305 + 20", "label": "Python + frontend automated tests at v1.0", "evidence": ["docs/reports/m7_portfolio_release.md"]}
+  ]
+}
