@@ -1,0 +1,16 @@
+{
+  "description": "Single-rater (Claude, during M5) strict re-grade of the 15 chat_v1 'qa' items. A reply counts as correct only if it states the right answer as its answer, without contradicting it. The automatic include_any check is lenient (substring matches such as '7' inside '57', or the right word inside unrelated text) and is reported alongside as an upper bound. Borderline replies are listed and counted as incorrect.",
+  "rule": "states the correct answer as the answer to the question; no self-contradiction; incidental mentions do not count",
+  "sft_best": {
+    "greedy": {"correct": 0, "n": 15, "automatic": 0, "correct_items": []},
+    "greedy_rp": {"correct": 1, "n": 15, "automatic": 2, "correct_items": ["qa10"], "automatic_false_positives": ["qa12 (says the language is called \"data\"; 'Python' appears later in the text)"]},
+    "sampled": {"correct": 2, "n": 45, "automatic": 4, "correct_items": ["qa10 seed 11", "qa11 seed 11"], "borderline_counted_incorrect": ["qa13 seed 33: 'The closest star to Earth is in the sun'"]},
+    "sampled_rp": {"correct": 2, "n": 45, "automatic": 7, "correct_items": ["qa10 seed 11 ('Pacific Ocean, known as the Bluetoothic')", "qa11 seed 11 ('that the cold')"], "borderline_counted_incorrect": ["qa13 seed 33: 'in the sun'", "qa15 seed 11: '- green. blue is yellow'"], "automatic_false_positives": ["qa12 seed 22", "qa13 seed 22", "qa14 seed 22 ('57 percent' contains '7')"]}
+  },
+  "base_m4_1": {
+    "greedy": {"correct": 0, "n": 15, "automatic": 0},
+    "greedy_rp": {"correct": 0, "n": 15, "automatic": 1, "automatic_false_positives": ["qa15"]},
+    "sampled": {"correct": 0, "n": 45, "automatic": 5},
+    "sampled_rp": {"correct": 1, "n": 45, "automatic": 10, "correct_items": ["qa07 seed 11 ('They allow them to absorb CO2', inside an otherwise off-topic reply)"]}
+  }
+}
