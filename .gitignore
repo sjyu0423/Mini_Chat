@@ -21,3 +21,6 @@ htmlcov/
 .DS_Store
 .idea/
 .vscode/
+
+# Local agent / tooling state (never commit)
+.claude/

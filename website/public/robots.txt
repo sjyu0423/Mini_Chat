@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Public portfolio project site. No live model inference is hosted here.
+Sitemap: https://sjyu0423.github.io/Mini_Chat/sitemap.xml

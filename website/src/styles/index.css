@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens. This is the single source of truth for colour, type, spacing,
+ * radii, widths and breakpoints; components use only these utilities.
+ * Tailwind's default colour palette is removed so off-palette colours fail to compile.
+ */
+@theme {
+  /* Colour */
+  --color-*: initial;
+  --color-background: #0b0f14;
+  --color-surface: #161d27;
+  --color-surface-elevated: #1d2835;
+  --color-border: #293747;
+  --color-border-strong: #3a4b5f;
+  --color-accent: #7c9dbd;
+  --color-accent-strong: #9bb6d0;
+  --color-fg: #f0f4f8;
+  --color-fg-muted: #a5b3c4;
+
+  /* Typefaces: sans for all prose and UI; mono only for parameters, metrics and code */
+  --font-sans:
+    'IBM Plex Sans Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Type scale (fluid display sizes, fixed body sizes) */
+  --text-display: clamp(2.75rem, 1.9rem + 3.4vw, 4.75rem);
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.035em;
+  --text-display--font-weight: 600;
+
+  --text-headline: clamp(1.875rem, 1.5rem + 1.5vw, 2.75rem);
+  --text-headline--line-height: 1.12;
+  --text-headline--letter-spacing: -0.025em;
+  --text-headline--font-weight: 600;
+
+  --text-title: 1.25rem;
+  --text-title--line-height: 1.4;
+  --text-title--letter-spacing: -0.01em;
+  --text-title--font-weight: 600;
+
+  --text-lede: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --text-lede--line-height: 1.6;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.65;
+
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.4;
+  --text-eyebrow--letter-spacing: 0.14em;
+  --text-eyebrow--font-weight: 500;
+
+  /* Layout spacing (component-level spacing uses Tailwind's 0.25rem scale) */
+  --spacing-gutter: clamp(1.25rem, 0.75rem + 2.5vw, 2.5rem);
+  --spacing-section: clamp(4.5rem, 3rem + 6vw, 8rem);
+  --spacing-header: 4rem;
+
+  /* Container widths */
+  --container-page: 72rem;
+  --container-reading: 42rem;
+
+  /* Radii */
+  --radius-control: 0.5rem;
+  --radius-card: 0.875rem;
+  --radius-pill: 9999px;
+
+  /* Breakpoints (Tailwind defaults, stated explicitly) */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+
+  /* Motion */
+  --default-transition-duration: 160ms;
+  --default-transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-padding-top: calc(var(--spacing-header) + 1.5rem);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-background font-sans text-body text-fg antialiased;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-fg;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

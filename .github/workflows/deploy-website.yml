@@ -1,0 +1,64 @@
+# Builds and deploys the static Mini_Chat website to GitHub Pages.
+# Manual trigger only — does not deploy on push.
+#
+# Before the first successful run:
+# 1. Repository Settings → Pages → Build and deployment → Source: GitHub Actions
+# 2. Ensure Pages is enabled for this repository
+# 3. Run this workflow from the Actions tab (workflow_dispatch)
+#
+# Working directory: website/ (independent of the Python ML package).
+
+name: Deploy website
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-website
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build website
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck, lint, and production build
+        run: npm run check
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website/dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
